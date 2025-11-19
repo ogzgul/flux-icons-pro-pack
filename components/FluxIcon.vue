@@ -32,7 +32,7 @@ const iconPath = computed(() => icons[props.name] || "");
   <span v-else class="text-xs text-red-500">?</span>
 </template>
 
-<style scoped>
+<style >
 /* Eğer Tailwind yoksa bu CSS çalışır */
 @keyframes spin {
   from { transform: rotate(0deg); }

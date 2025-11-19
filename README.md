@@ -78,7 +78,21 @@ Once registered, you can use the component in your templates with simple props.
   </div>
 </template>
 
+##🚀 Usage Option 2: Universal HTML/CSS (Webfont)
+You can use Flux Icons in React, Angular, Svelte, or Plain HTML by using the generated CSS and webfonts.
 
+1. Import CSS
+Import the CSS file in your main style file or entry point:
+
+import 'flux-icons-pro-pack/dist-font/flux-icons.css';
+
+##2. Usage with <i> Tag
+Use the icons anywhere just like FontAwesome or Bootstrap Icons.
+<i class="flux-icon flux-icon-home"></i>
+
+<i class="flux-icon flux-icon-user" style="font-size: 32px; color: blue;"></i>
+
+<i class="flux-icon flux-icon-loader-5 animate-spin"></i>
 ## 📄 License
 
 Released under the [MIT License](./LICENSE).

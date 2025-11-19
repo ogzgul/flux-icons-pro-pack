@@ -7,7 +7,8 @@
   "license": "MIT",
   "type": "module",
   "files": [
-    "dist-lib"
+    "dist-lib",
+    "dist-font"
   ],
   "main": "./dist-lib/flux-icons.umd.js",
   "module": "./dist-lib/flux-icons.es.js",
@@ -16,7 +17,8 @@
       "import": "./dist-lib/flux-icons.es.js",
       "require": "./dist-lib/flux-icons.umd.js"
     },
-    "./style.css": "./dist-lib/style.css"
+    "./style.css": "./dist-lib/style.css",
+    "./css": "./dist-font/flux-icons.css"
   },
   "scripts": {
     "build": "nuxt build",
@@ -24,19 +26,21 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "build:lib": "vite build --config vite.lib.config.js"
+    "build:lib": "vite build --config vite.lib.config.js",
+    "build:font": "node scripts/create-webfont.js"
   },
   "peerDependencies": {
     "vue": "^3.0.0"
   },
   "dependencies": {
     "nuxt": "^3.14.0",
-    "vue": "^3.5.13",
+    "vue": "^3.0.0",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.12.2",
     "@vitejs/plugin-vue": "^5.2.1",
+    "svgtofont": "^6.5.0",
     "vite": "^6.0.1"
   }
 }

@@ -1,5 +1,8 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from "vue";
+import { useFluxIcons } from '@/composables/useFluxIcons'; // Composable yolunu kontrol et
+
+// Ikon verisini al
 const { icons } = useFluxIcons();
 
 // --- AYARLAR ---
@@ -8,14 +11,21 @@ const visibleCount = ref(50);
 const selectedIcon = ref(null);
 const isModalOpen = ref(false);
 const copied = ref(false);
-// YENİ: spin özelliği eklendi
-const customize = ref({ size: 64, color: "#818cf8", stroke: 2, type: "component", spin: false });
 
-const allIconNames = Object.keys(icons).sort();
+// YENİ: Varsayılan type 'class' yapıldı (Bootstrap stili)
+const customize = ref({ 
+  size: 64, 
+  color: "#818cf8", 
+  stroke: 2, 
+  type: "class", 
+  spin: false 
+});
+
+const allIconNames = computed(() => Object.keys(icons).sort());
 
 const filteredIcons = computed(() => {
   const query = searchQuery.value.toLowerCase();
-  return allIconNames.filter(name => name.includes(query));
+  return allIconNames.value.filter(name => name.includes(query));
 });
 
 const displayedIcons = computed(() => {
@@ -35,17 +45,46 @@ const handleScroll = () => {
 onMounted(() => window.addEventListener("scroll", handleScroll));
 onUnmounted(() => window.removeEventListener("scroll", handleScroll));
 
-const openModal = (name) => { selectedIcon.value = name; isModalOpen.value = true; copied.value = false; };
+const openModal = (name) => { 
+    selectedIcon.value = name; 
+    isModalOpen.value = true; 
+    copied.value = false; 
+    // Modal her açıldığında varsayılan olarak Class'a dönmesini istersen:
+    // customize.value.type = 'class'; 
+};
 const closeModal = () => { isModalOpen.value = false; };
 
+// --- KOD ÜRETİCİ (GÜNCELLENDİ) ---
 const generatedCode = computed(() => {
   if (!selectedIcon.value) return "";
+
+  // Değerleri al
+  const sizeValue = customize.value.size;
+  const colorValue = customize.value.color;
+  const strokeValue = customize.value.stroke;
+  
+  // Değişkenler
+  const strokeAttr = strokeValue !== 2 ? ` stroke-width="${strokeValue}"` : '';
   const spinAttr = customize.value.spin ? ' spin' : '';
   const spinClass = customize.value.spin ? ' animate-spin' : '';
 
-  if (customize.value.type === "component") return `<FluxIcon name="${selectedIcon.value}" size="${customize.value.size}" color="${customize.value.color}"${spinAttr} />`;
-  if (customize.value.type === "class") return `<i class="flux-${selectedIcon.value}${spinClass}"></i>`;
-  return `<svg width="${customize.value.size}" height="${customize.value.size}" class="${spinClass.trim()}" viewBox="0 0 24 24" fill="none" stroke="${customize.value.color}" stroke-width="${customize.value.stroke}" stroke-linecap="round" stroke-linejoin="round">${icons[selectedIcon.value]}</svg>`;
+  // 1. WEBFONT / CLASS ÇIKTISI (Bootstrap Stili - Varsayılan)
+  if (customize.value.type === "class") {
+    // Font boyutu ve rengi style ile verilir
+    return `<i class="flux-icon flux-icon-${selectedIcon.value}${spinClass}" style="font-size: ${sizeValue}px; color: ${colorValue};"></i>`;
+  }
+
+  // 2. VUE COMPONENT ÇIKTISI
+  if (customize.value.type === "component") {
+    return `<FluxIcon name="${selectedIcon.value}" size="${sizeValue}" color="${colorValue}"${strokeAttr}${spinAttr} />`;
+  } 
+  
+  // 3. RAW SVG ÇIKTISI
+  if (customize.value.type === "html") {
+      return `<svg width="${sizeValue}" height="${sizeValue}" viewBox="0 0 24 24" fill="none" stroke="${colorValue}" stroke-width="${strokeValue}" stroke-linecap="round" stroke-linejoin="round" class="${spinClass.trim()}">${icons[selectedIcon.value]}</svg>`;
+  }
+  
+  return "";
 });
 
 const copyToClipboard = () => {
@@ -134,7 +173,8 @@ const copyToClipboard = () => {
           </div>
 
           <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
-            <div class="flex bg-slate-100 dark:bg-slate-950 p-1 rounded-lg border border-slate-200 dark:border-slate-800 mb-2">
+            <div class="flex bg-slate-100 dark:bg-slate-950 p-1 rounded-lg border border-slate-200 dark:border-slate-800 mb-2 gap-1">
+              <button @click="customize.type='class'" :class="{'bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow':customize.type=='class'}" class="flex-1 py-1.5 text-xs font-medium text-slate-500 rounded transition-all">Class / HTML</button>
               <button @click="customize.type='component'" :class="{'bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow':customize.type=='component'}" class="flex-1 py-1.5 text-xs font-medium text-slate-500 rounded transition-all">Nuxt / Vue</button>
               <button @click="customize.type='html'" :class="{'bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow':customize.type=='html'}" class="flex-1 py-1.5 text-xs font-medium text-slate-500 rounded transition-all">SVG</button>
             </div>
