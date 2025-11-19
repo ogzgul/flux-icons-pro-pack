@@ -1,0 +1,42 @@
+{
+  "name": "flux-icons-pro-pack",
+  "version": "1.0.1",
+  "private": false,
+  "description": "1000+ Modern, animated and customizable SVG icons for Vue 3 & Nuxt.",
+  "author": "Oguz <oguz.gul216@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist-lib"
+  ],
+  "main": "./dist-lib/flux-icons.umd.js",
+  "module": "./dist-lib/flux-icons.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist-lib/flux-icons.es.js",
+      "require": "./dist-lib/flux-icons.umd.js"
+    },
+    "./style.css": "./dist-lib/style.css"
+  },
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "build:lib": "vite build --config vite.lib.config.js"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "dependencies": {
+    "nuxt": "^3.14.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^6.0.1"
+  }
+}
