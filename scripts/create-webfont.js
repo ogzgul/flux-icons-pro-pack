@@ -1,13 +1,12 @@
 import fs from 'fs';
 import path from 'path';
 import svgtofont from 'svgtofont';
-import outlineStroke from 'svg-outline-stroke'; // Yeni paket
+import outlineStroke from 'svg-outline-stroke'; // Bunu yüklemiştik
 import { icons } from '../lib/icons.js';
 
 const SVG_SOURCE_DIR = path.resolve(process.cwd(), 'svg_source');
 const FONT_OUTPUT_DIR = path.resolve(process.cwd(), 'dist-font');
 
-// 1. İndirme ve Dönüştürme İşlemi
 async function extractSvgs() {
   console.log('1. İkonlar işleniyor ve şekle dönüştürülüyor (Bu biraz sürebilir)...');
   
@@ -19,26 +18,27 @@ async function extractSvgs() {
   const iconNames = Object.keys(icons);
   let count = 0;
 
-  // Döngü içinde asenkron işlem yapacağımız için for...of kullanıyoruz
   for (const name of iconNames) {
     const rawPath = icons[name];
     let finalSvgContent = '';
 
-    // Eğer ikon "Dolu/Marka" ikonuysa (stroke="none" içeriyorsa) olduğu gibi al
-    if (rawPath.includes('stroke="none"') || rawPath.includes("stroke='none'")) {
+    // Eğer ikon "Dolu/Marka" ikonuysa dokunma
+    if (rawPath.includes('stroke="none"') || rawPath.includes("stroke='none'") || rawPath.includes('fill="currentColor"')) {
        finalSvgContent = `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">${rawPath}</svg>`;
     } 
     // Eğer ikon "Çizgisel" ise, çizgiyi şekle (outline) çevir
     else {
-      // Önce geçici bir SVG oluşturuyoruz
-      const tempSvg = `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${rawPath}</svg>`;
+      // Çizgi kalınlığını ve rengini net belirtiyoruz
+      const tempSvg = `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${rawPath}</svg>`;
       
       try {
-        // Sihirli dokunuş: Stroke -> Fill dönüşümü
-        finalSvgContent = await outlineStroke(tempSvg);
+        // DÜZELTME: outlineStroke parametreleri
+        // optCurve: false (Daha keskin çizgiler için)
+        // step: 100 (Daha hassas dönüşüm)
+        finalSvgContent = await outlineStroke(tempSvg, { optCurve: false, step: 100, centerHorizontally: true });
       } catch (err) {
         console.error(`Hata: ${name} dönüştürülemedi.`, err);
-        finalSvgContent = tempSvg; // Hata olursa eskisini koy
+        finalSvgContent = tempSvg;
       }
     }
 
@@ -46,14 +46,12 @@ async function extractSvgs() {
     fs.writeFileSync(path.join(SVG_SOURCE_DIR, fileName), finalSvgContent, 'utf-8');
     count++;
     
-    // Konsolu boğmamak için her 100 ikonda bir bilgi ver
     if (count % 100 === 0) console.log(`   ...${count} ikon işlendi.`);
   }
 
   console.log(`✅ ${count} adet ikon başarıyla şekle dönüştürüldü.`);
 }
 
-// 2. Font Oluşturma
 async function generateFont() {
   console.log('2. Font dosyaları oluşturuluyor...');
 
@@ -69,7 +67,9 @@ async function generateFont() {
     svgicons2svgfont: {
       fontHeight: 1000,
       normalize: true,
-      centerHorizontally: true
+      centerHorizontally: true,
+      // Bu ayar font oluşturucunun şekilleri birleştirmesini sağlar
+      fixedWidth: true 
     }
   });
 
