@@ -1,5 +1,5 @@
-import { computed as c, createElementBlock as i, openBlock as r, normalizeClass as p } from "vue";
-const d = {
+import { computed as o, createElementBlock as r, openBlock as h, normalizeClass as c } from "vue";
+const p = {
   // ==========================================
   // 1. SOSYAL MEDYA & MARKALAR
   // ==========================================
@@ -139,8 +139,6 @@ const d = {
   calendar: '<rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/>',
   edit: '<path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>',
   // --- İNSANLAR & JESTLER ---
-  "user-thinking": '<path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z"/><path d="M16 12a4 4 0 0 0-4-4H8"/><path d="M8 8s1.5-2 4-2 4 2 4 2"/><path d="M8 12s1.5 2 4 2 4-2 4-2"/>',
-  // Düşünen insan
   "user-check": '<path d="M16 21v-2a4 4 0 0 0-3-3.8"/><path d="M4 21v-2a4 4 0 0 1 4-4h3"/><circle cx="10" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/>',
   // Onaylayan insan
   "user-waving": '<path d="M16 21v-2a4 4 0 0 0-3-3.8"/><path d="M4 21v-2a4 4 0 0 1 4-4h3"/><circle cx="10" cy="7" r="4"/><path d="M22 17s-2.5-3-2-6a3 3 0 0 0-5 0c.5 3-2 6-2 6"/>',
@@ -151,8 +149,6 @@ const d = {
   // Nah işareti
   "hand-ring": '<path d="M18 10a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v10"/><path d="M10 10a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10"/><path d="M14 10V4a2 2 0 0 1 4 0v6"/><path d="M6 10V4a2 2 0 0 1 4 0v6"/><circle cx="12" cy="14" r="2"/>',
   // Yüzük parmağı
-  "hand-ok": '<path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z"/><path d="M8 12s1.5 2 4 2 4-2 4-2"/><path d="M15 9s-1.5-2-4-2-4 2-4 2"/><path d="M16 12a4 4 0 0 0-4-4H8"/><path d="M8 8s1.5-2 4-2 4 2 4 2"/>',
-  // Tamam (Ok) işareti
   "hand-fist": '<path d="M3 12a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6"/><path d="M6 10V4a2 2 0 1 1 4 0v6"/><path d="M14 10V4a2 2 0 1 1 4 0v6"/>',
   // Yumruk
   "hand-clap": '<path d="M10 12l2 2 2-2m-8 6h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v8"/><path d="M6 10V4a2 2 0 1 1 4 0v6"/><path d="M18 10V4a2 2 0 1 1 4 0v6"/>',
@@ -175,13 +171,9 @@ const d = {
   "brand-spotify": '<circle cx="12" cy="12" r="10"/><path d="M8 11c3.5-1 7-1 9.5 0"/><path d="M8.5 14c2.5-.8 5-.8 7 0"/><path d="M9 17c1.5-.5 3-.5 4 0"/>',
   "brand-snapchat": '<path d="M12 4c-3 0-5 2-5 5v1c0 1-1 2-3 2 0 3 2 3 2 3v1c0 2 2 4 6 4s6-2 6-4v-1c0 0 2 0 2-3-2 0-3-1-3-2V9c0-3-2-5-5-5z"/>',
   // Snapchat Hayaleti
-  "brand-pinterest": '<circle cx="12" cy="12" r="10"/><path d="M8 20l4-9"/><path d="M10.7 14c.43-.48.63-1 .63-1.5a2.5 2.5 0 0 0-5 0c0 1.91 2.1 5.76 5.61 5.76 2.51 0 4.06-2.2 4.06-5.26 0-3.07-2.05-5.5-6.2-5.5C6.38 7.5 4 10.5 4 13.5"/>',
-  // Pinterest
   "brand-reddit": '<circle cx="12" cy="12" r="10"/><path d="M17 13c.5-.5.5-1.5 0-2s-1.5-.5-2 0"/><path d="M7 11c-.5-.5-1.5-.5-2 0s-.5 1.5 0 2"/><path d="M15 16c-1 1-3 1-4 0"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="6" x2="16" y2="5"/><circle cx="17" cy="5" r="1"/>',
   // Reddit Alien
   "brand-netflix": '<path d="M6 4v16"/><path d="M18 4v16"/><path d="M6 4l12 16"/>',
-  "brand-amazon": '<path d="M21 15a2 2 0 0 1-2-2V8a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h7"/><path d="M5 15a10 10 0 0 0 14 2"/>',
-  // Amazon Gülüşü
   "brand-whatsapp": '<path d="M3 21l1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"/><path d="M9.5 9.5c.5-.5 1.5-.5 2.5 0l1 1c.5.5.5 1.5 0 2l-1 1c1 2 2.5 3.5 4.5 4.5l1-1c.5-.5 1.5-.5 2 0l1 1c.5.5.5 1.5 0 2s-1.5 2-2.5 2c-4 0-9-5-9-9 0-1 .5-2.5 1-2.5z"/>',
   // ==========================================
   // 10. ARAÇLAR & UYGULAMALAR (APPLE STYLE)
@@ -208,7 +200,6 @@ const d = {
   "emoji-sad": '<circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>',
   "emoji-wink": '<circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01"/><path d="M15.5 9a2.5 2.5 0 0 0 0 1"/>',
   "emoji-laugh": '<circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/><path d="M18 13l2-1"/><path d="M6 13l-2-1"/>',
-  "emoji-cool": '<circle cx="12" cy="12" r="10"/><path d="M7 11h10l-1.5 3H8.5L7 11Z"/><line x1="15" y1="11" x2="15" y2="11"/><path d="M8 16s1.5 2 4 2 4-2 4-2"/>',
   "emoji-surprised": '<circle cx="12" cy="12" r="10"/><circle cx="12" cy="16" r="2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>',
   "emoji-neutral": '<circle cx="12" cy="12" r="10"/><line x1="8" y1="15" x2="16" y2="15"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>',
   "emoji-angry": '<circle cx="12" cy="12" r="10"/><path d="M8 16s1.5-1 4-1 4 1 4 1"/><path d="M7.5 8L10 9"/><path d="M16.5 8L14 9"/>',
@@ -246,7 +237,6 @@ const d = {
   // =================================================
   "emoji-cry": '<circle cx="12" cy="12" r="10"/><path d="M8 15s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/><path d="M15 17c.5 1 1.5 1.5 2.5 1s2-1.5 0-3.5-2.5 1-2.5 2.5z"/>',
   "emoji-nerd": '<circle cx="12" cy="12" r="10"/><circle cx="8" cy="10" r="2"/><circle cx="16" cy="10" r="2"/><line x1="10" y1="10" x2="14" y2="10"/><path d="M8 15s1.5 2 4 2 4-2 4-2"/>',
-  "emoji-devil": '<path d="M12 2a10 10 0 1 0 10 10H2A10 10 0 0 0 12 2z"/><path d="M8 13s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/><path d="M6 4L3 2"/><path d="M18 4l3-2"/>',
   "emoji-zipper": '<circle cx="12" cy="12" r="10"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/><line x1="8" y1="15" x2="16" y2="15"/><line x1="10" y1="13" x2="10" y2="17"/><line x1="12" y1="13" x2="12" y2="17"/><line x1="14" y1="13" x2="14" y2="17"/>',
   "emoji-confused": '<circle cx="12" cy="12" r="10"/><line x1="9" y1="10" x2="9.01" y2="10"/><line x1="15" y1="10" x2="15.01" y2="10"/><path d="M8 16l2-1 2 1 2-1 2 1"/>',
   "emoji-ghost": '<path d="M9 22l3-3 3 3 3-3 3 3V10a9 9 0 0 0-18 0v12l3-3z"/><circle cx="10" cy="10" r="1"/><circle cx="14" cy="10" r="1"/>',
@@ -278,10 +268,7 @@ const d = {
   // =================================================
   shield: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
   "shield-check": '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/>',
-  fingerprint: '<path d="M2 12C2 6.5 6.5 2 12 2a10 10 0 0 1 8 4"/><path d="M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .5-2.5"/><path d="M12 2.1a7 7 0 0 0-5 12.5"/><path d="M12 10a2 2 0 0 0-2 2c0 5 3 9 3 9s3-4 3-9a4 4 0 0 0-4-4"/><path d="M16.5 19.5c.5-1.5 1-4.5 1-7.5a9 9 0 0 0-2-5.3"/>',
-  "currency-bitcoin": '<path d="M11.767 19.089c4.924.868 6.14-6.025 1.216-5.794 4.924.868 4.924-5.794 0-6.662M10 18h4m-4-12h4m-2 13v3m0-16v3"/>',
   "currency-ethereum": '<path d="M12 2L5 12l7 4 7-4-7-10z"/><path d="M5 14l7 8 7-8-7-3-7 3z"/>',
-  "currency-dollar-circle": '<circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><path d="M8 12h8"/>',
   // =================================================
   // 16. EĞİTİM & BİLİM (EDUCATION)
   // =================================================
@@ -366,10 +353,7 @@ const d = {
   // =================================================
   // 25. MARKALAR (EKSTRA)
   // =================================================
-  "brand-slack": '<path fill="currentColor" stroke="none" d="M5.5 20.5a2.5 2.5 0 0 1 0-5H9v5a2.5 2.5 0 0 1-3.5 0m5.5 0a2.5 2.5 0 0 1 5 0v-3.5H11zm0-17a2.5 2.5 0 0 1 0 5H9V5a2.5 2.5 0 0 1 2-1.5m-7.5 5.5a2.5 2.5 0 0 1 5 0v-3.5H5v3.5zm15.5-5.5a2.5 2.5 0 0 1 0 5H15V5a2.5 2.5 0 0 1 5.5 0m-5.5 5.5a2.5 2.5 0 0 1 5 0v3.5h-5v-3.5zm-2.5 9a2.5 2.5 0 0 1-5 0V15h5v2.5"/>',
-  "brand-dribbble": '<circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-5.38c-3.72-.38-6.85-.06-11.54.97C4.25 9.2 7.76 5.18 15.58 3.06"/><path d="M2.44 12.03c4.81-1.01 10.35-.8 15.14.69"/>',
   "brand-tiktok": '<path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>',
-  "brand-medium": '<circle cx="6.5" cy="12" r="5.5"/><ellipse cx="16.5" cy="12" rx="3.5" ry="5.5"/><ellipse cx="22" cy="12" rx="1" ry="5.5"/>',
   // =================================================
   // 26. GRAFİK & ANALİZ (CHARTS & ANALYTICS)
   // =================================================
@@ -396,14 +380,10 @@ const d = {
   // 28. YAZILIM DİLLERİ & FRAMEWORKLER (SOLID)
   // =================================================
   // Bunlar "brand-" ön ekiyle yine dolu (solid) olacak
-  "brand-vue": '<path fill="currentColor" stroke="none" d="M2 3h3.2l6.8 11.6L18.8 3H22L12 20.2 2 3zm6.4 0h2.2l3.4 5.8 3.4-5.8h2.2L12 14.4 8.4 3z"/>',
   "brand-react": '<circle fill="currentColor" stroke="none" cx="12" cy="12" r="2"/><path stroke="currentColor" stroke-width="1.5" d="M12 21.3c-2.4 0-4.6-.9-6.3-2.4-1.7-1.5-2.7-3.6-2.7-5.9 0-2.3 1-4.4 2.7-5.9 1.7-1.5 3.9-2.4 6.3-2.4s4.6.9 6.3 2.4c1.7 1.5 2.7 3.6 2.7 5.9 0 2.3-1 4.4-2.7 5.9-1.7 1.5-3.9 2.4-6.3 2.4z" transform="rotate(0 12 12)" opacity="0.4"/><ellipse fill="none" stroke="currentColor" stroke-width="1.5" cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse fill="none" stroke="currentColor" stroke-width="1.5" cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><ellipse fill="none" stroke="currentColor" stroke-width="1.5" cx="12" cy="12" rx="10" ry="4"/>',
   "brand-angular": '<path fill="currentColor" stroke="none" d="M10.5 14.7h3l.9 2.3h2.6L12 2.8 5 17h2.6l2.9-2.3zm1.5-4l1.1 2.7h-2.2l1.1-2.7z"/><path stroke="currentColor" stroke-width="1.5" d="M12 2.8L2.5 6l1.5 13 8 4.5 8-4.5 1.5-13L12 2.8z"/>',
-  "brand-javascript": '<rect fill="currentColor" stroke="none" x="2" y="2" width="20" height="20" rx="2"/><path fill="#000" d="M12.5 16.5c0 .8-.7 1.5-1.5 1.5s-1.5-.7-1.5-1.5v-3.5h-2v3.5c0 1.9 1.6 3.5 3.5 3.5s3.5-1.6 3.5-3.5v-5h-2v5zm6-2v-3h-2v3c0 .6-.4 1-1 1s-1-.4-1-1h-2c0 1.7 1.3 3 3 3s3-1.3 3-3z"/>',
   "brand-typescript": '<rect fill="currentColor" stroke="none" x="2" y="2" width="20" height="20" rx="2"/><path fill="#fff" d="M8 10v8h2v-8h3V8H5v2h3zm7 0v2.5c0 .8.7 1.5 1.5 1.5s1.5-.7 1.5-1.5V10h-3zM15 8h5v2h-2v2.5c0 .8-.7 1.5-1.5 1.5s-1.5-.7-1.5-1.5V12h-2v.5c0 1.9 1.6 3.5 3.5 3.5s3.5-1.6 3.5-3.5V8h-5z"/>',
   "brand-python": '<path fill="currentColor" stroke="none" d="M12 2c-2 0-4 2-4 4v2h4v2H4v8c0 2 2 4 4 4h4c2 0 4-2 4-4v-2h-4v-2h8V6c0-2-2-4-4-4h-4zm-1 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm2 12a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>',
-  "brand-css3": '<path fill="currentColor" stroke="none" d="M4 3l2 16 6 2 6-2 2-16H4zm13 3l-.5 2.5h-6l.2 1h5.7l-.5 3.5-3.9 1.1-3.9-1.1-.2-1.5H6l.4 3.2 5.6 1.6 5.6-1.6.8-6.2H9.5l-.2-1h7.3l.4-2H17z"/>',
-  "brand-html5": '<path fill="currentColor" stroke="none" d="M3 3l2 16 7 2 7-2 2-16H3zm14.6 6h-8l.2 2h7.7l-.6 4.5-4.9 1.3-4.9-1.3-.3-2.5H4.9l.5 4.3 6.6 1.8 6.6-1.8.9-6.3H7.5l-.2-2h10.5l.2-2z"/>',
   // =================================================
   // 29. OK ÇEŞİTLERİ (ARROWS - CIRCLE & SQUARE)
   // =================================================
@@ -546,7 +526,6 @@ const d = {
   // =================================================
   "brand-linkedin": '<rect fill="currentColor" stroke="none" x="2" y="2" width="20" height="20" rx="2"/><path fill="white" d="M8 18v-9H5v9h3zM6.5 8A1.7 1.7 0 1 1 8.2 6.3 1.7 1.7 0 0 1 6.5 8zM19 18h-3v-4.7c0-1.1 0-2.6-1.6-2.6s-1.8 1.2-1.8 2.5V18h-3v-9h3v1.2h.1a3.2 3.2 0 0 1 2.9-1.6c3.1 0 3.7 2.1 3.7 4.7V18z"/>',
   "brand-paypal": '<path fill="currentColor" stroke="none" d="M7.08 22.2l.64-4.06h2.76c3.8 0 6.2-1.86 6.2-5.96 0-3.02-1.42-5.2-5.38-5.2H6.14L4 22.2h3.08z"/><path fill="currentColor" stroke="none" opacity="0.5" d="M9.42 11.2h2.86c2.14 0 3.36-1.04 3.36-3.36 0-1.7-.8-2.94-3.02-2.94H8.14l-1.8 11.3h3.08z"/>',
-  "brand-steam": '<path fill="currentColor" stroke="none" d="M12 2a10 10 0 0 0-9.88 8.28L6.5 12a2.5 2.5 0 0 1 2.5 2.5c0 .12 0 .23-.03.34l3.28 1.36a2.5 2.5 0 0 1 4.5-1.2A2.5 2.5 0 1 1 12 12z"/><path fill="currentColor" stroke="none" d="M12 12a3 3 0 1 0 3 3 3 3 0 0 0-3-3zm0 4a1 1 0 1 1 1-1 1 1 0 0 1-1 1z"/>',
   "brand-linux": '<path fill="currentColor" stroke="none" d="M12 2C9.5 2 7.5 4 7.5 6.5c0 1.5.5 3 1 4.5-1 1-2 2-2 3.5S7 17 8 18s1 2 1 3c0 1 2 1 3 1s3 0 3-1 0-2 1-3 1.5-1.5 1.5-3.5-1-2.5-2-3.5c.5-1.5 1-3 1-4.5C16.5 4 14.5 2 12 2z"/><path fill="white" d="M11 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm2 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>',
   // =================================================
   // 45. HAYVANLAR (ANIMALS)
@@ -568,7 +547,6 @@ const d = {
   // =================================================
   // 47. MUTFAK & YEMEK PİŞİRME (KITCHEN)
   // =================================================
-  "chef-hat": '<path d="M6 14H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1"/><path d="M22 14h-2a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-1"/><path d="M18 14V7a4 4 0 0 0-8 0v7"/><path d="M10 7a4 4 0 0 0-8 0v7"/><path d="M22 7a4 4 0 0 0-8 0v7"/><rect x="6" y="14" width="12" height="6" rx="2"/>',
   utensils: '<path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/>',
   cup: '<path d="M17 21h-10a2 2 0 0 1-2-2v-10a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2ZM21 9a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2v-6z"/><line x1="9" y1="13" x2="15" y2="13"/>',
   fridge: '<rect x="5" y="2" width="14" height="20" rx="2"/><path d="M5 10h14"/><path d="M15 14v4"/><path d="M15 4v3"/>',
@@ -602,13 +580,9 @@ const d = {
   // =================================================
   // 51. YAZILIM DİLLERİ - EKSTRA (SOLID)
   // =================================================
-  "brand-php": '<path fill="currentColor" stroke="none" d="M12 11h2a2 2 0 0 1 0 4h-2v-4zm-8 0h2a2 2 0 0 1 0 4H4v-4zm14 0h2a2 2 0 0 1 0 4h-2v-4zM2 7h20v10H2V7z"/>',
-  // Basitleştirilmiş PHP
-  "brand-java": '<path fill="currentColor" stroke="none" d="M12 20c-2.5 0-5.5-1.5-5.5-3s2-2 4.5-2 5.5 1 5.5 2-2 3-4.5 3zm-1-6c-2.5 0-4-1-4-2s1.5-2 4-2 3.5 1 3.5 2-1.5 2-3.5 2zm4-7c0 2-2 3-3 3s-3-1.5-3-3 1-4 3-4 3 2 3 4z"/>',
   "brand-docker": '<path fill="currentColor" stroke="none" d="M22 12c0 5-4.5 8-10 8S2 17 2 12c0-2 1-4 3-5v-1h2v1h2V6h2v1h2V5h2v2h2v1c2 1 3 3 3 5zM6 13h2v-2H6v2zm4 0h2v-2h-2v2zm4 0h2v-2h-2v2zm-8 4h2v-2H6v2zm4 0h2v-2h-2v2zm4 0h2v-2h-2v2z"/>',
   "brand-ruby": '<path fill="currentColor" stroke="none" d="M18 6h-5l-2-4-2 4H4l6 14 8-14z"/>',
   "brand-swift": '<path fill="currentColor" stroke="none" d="M19.5 4.5C16 5 15 7 15 7s-3-1-5 1 0 4 2 5-3 4-6 7c3-1 6-2 7-4 0 0-1-1-1-2s3 1 4 0c0 0 .5-2-1-3s4-2 4.5-6.5z"/>',
-  "brand-xampp": '<rect x="2" y="2" width="20" height="20" rx="4" fill="currentColor" stroke="none"/><path d="M7 7l10 10M17 7L7 17" stroke="black" stroke-width="3" stroke-linecap="round"/>',
   // =================================================
   // 52. MATEMATİK & BİLİM (MATH)
   // =================================================
@@ -716,8 +690,6 @@ const d = {
   // =================================================
   "arrow-merge": '<path d="M12 22V10"/><path d="M6 2l4.5 8"/><path d="M18 2l-4.5 8"/>',
   "arrow-split": '<path d="M12 2v12"/><path d="M12 14l-6 8"/><path d="M12 14l6 8"/>',
-  "arrow-loop-left": '<path d="M12 22V11a5 5 0 1 0-10 0v3"/><path d="M7 19l-5-5 5-5"/>',
-  "arrow-loop-right": '<path d="M12 22V11a5 5 0 1 1 10 0v3"/><path d="M17 19l5-5-5-5"/>',
   "chevrons-up": '<polyline points="17 11 12 6 7 11"/><polyline points="17 18 12 13 7 18"/>',
   "chevrons-down": '<polyline points="7 13 12 18 17 13"/><polyline points="7 6 12 11 17 6"/>',
   "chevrons-left": '<polyline points="11 17 6 12 11 7"/><polyline points="18 17 13 12 18 7"/>',
@@ -778,7 +750,6 @@ const d = {
   "brand-gitlab": '<path fill="currentColor" stroke="none" d="M22.65 14.39L19 3.21a.91.91 0 0 0-1.72 0L15.4 9H8.6l-1.88-5.79a.91.91 0 0 0-1.72 0L1.35 14.39a.9.9 0 0 0 .32 1l10.33 7.51L22.33 15.4a.9.9 0 0 0 .32-1.01z"/>',
   "brand-codepen": '<path fill="none" stroke="currentColor" stroke-width="2" d="M12 2L3 9l9 7 9-7-9-7zm0 14l-9 7 9 7 9-7-9-7zm0-7v7m-9 7v-7m18 7v-7"/>',
   // Codepen çizgisel daha iyi durur
-  "brand-wordpress": '<path fill="currentColor" stroke="none" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 0 1-8-8c0-1.57.45-3.02 1.21-4.24l4.65 12.8h1.39l2.4-7.2 2.37 7.2h1.37l4.64-12.74A7.97 7.97 0 0 1 20 12a8 8 0 0 1-8 8z"/>',
   "brand-ubuntu": '<circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path fill="currentColor" stroke="none" d="M12 5a1.5 1.5 0 1 1-1.5 1.5A1.5 1.5 0 0 1 12 5zm-6 6.5a1.5 1.5 0 1 1 1.5-1.5 1.5 1.5 0 0 1-1.5 1.5zm12 0a1.5 1.5 0 1 1 1.5-1.5 1.5 1.5 0 0 1-1.5 1.5z"/>',
   // =================================================
   // 71. ASTROLOJİ & BURÇLAR (ZODIAC)
@@ -813,9 +784,7 @@ const d = {
   // =================================================
   // 74. EĞLENCELİ OKLAR (FUN ARROWS)
   // =================================================
-  "arrow-wave": '<path d="M3 12c2-3 5-3 7 0s5 3 7 0"/><polyline points="13 9 17 12 13 15"/>',
   "arrow-zigzag": '<polyline points="4 18 8 8 12 18 16 8 20 18"/><polyline points="16 14 20 18 20 14"/>',
-  "arrow-loop": '<path d="M18 14a4 4 0 1 0-8 0v-4a4 4 0 1 1-8 0"/><polyline points="6 6 2 10 6 14"/>',
   "arrow-return": '<polyline points="9 10 4 15 9 20"/><path d="M20 4v7a4 4 0 0 1-4 4H4"/>',
   // =================================================
   // 75. EKSTRA ARAYÜZ (UI EXTRA)
@@ -918,7 +887,6 @@ const d = {
   "building-2": '<path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/>',
   warehouse: '<path d="M22 8.35V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.35A2 2 0 0 1 3.26 6.5l8-3.2a2 2 0 0 1 1.48 0l8 3.2A2 2 0 0 1 22 8.35Z"/><path d="M6 18h12"/><path d="M6 14h12"/>',
   store: '<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/><path d="M3 9h18"/>',
-  archway: '<path d="M6 22v-9a6 6 0 0 1 12 0v9"/><path d="M2 22v-4a8 8 0 0 1 16 0v4"/><line x1="2" y1="22" x2="22" y2="22"/><line x1="2" y1="13" x2="6" y2="13"/><line x1="18" y1="13" x2="22" y2="13"/>',
   // =================================================
   // 87. SPOR EKSTRA (SPORTS)
   // =================================================
@@ -932,7 +900,6 @@ const d = {
   aperture: '<circle cx="12" cy="12" r="10"/><line x1="14.31" y1="8" x2="20.05" y2="17.94"/><line x1="9.69" y1="8" x2="21.17" y2="8"/><line x1="7.38" y1="12" x2="13.12" y2="2.06"/><line x1="9.69" y1="16" x2="3.95" y2="6.06"/><line x1="14.31" y1="16" x2="2.83" y2="16"/><line x1="16.62" y1="12" x2="10.88" y2="21.94"/>',
   "camera-off": '<line x1="1" y1="1" x2="23" y2="23"/><path d="M21 21l-9.19-9.19a6 6 0 0 0-8.49-8.49l9.19 9.19"/><path d="M2 7v10a2 2 0 0 0 2 2h16"/><path d="M23 19v-8a2 2 0 0 0-2-2h-2l-2-3h-6"/>',
   flash: '<path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>',
-  "flash-off": '<line x1="3" y1="3" x2="21" y2="21"/><path d="M13 2l-5 6h-5l1 1"/><path d="M19 16l-3 6-1-8h6l-1-4"/>',
   focus: '<circle cx="12" cy="12" r="3"/><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/>',
   "film-strip": '<rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/>',
   // =================================================
@@ -1045,7 +1012,6 @@ const d = {
   "trash-2": '<path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/>',
   bucket: '<path d="M3 7l2 13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2l2-13"/><path d="M2 7h20"/><path d="M12 2v5"/>',
   broom: '<path d="M16 2l-3 7"/><path d="M2 12l7 3"/><path d="M9 10a2 2 0 0 1 2 2l4 9a2 2 0 0 1-2 2l-9-4a2 2 0 0 1 2-2l2-7z"/>',
-  "droplet-off": '<path d="M12 22a7 7 0 0 1-7-7c0-2 2-4.2 4.2-6"/><path d="M17.5 10.5c1.7 2.2 1.5 4.5.5 6.5"/><line x1="2" y1="2" x2="22" y2="22"/>',
   shower: '<path d="M4 4h5a5 5 0 0 1 5 5v10"/><path d="M4 22h10"/><path d="M10 16l2 2"/><path d="M14 14l2 2"/><path d="M10 4v-2"/>',
   bath: '<path d="M2 19h20"/><path d="M3 19v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"/><line x1="6" y1="5" x2="6" y2="10"/><line x1="6" y1="5" x2="8" y2="7"/>',
   // =================================================
@@ -1084,7 +1050,6 @@ const d = {
   // =================================================
   // 104. YAZILIMCI & TECH LOGOLARI (MODERN STACK)
   // =================================================
-  "brand-tailwind": '<path fill="currentColor" stroke="none" d="M11.5 6.5c1.5-2 3-2.5 4.5-1 2 2 1 5-2 6-2.5-1-3.5-3-2.5-5zm-7 5c1.5-2 3-2.5 4.5-1 2 2 1 5-2 6-2.5-1-3.5-3-2.5-5z"/><path fill="currentColor" stroke="none" d="M18.5 11.5c1.5-2 3-2.5 4.5-1 2 2 1 5-2 6-2.5-1-3.5-3-2.5-5z" opacity="0.5"/>',
   "brand-vercel": '<path fill="currentColor" stroke="none" d="M12 1L24 22H0L12 1z"/>',
   // Üçgen (Vercel/Next.js)
   "brand-npm": '<path fill="currentColor" stroke="none" d="M1 8h22v7H11v2H7.5v-2H1V8zm2 5h2v-2H3v2zm5 0h2v2h-2v-2zm7 0h2v-2h-2v2z"/>',
@@ -1105,7 +1070,6 @@ const d = {
   "arrow-turn-left": '<polyline points="10 9 15 4 20 9"/><path d="M4 20h9a2 2 0 0 0 2-2V4"/>',
   "arrow-u-turn-left": '<path d="M9 18l-6-6 6-6"/><path d="M21 21v-2a4 4 0 0 0-3-3.87"/><path d="M3 12h14a4 4 0 0 1 4 4v3"/>',
   "arrow-u-turn-right": '<path d="M15 18l6-6-6-6"/><path d="M3 21v-2a4 4 0 0 1 3-3.87"/><path d="M21 12H7a4 4 0 0 0-4 4v3"/>',
-  "arrow-fork": '<line x1="12" y1="21" x2="12" y2="12"/><path d="M12 12a4 4 0 0 1 4-4h4"/><path d="M12 12a4 4 0 0 0-4-4H4"/><polyline points="22 6 18 2 18 10"/><polyline points="6 10 6 2 2 6"/>',
   // =================================================
   // 107. MUTFAK ARAÇLARI (CUTLERY)
   // =================================================
@@ -1123,7 +1087,6 @@ const d = {
   // Adalet Terazisi
   "badge-police": '<path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.78 4.78 4 4 0 0 1-6.74 0 4 4 0 0 1-4.78-4.78 4 4 0 0 1 0-6.74Z"/>',
   // Polis Rozeti
-  handcuffs: '<path d="M18.5 18.5a4.5 4.5 0 1 0-6.4-6.4"/><path d="M5.5 11.5a4.5 4.5 0 1 0 6.4-6.4"/><path d="M11 11l2 2"/><path d="M8 8l-1-1"/>',
   "stethoscope-2": '<path d="M4.8 2.3A2 2 0 0 1 7 4v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4a2 2 0 0 1 2-2h1"/><path d="M8 15h8"/><path d="M12 15v6"/><circle cx="12" cy="21" r="1"/>',
   "briefcase-medical": '<rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><path d="M12 12v4"/><path d="M10 14h4"/>',
   // Doktor Çantası
@@ -1223,8 +1186,6 @@ const d = {
   // Salyangoz ve İzi
   potato: '<path d="M16 14a4 4 0 0 1-4 4 4 4 0 0 1-4-4V8a4 4 0 0 1 4-4 4 4 0 0 1 4 4v6z"/><path d="M10 10h.01"/><path d="M14 10h.01"/><path d="M12 12v.01"/>',
   // Patates Kafa
-  bananana: '<path d="M22 10.97c-.8-1.7-2.7-2.3-4.5-1.5L9.6 14.4c-1.8.8-2.3 2.7-1.5 4.5.8 1.8 2.7 2.3 4.5 1.5L20.4 9.6c1.8-.8 2.3-2.7 1.5-4.5z"/><path d="M12.3 7.8L3 3l-.6.6c-1.8.8-2.3 2.7-1.5 4.5.8 1.8 2.7 2.3 4.5 1.5l9.3-4.8z"/>',
-  // Banana (Troll kıvrımlı)
   "internet-explorer": '<circle cx="12" cy="12" r="10"/><path d="M12 2v20"/><path d="M2 12h20"/><path d="M7 6c2-1 4-1 6 0 1 0 2 0 3 .5"/><path d="M17 18c-2 1-4 1-6 0-1 0-2 0-3-.5"/>',
   // Eski Internet Explorer Logosu (özleyenlere)
   "cat-laptop": '<path d="M10 17v4h4v-4"/><path d="M2 17h20"/><path d="M2 17l4-10h12l4 10z"/><path d="M14 7l2-4"/><path d="M10 7l-2-4"/><path d="M11 10h.01"/><path d="M13 10h.01"/>',
@@ -1245,7 +1206,6 @@ const d = {
   // =================================================
   coffin: '<path d="M7 3l-2 6v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9l-2-6H7z"/><path d="M12 8v8"/><path d="M8 11h8"/>',
   "spider-web": '<path d="M12 2v20"/><path d="M2 12h20"/><path d="M4.93 4.93l14.14 14.14"/><path d="M19.07 4.93L4.93 19.07"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="8"/>',
-  bat: '<path d="M2 12s3-5 6-2c0 0 1 2 4 2s4-2 4-2c3-3 6 2 6 2s-2 6-8 6-8-6-8-6z"/><circle cx="10" cy="11" r="1"/><circle cx="14" cy="11" r="1"/>',
   "alien-pixel": '<path d="M4 8h16"/><path d="M4 8v6h2v2h2v-2h8v2h2v-2h2V8"/><rect x="7" y="10" width="2" height="2"/><rect x="15" y="10" width="2" height="2"/><line x1="2" y1="16" x2="2" y2="18"/><line x1="22" y1="16" x2="22" y2="18"/>',
   // Space Invader tarzı
   // =================================================
@@ -1270,7 +1230,6 @@ const d = {
   // =================================================
   // 123. HOBİLER & AKTİVİTE (HOBBIES)
   // =================================================
-  fishing: '<path d="M2 22c5-5 5-15 15-15 2 0 3 2 3 4 0 2-2 3-4 3"/><path d="M22 14v3a2 2 0 0 1-4 0"/><circle cx="17" cy="7" r="1"/>',
   gardening: '<path d="M8 22v-9a4 4 0 0 1 4-4h0a4 4 0 0 1 4 4v9"/><path d="M8 13a4 4 0 1 0-8 0"/><path d="M16 13a4 4 0 1 1 8 0"/><path d="M12 22V9"/>',
   // Sulama kabı gibi stilize
   painting: '<path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2"/><circle cx="8" cy="8" r="1"/><circle cx="16" cy="8" r="1"/><circle cx="8" cy="16" r="1"/><path d="M14 14l4 4"/>',
@@ -1362,10 +1321,6 @@ const d = {
   // =================================================
   gemini: '<path d="M12 2L9.5 9.5L2 12l7.5 2.5L12 22l2.5-7.5L22 12l-7.5-2.5z"/><path d="M12 8l-1 4-4 1 4 1 1 4 1-4 4-1-4-1z" opacity="0.5"/>',
   // Bizim Gem İkonumuz
-  "badge-pro": '<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M7 15V9h2a2 2 0 0 1 0 4H7"/><path d="M13 15V9h2a2 2 0 0 1 0 4h-1l2 2"/><path d="M18 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>',
-  // PRO Yazısı
-  "badge-new": '<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M6 15V9l3 6V9"/><path d="M12 15V9h3"/><path d="M12 12h2"/><path d="M12 15h3"/><path d="M18 15l1-6 1 6"/><path d="M20 15l1-4"/><path d="M18 15l1-4"/>',
-  // NEW Yazısı (Basit)
   "badge-4k": '<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M6 9v3h2"/><path d="M8 9v6"/><path d="M12 9v6"/><path d="M12 12l3-3"/><path d="M12 12l3 3"/>',
   // 4K
   "badge-hd": '<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M6 9v6"/><path d="M10 9v6"/><path d="M6 12h4"/><path d="M14 9v6h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2z"/>',
@@ -1402,8 +1357,6 @@ const d = {
   // =================================================
   gear: '<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1.82.33l.06.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0-2.83l-.06-.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1Z"/>',
   // Klasik çark
-  "gear-filled": '<path fill="currentColor" stroke="none" d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm9.4 5.5a1.7 1.7 0 0 0 .3-1.8l-.1-.1a2 2 0 0 1 0-2.8l.1-.1a1.7 1.7 0 0 0-.3-1.8 1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 1-1.5-1 1.7 1.7 0 0 0-1.8-.3l-.1.1a2 2 0 0 1-2.8 0l-.1-.1a1.7 1.7 0 0 0-1.8.3 1.7 1.7 0 0 1-1.5 1 1.7 1.7 0 0 0-1.8.3 1.7 1.7 0 0 0-.3 1.8l.1.1a2 2 0 0 1 0 2.8l-.1.1a1.7 1.7 0 0 0 .3 1.8 1.7 1.7 0 0 0 1.8.3 1.7 1.7 0 0 1 1.5 1 1.7 1.7 0 0 0 1.8.3l.1-.1a2 2 0 0 1 2.8 0l.1.1a1.7 1.7 0 0 0 1.8-.3 1.7 1.7 0 0 1 1.5-1 1.7 1.7 0 0 0 1.8-.3Z"/>',
-  // Dolu çark
   gears: '<circle cx="7" cy="7" r="3"/><circle cx="17" cy="17" r="3"/><path d="M12 7h2"/><path d="M7 12v2"/><path d="M14 17h-2"/><path d="M17 14v-2"/>',
   // İkili basit çark
   "settings-code": '<path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1.82.33l.06.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0-2.83l-.06-.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1Z"/><polyline points="9 12 7 14 9 16"/><polyline points="15 12 17 14 15 16"/>',
@@ -1537,18 +1490,8 @@ const d = {
   // =================================================
   // 148. KRİPTO PARALAR (RENKLİ & ORİJİNAL)
   // =================================================
-  // BITCOIN (Flux - Çizgisel & Düzgün)
-  "crypto-btc-line": '<circle cx="12" cy="12" r="10"/><path d="M8 8h4.5a2.5 2.5 0 0 1 0 5H8"/><path d="M8 13h5.5a2.5 2.5 0 0 1 0 5H8"/><line x1="10" y1="6" x2="10" y2="8"/><line x1="14" y1="6" x2="14" y2="8"/><line x1="10" y1="18" x2="10" y2="20"/><line x1="14" y1="18" x2="14" y2="20"/><line x1="8" y1="8" x2="8" y2="18"/>',
   // ETHEREUM (Renkli - Mavi/Mor)
   "crypto-eth-color": '<path fill="#627EEA" stroke="none" d="M12 2L4.63 14.25 12 18.6l7.37-4.35L12 2Z"/><path fill="#37367B" stroke="none" d="M12 22l-7.37-10.35L12 16v6Z"/><path fill="#8C9EFF" stroke="none" d="M12 16l7.37-4.35L12 22V16Z"/><path fill="#FFFFFF" stroke="none" d="M12 16V2l-7.37 12.25L12 16Z" opacity="0.5"/>',
-  // TETHER (Renkli - Yeşil)
-  "crypto-usdt-color": '<path fill="#26A17B" stroke="none" d="M12 22C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10-4.48 10-10 10zm2.7-11.7V7.88H9.3v2.42c-2.08.15-3.7.87-3.7 1.73 0 .82 1.47 1.51 3.4 1.7v5.04h4v-5.03c1.92-.18 3.4-.88 3.4-1.7 0-.86-1.62-1.58-3.7-1.73zm-2.7 2.72c-1.48 0-2.75-.37-2.75-.87s1.27-.87 2.75-.87 2.75.37 2.75.87-1.27.87-2.75.87z"/>',
-  // BINANCE (Renkli - Sarı)
-  "crypto-bnb-color": '<path fill="#F3BA2F" stroke="none" d="M12 2L2 12l10 10 10-10L12 2zm0 4.96l2.52 2.52-2.52 2.52-2.52-2.52L12 6.96zm-4.96 5.04l2.52 2.52-2.52 2.52-2.52-2.52 2.52-2.52zm5.04 5.04l-2.52 2.52 2.52 2.52 2.52-2.52-2.52-2.52zm4.96-5.04l2.52 2.52-2.52 2.52-2.52-2.52 2.52-2.52z"/>',
-  // RIPPLE (Renkli - Mavi)
-  "crypto-xrp-color": '<circle cx="12" cy="12" r="10" fill="#23292F" stroke="none"/><path fill="#00AAE4" stroke="none" d="M12 13.6l-5.2 5.2a1.5 1.5 0 0 1-2.1-2.1l6.2-6.3a1.5 1.5 0 0 1 2.1 0l6.2 6.3a1.5 1.5 0 0 1-2.1 2.1L12 13.6zm0-3.2l5.2-5.2a1.5 1.5 0 0 1 2.1 2.1l-6.2 6.3a1.5 1.5 0 0 1-2.1 0L4.7 7.3a1.5 1.5 0 0 1 2.1-2.1l5.2 5.2z"/>',
-  // SOLANA (Renkli - Gradyan hissiyatlı)
-  "crypto-sol-color": '<rect x="2" y="2" width="20" height="20" rx="10" fill="#000000" stroke="none"/><path fill="#14F195" stroke="none" d="M4.5 8.5l2.5-2.5h10.5l-2.5 2.5H4.5z"/><path fill="#9945FF" stroke="none" d="M6.5 13.5l-2.5 2.5h10.5l2.5-2.5H6.5z"/><path fill="#14F195" stroke="none" d="M4.5 18.5l2.5-2.5h10.5l-2.5 2.5H4.5z"/>',
   // =================================================
   // 149. ALIŞVERİŞ & SEPET TÜREVLERİ (SHOPPING VARIANTS)
   // =================================================
@@ -1576,14 +1519,6 @@ const d = {
   // =================================================
   "battery-0": '<rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="13" x2="23" y2="11"/>',
   // Boş
-  "battery-25": '<rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="13" x2="23" y2="11"/><path fill="currentColor" stroke="none" d="M3 8h4v8H3z"/>',
-  // %25
-  "battery-50": '<rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="13" x2="23" y2="11"/><path fill="currentColor" stroke="none" d="M3 8h8v8H3z"/>',
-  // %50
-  "battery-75": '<rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="13" x2="23" y2="11"/><path fill="currentColor" stroke="none" d="M3 8h12v8H3z"/>',
-  // %75
-  "battery-full": '<rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="13" x2="23" y2="11"/><path fill="currentColor" stroke="none" d="M3 8h14v8H3z"/>',
-  // Dolu
   "battery-eco": '<rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="13" x2="23" y2="11"/><path d="M9 15l2-6h-4l2-6"/>',
   // Tasarruf modu (Yaprak yerine şimşek)
   // =================================================
@@ -1636,10 +1571,6 @@ const d = {
   // 151. ENERJİ SEVİYELERİ (BATTERY LEVELS)
   // =================================================
   "battery-level-0": '<rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="13" x2="23" y2="11"/>',
-  "battery-level-25": '<rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="13" x2="23" y2="11"/><path fill="currentColor" stroke="none" d="M3 8h4v8H3z"/>',
-  "battery-level-50": '<rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="13" x2="23" y2="11"/><path fill="currentColor" stroke="none" d="M3 8h8v8H3z"/>',
-  "battery-level-75": '<rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="13" x2="23" y2="11"/><path fill="currentColor" stroke="none" d="M3 8h12v8H3z"/>',
-  "battery-level-100": '<rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="13" x2="23" y2="11"/><path fill="currentColor" stroke="none" d="M3 8h14v8H3z"/>',
   "battery-saving": '<rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="13" x2="23" y2="11"/><path d="M9 15l2-6h-4l2-6"/>',
   // Şimşekli
   // =================================================
@@ -1667,8 +1598,6 @@ const d = {
   // =================================================
   // 155. SOSYAL ETKİLEŞİM & AI (SOCIAL & GROK)
   // =================================================
-  "brand-grok": '<path d="M4 4l16 16"/><path d="M4 20L20 4"/><rect x="2" y="2" width="20" height="20" rx="2"/>',
-  // Grok / AI Sembolü
   "icon-retweet": '<path d="M17 4v6l-2-2"/><path d="M17 10l2-2"/><path d="M7 20v-6l2 2"/><path d="M7 14l-2 2"/><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/>',
   "icon-repost": '<path d="M4 12v-3a3 3 0 0 1 3-3h13"/><path d="M17 3l3 3-3 3"/><path d="M20 12v3a3 3 0 0 1-3 3H4"/><path d="M7 21l-3-3 3-3"/>',
   "like-outline": '<path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>',
@@ -1865,8 +1794,6 @@ const d = {
   // Yıldız gözlü
   "emoji-sunglasses": '<circle cx="12" cy="12" r="10"/><path d="M8 15s1.5 1 4 1 4-1 4-1"/><path d="M4 10h16"/><path d="M7 10v2a2 2 0 0 0 4 0v-2"/><path d="M13 10v2a2 2 0 0 0 4 0v-2"/>',
   // Güneş gözlüklü (Detaylı)
-  "emoji-money": '<circle cx="12" cy="12" r="10"/><path d="M8 15s1.5 1 4 1 4-1 4-1"/><path d="M9 7h6"/><path d="M12 7v5"/><path d="M9 9h6"/>',
-  // Para gözlü (Dolar işareti)
   // --- NEGATİF DUYGULAR ---
   "emoji-angry-2": '<circle cx="12" cy="12" r="10"/><path d="M8 16s1.5-1 4-1 4 1 4 1"/><line x1="9" y1="10" x2="9.01" y2="10"/><line x1="15" y1="10" x2="15.01" y2="10"/><path d="M7 8l3 1"/><path d="M17 8l-3 1"/>',
   // Kaşları çatık
@@ -1888,10 +1815,6 @@ const d = {
   "emoji-expressionless": '<circle cx="12" cy="12" r="10"/><line x1="8" y1="14" x2="16" y2="14"/><line x1="8" y1="9" x2="10" y2="9"/><line x1="14" y1="9" x2="16" y2="9"/>',
   // İfadesiz (Düz çizgi gözler)
   // --- HASTA & DURUM ---
-  "emoji-mask": '<circle cx="12" cy="12" r="10"/><path d="M16 10h-8"/><path d="M8 10v4a4 4 0 0 0 8 0v-4"/><line x1="6" y1="12" x2="8" y2="11"/><line x1="18" y1="12" x2="16" y2="11"/>',
-  // Maskeli (Düzeltilmiş)
-  "emoji-sick": '<circle cx="12" cy="12" r="10"/><path d="M8 15h8"/><path d="M12 13v4"/><line x1="9" y1="9" x2="10" y2="10"/><line x1="15" y1="9" x2="14" y2="10"/><path d="M9 5l1 1"/><path d="M14 5l1 1"/>',
-  // Hasta (Termometreli gibi)
   "emoji-sleep-zzz": '<circle cx="12" cy="12" r="10"/><path d="M8 15h8"/><line x1="9" y1="10" x2="11" y2="10"/><line x1="13" y1="10" x2="15" y2="10"/><path d="M18 4l2-2"/><path d="M20 7l3-3"/><path d="M16 3l1-1"/>',
   // Uyuyan (Zzz)
   // --- EĞLENCELİ DETAYLAR ---
@@ -1935,8 +1858,6 @@ const d = {
   // X gözlü veya farklı (Admin yetkisi) - Düzeltme: Kral tacı gibi
   "user-crown": '<path d="M20 21v-2a4 4 0 0 0-3-3.8"/><path d="M4 21v-2a4 4 0 0 1 4-4h3"/><circle cx="12" cy="7" r="4"/><path d="M9 2l3 3 3-3"/>',
   // Taçlı kullanıcı (Admin/VIP)
-  "user-star": '<path d="M20 21v-2a4 4 0 0 0-3-3.8"/><path d="M4 21v-2a4 4 0 0 1 4-4h3"/><circle cx="12" cy="7" r="4"/><path d="M21 4l-2 6-4-2 4-2 2-6z"/>',
-  // Yıldız kullanıcı
   "user-doctor": '<path d="M20 21v-2a4 4 0 0 0-3-3.8"/><path d="M4 21v-2a4 4 0 0 1 4-4h3"/><circle cx="12" cy="7" r="4"/><path d="M10 3h4"/><path d="M12 1v4"/>',
   // Doktor (Artı işaretli)
   "user-student": '<path d="M20 21v-2a4 4 0 0 0-3-3.8"/><path d="M4 21v-2a4 4 0 0 1 4-4h3"/><circle cx="12" cy="9" r="3"/><path d="M12 2l-8 4 8 4 8-4-8-4z"/><path d="M20 6v6"/>',
@@ -2250,12 +2171,408 @@ const d = {
     <circle cx="15" cy="12" r="1.5" fill="#334155"/>
     <rect x="9" y="15" width="6" height="2" rx="1" fill="#334155" fill-opacity="0.5"/>
     <ellipse cx="8" cy="8" rx="2" ry="1" fill="white" fill-opacity="0.5"/></svg>`,
-  "liquid-num-0": '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-n0" x1="4" y1="4" x2="20" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#F1F5F9" stop-opacity="1"/><stop offset="1" stop-color="#94A3B8" stop-opacity="1"/></linearGradient></defs><rect x="6" y="4" width="12" height="16" rx="6" fill="url(#liq-n0)" stroke="#64748B" stroke-width="1"/><ellipse cx="10" cy="7" rx="3" ry="1.5" fill="white" fill-opacity="0.6" transform="rotate(-20 10 7)"/></svg>'
-}, o = (t, e) => {
-  const a = t.__vccOpts || t;
-  for (const [l, h] of e)
-    a[l] = h;
-  return a;
+  "liquid-num-0": '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-n0" x1="4" y1="4" x2="20" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#F1F5F9" stop-opacity="1"/><stop offset="1" stop-color="#94A3B8" stop-opacity="1"/></linearGradient></defs><rect x="6" y="4" width="12" height="16" rx="6" fill="url(#liq-n0)" stroke="#64748B" stroke-width="1"/><ellipse cx="10" cy="7" rx="3" ry="1.5" fill="white" fill-opacity="0.6" transform="rotate(-20 10 7)"/></svg>',
+  // =================================================
+  // 175. LIQUID: SOSYAL ETKİLEŞİM (SOCIAL GLASS)
+  // =================================================
+  // Liquid Like (Beğeni - Parmak) - Mavi Cam
+  "liquid-thumbs-up": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="liq-thumb" x1="2" y1="10" x2="22" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#3B82F6" stop-opacity="0.8"/><stop offset="1" stop-color="#93C5FD" stop-opacity="0.3"/></linearGradient></defs>
+        <path d="M7 11v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h3a4 4 0 0 0 4-4V6a2 2 0 0 1 4 0v5h3a2 2 0 0 1 2 2l-1 5a2 3 0 0 1-2 2h-7a3 3 0 0 1-3-3" fill="url(#liq-thumb)" stroke="#1D4ED8" stroke-width="1.5" stroke-linejoin="round"/>
+        <circle cx="14" cy="14" r="2" fill="white" fill-opacity="0.3"/>
+    </svg>`,
+  // Liquid Retweet (Döngü) - Yeşil Cam
+  "liquid-retweet": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="liq-retweet" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#10B981" stop-opacity="0.8"/><stop offset="1" stop-color="#6EE7B7" stop-opacity="0.3"/></linearGradient></defs>
+        <path d="M17 4v6l-2-2M17 10l2-2M7 20v-6l2 2M7 14l-2 2" stroke="#047857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16" fill="none" stroke="url(#liq-retweet)" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="12" cy="12" r="2" fill="white" fill-opacity="0.4"/>
+    </svg>`,
+  // Liquid Kalp (Süper Like) - Parlak Kırmızı
+  "liquid-super-like": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="liq-super-like" x1="12" y1="4" x2="12" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="#EF4444" stop-opacity="0.9"/><stop offset="1" stop-color="#FCA5A5" stop-opacity="0.4"/></linearGradient></defs>
+        <path d="M20.8 4.6a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="url(#liq-super-like)" stroke="#B91C1C" stroke-width="1.5"/>
+        <path d="M16 8c1-1 2-1 2.5-.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.6"/>
+        <circle cx="7" cy="9" r="1.5" fill="white" fill-opacity="0.5"/>
+    </svg>`,
+  // =================================================
+  // 176. LIQUID: URL & YÖNLENDİRME (LINKS & NAV)
+  // =================================================
+  // Liquid Link (Zincir) - Metalik Gri/Mavi
+  "liquid-link": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="liq-link" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#64748B" stop-opacity="0.7"/><stop offset="1" stop-color="#CBD5E1" stop-opacity="0.2"/></linearGradient></defs>
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke="#334155" stroke-width="2" stroke-linecap="round"/>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke="#334155" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="12" cy="12" r="3" fill="url(#liq-link)"/>
+    </svg>`,
+  // Liquid Yönlendirme (External) - Turkuaz Ok
+  "liquid-external-link": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="liq-ext" x1="10" y1="10" x2="22" y2="2" gradientUnits="userSpaceOnUse"><stop stop-color="#06B6D4" stop-opacity="0.9"/><stop offset="1" stop-color="#A5F3FC" stop-opacity="0.3"/></linearGradient></defs>
+        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" stroke="#0891B2" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M15 3h6v6" stroke="#0891B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="10" y1="14" x2="21" y2="3" stroke="url(#liq-ext)" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="15.5" cy="8.5" r="1.5" fill="white" fill-opacity="0.6"/>
+    </svg>`,
+  // =================================================
+  // 177. LIQUID: ÇILGIN EMOJİLER (CRAZY GLASS EMOJIS)
+  // =================================================
+  // Liquid Alien (Uzaylı - Radyoaktif Yeşil)
+  "liquid-alien": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="liq-alien" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#84CC16" stop-opacity="0.8"/><stop offset="1" stop-color="#D9F99D" stop-opacity="0.3"/></linearGradient></defs>
+        <path d="M12 2c-5 0-8 5-8 11 0 6 3 9 8 9s8-3 8-9c0-6-3-11-8-11z" fill="url(#liq-alien)" stroke="#4D7C0F" stroke-width="1.5"/>
+        <path d="M9 13l.01 0M15 13l.01 0" stroke="#1a2e05" stroke-width="3" stroke-linecap="round"/>
+        <path d="M10 17c1 1 3 1 4 0" stroke="#1a2e05" stroke-width="1" stroke-linecap="round" fill="none"/>
+        <ellipse cx="12" cy="6" rx="3" ry="1.5" fill="white" fill-opacity="0.4"/>
+    </svg>`,
+  // Liquid Ghost (Hayalet - Beyaz/Mavi Parlama)
+  "liquid-ghost": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="liq-ghost" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#E2E8F0" stop-opacity="0.9"/><stop offset="1" stop-color="#F8FAFC" stop-opacity="0.1"/></linearGradient></defs>
+        <path d="M9 22l3-3 3 3 3-3 3 3V10a9 9 0 0 0-18 0v12l3-3z" fill="url(#liq-ghost)" stroke="#94A3B8" stroke-width="1.5"/>
+        <circle cx="10" cy="10" r="1.5" fill="#1E293B"/>
+        <circle cx="14" cy="10" r="1.5" fill="#1E293B"/>
+        <ellipse cx="12" cy="5" rx="2" ry="1" fill="white" fill-opacity="0.6"/>
+    </svg>`,
+  // Liquid Poop (Gökkuşağı/Renkli Kaka - Troll Özel)
+  "liquid-poop-rainbow": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="liq-poop" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#EC4899" stop-opacity="0.8"/><stop offset="0.5" stop-color="#8B5CF6" stop-opacity="0.8"/><stop offset="1" stop-color="#3B82F6" stop-opacity="0.8"/></linearGradient></defs>
+        <path d="M12 2c-2 0-3.5 1.5-3.5 3.5 0 .5.1 1 .3 1.5-1.5 1-2.3 2.5-2.3 4.5 0 1.5.5 2.5 1.5 3.5-1.5 1-2.5 2.5-2.5 4.5 0 2.5 2.5 4.5 6.5 4.5s6.5-2 6.5-4.5c0-2-1-3.5-2.5-4.5 1-1 1.5-2 1.5-3.5 0-2-.8-3.5-2.3-4.5.2-.5.3-1 .3-1.5C15.5 3.5 14 2 12 2z" fill="url(#liq-poop)" stroke="#7C3AED" stroke-width="1"/>
+        <path d="M10 12h.01M14 12h.01" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <path d="M10 16s1 1 2 1 2-1 2-1" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    </svg>`,
+  // =================================================
+  // 178. LIQUID: ÖZEL ARAÇLAR (SPECIAL TOOLS)
+  // =================================================
+  // Liquid Magic Wand (Sihirli Değnek - Altın/Sarı)
+  "liquid-magic": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="liq-magic" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse"><stop stop-color="#F59E0B" stop-opacity="0.8"/><stop offset="1" stop-color="#FEF3C7" stop-opacity="0.2"/></linearGradient></defs>
+        <path d="M2 22l8.5-8.5" stroke="#D97706" stroke-width="3" stroke-linecap="round"/>
+        <path d="M11 13l8.5-8.5" fill="url(#liq-magic)" stroke="#D97706" stroke-width="1.5"/>
+        <path d="M14.5 2l-2.5 2.5M12 2l2.5 2.5M13.25 1v3.5M11.5 2.75h3.5" stroke="#F59E0B" stroke-width="1"/>
+        <circle cx="15" cy="9" r="1.5" fill="white" fill-opacity="0.6"/>
+    </svg>`,
+  // Liquid Rocket (Roket - 3D Kırmızı/Mavi)
+  "liquid-rocket-3d": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="liq-rock3d" x1="6" y1="6" x2="18" y2="18" gradientUnits="userSpaceOnUse"><stop stop-color="#EF4444" stop-opacity="0.9"/><stop offset="1" stop-color="#3B82F6" stop-opacity="0.4"/></linearGradient></defs>
+        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" fill="#3B82F6"/>
+        <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" fill="url(#liq-rock3d)" stroke="#B91C1C" stroke-width="1.5"/>
+        <circle cx="15" cy="9" r="2" fill="white" fill-opacity="0.5"/>
+    </svg>`,
+  // =================================================
+  // 181. LIQUID: SOSYAL & ETKİLEŞİM (SOCIAL PRO)
+  // =================================================
+  // Liquid YouTube (Kırmızı Cam - Play Butonu)
+  "liquid-brand-youtube": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-yt" x1="2" y1="4" x2="22" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#EF4444" stop-opacity="0.9"/><stop offset="1" stop-color="#FCA5A5" stop-opacity="0.4"/></linearGradient></defs>
+    <rect x="2" y="4" width="20" height="16" rx="4" fill="url(#liq-yt)" stroke="#B91C1C" stroke-width="1.5"/>
+    <path d="M10 9l5 3-5 3V9z" fill="white" filter="drop-shadow(0 2px 2px rgba(0,0,0,0.2))"/>
+    <path d="M4 8h2" stroke="white" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
+    </svg>`,
+  // Liquid Dislike (Beğenmeme - Kırmızı/Mor Başparmak Aşağı)
+  "liquid-thumbs-down": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-dislike" x1="2" y1="4" x2="22" y2="14" gradientUnits="userSpaceOnUse"><stop stop-color="#7C3AED" stop-opacity="0.8"/><stop offset="1" stop-color="#C4B5FD" stop-opacity="0.3"/></linearGradient></defs>
+    <path d="M7 13V5a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h3a4 4 0 0 1 4 4v1a2 2 0 0 0 4 0v-5h3a2 2 0 0 0 2-2l-1-5a2 3 0 0 0-2-2h-7a3 3 0 0 0-3 3" fill="url(#liq-dislike)" stroke="#6D28D9" stroke-width="1.5" stroke-linejoin="round"/>
+    <circle cx="14" cy="8" r="1.5" fill="white" fill-opacity="0.4"/>
+    </svg>`,
+  // Liquid Favorilere Ekle (Kalp + Artı - Pembe Cam)
+  "liquid-heart-add": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-heart-add" x1="2" y1="4" x2="18" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#EC4899" stop-opacity="0.8"/><stop offset="1" stop-color="#FBCFE8" stop-opacity="0.2"/></linearGradient></defs>
+    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" fill="url(#liq-heart-add)" stroke="#DB2777" stroke-width="1.5" stroke-linejoin="round"/>
+    <circle cx="18" cy="18" r="5" fill="#FFFFFF"/>
+    <line x1="18" y1="15" x2="18" y2="21" stroke="#DB2777" stroke-width="2" stroke-linecap="round"/>
+    <line x1="15" y1="18" x2="21" y2="18" stroke="#DB2777" stroke-width="2" stroke-linecap="round"/>
+    <ellipse cx="7" cy="7" rx="2" ry="1" fill="white" fill-opacity="0.5" transform="rotate(-45 7 7)"/>
+    </svg>`,
+  // Liquid Düşünen Emoji (Thinking - Sarı/Mavi Karışım)
+  "liquid-emoji-think": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-think" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#FCD34D" stop-opacity="0.9"/><stop offset="1" stop-color="#F59E0B" stop-opacity="0.9"/></linearGradient></defs>
+    <circle cx="12" cy="12" r="10" fill="url(#liq-think)" stroke="#D97706" stroke-width="1"/>
+    <path d="M8 15h4" stroke="#92400E" stroke-width="2" stroke-linecap="round"/> <path d="M14 17l2-2" stroke="#92400E" stroke-width="2" stroke-linecap="round"/> <path d="M16 13l2 2" stroke="#92400E" stroke-width="2" stroke-linecap="round"/> <circle cx="9" cy="9" r="1.5" fill="#92400E"/> <path d="M15 8l2-1" stroke="#92400E" stroke-width="2" stroke-linecap="round"/> <circle cx="15" cy="10" r="1.5" fill="#92400E"/> <ellipse cx="12" cy="5" rx="4" ry="1.5" fill="white" fill-opacity="0.4"/>
+    </svg>`,
+  // =================================================
+  // 182. LIQUID: SAATLER & ZAMAN (TIME GLASS)
+  // =================================================
+  // Liquid Saat (Mavi/Turkuaz Cam)
+  "liquid-clock": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-clock" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#0EA5E9" stop-opacity="0.8"/><stop offset="1" stop-color="#BAE6FD" stop-opacity="0.2"/></linearGradient></defs>
+    <circle cx="12" cy="12" r="10" fill="url(#liq-clock)" stroke="#0284C7" stroke-width="1.5"/>
+    <polyline points="12 6 12 12 16 14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="12" cy="12" r="1" fill="white"/>
+    <path d="M12 2a10 10 0 0 1 7 3" stroke="white" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round" fill="none"/>
+    </svg>`,
+  // Liquid Kum Saati (Turuncu/Sarı Cam - Akıyor)
+  "liquid-hourglass": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-hglass" x1="5" y1="2" x2="19" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#F97316" stop-opacity="0.8"/><stop offset="1" stop-color="#FED7AA" stop-opacity="0.3"/></linearGradient></defs>
+    <path d="M17 22v-9l-3-4 3-5h-9l3 5-3 4v9h9z" fill="url(#liq-hglass)" stroke="#EA580C" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M12 2v2" stroke="#EA580C" stroke-width="1.5"/>
+    <path d="M12 11v5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-dasharray="1 2"/> <ellipse cx="12" cy="19" rx="3" ry="1" fill="white" fill-opacity="0.5"/> </svg>`,
+  // Liquid Alarm (Yeşil/Teal Cam)
+  "liquid-alarm": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-alarm" x1="4" y1="5" x2="20" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="#10B981" stop-opacity="0.8"/><stop offset="1" stop-color="#A7F3D0" stop-opacity="0.2"/></linearGradient></defs>
+    <circle cx="12" cy="13" r="8" fill="url(#liq-alarm)" stroke="#059669" stroke-width="1.5"/>
+    <path d="M12 9v4l2 2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M5 3L2 6" stroke="#059669" stroke-width="2" stroke-linecap="round"/>
+    <path d="M22 6l-3-3" stroke="#059669" stroke-width="2" stroke-linecap="round"/>
+    <path d="M6.38 18.7L4 21" stroke="#059669" stroke-width="2" stroke-linecap="round"/>
+    <path d="M17.64 18.67L20 21" stroke="#059669" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="12" cy="10" r="2" fill="white" fill-opacity="0.3"/>
+    </svg>`,
+  // =================================================
+  // 183. LIQUID: MÜZİK & ENSTRÜMANLAR (MUSIC PRO)
+  // =================================================
+  "liquid-guitar": '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-guitar" x1="6" y1="2" x2="18" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#F59E0B" stop-opacity="0.8"/><stop offset="1" stop-color="#FDE68A" stop-opacity="0.2"/></linearGradient></defs><path d="M13.5 21.4c-3.4 1.5-7.2-.6-8.5-4.7-.4-1.3-.4-2.6.1-3.8l9.6-11 2.4.8-9.6 11c-.2.7-.2 1.4 0 2.1.6 2 2.6 3 4.3 2.3" fill="url(#liq-guitar)" stroke="#D97706" stroke-width="1.5" stroke-linecap="round"/><circle cx="7.5" cy="16.5" r="1.5" fill="white" fill-opacity="0.4"/></svg>',
+  "liquid-headphone": '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-hphone" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#EC4899" stop-opacity="0.7"/><stop offset="1" stop-color="#FBCFE8" stop-opacity="0.2"/></linearGradient></defs><path d="M3 18v-6a9 9 0 0 1 18 0v6" stroke="#DB2777" stroke-width="1.5" stroke-linecap="round"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z" fill="url(#liq-hphone)" stroke="#DB2777" stroke-width="1.5"/><path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" fill="url(#liq-hphone)" stroke="#DB2777" stroke-width="1.5"/><circle cx="18" cy="16" r="1" fill="white" fill-opacity="0.4"/></svg>',
+  "liquid-mic-stand": '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-mic-std" x1="8" y1="2" x2="16" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1" stop-opacity="0.8"/><stop offset="1" stop-color="#A5B4FC" stop-opacity="0.2"/></linearGradient></defs><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" fill="url(#liq-mic-std)" stroke="#4F46E5" stroke-width="1.5"/><path d="M19 10v2a7 7 0 0 1-14 0v-2" stroke="#4F46E5" stroke-width="1.5" stroke-linecap="round"/><line x1="12" y1="19" x2="12" y2="22" stroke="#4F46E5" stroke-width="1.5"/><line x1="8" y1="22" x2="16" y2="22" stroke="#4F46E5" stroke-width="1.5"/></svg>',
+  // =================================================
+  // 184. LIQUID: YEMEK & FAST FOOD (TASTY GLASS)
+  // =================================================
+  "liquid-burger": '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-burger" x1="4" y1="4" x2="20" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#F59E0B" stop-opacity="0.9"/><stop offset="1" stop-color="#FEF3C7" stop-opacity="0.3"/></linearGradient></defs><path d="M4 12h16a8 8 0 0 0-16 0Z" fill="url(#liq-burger)" stroke="#D97706" stroke-width="1.5"/><rect x="4" y="12" width="16" height="4" rx="1" fill="#10B981" stroke="#059669" stroke-width="1.5"/><path d="M20 16h-16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2Z" fill="url(#liq-burger)" stroke="#D97706" stroke-width="1.5"/><circle cx="10" cy="9" r="1" fill="white" fill-opacity="0.6"/></svg>',
+  "liquid-drink": '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-drink" x1="6" y1="4" x2="18" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#06B6D4" stop-opacity="0.7"/><stop offset="1" stop-color="#A5F3FC" stop-opacity="0.2"/></linearGradient></defs><path d="M17 21h-10a2 2 0 0 1-2-2v-10a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2Z" fill="url(#liq-drink)" stroke="#0891B2" stroke-width="1.5"/><line x1="16" y1="7" x2="20" y2="3" stroke="#0891B2" stroke-width="2" stroke-linecap="round"/><path d="M8 14c1.5-1 2.5 1 4 0" stroke="white" stroke-opacity="0.4" stroke-width="1.5"/><path d="M12 16c1.5-1 2.5 1 4 0" stroke="white" stroke-opacity="0.4" stroke-width="1.5"/></svg>',
+  // =================================================
+  // 185. LIQUID: UZAY & BİLİM (GALAXY GLASS)
+  // =================================================
+  "liquid-saturn": '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-saturn" x1="6" y1="6" x2="18" y2="18" gradientUnits="userSpaceOnUse"><stop stop-color="#8B5CF6" stop-opacity="0.8"/><stop offset="1" stop-color="#E9D5FF" stop-opacity="0.2"/></linearGradient></defs><circle cx="12" cy="12" r="6" fill="url(#liq-saturn)" stroke="#7C3AED" stroke-width="1.5"/><path d="M20.4 15.2a11 11 0 1 0-16.8-6.4" stroke="#7C3AED" stroke-width="1.5" stroke-linecap="round" fill="none"/><circle cx="10" cy="10" r="1.5" fill="white" fill-opacity="0.4"/></svg>',
+  "liquid-atom": '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-atom" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#0EA5E9" stop-opacity="0.8"/><stop offset="1" stop-color="#BAE6FD" stop-opacity="0.2"/></linearGradient></defs><circle cx="12" cy="12" r="2" fill="#0284C7"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2" stroke="url(#liq-atom)" stroke-width="1.5" fill="none"/><path d="M4.93 4.93l14.14 14.14" stroke="url(#liq-atom)" stroke-width="1.5" stroke-opacity="0.6"/><path d="M19.07 4.93L4.93 19.07" stroke="url(#liq-atom)" stroke-width="1.5" stroke-opacity="0.6"/></svg>',
+  // =================================================
+  // 186. LIQUID: OFİS & SUNUM (WORK GLASS)
+  // =================================================
+  "liquid-presentation": '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-pres" x1="2" y1="3" x2="22" y2="17" gradientUnits="userSpaceOnUse"><stop stop-color="#10B981" stop-opacity="0.7"/><stop offset="1" stop-color="#D1FAE5" stop-opacity="0.2"/></linearGradient></defs><rect x="2" y="3" width="20" height="14" rx="2" fill="url(#liq-pres)" stroke="#059669" stroke-width="1.5"/><line x1="8" y1="21" x2="16" y2="21" stroke="#059669" stroke-width="1.5" stroke-linecap="round"/><line x1="12" y1="17" x2="12" y2="21" stroke="#059669" stroke-width="1.5"/><path d="M9 10l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  "liquid-pin": '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-pin" x1="10" y1="2" x2="14" y2="14" gradientUnits="userSpaceOnUse"><stop stop-color="#EF4444" stop-opacity="0.8"/><stop offset="1" stop-color="#FECACA" stop-opacity="0.3"/></linearGradient></defs><path d="M16 2v5a5 5 0 0 0 5 5v2H3v-2a5 5 0 0 0 5-5V2" fill="url(#liq-pin)" stroke="#DC2626" stroke-width="1.5"/><line x1="12" y1="22" x2="12" y2="14" stroke="#DC2626" stroke-width="1.5"/><circle cx="12" cy="8" r="1.5" fill="white" fill-opacity="0.5"/></svg>',
+  // =================================================
+  // 187. LIQUID: OYUN & EĞLENCE (GAMING GLASS)
+  // =================================================
+  // Liquid Gamepad (Mor/Pembe Neon)
+  "liquid-gamepad-pro": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-game-pro" x1="2" y1="12" x2="22" y2="12" gradientUnits="userSpaceOnUse"><stop stop-color="#8B5CF6" stop-opacity="0.9"/><stop offset="1" stop-color="#EC4899" stop-opacity="0.8"/></linearGradient></defs>
+    <path d="M22 12a10 10 0 0 0-10-10 10 10 0 0 0-10 10 10 10 0 0 0 4 8 10 10 0 0 0 12 0 10 10 0 0 0 4-8z" fill="url(#liq-game-pro)" stroke="#7C3AED" stroke-width="1.5"/>
+    <circle cx="12" cy="12" r="10" fill="url(#liq-game-pro)" opacity="0.2"/>
+    <path d="M6 12h4m-2-2v4" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="15" cy="13" r="1.5" fill="white"/>
+    <circle cx="17" cy="11" r="1.5" fill="white"/>
+    <path d="M12 2a10 10 0 0 1 7 3" stroke="white" stroke-opacity="0.3" stroke-width="2" stroke-linecap="round" fill="none"/>
+    </svg>`,
+  // Liquid Zar (Dice - Şeffaf Beyaz/Mavi)
+  "liquid-dice-cube": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-dice" x1="4" y1="4" x2="20" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#E0F2FE" stop-opacity="0.9"/><stop offset="1" stop-color="#3B82F6" stop-opacity="0.4"/></linearGradient></defs>
+    <rect x="4" y="4" width="16" height="16" rx="4" fill="url(#liq-dice)" stroke="#3B82F6" stroke-width="1.5"/>
+    <circle cx="8.5" cy="8.5" r="1.5" fill="#2563EB"/>
+    <circle cx="15.5" cy="15.5" r="1.5" fill="#2563EB"/>
+    <circle cx="15.5" cy="8.5" r="1.5" fill="#2563EB"/>
+    <circle cx="8.5" cy="15.5" r="1.5" fill="#2563EB"/>
+    <circle cx="12" cy="12" r="1.5" fill="#2563EB"/>
+    <path d="M6 4h4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-opacity="0.8"/>
+    </svg>`,
+  // =================================================
+  // 188. LIQUID: PREMIUM OBJELER (HERO ITEMS)
+  // =================================================
+  // Liquid Elmas (Premium Üyelik - Turkuaz)
+  "liquid-diamond-pro": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-diam-pro" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#06B6D4" stop-opacity="0.8"/><stop offset="1" stop-color="#67E8F9" stop-opacity="0.2"/></linearGradient></defs>
+    <path d="M6 4h12l4 6-10 10L2 10h4" fill="url(#liq-diam-pro)" stroke="#0891B2" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M2 10h20M12 20L6 4m6 16l6-16" stroke="#0891B2" stroke-width="1" stroke-opacity="0.5"/>
+    <path d="M7 5l2 4" stroke="white" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>`,
+  // Liquid Taç (Liderlik/VIP - Altın Sarısı)
+  "liquid-crown-king": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-crown" x1="2" y1="10" x2="22" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#F59E0B" stop-opacity="0.9"/><stop offset="1" stop-color="#FDE68A" stop-opacity="0.3"/></linearGradient></defs>
+    <path d="M2 6l3 12h14l3-12-6 7-4-7-4 7-6-7z" fill="url(#liq-crown)" stroke="#D97706" stroke-width="1.5" stroke-linejoin="round"/>
+    <circle cx="12" cy="6" r="1" fill="white"/>
+    <circle cx="2" cy="6" r="1" fill="white"/>
+    <circle cx="22" cy="6" r="1" fill="white"/>
+    <path d="M6 16h12" stroke="#B45309" stroke-width="1" stroke-opacity="0.5"/>
+    </svg>`,
+  // Liquid Kupa (Başarı - Altın/Turuncu)
+  "liquid-trophy-cup": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-trophy" x1="6" y1="2" x2="18" y2="16" gradientUnits="userSpaceOnUse"><stop stop-color="#FBBF24" stop-opacity="0.9"/><stop offset="1" stop-color="#F59E0B" stop-opacity="0.4"/></linearGradient></defs>
+    <path d="M8 21h8M12 17v4M7 4h10M17 4v8a5 5 0 0 1-10 0V4" stroke="#D97706" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="url(#liq-trophy)"/>
+    <path d="M5 9v2a2 2 0 0 0 2 2h0M19 9v2a2 2 0 0 1-2 2h0" stroke="#D97706" stroke-width="1.5"/>
+    <ellipse cx="12" cy="7" rx="3" ry="1" fill="white" fill-opacity="0.5"/>
+    </svg>`,
+  // =================================================
+  // 189. LIQUID: GÜVENLİK & UYARI (SYSTEM ALERTS)
+  // =================================================
+  // Liquid Radar (Tarama - Kırmızı/Pembe)
+  "liquid-radar-scan": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-radar" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#EF4444" stop-opacity="0.8"/><stop offset="1" stop-color="#FECACA" stop-opacity="0.2"/></linearGradient></defs>
+    <circle cx="12" cy="12" r="10" stroke="#DC2626" stroke-width="1.5" fill="none"/>
+    <circle cx="12" cy="12" r="6" stroke="#DC2626" stroke-width="1.5" fill="url(#liq-radar)"/>
+    <circle cx="12" cy="12" r="2" fill="white"/>
+    <path d="M12 2v10l7 7" stroke="white" stroke-width="1" stroke-opacity="0.5"/>
+    </svg>`,
+  // Liquid Info (Bilgi - Mavi Damla)
+  "liquid-info-circle": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-info" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#3B82F6" stop-opacity="0.8"/><stop offset="1" stop-color="#93C5FD" stop-opacity="0.3"/></linearGradient></defs>
+    <circle cx="12" cy="12" r="10" fill="url(#liq-info)" stroke="#2563EB" stroke-width="1.5"/>
+    <line x1="12" y1="16" x2="12" y2="12" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="12" cy="8" r="1.5" fill="white"/>
+    <path d="M6 16c0 3 2 4 6 4s6-1 6-4" fill="none" stroke="white" stroke-opacity="0.1" stroke-width="2"/>
+    </svg>`,
+  // Liquid Check (Onay - Yeşil Parlak)
+  "liquid-check-circle": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-check" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#10B981" stop-opacity="0.8"/><stop offset="1" stop-color="#6EE7B7" stop-opacity="0.3"/></linearGradient></defs>
+    <circle cx="12" cy="12" r="10" fill="url(#liq-check)" stroke="#059669" stroke-width="1.5"/>
+    <path d="M8 12l3 3 5-5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="16" cy="8" r="3" fill="white" fill-opacity="0.2"/>
+    </svg>`,
+  // Liquid Alert (Uyarı - Turuncu Üçgen)
+  "liquid-alert-triangle": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-warn" x1="12" y1="2" x2="12" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#F59E0B" stop-opacity="0.9"/><stop offset="1" stop-color="#FDE68A" stop-opacity="0.4"/></linearGradient></defs>
+    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" fill="url(#liq-warn)" stroke="#D97706" stroke-width="1.5" stroke-linejoin="round"/>
+    <line x1="12" y1="9" x2="12" y2="13" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="12" cy="17" r="1.5" fill="white"/>
+    </svg>`,
+  // =================================================
+  // 190. LIQUID: ÜÇ MAYMUN (SEE, HEAR, SPEAK NO EVIL)
+  // =================================================
+  // Not: Bunlar çok özel tasarımlardır. Kahverengi/Turuncu cam efekti.
+  // Görmedim (See No Evil)
+  "liquid-monkey-see": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-monk-1" x1="12" y1="4" x2="12" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#B45309" stop-opacity="0.9"/><stop offset="1" stop-color="#FCD34D" stop-opacity="0.5"/></linearGradient></defs>
+    <circle cx="12" cy="12" r="10" fill="url(#liq-monk-1)" stroke="#92400E" stroke-width="1.5"/>
+    <path d="M4 10c0-2 3-3 3-3s3 1 3 3" fill="#78350F" opacity="0.8"/> <path d="M14 10c0-2 3-3 3-3s3 1 3 3" fill="#78350F" opacity="0.8"/> <path d="M10 16c1 1 3 1 4 0" stroke="#78350F" stroke-width="1.5" stroke-linecap="round"/> <ellipse cx="12" cy="5" rx="4" ry="1.5" fill="white" fill-opacity="0.3"/>
+    </svg>`,
+  // Duymadım (Hear No Evil)
+  "liquid-monkey-hear": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-monk-2" x1="12" y1="4" x2="12" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#B45309" stop-opacity="0.9"/><stop offset="1" stop-color="#FCD34D" stop-opacity="0.5"/></linearGradient></defs>
+    <circle cx="12" cy="12" r="10" fill="url(#liq-monk-2)" stroke="#92400E" stroke-width="1.5"/>
+    <circle cx="8" cy="10" r="1.5" fill="#78350F"/> <circle cx="16" cy="10" r="1.5" fill="#78350F"/> <path d="M2 10c0-2 2-4 3-4v8c-1 0-3-2-3-4z" fill="#78350F" opacity="0.8"/> <path d="M22 10c0-2-2-4-3-4v8c1 0 3-2 3-4z" fill="#78350F" opacity="0.8"/> <path d="M10 16c1 1 3 1 4 0" stroke="#78350F" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>`,
+  // Bilmiyorum/Konuşmam (Speak No Evil)
+  "liquid-monkey-speak": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-monk-3" x1="12" y1="4" x2="12" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#B45309" stop-opacity="0.9"/><stop offset="1" stop-color="#FCD34D" stop-opacity="0.5"/></linearGradient></defs>
+    <circle cx="12" cy="12" r="10" fill="url(#liq-monk-3)" stroke="#92400E" stroke-width="1.5"/>
+    <circle cx="8" cy="9" r="1.5" fill="#78350F"/> <circle cx="16" cy="9" r="1.5" fill="#78350F"/> <rect x="8" y="13" width="8" height="5" rx="2" fill="#78350F" opacity="0.8"/> <ellipse cx="12" cy="5" rx="4" ry="1.5" fill="white" fill-opacity="0.3"/>
+    </svg>`,
+  // =================================================
+  // 191. LIQUID: GELİŞMİŞ EV & YAŞAM (SMART HOME)
+  // =================================================
+  // Liquid Akıllı Ev (Wifi Dalgalı)
+  "liquid-home-smart": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-home-wifi" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#3B82F6" stop-opacity="0.8"/><stop offset="1" stop-color="#BFDBFE" stop-opacity="0.3"/></linearGradient></defs>
+    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" fill="url(#liq-home-wifi)" stroke="#2563EB" stroke-width="1.5"/>
+    <path d="M8.5 16a5 5 0 0 1 7 0" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <path d="M10 19a2 2 0 0 1 4 0" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="12" cy="8" r="2" fill="white" fill-opacity="0.4"/>
+    </svg>`,
+  // Liquid Doğa Evi (Yapraklı/Eko)
+  "liquid-home-eco": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-home-eco" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#10B981" stop-opacity="0.8"/><stop offset="1" stop-color="#A7F3D0" stop-opacity="0.3"/></linearGradient></defs>
+    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" fill="url(#liq-home-eco)" stroke="#059669" stroke-width="1.5"/>
+    <path d="M12 12c2-3 5-3 5 0s-3 3-5 0z" fill="white" fill-opacity="0.6"/> <path d="M12 22v-5" stroke="#059669" stroke-width="1.5"/>
+    </svg>`,
+  // =================================================
+  // 192. LIQUID: KOPYALA & DÜZENLE (EDITING PRO)
+  // =================================================
+  // Liquid Copy Success (Yeşil Onaylı Kopyalama)
+  "liquid-copy-check": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-cp-chk" x1="2" y1="2" x2="20" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#10B981" stop-opacity="0.7"/><stop offset="1" stop-color="#6EE7B7" stop-opacity="0.2"/></linearGradient></defs>
+    <rect x="9" y="9" width="13" height="13" rx="2" fill="url(#liq-cp-chk)" stroke="#059669" stroke-width="1.5"/>
+    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="#059669" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    <path d="M12 15l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>`,
+  // Liquid Bento Menu (Modern Grid - Çok Renkli)
+  "liquid-menu-bento": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <rect x="3" y="3" width="8" height="8" rx="2" fill="#6366F1" fill-opacity="0.8" stroke="none"/>
+        <rect x="13" y="3" width="8" height="8" rx="2" fill="#EC4899" fill-opacity="0.8" stroke="none"/>
+        <rect x="3" y="13" width="18" height="8" rx="2" fill="#10B981" fill-opacity="0.8" stroke="none"/>
+        <circle cx="7" cy="7" r="1" fill="white" fill-opacity="0.5"/>
+        <circle cx="17" cy="7" r="1" fill="white" fill-opacity="0.5"/>
+    </svg>`,
+  // =================================================
+  // 195. ÖZEL STICKERLAR (LIQUID LOVE EDITION)
+  // =================================================
+  // 1. "Seni Seviyorum" Yazılı Cam Rozet (Kırmızı/Pembe)
+  "sticker-love-text": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="liq-sticker-bg" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#BE123C" stop-opacity="0.9"/>
+                <stop offset="1" stop-color="#FB7185" stop-opacity="0.8"/>
+            </linearGradient>
+            <filter id="sticker-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#000" flood-opacity="0.2"/>
+            </filter>
+        </defs>
+        <rect x="1" y="6" width="22" height="12" rx="6" fill="white" filter="url(#sticker-shadow)"/>
+        <rect x="2" y="7" width="20" height="10" rx="5" fill="url(#liq-sticker-bg)"/>
+        <path d="M4 9a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3" fill="none" stroke="white" stroke-width="1" stroke-opacity="0.5"/>
+        <text x="12" y="13" font-family="cursive, sans-serif" font-size="4.5" fill="white" text-anchor="middle" dominant-baseline="middle" font-weight="bold" style="text-shadow: 0 1px 2px rgba(0,0,0,0.2);">Seni Seviyorum</text>
+    </svg>`,
+  // 2. 3D Cam Kalp (Kabarık Sticker)
+  "sticker-heart-3d": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="liq-heart-3d" x1="12" y1="4" x2="12" y2="20" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#E11D48" stop-opacity="1"/>
+                <stop offset="1" stop-color="#FDA4AF" stop-opacity="1"/>
+            </linearGradient>
+        </defs>
+        <path d="M21.5 5.5c-2.5-2.5-6.5-2.5-9 0l-.5.5-.5-.5c-2.5-2.5-6.5-2.5-9 0s-2.5 6.5 0 9l9.5 9.5 9.5-9.5c2.5-2.5 2.5-6.5 0-9z" fill="white" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M20.8 4.6a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="url(#liq-heart-3d)"/>
+        <path d="M16 6a3 3 0 0 1 3 3" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+        <ellipse cx="6" cy="8" rx="2" ry="1" fill="white" opacity="0.4" transform="rotate(-45 6 8)"/>
+    </svg>`,
+  // 3. Aşk Mektubu (Zarf - Liquid)
+  "sticker-love-letter": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="liq-letter" x1="2" y1="4" x2="22" y2="20" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FBCFE8" stop-opacity="1"/>
+                <stop offset="1" stop-color="#F472B6" stop-opacity="1"/>
+            </linearGradient>
+        </defs>
+        <rect x="1" y="3" width="22" height="18" rx="3" fill="white"/> <rect x="2" y="4" width="20" height="16" rx="2" fill="url(#liq-letter)"/>
+        <path d="M2 6l10 7 10-7" fill="none" stroke="#BE185D" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M12 13l-10 7" fill="none" stroke="#BE185D" stroke-width="1" stroke-opacity="0.5"/>
+        <path d="M12 13l10 7" fill="none" stroke="#BE185D" stroke-width="1" stroke-opacity="0.5"/>
+        <circle cx="12" cy="13" r="3" fill="#BE185D" stroke="white" stroke-width="1"/>
+        <path d="M12 14.5l-1.5-1.5c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l.1.1.1-.1c.4-.4 1-.4 1.4 0s.4 1 0 1.4L12 14.5z" fill="white"/>
+    </svg>`,
+  // 4. Gül (Rose - Cam Efektli)
+  "sticker-rose": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="liq-rose-red" x1="8" y1="2" x2="16" y2="12"><stop stop-color="#E11D48"/><stop offset="1" stop-color="#881337"/></linearGradient>
+            <linearGradient id="liq-rose-green" x1="10" y1="12" x2="14" y2="22"><stop stop-color="#22C55E"/><stop offset="1" stop-color="#15803D"/></linearGradient>
+        </defs>
+        <path d="M12 21s-2-5-2-9c0-3 2-5 2-5s2 2 2 5c0 4-2 9-2 9z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M12 3c-2 0-4 2-4 4 0 3 2 5 4 5s4-2 4-5c0-2-2-4-4-4z" stroke="white" stroke-width="4" fill="none"/>
+        
+        <path d="M12 21s-1.5-4-1.5-8" stroke="url(#liq-rose-green)" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <path d="M12 16c2 0 4-1 4-2" stroke="url(#liq-rose-green)" stroke-width="2" stroke-linecap="round" fill="none"/>
+        
+        <circle cx="12" cy="8" r="4" fill="url(#liq-rose-red)"/>
+        <path d="M12 8c-1 0-2-1-2-2s1-2 2-2 2 1 2 2-1 2-2 2z" fill="none" stroke="#FECDD3" stroke-width="1"/>
+        <path d="M10 9c0 1 1 2 2 2s2-1 2-2" fill="none" stroke="#881337" stroke-width="1"/>
+    </svg>`,
+  // =================================================
+  // 196. RETRO WINDOWS & PIXEL ART (90's VIBE)
+  // =================================================
+  // Windows Seçim Aracı (Marching Ants)
+  "text-select-tool": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="6" width="20" height="12" stroke="#000" stroke-width="1" stroke-dasharray="2 2" fill="rgba(0,0,255,0.1)"/>
+        <rect x="1" y="5" width="2" height="2" fill="black"/> <rect x="21" y="5" width="2" height="2" fill="black"/>
+        <rect x="1" y="17" width="2" height="2" fill="black"/> <rect x="21" y="17" width="2" height="2" fill="black"/>
+        <path d="M6 12h12" stroke="#000" stroke-width="4" stroke-linecap="square" opacity="0.2"/> <text x="12" y="13.5" font-family="monospace" font-size="8" text-anchor="middle" fill="#000" font-weight="bold">FLUX</text>
+    </svg>`,
+  // Pixel Art "Hi" Balonu
+  "text-pixel-hi": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 2h20v16h-4l-4 4-4-4H2V2z" fill="#fff" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M4 4h2v2H4V4zm4 0h2v2H8V4zm4 0h2v2h-2V4zm4 0h2v2h-2V4z" fill="#e5e5e5"/> <text x="12" y="12" font-family="monospace" font-size="8" text-anchor="middle" fill="#000" font-weight="bold">HELLO</text>
+    </svg>`,
+  // Retro Error Mesajı (Windows XP Style)
+  "text-error-popup": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="4" width="20" height="16" fill="#ECE9D8" stroke="#0055EA" stroke-width="1"/>
+        <rect x="2" y="4" width="20" height="4" fill="#0054E3"/>
+        <circle cx="19" cy="6" r="1" fill="white"/> <rect x="17" y="5" width="4" height="2" fill="none" stroke="white" rx="0.5"/>
+        <circle cx="6" cy="12" r="2" fill="#FF0000"/> <line x1="5" y1="11" x2="7" y2="13" stroke="white" stroke-width="1"/> <line x1="7" y1="11" x2="5" y2="13" stroke="white" stroke-width="1"/>
+        <path d="M10 11h10M10 14h6" stroke="black" stroke-width="1" stroke-linecap="round"/>
+    </svg>`,
+  // =================================================
+  // 197. WHATSAPP TARZI STICKERLAR (LIQUID & BUBBLE)
+  // =================================================
+  // Sticker: "WOW" (Patlama Efektli)
+  "sticker-wow": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="grad-wow" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#FCD34D"/><stop offset="1" stop-color="#F59E0B"/></linearGradient></defs>
+        <path d="M12 2l2.5 7 6.5 1-5 5 1.5 7-5.5-3-5.5 3 1.5-7-5-5 6.5-1z" fill="white" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M12 2l2.5 7 6.5 1-5 5 1.5 7-5.5-3-5.5 3 1.5-7-5-5 6.5-1z" fill="url(#grad-wow)" stroke="#D97706" stroke-width="1"/>
+        <text x="12" y="15" font-family="sans-serif" font-size="6" font-weight="900" fill="#78350F" text-anchor="middle">WOW</text>
+    </svg>`,
+  // Sticker: "NEW" (Yeni Etiketi)
+  "sticker-new-tag": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="grad-new" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#F472B6"/><stop offset="1" stop-color="#DB2777"/></linearGradient></defs>
+        <path d="M2 12l4-8h12l4 8-4 8H6z" fill="white" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M2 12l4-8h12l4 8-4 8H6z" fill="url(#grad-new)"/>
+        <text x="12" y="14" font-family="sans-serif" font-size="6" font-weight="900" fill="white" text-anchor="middle">NEW</text>
+        <circle cx="4" cy="12" r="1" fill="white"/>
+        <circle cx="20" cy="12" r="1" fill="white"/>
+    </svg>`,
+  // Sticker: "100%" (Onay Damgası)
+  "sticker-100": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="grad-100" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#34D399"/><stop offset="1" stop-color="#059669"/></linearGradient></defs>
+        <circle cx="12" cy="12" r="9" fill="white" stroke="white" stroke-width="2"/>
+        <circle cx="12" cy="12" r="9" fill="url(#grad-100)" stroke="#047857" stroke-width="1"/>
+        <path d="M12 2a10 10 0 0 1 5 2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-opacity="0.4"/>
+        <text x="12" y="14" font-family="sans-serif" font-size="7" font-weight="900" fill="white" text-anchor="middle" style="text-shadow: 1px 1px 0 #065f46;">100%</text>
+    </svg>`
+}, d = (t, a) => {
+  const e = t.__vccOpts || t;
+  for (const [i, l] of a)
+    e[i] = l;
+  return e;
 }, s = ["width", "height", "stroke", "stroke-width", "innerHTML"], n = {
   key: 1,
   style: { color: "red", "font-size": "10px" }
@@ -2270,22 +2587,22 @@ const d = {
     spin: { type: Boolean, default: !1 }
   },
   setup(t) {
-    const e = t, a = c(() => d[e.name] || "");
-    return (l, h) => a.value ? (r(), i("svg", {
+    const a = t, e = o(() => p[a.name] || "");
+    return (i, l) => e.value ? (h(), r("svg", {
       key: 0,
       width: t.size,
       height: t.size,
       viewBox: "0 0 24 24",
       fill: "none",
-      stroke: a.value.includes('stroke="none"') ? "none" : t.color,
-      "stroke-width": a.value.includes('stroke="none"') ? "0" : t.strokeWidth,
+      stroke: e.value.includes('stroke="none"') ? "none" : t.color,
+      "stroke-width": e.value.includes('stroke="none"') ? "0" : t.strokeWidth,
       "stroke-linecap": "round",
       "stroke-linejoin": "round",
-      class: p([t.className, { "animate-spin": t.spin }]),
-      innerHTML: a.value
-    }, null, 10, s)) : (r(), i("span", n, "?"));
+      class: c([t.className, { "animate-spin": t.spin }]),
+      innerHTML: e.value
+    }, null, 10, s)) : (h(), r("span", n, "?"));
   }
-}, x = /* @__PURE__ */ o(y, [["__scopeId", "data-v-1d136f5b"]]), v = {
+}, x = /* @__PURE__ */ d(y, [["__scopeId", "data-v-1d136f5b"]]), v = {
   install: (t) => {
     t.component("FluxIcon", x);
   }
@@ -2293,5 +2610,5 @@ const d = {
 export {
   x as FluxIcon,
   v as default,
-  d as icons
+  p as icons
 };
