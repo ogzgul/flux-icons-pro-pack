@@ -27,7 +27,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "build:lib": "vite build --config vite.lib.config.js",
-    "build:font": "node scripts/create-webfont.js",
+    "build:font": "node scripts/build-css.js",
     "prepublishOnly": "npm run build:font && npm run build:lib"
   },
   "peerDependencies": {
