@@ -1,70 +1,73 @@
 import fs from 'fs';
 import path from 'path';
 import svgtofont from 'svgtofont';
-import outlineStroke from 'svg-outline-stroke';
+import SVGFixer from 'oslllo-svg-fixer'; // Stroke -> Fill dönüştürücü
 import { icons } from '../lib/icons.js';
 
-const SVG_SOURCE_DIR = path.resolve(process.cwd(), 'svg_source');
-const FONT_OUTPUT_DIR = path.resolve(process.cwd(), 'dist-font');
+// Klasör yolları
+const TEMP_DIR = path.resolve(process.cwd(), 'temp_icons'); // Ham dosyalar
+const SVG_SOURCE_DIR = path.resolve(process.cwd(), 'svg_source'); // Düzeltilmişler
+const FONT_OUTPUT_DIR = path.resolve(process.cwd(), 'dist-font'); // Font çıktısı
 
-async function extractSvgs() {
-  console.log('1. İkonlar işleniyor ve Stroke -> Path dönüşümü yapılıyor...');
+// 1. Adım: Ham SVG'leri Geçici Klasöre Yaz
+async function writeRawSvgs() {
+  console.log('1. Ham ikonlar hazırlanıyor...');
   
-  if (fs.existsSync(SVG_SOURCE_DIR)) {
-    fs.rmSync(SVG_SOURCE_DIR, { recursive: true, force: true });
-  }
+  // Temizlik
+  if (fs.existsSync(TEMP_DIR)) fs.rmSync(TEMP_DIR, { recursive: true, force: true });
+  if (fs.existsSync(SVG_SOURCE_DIR)) fs.rmSync(SVG_SOURCE_DIR, { recursive: true, force: true });
+  
+  fs.mkdirSync(TEMP_DIR, { recursive: true });
   fs.mkdirSync(SVG_SOURCE_DIR, { recursive: true });
 
   const iconNames = Object.keys(icons);
-  let count = 0;
-
-  for (const name of iconNames) {
+  
+  iconNames.forEach(name => {
     const rawPath = icons[name];
-    let finalSvgContent = '';
+    let svgContent = '';
 
-    // KONTROL: İkon zaten dolu mu? (Markalar vs.)
+    // Marka/Dolu ikon kontrolü
     const isSolid = rawPath.includes('stroke="none"') || 
                     (rawPath.includes('fill=') && !rawPath.includes('fill="none"'));
 
     if (isSolid) {
-       // Dolu ikonları olduğu gibi al ama rengi siyah yap (Font için siyah şart)
-       // currentColor veya hex renklerini siyaha çeviriyoruz ki font motoru algılasın.
+       // Dolu ikonlar (Siyah renk zorlamasıyla)
        let cleanPath = rawPath.replace(/fill="[^"]*"/g, 'fill="#000000"');
-       if (!cleanPath.includes('fill=')) {
-           cleanPath = `<g fill="#000000">${cleanPath}</g>`;
-       }
-       finalSvgContent = `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">${cleanPath}</svg>`;
-    } 
-    else {
-      // ÇİZGİSEL İKONLAR İÇİN DÖNÜŞÜM
-      // 1. Önce siyah stroke ile ham bir SVG oluşturuyoruz.
-      const tempSvg = `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${rawPath}</svg>`;
-      
-      try {
-        // 2. outlineStroke ile çizgiyi şekle (path'e) çeviriyoruz.
-        // color: 'black' font motorunun şekli görmesi için kritiktir.
-        finalSvgContent = await outlineStroke(tempSvg, { 
-            optCurve: true, 
-            step: 4, 
-            centerHorizontally: false, // Kaymayı önlemek için kapattım
-            fixedWidth: false, // Oran bozulmasın diye kapattım
-            color: '#000000' 
-        });
-      } catch (err) {
-        console.error(`Hata: ${name} dönüştürülemedi, orjinali kullanılıyor.`, err);
-        finalSvgContent = tempSvg;
-      }
+       if (!cleanPath.includes('fill=')) cleanPath = `<g fill="#000000">${cleanPath}</g>`;
+       svgContent = `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">${cleanPath}</svg>`;
+    } else {
+       // Çizgisel ikonlar (Siyah stroke ile)
+       // DİKKAT: Fixer'ın algılaması için stroke-width ve renk net olmalı
+       svgContent = `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${rawPath}</svg>`;
     }
 
-    const fileName = `${name}.svg`;
-    fs.writeFileSync(path.join(SVG_SOURCE_DIR, fileName), finalSvgContent, 'utf-8');
-    count++;
-  }
-  console.log(`✅ ${count} ikon svg_source klasörüne çıkarıldı.`);
+    fs.writeFileSync(path.join(TEMP_DIR, `${name}.svg`), svgContent, 'utf-8');
+  });
+
+  console.log(`✅ ${iconNames.length} adet ham ikon yazıldı.`);
 }
 
+// 2. Adım: SVG Fixer ile Stroke -> Fill Dönüşümü
+async function fixSvgs() {
+  console.log('2. Stroke -> Outline dönüşümü yapılıyor (Bu işlem 1-2 dk sürebilir)...');
+  
+  // DÜZELTME: 'new' kaldırıldı ve .fix() metodu kullanıldı
+  const fixer = SVGFixer(TEMP_DIR, SVG_SOURCE_DIR, {
+    showProgressBar: true, // İlerleme çubuğu göster
+    traceResolution: 600, // Kalite ayarı (Yüksek tutarsak işlem uzar, 600 ideal)
+  });
+
+  try {
+    await fixer.fix(); // <--- .process() YERİNE .fix() OLDU
+    console.log('✅ Dönüşüm tamamlandı! Çizgiler artık şekil oldu.');
+  } catch (err) {
+    console.error('Dönüştürme hatası:', err);
+  }
+}
+
+// 3. Adım: Font Oluşturma
 async function generateFont() {
-  console.log('2. Font dosyaları oluşturuluyor...');
+  console.log('3. Font dosyaları oluşturuluyor...');
 
   await svgtofont({
     src: SVG_SOURCE_DIR,
@@ -78,20 +81,27 @@ async function generateFont() {
     svgicons2svgfont: {
       fontHeight: 1000,
       normalize: true,
-      centerHorizontally: true
+      centerHorizontally: true,
+      fixedWidth: true 
     }
   });
+
   console.log('✅ Font işlemi tamamlandı!');
-  
-  // Temizlik yapmıyoruz ki klasörü kontrol edebil.
-  // fs.rmSync(SVG_SOURCE_DIR, { recursive: true, force: true });
+
+  // Temizlik
+  try {
+      fs.rmSync(TEMP_DIR, { recursive: true, force: true });
+      fs.rmSync(SVG_SOURCE_DIR, { recursive: true, force: true });
+      console.log('✨ Geçici dosyalar temizlendi.');
+  } catch (e) {}
 }
 
 (async () => {
   try {
-    await extractSvgs();
+    await writeRawSvgs();
+    await fixSvgs();
     await generateFont();
   } catch (error) {
-    console.error('❌ Kritik Hata:', error);
+    console.error('❌ Hata:', error);
   }
 })();
