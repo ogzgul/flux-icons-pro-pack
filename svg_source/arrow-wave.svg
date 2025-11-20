@@ -1,5 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <g fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M3 12c2-3 5-3 7 0s5 3 7 0"/><polyline points="13 9 17 12 13 15"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" version="1.1">
+	<path d="M 12 9.031 C 12 9.599, 12.675 10.322, 13.500 10.638 C 14.325 10.955, 15 11.616, 15 12.107 C 15 13.702, 12.356 13.051, 10.500 11 C 8.350 8.624, 4.746 8.396, 2.980 10.524 C 1.238 12.623, 2.365 13.414, 4.869 11.850 C 6.686 10.715, 7.289 10.903, 9.922 13.425 C 12.814 16.196, 12.993 16.235, 15.455 14.621 C 18.631 12.541, 18.645 11.653, 15.535 9.615 C 12.658 7.730, 12 7.621, 12 9.031" stroke="none" fill="black" fill-rule="evenodd"/>
 </svg>
