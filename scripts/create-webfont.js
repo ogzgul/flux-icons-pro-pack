@@ -23,13 +23,18 @@ function extractSvgs() {
   iconNames.forEach(name => {
     const svgPath = icons[name];
     
-    // SVG Path'lerini 24x24 viewBox içine sarmala
-    // stroke-width'i kaldırdık çünkü fontlarda stroke değil fill kullanılır genelde, 
-    // ama çizgisel ikonlar için stroke korunabilir. Biz standardı koruyoruz.
-    const wrappedSvg = `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${svgPath}</svg>`;
+    // DÜZELTME: currentColor yerine sabit '#000' ve <g> etiketi kullanımı.
+    // Font motorları 'currentColor' değişkenini tanımaz, siyah stroke vermeliyiz.
+    // Ayrıca fill="none" özelliği grup içine alındı.
+    const wrappedSvg = `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <g fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    ${svgPath}
+  </g>
+</svg>`;
 
     const fileName = `${name}.svg`;
-    fs.writeFileSync(path.join(SVG_SOURCE_DIR, fileName), wrappedSvg, 'utf-8');
+    fs.writeFileSync(path.join(SVG_SOURCE_DIR, fileName), wrappedSvg.trim(), 'utf-8');
     count++;
   });
 
@@ -43,18 +48,18 @@ async function generateFont() {
   await svgtofont({
     src: SVG_SOURCE_DIR, // SVGLERİN KAYNAĞI
     dist: FONT_OUTPUT_DIR, // FONT ÇIKTISI
-    fontName: "FluxIcons", // Font adı (FluxIcons.ttf vb. olacak)
-    css: true, // CSS dosyasını otomatik oluştur
+    fontName: "FluxIcons", // Font adı
+    css: true, // CSS dosyasını oluştur
     outSVGReact: false,
     outSVGPath: false,
-    emptyDist: true, // Çıktı klasörünü her seferinde temizle
+    emptyDist: true, // Çıktı klasörünü temizle
     classNamePrefix: 'flux-icon', // CSS sınıfı: .flux-icon-home
     svgicons2svgfont: {
       fontHeight: 1000,
-      normalize: true
+      normalize: true,
+      centerHorizontally: true // İkonları ortalar
     },
-    // DİKKAT: styleTemplates satırını sildik, artık varsayılan şablonu kullanacak.
-    // Bu sayede hata almayacaksın.
+    // Varsayılan şablonları kullanması için styleTemplates ayarını kaldırdık.
   });
 
   console.log('✅ Font oluşturma başarılı! Çıktılar dist-font klasöründe.');
