@@ -1735,6 +1735,184 @@
     "menu-meatball": `<circle cx="12" cy="12" r="1"/><circle cx="5" cy="12" r="1"/><circle cx="19" cy="12" r="1"/>`, // Yatay 3 nokta
     "menu-grid-small": `<rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>`,
     "menu-motion": `<line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="15" y2="6"/><line x1="9" y1="18" x2="21" y2="18"/>`, // Hareketli hissi veren
+  
+  // =================================================
+    // 160. LIQUID GLASS SERİSİ (PREMIUM 3D STYLE)
+    // =================================================
+    
+    // LIQUID HOME (Mavi/Indigo Cam Efekti)
+    "liquid-home": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="liq-home" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1" stop-opacity="0.6"/><stop offset="1" stop-color="#818CF8" stop-opacity="0.1"/></linearGradient></defs>
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" fill="url(#liq-home)" stroke="#6366F1" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M9 22v-6h6v6" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="12" cy="8" r="2" fill="white" fill-opacity="0.4"/>
+    </svg>`,
+
+    // LIQUID HEART (Pembe/Kırmızı Aşk Camı)
+    "liquid-heart": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="liq-heart" x1="12" y1="4" x2="12" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="#F43F5E" stop-opacity="0.7"/><stop offset="1" stop-color="#FB7185" stop-opacity="0.1"/></linearGradient></defs>
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="url(#liq-heart)" stroke="#F43F5E" stroke-width="1.5" stroke-linejoin="round"/>
+        <ellipse cx="7" cy="8" rx="2" ry="1" fill="white" fill-opacity="0.4" transform="rotate(-45 7 8)"/>
+    </svg>`,
+
+    // LIQUID USER (Yeşil/Teal Profil Camı)
+    "liquid-user": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="liq-user" x1="12" y1="4" x2="12" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="#10B981" stop-opacity="0.6"/><stop offset="1" stop-color="#34D399" stop-opacity="0.1"/></linearGradient></defs>
+        <circle cx="12" cy="7" r="4" fill="url(#liq-user)" stroke="#10B981" stroke-width="1.5"/>
+        <path d="M20 21v-2a4 4 0 0 0-3-3.8H7a4 4 0 0 0-3 3.8v2" fill="url(#liq-user)" stroke="#10B981" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="12" cy="7" r="1.5" fill="white" fill-opacity="0.4"/>
+    </svg>`,
+
+    // LIQUID SEARCH (Mor/Violet Arama Camı)
+    "liquid-search": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="liq-search" x1="11" y1="3" x2="11" y2="19" gradientUnits="userSpaceOnUse"><stop stop-color="#8B5CF6" stop-opacity="0.6"/><stop offset="1" stop-color="#A78BFA" stop-opacity="0.1"/></linearGradient></defs>
+        <circle cx="11" cy="11" r="8" fill="url(#liq-search)" stroke="#8B5CF6" stroke-width="1.5"/>
+        <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="#8B5CF6" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="9" cy="9" r="2" fill="white" fill-opacity="0.3"/>
+    </svg>`,
+
+    // LIQUID BELL (Sarı/Amber Bildirim Camı)
+    "liquid-bell": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="liq-bell" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#F59E0B" stop-opacity="0.7"/><stop offset="1" stop-color="#FCD34D" stop-opacity="0.1"/></linearGradient></defs>
+        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" fill="url(#liq-bell)" stroke="#F59E0B" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M13.73 21a2 2 0 0 1-3.46 0" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="14" cy="8" r="2" fill="white" fill-opacity="0.4"/>
+    </svg>`,
+
+    // LIQUID SETTINGS (Gri/Slate Ayar Çarkı)
+    "liquid-settings": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="liq-gear" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#64748B" stop-opacity="0.6"/><stop offset="1" stop-color="#94A3B8" stop-opacity="0.2"/></linearGradient></defs>
+        <circle cx="12" cy="12" r="3" fill="none" stroke="#475569" stroke-width="1.5"/>
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0-2.83l-.06-.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1Z" fill="url(#liq-gear)" stroke="#475569" stroke-width="1.5"/>
+    </svg>`,
+
+    // LIQUID SHIELD (Mavi Güvenlik Camı)
+    "liquid-shield": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="liq-shield" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#3B82F6" stop-opacity="0.6"/><stop offset="1" stop-color="#60A5FA" stop-opacity="0.1"/></linearGradient></defs>
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="url(#liq-shield)" stroke="#3B82F6" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="url(#liq-shield)" opacity="0.5" transform="scale(0.7) translate(5,4)"/>
+        <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>`,
+
+    // LIQUID MAIL (Turuncu/Turkuaz İletişim)
+    "liquid-mail": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="liq-mail" x1="12" y1="4" x2="12" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#06B6D4" stop-opacity="0.6"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0.1"/></linearGradient></defs>
+        <rect x="2" y="4" width="20" height="16" rx="2" fill="url(#liq-mail)" stroke="#06B6D4" stroke-width="1.5"/>
+        <path d="M22 6l-10 7L2 6" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="12" cy="13" r="1.5" fill="white" fill-opacity="0.6"/>
+    </svg>`,
+  // =================================================
+    // 161. LIQUID: OFİS & DOSYALAR (YELLOW/ORANGE GLASS)
+    // =================================================
+    "liquid-folder": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-folder" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#F59E0B" stop-opacity="0.8"/><stop offset="1" stop-color="#FCD34D" stop-opacity="0.2"/></linearGradient></defs><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" fill="url(#liq-folder)" stroke="#D97706" stroke-width="1.5"/><path d="M2 10h20" stroke="#FCD34D" stroke-width="1" opacity="0.5"/><circle cx="18" cy="15" r="3" fill="white" fill-opacity="0.2"/></svg>`,
+    
+    "liquid-folder-open": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-folder-op" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#F59E0B" stop-opacity="0.8"/><stop offset="1" stop-color="#FEF3C7" stop-opacity="0.2"/></linearGradient></defs><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" fill="url(#liq-folder-op)" stroke="#D97706" stroke-width="1.5"/><path d="M2 12l2.5-6h15l2.5 6" stroke="white" stroke-opacity="0.4" stroke-width="1"/><rect x="5" y="14" width="14" height="6" rx="1" fill="white" fill-opacity="0.3"/></svg>`,
+
+    "liquid-document": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-doc" x1="4" y1="2" x2="20" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#3B82F6" stop-opacity="0.6"/><stop offset="1" stop-color="#93C5FD" stop-opacity="0.1"/></linearGradient></defs><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" fill="url(#liq-doc)" stroke="#2563EB" stroke-width="1.5"/><path d="M14 2v6h6" stroke="#2563EB" stroke-width="1.5"/><line x1="8" y1="13" x2="16" y2="13" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="8" y1="17" x2="13" y2="17" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>`,
+
+    "liquid-edit": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-edit" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse"><stop stop-color="#10B981" stop-opacity="0.8"/><stop offset="1" stop-color="#6EE7B7" stop-opacity="0.2"/></linearGradient></defs><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#059669" stroke-width="1.5" stroke-linecap="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" fill="url(#liq-edit)" stroke="#059669" stroke-width="1.5"/><circle cx="19" cy="5" r="1.5" fill="white" fill-opacity="0.5"/></svg>`,
+
+    // =================================================
+    // 162. LIQUID: MEDYA & EĞLENCE (PURPLE/PINK GLASS)
+    // =================================================
+    "liquid-play": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-play" x1="5" y1="3" x2="19" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="#8B5CF6" stop-opacity="0.8"/><stop offset="1" stop-color="#C4B5FD" stop-opacity="0.2"/></linearGradient></defs><circle cx="12" cy="12" r="10" stroke="#7C3AED" stroke-width="1.5" fill="none"/><path d="M10 8l6 4-6 4V8z" fill="url(#liq-play)" stroke="#7C3AED" stroke-width="1.5" stroke-linejoin="round"/><circle cx="12" cy="12" r="8" fill="url(#liq-play)" opacity="0.2"/></svg>`,
+
+    "liquid-camera": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-cam" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#EC4899" stop-opacity="0.7"/><stop offset="1" stop-color="#FBCFE8" stop-opacity="0.1"/></linearGradient></defs><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" fill="url(#liq-cam)" stroke="#DB2777" stroke-width="1.5"/><circle cx="12" cy="13" r="4" fill="white" fill-opacity="0.2" stroke="#DB2777" stroke-width="1.5"/><circle cx="18" cy="9" r="1" fill="white"/></svg>`,
+
+    "liquid-image": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-img" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1" stop-opacity="0.7"/><stop offset="1" stop-color="#A5B4FC" stop-opacity="0.1"/></linearGradient></defs><rect x="3" y="3" width="18" height="18" rx="2" fill="url(#liq-img)" stroke="#4F46E5" stroke-width="1.5"/><circle cx="8.5" cy="8.5" r="1.5" fill="white"/><path d="M21 15l-5-5L5 21" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="white" fill-opacity="0.2"/></svg>`,
+
+    "liquid-music": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-music" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#14B8A6" stop-opacity="0.7"/><stop offset="1" stop-color="#5EEAD4" stop-opacity="0.2"/></linearGradient></defs><path d="M9 18V5l12-2v13" stroke="#0D9488" stroke-width="1.5" stroke-linecap="round"/><circle cx="6" cy="18" r="3" fill="url(#liq-music)" stroke="#0D9488" stroke-width="1.5"/><circle cx="18" cy="16" r="3" fill="url(#liq-music)" stroke="#0D9488" stroke-width="1.5"/><path d="M9 5l12-2" stroke="#0D9488" stroke-width="1.5"/></svg>`,
+
+    // =================================================
+    // 163. LIQUID: E-TİCARET & FİNANS (GREEN GLASS)
+    // =================================================
+    "liquid-cart": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-cart" x1="1" y1="1" x2="23" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="#10B981" stop-opacity="0.7"/><stop offset="1" stop-color="#6EE7B7" stop-opacity="0.1"/></linearGradient></defs><circle cx="9" cy="21" r="1" fill="#059669"/><circle cx="20" cy="21" r="1" fill="#059669"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" fill="url(#liq-cart)" stroke="#059669" stroke-width="1.5"/><path d="M10 10h8" stroke="white" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"/></svg>`,
+
+    "liquid-bag": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-bag" x1="6" y1="2" x2="18" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#F43F5E" stop-opacity="0.7"/><stop offset="1" stop-color="#FDA4AF" stop-opacity="0.2"/></linearGradient></defs><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" fill="url(#liq-bag)" stroke="#E11D48" stroke-width="1.5"/><line x1="3" y1="6" x2="21" y2="6" stroke="#E11D48" stroke-width="1.5"/><path d="M16 10a4 4 0 0 1-8 0" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>`,
+
+    "liquid-tag": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-tag" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#8B5CF6" stop-opacity="0.7"/><stop offset="1" stop-color="#DDD6FE" stop-opacity="0.2"/></linearGradient></defs><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" fill="url(#liq-tag)" stroke="#7C3AED" stroke-width="1.5"/><circle cx="7" cy="7" r="2" fill="white" fill-opacity="0.8"/></svg>`,
+
+    "liquid-gift": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-gift" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#EF4444" stop-opacity="0.7"/><stop offset="1" stop-color="#FECACA" stop-opacity="0.2"/></linearGradient></defs><rect x="2" y="7" width="20" height="15" rx="2" fill="url(#liq-gift)" stroke="#DC2626" stroke-width="1.5"/><line x1="12" y1="22" x2="12" y2="7" stroke="#DC2626" stroke-width="1.5"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z" fill="white" fill-opacity="0.3" stroke="#DC2626"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" fill="white" fill-opacity="0.3" stroke="#DC2626"/></svg>`,
+
+    // =================================================
+    // 164. LIQUID: GÜVENLİK & SİSTEM (BLUE GLASS)
+    // =================================================
+    "liquid-lock": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-lock" x1="3" y1="11" x2="21" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#3B82F6" stop-opacity="0.7"/><stop offset="1" stop-color="#BFDBFE" stop-opacity="0.2"/></linearGradient></defs><rect x="3" y="11" width="18" height="11" rx="2" fill="url(#liq-lock)" stroke="#2563EB" stroke-width="1.5"/><path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="16.5" r="1.5" fill="white"/></svg>`,
+
+    "liquid-key": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-key" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#F59E0B" stop-opacity="0.7"/><stop offset="1" stop-color="#FEF3C7" stop-opacity="0.2"/></linearGradient></defs><circle cx="8" cy="15" r="5" fill="url(#liq-key)" stroke="#D97706" stroke-width="1.5"/><line x1="11.5" y1="11.5" x2="20" y2="3" stroke="#D97706" stroke-width="1.5"/><path d="M17 6l2 2" stroke="#D97706" stroke-width="1.5"/><path d="M14 9l2 2" stroke="#D97706" stroke-width="1.5"/><circle cx="8" cy="15" r="1.5" fill="white" fill-opacity="0.5"/></svg>`,
+
+    "liquid-shield-check": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-shield-chk" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#10B981" stop-opacity="0.7"/><stop offset="1" stop-color="#6EE7B7" stop-opacity="0.1"/></linearGradient></defs><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="url(#liq-shield-chk)" stroke="#059669" stroke-width="1.5"/><polyline points="9 12 11 14 15 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+
+    // =================================================
+    // 165. LIQUID: İLETİŞİM (TEAL GLASS)
+    // =================================================
+    "liquid-chat": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-chat" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#0EA5E9" stop-opacity="0.7"/><stop offset="1" stop-color="#BAE6FD" stop-opacity="0.2"/></linearGradient></defs><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="url(#liq-chat)" stroke="#0284C7" stroke-width="1.5"/><circle cx="8" cy="11" r="1" fill="white"/><circle cx="12" cy="11" r="1" fill="white"/><circle cx="16" cy="11" r="1" fill="white"/></svg>`,
+
+    "liquid-send": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-send" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1" stop-opacity="0.8"/><stop offset="1" stop-color="#C7D2FE" stop-opacity="0.1"/></linearGradient></defs><line x1="22" y1="2" x2="11" y2="13" stroke="#4F46E5" stroke-width="1.5"/><polygon points="22 2 15 22 11 13 2 9 22 2" fill="url(#liq-send)" stroke="#4F46E5" stroke-width="1.5"/></svg>`,
+
+    "liquid-at": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-at" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#DB2777" stop-opacity="0.6"/><stop offset="1" stop-color="#FBCFE8" stop-opacity="0.1"/></linearGradient></defs><circle cx="12" cy="12" r="4" fill="url(#liq-at)" stroke="#BE185D" stroke-width="1.5"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94" stroke="#BE185D" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>`,
+
+    // =================================================
+    // 166. LIQUID: HAVA DURUMU (SKY GLASS)
+    // =================================================
+    "liquid-sun": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-sun" x1="8" y1="8" x2="16" y2="16" gradientUnits="userSpaceOnUse"><stop stop-color="#F59E0B" stop-opacity="0.9"/><stop offset="1" stop-color="#FEF3C7" stop-opacity="0.2"/></linearGradient></defs><circle cx="12" cy="12" r="5" fill="url(#liq-sun)" stroke="#D97706" stroke-width="1.5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="#D97706" stroke-width="1.5" stroke-linecap="round"/></svg>`,
+
+    "liquid-cloud": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-cloud" x1="2" y1="10" x2="22" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#3B82F6" stop-opacity="0.6"/><stop offset="1" stop-color="#E0F2FE" stop-opacity="0.2"/></linearGradient></defs><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" fill="url(#liq-cloud)" stroke="#2563EB" stroke-width="1.5" stroke-linejoin="round"/></svg>`,
+
+    "liquid-lightning": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-bolt" x1="10" y1="2" x2="14" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#FACC15" stop-opacity="0.9"/><stop offset="1" stop-color="#FEF08A" stop-opacity="0.2"/></linearGradient></defs><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="url(#liq-bolt)" stroke="#CA8A04" stroke-width="1.5" stroke-linejoin="round"/></svg>`,
+
+    // =================================================
+    // 167. LIQUID: SİSTEM (GRAY GLASS)
+    // =================================================
+    "liquid-trash": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-trash" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="#EF4444" stop-opacity="0.6"/><stop offset="1" stop-color="#FECACA" stop-opacity="0.1"/></linearGradient></defs><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" stroke="#DC2626" stroke-width="1.5"/><rect x="5" y="6" width="14" height="14" fill="url(#liq-trash)" opacity="0.5"/><line x1="10" y1="11" x2="10" y2="17" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round"/><line x1="14" y1="11" x2="14" y2="17" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round"/></svg>`,
+
+    "liquid-star": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-star" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#F59E0B" stop-opacity="0.8"/><stop offset="1" stop-color="#FDE68A" stop-opacity="0.2"/></linearGradient></defs><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="url(#liq-star)" stroke="#D97706" stroke-width="1.5" stroke-linejoin="round"/><circle cx="10" cy="10" r="1" fill="white" fill-opacity="0.6"/></svg>`,
+  // =================================================
+    // 168. LIQUID: OFİS & ÜRETKENLİK (OFFICE GLASS)
+    // =================================================
+    "liquid-calendar": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-cal" x1="3" y1="4" x2="21" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#3B82F6" stop-opacity="0.7"/><stop offset="1" stop-color="#DBEAFE" stop-opacity="0.2"/></linearGradient></defs><rect x="3" y="4" width="18" height="18" rx="2" fill="url(#liq-cal)" stroke="#2563EB" stroke-width="1.5"/><path d="M16 2v4M8 2v4M3 10h18" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"/><rect x="7" y="14" width="4" height="4" rx="1" fill="white" fill-opacity="0.4"/></svg>`,
+
+    "liquid-chart": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-chart" x1="3" y1="10" x2="21" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="#8B5CF6" stop-opacity="0.7"/><stop offset="1" stop-color="#E9D5FF" stop-opacity="0.2"/></linearGradient></defs><path d="M3 3v18h18" stroke="#7C3AED" stroke-width="1.5" stroke-linecap="round"/><rect x="7" y="10" width="4" height="9" rx="1" fill="url(#liq-chart)" stroke="#7C3AED" stroke-width="1"/><rect x="15" y="6" width="4" height="13" rx="1" fill="url(#liq-chart)" stroke="#7C3AED" stroke-width="1"/><line x1="7" y1="10" x2="11" y2="10" stroke="white" stroke-opacity="0.5"/><line x1="15" y1="6" x2="19" y2="6" stroke="white" stroke-opacity="0.5"/></svg>`,
+
+    "liquid-clipboard": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-clip" x1="4" y1="2" x2="20" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#0D9488" stop-opacity="0.7"/><stop offset="1" stop-color="#CCFBF1" stop-opacity="0.2"/></linearGradient></defs><rect x="9" y="2" width="6" height="4" rx="1" fill="#0F766E"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" fill="url(#liq-clip)" stroke="#0F766E" stroke-width="1.5"/><line x1="8" y1="12" x2="16" y2="12" stroke="white" stroke-width="1.5" stroke-opacity="0.6"/><line x1="8" y1="16" x2="12" y2="16" stroke="white" stroke-width="1.5" stroke-opacity="0.6"/></svg>`,
+
+    "liquid-briefcase": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-case" x1="2" y1="7" x2="22" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="#B45309" stop-opacity="0.8"/><stop offset="1" stop-color="#FEF3C7" stop-opacity="0.2"/></linearGradient></defs><rect x="2" y="7" width="20" height="14" rx="2" fill="url(#liq-case)" stroke="#92400E" stroke-width="1.5"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" stroke="#92400E" stroke-width="1.5"/><circle cx="12" cy="14" r="1.5" fill="white" fill-opacity="0.5"/></svg>`,
+
+    // =================================================
+    // 169. LIQUID: TEKNOLOJİ & CİHAZ (TECH GLASS)
+    // =================================================
+    "liquid-battery": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-bat" x1="2" y1="6" x2="18" y2="18" gradientUnits="userSpaceOnUse"><stop stop-color="#10B981" stop-opacity="0.8"/><stop offset="1" stop-color="#D1FAE5" stop-opacity="0.2"/></linearGradient></defs><rect x="1" y="6" width="18" height="12" rx="2" fill="url(#liq-bat)" stroke="#047857" stroke-width="1.5"/><line x1="23" y1="13" x2="23" y2="11" stroke="#047857" stroke-width="2"/><path d="M5 6v12" stroke="white" stroke-opacity="0.3"/><path d="M9 6v12" stroke="white" stroke-opacity="0.3"/><path d="M13 6v12" stroke="white" stroke-opacity="0.3"/></svg>`,
+
+    "liquid-wifi": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-wifi" x1="2" y1="8" x2="22" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#3B82F6" stop-opacity="0.8"/><stop offset="1" stop-color="#DBEAFE" stop-opacity="0.2"/></linearGradient></defs><path d="M5 12.55a11 11 0 0 1 14.08 0" stroke="#1D4ED8" stroke-width="1.5" stroke-linecap="round" fill="none"/><path d="M1.42 9a16 16 0 0 1 21.16 0" stroke="#1D4ED8" stroke-width="1.5" stroke-linecap="round" fill="none"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0" stroke="#1D4ED8" stroke-width="1.5" stroke-linecap="round" fill="none"/><circle cx="12" cy="20" r="2" fill="#3B82F6"/></svg>`,
+
+    "liquid-mouse": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-mouse" x1="6" y1="2" x2="18" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#6366F1" stop-opacity="0.7"/><stop offset="1" stop-color="#E0E7FF" stop-opacity="0.2"/></linearGradient></defs><rect x="6" y="3" width="12" height="18" rx="6" fill="url(#liq-mouse)" stroke="#4338CA" stroke-width="1.5"/><line x1="12" y1="7" x2="12" y2="11" stroke="#4338CA" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="16" r="2" fill="white" fill-opacity="0.2"/></svg>`,
+
+    "liquid-monitor": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-mon" x1="2" y1="3" x2="22" y2="17" gradientUnits="userSpaceOnUse"><stop stop-color="#06B6D4" stop-opacity="0.6"/><stop offset="1" stop-color="#CFFAFE" stop-opacity="0.2"/></linearGradient></defs><rect x="2" y="3" width="20" height="14" rx="2" fill="url(#liq-mon)" stroke="#0891B2" stroke-width="1.5"/><path d="M8 21h8M12 17v4" stroke="#0891B2" stroke-width="1.5" stroke-linecap="round"/><path d="M2 13h20" stroke="#0891B2" stroke-width="1" stroke-opacity="0.3"/></svg>`,
+
+    // =================================================
+    // 170. LIQUID: DOĞA & EVREN (NATURE GLASS)
+    // =================================================
+    "liquid-fire": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-fire" x1="6" y1="5" x2="18" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="#EF4444" stop-opacity="0.8"/><stop offset="1" stop-color="#FCD34D" stop-opacity="0.3"/></linearGradient></defs><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.1.2-2.2.5-3.3a7 7 0 0 0 3 3.8z" fill="url(#liq-fire)" stroke="#B91C1C" stroke-width="1.5"/><circle cx="12" cy="17" r="2" fill="#FEF3C7" fill-opacity="0.4"/></svg>`,
+
+    "liquid-water": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-water" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#3B82F6" stop-opacity="0.7"/><stop offset="1" stop-color="#BFDBFE" stop-opacity="0.2"/></linearGradient></defs><path d="M12 2.6L12 2.6a7 7 0 0 1 7 7c0 3.8-3.2 7.4-7 7.4s-7-3.6-7-7.4a7 7 0 0 1 7-7Z" fill="url(#liq-water)" stroke="#2563EB" stroke-width="1.5"/><path d="M14 9c0-1.5-1-2-2-2" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>`,
+
+    "liquid-leaf": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-leaf" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#10B981" stop-opacity="0.7"/><stop offset="1" stop-color="#A7F3D0" stop-opacity="0.2"/></linearGradient></defs><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.77 10-10 10Z" fill="url(#liq-leaf)" stroke="#059669" stroke-width="1.5"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" stroke="#059669" stroke-width="1.5" stroke-linecap="round"/></svg>`,
+
+    "liquid-moon": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-moon" x1="8" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#8B5CF6" stop-opacity="0.8"/><stop offset="1" stop-color="#C4B5FD" stop-opacity="0.2"/></linearGradient></defs><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="url(#liq-moon)" stroke="#7C3AED" stroke-width="1.5"/><circle cx="14" cy="10" r="1" fill="white" fill-opacity="0.3"/><circle cx="17" cy="15" r="2" fill="white" fill-opacity="0.1"/></svg>`,
+
+    // =================================================
+    // 171. LIQUID: KARIŞIK & EĞLENCE (MISC GLASS)
+    // =================================================
+    "liquid-bulb": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-bulb" x1="9" y1="2" x2="15" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#F59E0B" stop-opacity="0.7"/><stop offset="1" stop-color="#FDE68A" stop-opacity="0.2"/></linearGradient></defs><path d="M9 21h6M12 17v4" stroke="#D97706" stroke-width="1.5"/><path d="M12 2a7 7 0 0 0-7 7c0 2.5 2 4.5 2 7h10c0-2.5 2-4.5 2-7a7 7 0 0 0-7-7z" fill="url(#liq-bulb)" stroke="#D97706" stroke-width="1.5"/><path d="M10 8c1-2 3-2 4 0" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.6"/></svg>`,
+
+    "liquid-diamond": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-dia" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#0EA5E9" stop-opacity="0.7"/><stop offset="1" stop-color="#E0F2FE" stop-opacity="0.2"/></linearGradient></defs><polygon points="12 2 22 12 12 22 2 12 12 2" fill="url(#liq-dia)" stroke="#0284C7" stroke-width="1.5"/><rect x="9" y="9" width="6" height="6" rx="1" fill="white" fill-opacity="0.3" transform="rotate(45 12 12)"/></svg>`,
+
+    "liquid-rocket": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-rocket" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#EF4444" stop-opacity="0.8"/><stop offset="1" stop-color="#FCA5A5" stop-opacity="0.2"/></linearGradient></defs><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" stroke="#B91C1C" stroke-width="1.5" fill="#FCA5A5"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" fill="url(#liq-rocket)" stroke="#B91C1C" stroke-width="1.5"/><circle cx="15" cy="9" r="2" fill="white" fill-opacity="0.4"/></svg>`,
+
+    "liquid-bookmark": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-bm" x1="5" y1="2" x2="19" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#EC4899" stop-opacity="0.7"/><stop offset="1" stop-color="#FCE7F3" stop-opacity="0.2"/></linearGradient></defs><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" fill="url(#liq-bm)" stroke="#BE185D" stroke-width="1.5"/><circle cx="12" cy="8" r="2" fill="white" fill-opacity="0.3"/></svg>`,
+
+
+  
   };
 
   return { icons };
