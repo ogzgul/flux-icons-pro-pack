@@ -1,5 +1,7 @@
 
 /* Flux Icons - CSS SVG System */
+
+/* Eski font ikon sistemini devre dışı bırak */
 .flux-icon {
   display: inline-block;
   width: 1em;
@@ -8,6 +10,14 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  font-family: initial !important;
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* Eski ::before gliflerini temizle */
+.flux-icon::before {
+  content: '' !important;
 }
 
 .flux-icon-facebook {

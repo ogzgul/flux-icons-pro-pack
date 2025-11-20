@@ -1,24 +1,104 @@
-// create-webfont-css.js (veya istediğin isim)
+// scripts/create-webfont.js
 import fs from 'fs';
 import path from 'path';
+import svgtofont from 'svgtofont';
+import outlineStroke from 'svg-outline-stroke';
 import { icons } from '../lib/icons.js';
 
-const DIST_DIR = path.resolve(process.cwd(), 'dist-font');
+const SVG_SOURCE_DIR = path.resolve(process.cwd(), 'svg_source');
+const DIST_FONT_DIR = path.resolve(process.cwd(), 'dist-font');
 
 // Renkli olması gereken ikon türleri
 const COLORED_TYPES = ['flag-', 'brand-', 'emoji-', 'crypto-', 'logo-'];
 
-async function generateCssIcons() {
-  console.log('🎨 CSS İkon Sistemi Oluşturuluyor...');
+async function extractSvgs() {
+  console.log('1. İkonlar işleniyor ve Stroke -> Path dönüşümü yapılıyor...');
 
-  // Klasörü temizle
-  if (fs.existsSync(DIST_DIR)) {
-    fs.rmSync(DIST_DIR, { recursive: true, force: true });
+  if (fs.existsSync(SVG_SOURCE_DIR)) {
+    fs.rmSync(SVG_SOURCE_DIR, { recursive: true, force: true });
   }
-  fs.mkdirSync(DIST_DIR, { recursive: true });
+  fs.mkdirSync(SVG_SOURCE_DIR, { recursive: true });
+
+  const iconNames = Object.keys(icons);
+  let count = 0;
+
+  for (const name of iconNames) {
+    const rawPath = icons[name];
+    let finalSvgContent = '';
+
+    const isSolid =
+      rawPath.includes('stroke="none"') ||
+      (rawPath.includes('fill=') && !rawPath.includes('fill="none"'));
+
+    if (isSolid) {
+      let cleanPath = rawPath.replace(/fill="[^"]*"/g, 'fill="#000000"');
+      if (!cleanPath.includes('fill=')) {
+        cleanPath = `<g fill="#000000">${cleanPath}</g>`;
+      }
+      finalSvgContent = `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">${cleanPath}</svg>`;
+    } else {
+      const tempSvg = `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${rawPath}</svg>`;
+
+      try {
+        finalSvgContent = await outlineStroke(tempSvg, {
+          optCurve: true,
+          step: 4,
+          centerHorizontally: false,
+          fixedWidth: false,
+          color: '#000000',
+        });
+      } catch (err) {
+        console.error(`Hata: ${name} dönüştürülemedi, orjinali kullanılıyor.`, err);
+        finalSvgContent = tempSvg;
+      }
+    }
+
+    const fileName = `${name}.svg`;
+    fs.writeFileSync(path.join(SVG_SOURCE_DIR, fileName), finalSvgContent, 'utf-8');
+    count++;
+  }
+
+  console.log(`✅ ${count} ikon svg_source klasörüne çıkarıldı.`);
+}
+
+async function generateFont() {
+  console.log('2. Font dosyaları oluşturuluyor...');
+
+  if (!fs.existsSync(DIST_FONT_DIR)) {
+    fs.mkdirSync(DIST_FONT_DIR, { recursive: true });
+  }
+
+  await svgtofont({
+    src: SVG_SOURCE_DIR,
+    dist: DIST_FONT_DIR,
+    fontName: 'FluxIcons',
+    css: false,              // ÖNEMLİ: svgtofont artık CSS üretmiyor
+    outSVGReact: false,
+    outSVGPath: false,
+    emptyDist: false,
+    classNamePrefix: 'flux-icon',
+    svgicons2svgfont: {
+      fontHeight: 1000,
+      normalize: true,
+      centerHorizontally: true,
+    },
+  });
+
+  console.log('✅ Font dosyaları tamamlandı!');
+}
+
+// YENİ: SVG tabanlı CSS oluştur
+async function generateCssIcons() {
+  console.log('3. CSS ikon sistemi oluşturuluyor...');
+
+  if (!fs.existsSync(DIST_FONT_DIR)) {
+    fs.mkdirSync(DIST_FONT_DIR, { recursive: true });
+  }
 
   let cssContent = `
 /* Flux Icons - CSS SVG System */
+
+/* Eski font ikon sistemini devre dışı bırak */
 .flux-icon {
   display: inline-block;
   width: 1em;
@@ -27,6 +107,14 @@ async function generateCssIcons() {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  font-family: initial !important;
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* Eski ::before gliflerini temizle */
+.flux-icon::before {
+  content: '' !important;
 }
 `;
 
@@ -36,7 +124,6 @@ async function generateCssIcons() {
   iconNames.forEach((name) => {
     const rawSvg = icons[name];
 
-    // Bu ikon renkli mi?
     const isColored =
       COLORED_TYPES.some((type) => name.includes(type)) ||
       (rawSvg.includes('fill=') &&
@@ -46,20 +133,16 @@ async function generateCssIcons() {
     let fullSvg;
 
     if (isColored) {
-      // === RENKLİ İKONLAR ===
-      // Orijinal fill/stroke aynen kalsın
+      // Renkli ikonlar
       fullSvg = rawSvg.startsWith('<svg')
         ? rawSvg
         : `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">${rawSvg}</svg>`;
     } else {
-      // === ÇİZGİSEL / MONO İKONLAR ===
-      // Outline görünümünü korumak için stroke'lu bir svg sarmalıyoruz
+      // Çizgisel ikonlar (outline)
       let inner = rawSvg;
 
       if (rawSvg.trim().startsWith('<svg')) {
-        inner = rawSvg
-          .replace(/^<svg[^>]*>/i, '')
-          .replace(/<\/svg>$/i, '');
+        inner = rawSvg.replace(/^<svg[^>]*>/i, '').replace(/<\/svg>$/i, '');
       }
 
       fullSvg = `<svg xmlns="http://www.w3.org/2000/svg"
@@ -70,11 +153,8 @@ async function generateCssIcons() {
   stroke-linecap="round"
   stroke-linejoin="round"
 >${inner}</svg>`;
-      // Mask kullanacağımız için burada rengin siyah/white olması önemli değil,
-      // maske sadece alpha'yı kullanacak, rengi CSS'teki currentColor belirleyecek.
     }
 
-    // SVG'yi data URI için encode et
     const encodedSvg = fullSvg
       .replace(/"/g, "'")
       .replace(/%/g, '%25')
@@ -87,7 +167,6 @@ async function generateCssIcons() {
     const dataUri = `data:image/svg+xml,${encodedSvg}`;
 
     if (isColored) {
-      // --- RENKLİ MOD (arka plan beyaz, renkler olduğu gibi) ---
       cssContent += `
 .flux-icon-${name} {
   background-color: #ffffff;
@@ -95,7 +174,6 @@ async function generateCssIcons() {
 }
 `;
     } else {
-      // --- OUTLINE / MONO MOD (mask + currentColor) ---
       cssContent += `
 .flux-icon-${name} {
   background-color: currentColor;
@@ -114,11 +192,17 @@ async function generateCssIcons() {
     count++;
   });
 
-  fs.writeFileSync(path.join(DIST_DIR, 'FluxIcons.css'), cssContent, 'utf-8');
-  console.log(`✅ ${count} ikon başarıyla CSS sistemine dönüştürüldü!`);
-  console.log(`📁 Çıktı: dist-font/FluxIcons.css`);
+  fs.writeFileSync(path.join(DIST_FONT_DIR, 'FluxIcons.css'), cssContent, 'utf-8');
+  console.log(`✅ ${count} ikon için CSS üretildi.`);
+  console.log('📁 Çıktı: dist-font/FluxIcons.css');
 }
 
-generateCssIcons().catch((err) => {
-  console.error('❌ CSS ikon üretim hatası:', err);
-});
+(async () => {
+  try {
+    await extractSvgs();
+    await generateFont();
+    await generateCssIcons();
+  } catch (err) {
+    console.error('❌ Kritik hata:', err);
+  }
+})();
