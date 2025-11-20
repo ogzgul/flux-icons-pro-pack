@@ -41,15 +41,16 @@ const copyToClipboard = async (text, type) => {
             
             <div class="bg-slate-950 text-slate-200 p-4 rounded-lg font-mono text-xs md:text-sm flex justify-between items-center gap-4">
                 <span class="break-all text-indigo-300">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flux-icons-pro-pack@1.0.20/dist-font/flux-icons.css" /&gt;</span>
-                <button 
-                    @click="copyToClipboard('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flux-icons-pro-pack@1.0.20/dist-font/flux-icons.css" />', 'cdn')" 
-                    class="shrink-0 px-3 py-1.5 rounded text-xs font-bold transition-all flex items-center gap-2"
-                    :class="copiedState.cdn ? 'bg-emerald-500 text-white' : 'bg-slate-800 text-slate-400 hover:bg-indigo-600 hover:text-white'"
-                >
-                    <FluxIcon v-if="copiedState.cdn" name="check" size="14" />
-                    <FluxIcon v-else name="copy" size="14" />
-                    {{ copiedState.cdn ? 'Kopyalandı!' : 'Kopyala' }}
-                </button>
+               <button 
+  @click="copyToClipboard('<link rel=\'stylesheet\' href=\'https://cdn.jsdelivr.net/npm/flux-icons-pro-pack@1.0.20/dist-font/flux-icons.css\' />', 'cdn')" 
+  class="shrink-0 px-3 py-1.5 rounded text-xs font-bold transition-all flex items-center gap-2"
+  :class="copiedState.cdn ? 'bg-emerald-500 text-white' : 'bg-slate-800 text-slate-400 hover:bg-indigo-600 hover:text-white'"
+>
+  <FluxIcon v-if="copiedState.cdn" name="check" size="14" />
+  <FluxIcon v-else name="copy" size="14" />
+  {{ copiedState.cdn ? 'Kopyalandı!' : 'Kopyala' }}
+</button>
+
             </div>
 
             <div class="mt-4 p-3 bg-slate-50 dark:bg-slate-800 rounded border border-slate-200 dark:border-slate-700 text-xs text-slate-500">
