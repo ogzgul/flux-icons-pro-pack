@@ -1,18 +1,15 @@
-// scripts/create-webfont.js
 import fs from 'fs';
 import path from 'path';
 import svgtofont from 'svgtofont';
-import outlineStroke from 'svg-outline-stroke'; // Bu paketin yüklü olduğundan emin ol
+import outlineStroke from 'svg-outline-stroke';
 import { icons } from '../lib/icons.js';
 
 const SVG_SOURCE_DIR = path.resolve(process.cwd(), 'svg_source');
 const FONT_OUTPUT_DIR = path.resolve(process.cwd(), 'dist-font');
 
-// 1. İndirme ve Dönüştürme (Outline) İşlemi
 async function extractSvgs() {
   console.log('1. İkonlar işleniyor ve Stroke -> Path dönüşümü yapılıyor...');
   
-  // Klasör temizliği
   if (fs.existsSync(SVG_SOURCE_DIR)) {
     fs.rmSync(SVG_SOURCE_DIR, { recursive: true, force: true });
   }
@@ -21,32 +18,37 @@ async function extractSvgs() {
   const iconNames = Object.keys(icons);
   let count = 0;
 
-  // Asenkron döngü
   for (const name of iconNames) {
     const rawPath = icons[name];
     let finalSvgContent = '';
 
-    // KONTROL: İkon zaten dolu mu? (Brand ikonları veya solid olanlar)
-    // Eğer path içinde 'stroke="none"' veya 'fill=' (none hariç) varsa dokunma.
-    const isSolid = rawPath.includes('stroke="none"') || (rawPath.includes('fill=') && !rawPath.includes('fill="none"'));
+    // KONTROL: İkon zaten dolu mu? (Markalar vs.)
+    const isSolid = rawPath.includes('stroke="none"') || 
+                    (rawPath.includes('fill=') && !rawPath.includes('fill="none"'));
 
     if (isSolid) {
-       // Dolu ikonları olduğu gibi al, sadece sarmala
-       finalSvgContent = `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">${rawPath}</svg>`;
+       // Dolu ikonları olduğu gibi al ama rengi siyah yap (Font için siyah şart)
+       // currentColor veya hex renklerini siyaha çeviriyoruz ki font motoru algılasın.
+       let cleanPath = rawPath.replace(/fill="[^"]*"/g, 'fill="#000000"');
+       if (!cleanPath.includes('fill=')) {
+           cleanPath = `<g fill="#000000">${cleanPath}</g>`;
+       }
+       finalSvgContent = `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">${cleanPath}</svg>`;
     } 
     else {
-      // Çizgisel ikonları "Outline" işlemine sok (Çizgiyi şekle çevir)
-      // Önce geçici bir SVG oluşturuyoruz (Siyah stroke ile)
+      // ÇİZGİSEL İKONLAR İÇİN DÖNÜŞÜM
+      // 1. Önce siyah stroke ile ham bir SVG oluşturuyoruz.
       const tempSvg = `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${rawPath}</svg>`;
       
       try {
-        // SİHİRLİ DOKUNUŞ: Çizgileri şekle çevirir
+        // 2. outlineStroke ile çizgiyi şekle (path'e) çeviriyoruz.
+        // color: 'black' font motorunun şekli görmesi için kritiktir.
         finalSvgContent = await outlineStroke(tempSvg, { 
-            optCurve: false, // Eğrileri bozma
-            step: 4, // Hassasiyet
-            centerHorizontally: true,
-            fixedWidth: true,
-            color: 'black' // Fontlar rengi CSS'ten alır, burada siyah bazdır
+            optCurve: true, 
+            step: 4, 
+            centerHorizontally: false, // Kaymayı önlemek için kapattım
+            fixedWidth: false, // Oran bozulmasın diye kapattım
+            color: '#000000' 
         });
       } catch (err) {
         console.error(`Hata: ${name} dönüştürülemedi, orjinali kullanılıyor.`, err);
@@ -57,15 +59,10 @@ async function extractSvgs() {
     const fileName = `${name}.svg`;
     fs.writeFileSync(path.join(SVG_SOURCE_DIR, fileName), finalSvgContent, 'utf-8');
     count++;
-    
-    // Konsolu kilitlememek için ara sıra bilgi ver
-    if (count % 200 === 0) console.log(`   ...${count} ikon işlendi.`);
   }
-
-  console.log(`✅ ${count} adet ikon başarıyla işlendi.`);
+  console.log(`✅ ${count} ikon svg_source klasörüne çıkarıldı.`);
 }
 
-// 2. Font Oluşturma
 async function generateFont() {
   console.log('2. Font dosyaları oluşturuluyor...');
 
@@ -84,17 +81,12 @@ async function generateFont() {
       centerHorizontally: true
     }
   });
-
-  console.log('✅ Font işlemi tamamlandı! dist-font klasörünü kontrol et.');
-
-  // Temizlik
-  try {
-      fs.rmSync(SVG_SOURCE_DIR, { recursive: true, force: true });
-      console.log('✨ Geçici SVG klasörü temizlendi.');
-  } catch (e) {}
+  console.log('✅ Font işlemi tamamlandı!');
+  
+  // Temizlik yapmıyoruz ki klasörü kontrol edebil.
+  // fs.rmSync(SVG_SOURCE_DIR, { recursive: true, force: true });
 }
 
-// Başlat
 (async () => {
   try {
     await extractSvgs();
