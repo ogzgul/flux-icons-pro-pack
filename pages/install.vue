@@ -23,6 +23,11 @@
                 <button class="text-slate-500 hover:text-white shrink-0">Kopyala</button>
             </div>
 
+            <div class="mt-4 p-3 bg-slate-50 dark:bg-slate-800 rounded border border-slate-200 dark:border-slate-700 text-xs text-slate-500">
+                <p>Alternatif Link (CamelCase):</p>
+                <code class="block mt-1 select-all">https://cdn.jsdelivr.net/npm/flux-icons-pro-pack@1.0.20/dist-font/flux-icons.css</code>
+            </div>
+
             <div class="mt-6 p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-100 dark:border-slate-700">
                 <p class="text-sm font-bold mb-2 text-slate-700 dark:text-slate-300">Kullanım:</p>
                 <code class="text-xs sm:text-sm font-mono text-pink-500 bg-white dark:bg-slate-900 px-2 py-1 rounded border border-slate-200 dark:border-slate-700">

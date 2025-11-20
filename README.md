@@ -28,7 +28,11 @@ Add inside `<head>`:
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flux-icons-pro-pack@latest/dist-font/flux-icons.css" />
 ```
+Or :
 
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flux-icons-pro-pack@1.0.20/dist-font/flux-icons.css" />
+```
 Use anywhere:
 
 ```html
