@@ -1,1 +1,5 @@
-<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16a1 1 0 0 1 1-1h3V8a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7h3a1 1 0 0 1 1 1v4H2v-4z"/><line x1="12" y1="3" x2="12" y2="12"/><polyline points="8 7 12 3 16 7"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <g fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 16a1 1 0 0 1 1-1h3V8a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7h3a1 1 0 0 1 1 1v4H2v-4z"/><line x1="12" y1="3" x2="12" y2="12"/><polyline points="8 7 12 3 16 7"/>
+  </g>
+</svg>
