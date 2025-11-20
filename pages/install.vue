@@ -1,3 +1,24 @@
+<script setup>
+import { ref } from 'vue'
+
+const copiedState = ref({
+    cdn: false,
+    npm: false
+});
+
+const copyToClipboard = async (text, type) => {
+    try {
+        await navigator.clipboard.writeText(text);
+        copiedState.value[type] = true;
+        setTimeout(() => {
+            copiedState.value[type] = false;
+        }, 2000);
+    } catch (err) {
+        console.error('Kopyalama hatası:', err);
+    }
+}
+</script>
+
 <template>
   <main class="max-w-4xl mx-auto p-6 py-12">
     <div class="text-center mb-16">
