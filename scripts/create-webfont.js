@@ -1,17 +1,16 @@
 import fs from 'fs';
 import path from 'path';
 import svgtofont from 'svgtofont';
-import { icons } from '../lib/icons.js'; // İkon verilerini buradan alıyoruz
+import outlineStroke from 'svg-outline-stroke'; // Yeni paket
+import { icons } from '../lib/icons.js';
 
-// Klasör yolları
 const SVG_SOURCE_DIR = path.resolve(process.cwd(), 'svg_source');
 const FONT_OUTPUT_DIR = path.resolve(process.cwd(), 'dist-font');
 
-// 1. İndirme (Extraction) İşlemi
-function extractSvgs() {
-  console.log('1. JS Objesinden SVG Dosyalarına Çıkarılıyor...');
+// 1. İndirme ve Dönüştürme İşlemi
+async function extractSvgs() {
+  console.log('1. İkonlar işleniyor ve şekle dönüştürülüyor (Bu biraz sürebilir)...');
   
-  // Eski klasörü temizle veya oluştur
   if (fs.existsSync(SVG_SOURCE_DIR)) {
     fs.rmSync(SVG_SOURCE_DIR, { recursive: true, force: true });
   }
@@ -19,66 +18,74 @@ function extractSvgs() {
 
   const iconNames = Object.keys(icons);
   let count = 0;
-  
-  iconNames.forEach(name => {
-    const svgPath = icons[name];
-    
-    // DÜZELTME: currentColor yerine sabit '#000' ve <g> etiketi kullanımı.
-    // Font motorları 'currentColor' değişkenini tanımaz, siyah stroke vermeliyiz.
-    // Ayrıca fill="none" özelliği grup içine alındı.
-    const wrappedSvg = `
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <g fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    ${svgPath}
-  </g>
-</svg>`;
+
+  // Döngü içinde asenkron işlem yapacağımız için for...of kullanıyoruz
+  for (const name of iconNames) {
+    const rawPath = icons[name];
+    let finalSvgContent = '';
+
+    // Eğer ikon "Dolu/Marka" ikonuysa (stroke="none" içeriyorsa) olduğu gibi al
+    if (rawPath.includes('stroke="none"') || rawPath.includes("stroke='none'")) {
+       finalSvgContent = `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">${rawPath}</svg>`;
+    } 
+    // Eğer ikon "Çizgisel" ise, çizgiyi şekle (outline) çevir
+    else {
+      // Önce geçici bir SVG oluşturuyoruz
+      const tempSvg = `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${rawPath}</svg>`;
+      
+      try {
+        // Sihirli dokunuş: Stroke -> Fill dönüşümü
+        finalSvgContent = await outlineStroke(tempSvg);
+      } catch (err) {
+        console.error(`Hata: ${name} dönüştürülemedi.`, err);
+        finalSvgContent = tempSvg; // Hata olursa eskisini koy
+      }
+    }
 
     const fileName = `${name}.svg`;
-    fs.writeFileSync(path.join(SVG_SOURCE_DIR, fileName), wrappedSvg.trim(), 'utf-8');
+    fs.writeFileSync(path.join(SVG_SOURCE_DIR, fileName), finalSvgContent, 'utf-8');
     count++;
-  });
+    
+    // Konsolu boğmamak için her 100 ikonda bir bilgi ver
+    if (count % 100 === 0) console.log(`   ...${count} ikon işlendi.`);
+  }
 
-  console.log(`✅ ${count} adet ikon dosyaya başarıyla çıkarıldı.`);
+  console.log(`✅ ${count} adet ikon başarıyla şekle dönüştürüldü.`);
 }
 
-// 2. Fonta Dönüştürme (Generation) İşlemi
+// 2. Font Oluşturma
 async function generateFont() {
-  console.log('2. SVG Dosyaları Fonta Dönüştürülüyor...');
+  console.log('2. Font dosyaları oluşturuluyor...');
 
   await svgtofont({
-    src: SVG_SOURCE_DIR, // SVGLERİN KAYNAĞI
-    dist: FONT_OUTPUT_DIR, // FONT ÇIKTISI
-    fontName: "FluxIcons", // Font adı
-    css: true, // CSS dosyasını oluştur
+    src: SVG_SOURCE_DIR,
+    dist: FONT_OUTPUT_DIR,
+    fontName: "FluxIcons",
+    css: true,
     outSVGReact: false,
     outSVGPath: false,
-    emptyDist: true, // Çıktı klasörünü temizle
-    classNamePrefix: 'flux-icon', // CSS sınıfı: .flux-icon-home
+    emptyDist: true,
+    classNamePrefix: 'flux-icon',
     svgicons2svgfont: {
       fontHeight: 1000,
       normalize: true,
-      centerHorizontally: true // İkonları ortalar
-    },
-    // Varsayılan şablonları kullanması için styleTemplates ayarını kaldırdık.
+      centerHorizontally: true
+    }
   });
 
-  console.log('✅ Font oluşturma başarılı! Çıktılar dist-font klasöründe.');
-  
-  // 3. Geçici SVG klasörünü temizle
+  console.log('✅ Font işlemi tamamlandı! dist-font klasörünü kontrol et.');
+
   try {
       fs.rmSync(SVG_SOURCE_DIR, { recursive: true, force: true });
-      console.log('✨ Geçici SVG klasörü temizlendi.');
-  } catch (e) {
-      console.log('⚠️ Geçici klasör silinemedi (Önemli değil).');
-  }
+      console.log('✨ Temizlik yapıldı.');
+  } catch (e) {}
 }
 
-// Akışı Başlat
 (async () => {
   try {
-    extractSvgs();
+    await extractSvgs();
     await generateFont();
   } catch (error) {
-    console.error('❌ Hata oluştu:', error);
+    console.error('❌ Kritik Hata:', error);
   }
 })();
