@@ -84,7 +84,7 @@ const generatedCode = computed(() => {
   const strokeValue = customize.value.stroke;
   const strokeAttr = strokeValue !== 2 ? ` stroke-width="${strokeValue}"` : '';
   const spinAttr = customize.value.spin ? ' spin' : '';
-  const spinClass = customize.value.spin ? ' animate-spin' : '';
+  const spinClass = customize.value.spin ? ' flux-spin' : '';
   const customStyle = `style="font-size: ${sizeValue}px; color: ${colorValue};"`;
 
   if (customize.value.type === "class") {
