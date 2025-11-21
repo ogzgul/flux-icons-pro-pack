@@ -4,15 +4,15 @@ import { useFluxIcons } from '@/composables/useFluxIcons';
 
 const { icons } = useFluxIcons();
 
-// --- AYARLAR ---
+// --- SETTINGS ---
 const searchQuery = ref("");
 const visibleCount = ref(50);
 const selectedIcon = ref(null);
 const isModalOpen = ref(false);
 const copied = ref(false);
-const activeCategory = ref('all'); // Kategori Filtresi
+const activeCategory = ref('all');
 
-// Varsayılan Çıktı Ayarları (Class modu aktif)
+// Default Output Settings
 const customize = ref({ 
   size: 64, 
   color: "#818cf8", 
@@ -21,17 +21,18 @@ const customize = ref({
   spin: false 
 });
 
-// Type değişince kalınlığı sıfırla (Class modunda kalınlık sabittir)
+// Type değişince kalınlığı sıfırla
 watch(() => customize.value.type, (newType) => {
     if (newType === 'class') {
         customize.value.stroke = 2;
     }
 });
 
-// --- KATEGORİLER ---
+// --- CATEGORIES ---
 const categories = [
   { id: 'all', name: 'All' },
   { id: 'liquid-', name: 'Liquid Glass' },
+  { id: 'flux-', name: 'Flux' },
   { id: 'emoji-', name: 'Emojis' },
   { id: 'file-', name: 'Files' },
   { id: 'user-', name: 'Users' },
@@ -39,7 +40,7 @@ const categories = [
   { id: 'chart-', name: 'Charts' }
 ];
 
-// --- FİLTRELEME MANTIĞI ---
+// --- FILTERING LOGIC ---
 const allIconNames = computed(() => Object.keys(icons).sort());
 
 const filteredIcons = computed(() => {
@@ -47,9 +48,7 @@ const filteredIcons = computed(() => {
   const category = activeCategory.value;
 
   return allIconNames.value.filter(name => {
-    // 1. Arama
     const matchesSearch = name.includes(query);
-    // 2. Kategori
     let matchesCategory = true;
     if (category !== 'all') {
       matchesCategory = name.startsWith(category);
@@ -72,7 +71,6 @@ const handleScroll = () => {
   }
 };
 
-// Kategori seçince scroll yukarı ve sayaç sıfırla
 const selectCategory = (id) => {
     activeCategory.value = id;
     visibleCount.value = 50;
@@ -85,32 +83,23 @@ onUnmounted(() => window.removeEventListener("scroll", handleScroll));
 const openModal = (name) => { selectedIcon.value = name; isModalOpen.value = true; copied.value = false; };
 const closeModal = () => { isModalOpen.value = false; };
 
-// --- KOD ÇIKTISI ---
+// --- CODE GENERATOR ---
 const generatedCode = computed(() => {
   if (!selectedIcon.value) return "";
-  
   const sizeValue = customize.value.size;
   const colorValue = customize.value.color;
   const strokeValue = customize.value.stroke;
-  
   const strokeAttr = strokeValue !== 2 ? ` stroke-width="${strokeValue}"` : '';
   const spinAttr = customize.value.spin ? ' spin' : '';
-  
-  // CSS sınıfı (Webfont için)
   const spinClass = customize.value.spin ? ' flux-spin' : '';
   const customStyle = `style="font-size: ${sizeValue}px; color: ${colorValue};"`;
 
-  // 1. CLASS (Webfont) ÇIKTISI - VARSAYILAN
   if (customize.value.type === "class") {
     return `<i class="flux-icon flux-icon-${selectedIcon.value}${spinClass}" ${customStyle}></i>`;
   }
-  
-  // 2. COMPONENT ÇIKTISI
   if (customize.value.type === "component") {
     return `<FluxIcon name="${selectedIcon.value}" size="${sizeValue}" color="${colorValue}"${strokeAttr}${spinAttr} />`;
   } 
-  
-  // 3. SVG ÇIKTISI
   if (customize.value.type === "html") {
       const svgSpinClass = customize.value.spin ? ' class="flux-spin"' : '';
       return `<svg width="${sizeValue}" height="${sizeValue}" viewBox="0 0 24 24" fill="none" stroke="${colorValue}" stroke-width="${strokeValue}" stroke-linecap="round" stroke-linejoin="round"${svgSpinClass}>${icons[selectedIcon.value]}</svg>`;
@@ -132,13 +121,20 @@ const copyToClipboard = () => {
         <div class="flex flex-col items-center gap-6 max-w-4xl mx-auto px-4">
             
             <div class="relative w-full group">
-                <div class="absolute inset-0 bg-indigo-500/10 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <span class="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 pointer-events-none">
+                <div class="absolute inset-0 bg-indigo-500/10 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                
+                <span class="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 pointer-events-none z-20">
                     <FluxIcon name="search" size="22" />
                 </span>
-                <input v-model="searchQuery" type="text" placeholder="Search 1000+ icons..." class="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-full py-4 pl-14 pr-32 text-lg shadow-lg focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all placeholder:text-slate-400" />
                 
-                <div class="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-bold font-mono bg-slate-100 dark:bg-slate-800 text-slate-500 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-700">
+                <input 
+                    v-model="searchQuery" 
+                    type="text" 
+                    placeholder="Search 1000+ icons..." 
+                    class="relative z-10 w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-full py-4 pl-14 pr-32 text-lg shadow-lg focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all placeholder:text-slate-400" 
+                />
+                
+                <div class="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-bold font-mono bg-slate-100 dark:bg-slate-800 text-slate-500 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-700 z-20 pointer-events-none">
                     <span class="text-indigo-600 dark:text-indigo-400">{{ displayedIcons.length }}</span> / {{ filteredIcons.length }}
                 </div>
             </div>
@@ -170,11 +166,8 @@ const copyToClipboard = () => {
     
     <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4 pb-20">
       <div v-for="name in displayedIcons" :key="name" @click="openModal(name)" class="group relative bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 flex flex-col items-center justify-center gap-4 cursor-pointer hover:border-indigo-500 dark:hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300 overflow-hidden">
-        
-        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-500/0 to-purple-500/0 group-hover:from-indigo-500/5 group-hover:to-purple-500/5 transition-all duration-500"></div>
-        
+        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-500/0 to-purple-500/0 group-hover:from-indigo-500/5 group-hover:to-purple-500/5 transition-all duration-500 pointer-events-none"></div>
         <FluxIcon :name="name" size="32" class="text-slate-600 dark:text-slate-400 group-hover:text-indigo-500 group-hover:scale-110 transition-all duration-300 relative z-10" />
-        
         <span class="text-[10px] font-bold text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white truncate w-full text-center capitalize relative z-10 transition-colors">{{ name.replace(/-/g, ' ') }}</span>
       </div>
     </div>
@@ -188,7 +181,7 @@ const copyToClipboard = () => {
 
   <Transition name="fade">
     <div v-if="isModalOpen" class="fixed inset-0 z-[60] flex items-center justify-center p-4">
-      <div @click="closeModal" class="absolute inset-0 bg-slate-900/60 dark:bg-black/80 backdrop-blur-sm transition-opacity"></div>
+      <div @click="closeModal" class="absolute inset-0 bg-slate-900/60 dark:bg-black/90 backdrop-blur-sm transition-opacity"></div>
       
       <div class="relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 w-full max-w-3xl rounded-2xl shadow-2xl flex flex-col md:flex-row overflow-hidden transform transition-all scale-100 ring-1 ring-white/10">
         
@@ -266,3 +259,8 @@ const copyToClipboard = () => {
     </div>
   </Transition>
 </template>
+
+<style>
+.fade-enter-active, .fade-leave-active { transition: opacity 0.2s ease; }
+.fade-enter-from, .fade-leave-to { opacity: 0; }
+</style>
