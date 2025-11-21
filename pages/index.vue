@@ -1,53 +1,38 @@
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from "vue";
+import { ref, computed, onMounted, onUnmounted, watch } from "vue";
 import { useFluxIcons } from '@/composables/useFluxIcons';
 
 const { icons } = useFluxIcons();
 
-// --- SETTINGS ---
+// --- AYARLAR ---
 const searchQuery = ref("");
-const visibleCount = ref(50);
+const visibleCount = ref(50); 
 const selectedIcon = ref(null);
 const isModalOpen = ref(false);
 const copied = ref(false);
-const activeCategory = ref('all');
 
-// Default Output Settings
+// Varsayılan Ayarlar
 const customize = ref({ 
   size: 64, 
   color: "#818cf8", 
   stroke: 2, 
-  type: "class", 
+  type: "class", // Varsayılan: Class
   spin: false 
 });
 
-// --- CATEGORIES (TRANSLATED) ---
-const categories = [
-  { id: 'all', name: 'All' },
-  { id: 'liquid-', name: 'Liquid Glass' },
-  { id: 'brand-', name: 'Brands' },
-  { id: 'emoji-', name: 'Emojis' },
-  { id: 'file-', name: 'Files' },
-  { id: 'user-', name: 'Users' },
-  { id: 'arrow-', name: 'Arrows' },
-  { id: 'chart-', name: 'Charts' }
-];
+// TYPE Değişince Tetiklenen Mantık
+// Class seçilirse kalınlığı 2'ye (standart) sabitle, değilse serbest bırak.
+watch(() => customize.value.type, (newType) => {
+    if (newType === 'class') {
+        customize.value.stroke = 2;
+    }
+});
 
-// --- FILTERING LOGIC ---
 const allIconNames = computed(() => Object.keys(icons).sort());
 
 const filteredIcons = computed(() => {
   const query = searchQuery.value.toLowerCase();
-  const category = activeCategory.value;
-
-  return allIconNames.value.filter(name => {
-    const matchesSearch = name.includes(query);
-    let matchesCategory = true;
-    if (category !== 'all') {
-      matchesCategory = name.startsWith(category);
-    }
-    return matchesSearch && matchesCategory;
-  });
+  return allIconNames.value.filter(name => name.includes(query));
 });
 
 const displayedIcons = computed(() => {
@@ -64,38 +49,46 @@ const handleScroll = () => {
   }
 };
 
-const selectCategory = (id) => {
-    activeCategory.value = id;
-    visibleCount.value = 50;
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-};
-
 onMounted(() => window.addEventListener("scroll", handleScroll));
 onUnmounted(() => window.removeEventListener("scroll", handleScroll));
 
-const openModal = (name) => { selectedIcon.value = name; isModalOpen.value = true; copied.value = false; };
+const openModal = (name) => { 
+    selectedIcon.value = name; 
+    isModalOpen.value = true; 
+    copied.value = false; 
+    // Her açılışta varsayılan ayarlara dönmek istersen:
+    // customize.value.type = 'class';
+    // customize.value.stroke = 2;
+};
 const closeModal = () => { isModalOpen.value = false; };
 
-// --- CODE GENERATOR ---
 const generatedCode = computed(() => {
   if (!selectedIcon.value) return "";
+
   const sizeValue = customize.value.size;
   const colorValue = customize.value.color;
   const strokeValue = customize.value.stroke;
+  
   const strokeAttr = strokeValue !== 2 ? ` stroke-width="${strokeValue}"` : '';
   const spinAttr = customize.value.spin ? ' spin' : '';
-  const spinClass = customize.value.spin ? ' flux-spin' : '';
-  const customStyle = `style="font-size: ${sizeValue}px; color: ${colorValue};"`;
+  const spinClass = customize.value.spin ? ' flux-spin' : ''; // CSS dosyasındaki sınıf ismi
 
+  // 1. CLASS / HTML ÇIKTISI (Stroke Sabit)
   if (customize.value.type === "class") {
-    return `<i class="flux-icon flux-icon-${selectedIcon.value}${spinClass}" ${customStyle}></i>`;
+    return `<i class="flux-icon flux-icon-${selectedIcon.value}${spinClass}" style="font-size: ${sizeValue}px; color: ${colorValue};"></i>`;
   }
+
+  // 2. VUE COMPONENT ÇIKTISI (Dinamik Stroke)
   if (customize.value.type === "component") {
     return `<FluxIcon name="${selectedIcon.value}" size="${sizeValue}" color="${colorValue}"${strokeAttr}${spinAttr} />`;
   } 
+  
+  // 3. RAW SVG ÇIKTISI (Dinamik Stroke)
   if (customize.value.type === "html") {
-      return `<svg width="${sizeValue}" height="${sizeValue}" viewBox="0 0 24 24" fill="none" stroke="${colorValue}" stroke-width="${strokeValue}" stroke-linecap="round" stroke-linejoin="round" class="${spinClass.trim()}">${icons[selectedIcon.value]}</svg>`;
+      const svgClass = customize.value.spin ? ' class="flux-spin"' : '';
+      return `<svg width="${sizeValue}" height="${sizeValue}" viewBox="0 0 24 24" fill="none" stroke="${colorValue}" stroke-width="${strokeValue}" stroke-linecap="round" stroke-linejoin="round"${svgClass}>${icons[selectedIcon.value]}</svg>`;
   }
+  
   return "";
 });
 
@@ -109,48 +102,24 @@ const copyToClipboard = () => {
 <template>
   <main class="max-w-7xl mx-auto p-6 min-h-screen">
     
-    <div class="sticky top-20 z-30 bg-slate-50/95 dark:bg-slate-950/95 backdrop-blur-sm py-4 mb-8 border-b border-slate-200 dark:border-slate-800">
-        <div class="flex flex-col items-center gap-6">
-            
-            <div class="relative w-full max-w-xl group">
-                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500">
-                    <FluxIcon name="search" size="20" />
-                </span>
-                <input v-model="searchQuery" type="text" placeholder="Search 1000+ icons..." class="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl py-3 pl-12 pr-24 text-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition-all" />
-                <div class="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-mono bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-slate-500">
-                    {{ displayedIcons.length }} / {{ filteredIcons.length }}
-                </div>
-            </div>
-
-            <div class="flex flex-wrap justify-center gap-2">
-                <button 
-                    v-for="cat in categories" 
-                    :key="cat.id"
-                    @click="selectCategory(cat.id)"
-                    class="px-4 py-1.5 rounded-full text-sm font-medium transition-all border"
-                    :class="activeCategory === cat.id 
-                        ? 'bg-indigo-600 text-white border-indigo-600 shadow-md scale-105' 
-                        : 'bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700 hover:border-indigo-300 dark:hover:border-indigo-700'"
-                >
-                    {{ cat.name }}
-                </button>
+    <div class="sticky top-4 z-30 mb-8">
+        <div class="relative w-full max-w-xl mx-auto group">
+            <div class="absolute inset-0 bg-indigo-500/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 z-10">
+                <FluxIcon name="search" size="20" />
+            </span>
+            <input v-model="searchQuery" type="text" placeholder="1000+ İkon içinde ara..." class="relative z-10 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200 dark:border-slate-700 rounded-2xl py-3 pl-12 pr-24 text-lg shadow-lg focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition-all" />
+            <div class="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-mono bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-slate-500 z-10">
+                {{ displayedIcons.length }}
             </div>
         </div>
     </div>
 
-    <div v-if="filteredIcons.length === 0" class="text-center py-20">
-        <div class="inline-block p-4 bg-slate-100 dark:bg-slate-900 rounded-full mb-4">
-            <FluxIcon name="search-x" size="48" class="text-slate-400" />
-        </div>
-        <p class="text-slate-500">No icons found matching your criteria.</p>
-        <button @click="searchQuery = ''; activeCategory = 'all'" class="mt-4 text-indigo-500 hover:underline">Clear Filters</button>
-    </div>
+    <div v-if="filteredIcons.length === 0" class="text-center py-20 text-slate-500">Sonuç bulunamadı.</div>
     
     <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4 pb-20">
       <div v-for="name in displayedIcons" :key="name" @click="openModal(name)" class="group relative bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6 flex flex-col items-center justify-center gap-4 cursor-pointer hover:border-indigo-500 dark:hover:border-indigo-500 hover:shadow-lg hover:shadow-indigo-500/10 transition-all duration-300 overflow-hidden">
-        
         <div class="absolute inset-0 bg-gradient-to-tr from-indigo-500/0 to-purple-500/0 group-hover:from-indigo-500/5 group-hover:to-purple-500/5 transition-all duration-300"></div>
-        
         <FluxIcon :name="name" size="32" class="text-slate-600 dark:text-slate-400 group-hover:text-indigo-500 transition-all group-hover:scale-110 relative z-10" />
         <span class="text-[10px] font-medium text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200 truncate w-full text-center capitalize relative z-10">{{ name }}</span>
       </div>
@@ -158,7 +127,7 @@ const copyToClipboard = () => {
 
     <div v-if="displayedIcons.length < filteredIcons.length" class="py-8 text-center">
       <span class="inline-flex items-center gap-2 text-sm text-slate-500 animate-pulse">
-        <FluxIcon name="loader-5" spin size="16" /> Loading...
+        <FluxIcon name="loader-5" spin size="16" /> Yükleniyor...
       </span>
     </div>
   </main>
@@ -187,7 +156,7 @@ const copyToClipboard = () => {
           
           <div class="space-y-6">
               <div>
-                <label class="text-[10px] font-bold text-slate-400 uppercase block mb-3 tracking-wider">Color</label>
+                <label class="text-[10px] font-bold text-slate-400 uppercase block mb-3 tracking-wider">Renk</label>
                 <div class="flex gap-3 items-center">
                     <button v-for="c in ['#6366f1','#10b981','#f43f5e','#f59e0b','#3b82f6','#000000','#ffffff']" :key="c" @click="customize.color=c" class="w-8 h-8 rounded-full border border-slate-200 dark:border-slate-700 shadow-sm hover:scale-110 focus:ring-2 ring-offset-2 ring-offset-white dark:ring-offset-slate-900 ring-indigo-500 transition-all" :style="{background:c}"></button>
                     <div class="w-8 h-8 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center overflow-hidden relative cursor-pointer hover:border-indigo-500">
@@ -197,20 +166,26 @@ const copyToClipboard = () => {
                 </div>
               </div>
 
-              <div class="grid grid-cols-2 gap-4">
+              <div class="grid gap-4" :class="customize.type !== 'class' ? 'grid-cols-2' : 'grid-cols-1'">
                 <div>
-                    <label class="flex justify-between text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">Size <span class="text-slate-900 dark:text-white">{{customize.size}}px</span></label>
+                    <label class="flex justify-between text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">Boyut <span class="text-slate-900 dark:text-white">{{customize.size}}px</span></label>
                     <input v-model="customize.size" type="range" min="16" max="256" class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer accent-indigo-600" />
                 </div>
-                <div>
-                    <label class="flex justify-between text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">Stroke <span class="text-slate-900 dark:text-white">{{customize.stroke}}</span></label>
+                
+                <div v-if="customize.type !== 'class'">
+                    <label class="flex justify-between text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">Kalınlık <span class="text-slate-900 dark:text-white">{{customize.stroke}}</span></label>
                     <input v-model="customize.stroke" type="range" min="0.5" max="4" step="0.1" class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-lg appearance-none cursor-pointer accent-indigo-600" />
                 </div>
               </div>
 
+              <div v-if="customize.type === 'class'" class="text-[10px] text-amber-600 bg-amber-50 dark:bg-amber-900/20 p-2 rounded border border-amber-200 dark:border-amber-800">
+                  <FluxIcon name="info" size="12" class="inline mr-1" />
+                  Class (Webfont) modunda kalınlık sabittir. Dinamik kalınlık için SVG veya Component modunu kullanın.
+              </div>
+
               <label class="flex items-center justify-between bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl border border-slate-200 dark:border-slate-700 cursor-pointer hover:border-indigo-500 transition-colors">
                  <span class="text-xs font-medium text-slate-600 dark:text-slate-300 flex items-center gap-2">
-                    <FluxIcon name="refresh-cw" size="16" :spin="true" class="text-indigo-500" /> Animated (Spin)
+                    <FluxIcon name="refresh-cw" size="16" :spin="true" class="text-indigo-500" /> Hareketli (Spin)
                  </span>
                  <input type="checkbox" v-model="customize.spin" class="w-5 h-5 accent-indigo-600 rounded border-gray-300 focus:ring-indigo-500">
               </label>
@@ -229,7 +204,7 @@ const copyToClipboard = () => {
               <button @click="copyToClipboard" class="absolute top-3 right-3 px-3 py-1.5 rounded-lg text-xs font-bold shadow-lg transition-all flex items-center gap-2" :class="copied ? 'bg-emerald-500 text-white scale-105' : 'bg-white dark:bg-slate-800 text-slate-900 dark:text-white hover:bg-indigo-50 dark:hover:bg-slate-700'">
                   <FluxIcon v-if="copied" name="check" size="14" />
                   <FluxIcon v-else name="copy" size="14" />
-                  {{ copied ? 'Copied' : 'Copy' }}
+                  {{ copied ? 'Kopyalandı' : 'Kopyala' }}
               </button>
             </div>
           </div>
@@ -240,7 +215,6 @@ const copyToClipboard = () => {
 </template>
 
 <style>
-/* Fade Transition */
 .fade-enter-active, .fade-leave-active { transition: opacity 0.2s ease; }
 .fade-enter-from, .fade-leave-to { opacity: 0; }
 .fade-enter-active .relative, .fade-leave-active .relative { transition: transform 0.2s ease; }
