@@ -20,12 +20,8 @@
     // ==========================================
     "hand-thumbs-up": `<path d="M7 11v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h3a4 4 0 0 0 4-4V6a2 2 0 0 1 4 0v5h3a2 2 0 0 1 2 2l-1 5a2 3 0 0 1-2 2h-7a3 3 0 0 1-3-3"/>`,
     "hand-thumbs-down": `<path d="M7 13V5a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h3a4 4 0 0 1 4 4v1a2 2 0 0 0 4 0v-5h3a2 2 0 0 0 2-2l-1-5a2 3 0 0 0-2-2h-7a3 3 0 0 0-3 3"/>`,
-    "hand-point-up": `<path d="M4.5 14h3a2 2 0 0 1 2 2v2a2 2 0 0 1-4 0v-2z"/><path d="M10 10l1.5-7.5a1.5 1.5 0 0 1 3 0v9"/><path d="M10 13.5v5a2 2 0 0 0 4 0v-5"/><path d="M14 13.5v5a2 2 0 0 0 4 0v-5"/><path d="M18 13.5v2.5a2 2 0 0 0 4 0v-2.5a2 2 0 0 0-2-2h-2"/>`,
-    "hand-point-right": `<path d="M14 4.5v3a2 2 0 0 0 2 2h2a2 2 0 0 0 0-4h-2z"/><path d="M10 10L2.5 11.5a1.5 1.5 0 0 0 0 3h9"/><path d="M13.5 10h5a2 2 0 0 1 0 4h-5"/><path d="M13.5 14h5a2 2 0 0 1 0 4h-5"/><path d="M13.5 18h2.5a2 2 0 0 1 0 4h-2.5a2 2 0 0 1-2-2v-2"/>`,
     "hand-rock": `<path d="M3 12a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6"/><path d="M6 10V4a2 2 0 1 1 4 0v6"/><path d="M14 10V4a2 2 0 1 1 4 0v6"/>`,
-    "hand-peace": `<path d="M2 12a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-6"/><path d="M7 10V3a1 1 0 1 1 2 0v7"/><path d="M15 10V3a1 1 0 1 1 2 0v7"/>`,
     "hand-open": `<path d="M12 10V4a2 2 0 0 1 4 0v6"/><path d="M8 11V5a2 2 0 0 1 4 0v6"/><path d="M4 13V8a2 2 0 0 1 4 0v5"/><path d="M16 13v-2a2 2 0 0 1 4 0v5"/><path d="M4 13v5a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-5"/>`,
-    "hand-shake": `<path d="M11 11h-1a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h1"/><path d="M13 11h1a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-1"/><path d="M8 17a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2h1"/><path d="M16 17a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-1"/>`,
 
     // ==========================================
     // 3. YÜZ İFADELERİ (FACES & EMOJI)
@@ -152,11 +148,6 @@
   
   // --- İNSANLAR & JESTLER ---
     "user-check": `<path d="M16 21v-2a4 4 0 0 0-3-3.8"/><path d="M4 21v-2a4 4 0 0 1 4-4h3"/><circle cx="10" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/>`, // Onaylayan insan
-    "user-waving": `<path d="M16 21v-2a4 4 0 0 0-3-3.8"/><path d="M4 21v-2a4 4 0 0 1 4-4h3"/><circle cx="10" cy="7" r="4"/><path d="M22 17s-2.5-3-2-6a3 3 0 0 0-5 0c.5 3-2 6-2 6"/>`, // El sallayan insan
-    "hand-victory": `<path d="M18 10a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v10"/><path d="M10 10a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10"/><path d="M18 10V4a2 2 0 0 1 4 0v6"/><path d="M10 10V4a2 2 0 0 1 4 0v6"/>`, // Zafer işareti (V-sign)
-    "hand-ring": `<path d="M18 10a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v10"/><path d="M10 10a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10"/><path d="M14 10V4a2 2 0 0 1 4 0v6"/><path d="M6 10V4a2 2 0 0 1 4 0v6"/><circle cx="12" cy="14" r="2"/>`, // Yüzük parmağı
-    "hand-fist": `<path d="M3 12a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6"/><path d="M6 10V4a2 2 0 1 1 4 0v6"/><path d="M14 10V4a2 2 0 1 1 4 0v6"/>`, // Yumruk
-    "hand-clap": `<path d="M10 12l2 2 2-2m-8 6h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v8"/><path d="M6 10V4a2 2 0 1 1 4 0v6"/><path d="M18 10V4a2 2 0 1 1 4 0v6"/>`, // Alkış
     "hand-heart": `<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5l-2 4 4 2-2 4"/>`, // Kalp tutan el (biraz daha soyut)
     "hand-holding-up": `<path d="M17 10s-1.5-3-3-3h-2c-1.5 0-3 3-3 3v8c0 2 1 4 3 4h2c2 0 3-2 3-4v-8"/>`, // Yukarı uzanmış el (avuç içi yukarı)
     "hand-holding-down": `<path d="M17 14s-1.5 3-3 3h-2c-1.5 0-3-3-3-3v-8c0-2 1-4 3-4h2c2 0 3 2 3 4v8"/>`, // Aşağı uzanmış el (avuç içi aşağı)
@@ -1827,21 +1818,9 @@
     "emoji-kiss": `<circle cx="12" cy="12" r="10"/><path d="M12 15l-2-2 2-2 2 2-2 2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/><path d="M12 15v2"/><path d="M10 17h4"/>`, // Öpücük atan
     "emoji-surprise-2": `<circle cx="12" cy="12" r="10"/><circle cx="12" cy="16" r="3"/><path d="M9 9a2 2 0 0 1 2-2"/><path d="M15 9a2 2 0 0 0-2-2"/>`, // Şok olmuş (Büyük ağız)
 
-    // --- EL HAREKETLERİ (ALTERNATİFLER) ---
-    "hand-stop": `<path d="M10 9v-5a2 2 0 0 1 4 0v5"/><path d="M14 9v5"/><path d="M6 14v-1a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1a6 6 0 0 1-6 6 6 6 0 0 1-6-6z"/><line x1="10" y1="14" x2="10" y2="18"/><line x1="14" y1="14" x2="14" y2="18"/>`, // Dur işareti
-    "hand-point-left": `<path d="M10 4.5v3a2 2 0 0 1-2 2H6a2 2 0 0 1 0-4h2z"/><path d="M14 10l7.5 1.5a1.5 1.5 0 0 1 0 3H12.5"/><path d="M10.5 10H5.5a2 2 0 0 0 0 4h5"/><path d="M10.5 14H5.5a2 2 0 0 0 0 4h5"/><path d="M10.5 18H8a2 2 0 0 0 0 4h2.5a2 2 0 0 0 2-2v-2"/>`, // Sola işaret
-    "hand-rock-2": `<path d="M7 11v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-3"/><path d="M7 11V6a2 2 0 0 1 4 0v5"/><path d="M11 6a2 2 0 0 1 4 0v5"/><path d="M15 6a2 2 0 0 1 4 0v5"/>`, // Rock işareti (Farklı açı)
-    "hand-call": `<path d="M6 8a2 2 0 0 1 2-2h1"/><path d="M15 6h1a2 2 0 0 1 2 2"/><path d="M6 18a2 2 0 0 0 2 2h1"/><path d="M15 20h1a2 2 0 0 0 2-2"/><path d="M4 12h16"/><path d="M20 12v4"/><path d="M4 12v4"/>`, // "Ara beni" işareti
-
     // --- VÜCUT PARÇALARI (BODY) ---
     "ear": `<path d="M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0"/><path d="M15 8.5a2.5 2.5 0 0 0-5 0v1a2 2 0 1 1 0 4"/>`,
-    "nose": `<path d="M12 4a4 4 0 0 0-4 4v7a4 4 0 0 0 8 0v-2"/><path d="M8 15s1.5 2 4 2 4-2 4-2"/>`,
-    "foot": `<path d="M4 16v-6a4 4 0 0 1 8 0v2"/><path d="M12 12h4a4 4 0 0 1 4 4v2H8a4 4 0 0 1-4-4"/>`,
-    "brain-2": `<path d="M12 5a3 3 0 1 0-5.9 1.2A5 5 0 1 0 5 16h2"/><path d="M12 5a3 3 0 1 1 5.9 1.2A5 5 0 1 1 19 16h-2"/><path d="M12 20v-5"/>`, // Daha stilize beyin
-  // =================================================
-    // 151. KULLANICI & PROFİL ÇEŞİTLERİ (USER PRO)
-    // =================================================
-    
+   
     // --- PROFİL TİPLERİ ---
     "user-square": `<rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="12" cy="10" r="3"/><path d="M7 17c0-3 2.5-5 5-5s5 2 5 5"/>`, // Kare çerçeveli
     "user-circle-alt": `<circle cx="12" cy="12" r="10"/><circle cx="12" cy="9" r="3"/><path d="M6.5 18a6 6 0 0 1 11 0"/>`, // Yuvarlak çerçeveli (daha sade)
@@ -4268,7 +4247,1041 @@
     "flux-bulb-filament": `<path d="M9 21h6M12 17v4" stroke="currentColor" stroke-width="2"/><path d="M12 2a7 7 0 0 0-7 7c0 2.5 2 4.5 2 7h10c0-2.5 2-4.5 2-7a7 7 0 0 0-7-7z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M10 8l2-2 2 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>`,
 
 
+    "arrow-bar-right": `<path d="M4 12h12M12 8l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M4 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "arrow-bar-left": `<path d="M20 12H8M12 8l-4 4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M20 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
 
+
+    "flux-kinetic": `<path d="M2 12c0-5.5 4.5-10 10-10s10 4.5 10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 4"/><circle cx="12" cy="12" r="4" fill="currentColor"/><path d="M12 16v6M16 12h6M12 8V2M8 12H2" stroke="currentColor" stroke-width="2" opacity="0.5"/>`,
+    "flux-fusion": `<circle cx="8" cy="12" r="6" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="16" cy="12" r="6" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 9v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="2" fill="currentColor"/>`,
+    "flux-synergy": `<circle cx="12" cy="8" r="3" stroke="currentColor" stroke-width="2"/><circle cx="7" cy="17" r="3" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="17" r="3" stroke="currentColor" stroke-width="2"/><path d="M12 11l-3 4M12 11l3 4M9.5 17h5" stroke="currentColor" stroke-width="1.5"/>`,
+    "flux-morph": `<rect x="4" y="4" width="6" height="6" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="18" r="4" stroke="currentColor" stroke-width="2"/><path d="M7 10c0 5 5 4 11 4" stroke="currentColor" stroke-width="2" stroke-dasharray="2 2"/>`,
+    "flux-loop-infinity": `<path d="M4 12c0-4 4-8 8-8s8 4 8 8-4 8-8 8-8-4-8-8z" stroke="currentColor" stroke-width="2" stroke-dasharray="15 5" stroke-linecap="round" fill="none"/><path d="M12 8l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.5"/>`,
+    "flux-filter-flow": `<path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M2 3l10 10 10-10" stroke="currentColor" stroke-width="1" opacity="0.3"/>`,
+    "flux-data-cluster": `<circle cx="12" cy="12" r="2" fill="currentColor"/><circle cx="6" cy="8" r="1" fill="currentColor"/><circle cx="18" cy="8" r="1" fill="currentColor"/><circle cx="6" cy="16" r="1" fill="currentColor"/><circle cx="18" cy="16" r="1" fill="currentColor"/><path d="M12 12L6 8M12 12l6-4M12 12l-6 4M12 12l6 4" stroke="currentColor" stroke-width="1"/>`,
+    "flux-neural-node": `<circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><path d="M12 8V2M12 22v-6M8 12H2M22 12h-6" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="2" r="1" fill="currentColor"/><circle cx="12" cy="22" r="1" fill="currentColor"/><circle cx="2" cy="12" r="1" fill="currentColor"/><circle cx="22" cy="12" r="1" fill="currentColor"/>`,
+    "flux-blockchain": `<rect x="2" y="7" width="6" height="10" rx="1" stroke="currentColor" stroke-width="2"/><rect x="16" y="7" width="6" height="10" rx="1" stroke="currentColor" stroke-width="2"/><path d="M8 12h8" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2" fill="currentColor"/>`,
+    "flux-hex-maze": `<path d="M12 2l9 5v10l-9 5-9-5V7z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 12v5M12 7v2" stroke="currentColor" stroke-width="2"/><path d="M7.5 9.5l2.5 1.5M16.5 9.5l-2.5 1.5" stroke="currentColor" stroke-width="2"/>`,
+    "flux-prism-shard": `<path d="M12 2L2 22h20L12 2z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 6l-4 12h8z" stroke="currentColor" stroke-width="1" opacity="0.6"/>`,
+    "flux-orbit-ring": `<ellipse cx="12" cy="12" rx="10" ry="4" stroke="currentColor" stroke-width="2" transform="rotate(-45 12 12)" fill="none"/><circle cx="12" cy="12" r="3" fill="currentColor"/>`,
+    "liquid-energy-orb": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-nrg" x1="2" y1="2" x2="22" y2="22"><stop stop-color="#F59E0B"/><stop offset="1" stop-color="#FDE68A"/></linearGradient></defs><circle cx="12" cy="12" r="10" fill="url(#liq-nrg)" stroke="#D97706" stroke-width="1"/><path d="M13 2L9 14h6l-4 8" stroke="white" stroke-width="2" stroke-linejoin="round" fill="none"/><circle cx="12" cy="12" r="8" stroke="white" stroke-width="1" opacity="0.3"/></svg>`,
+    "liquid-cyber-shield": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-cshield" x1="2" y1="2" x2="22" y2="22"><stop stop-color="#3B82F6"/><stop offset="1" stop-color="#93C5FD"/></linearGradient></defs><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="url(#liq-cshield)" stroke="#1D4ED8" stroke-width="1.5"/><path d="M12 8v8M8 12h8" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M12 22V2" stroke="white" stroke-width="1" opacity="0.2"/></svg>`,
+    "liquid-flux-logo": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-logo" x1="12" y1="2" x2="12" y2="22"><stop stop-color="#8B5CF6"/><stop offset="1" stop-color="#C4B5FD"/></linearGradient></defs><path d="M12 2L2 12l10 10 10-10z" fill="url(#liq-logo)" stroke="#7C3AED" stroke-width="1.5"/><rect x="9" y="9" width="6" height="6" rx="1" fill="white" fill-opacity="0.8"/><circle cx="12" cy="12" r="1" fill="#7C3AED"/></svg>`,
+
+
+
+    "wallet-add-solid": `<path d="M21 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5" fill="currentColor" stroke="none"/><path d="M16 12h6v4h-6z" fill="currentColor" opacity="0.5"/><line x1="19" y1="12" x2="19" y2="16" stroke="white" stroke-width="1.5"/><line x1="17" y1="14" x2="21" y2="14" stroke="white" stroke-width="1.5"/>`,
+    "wallet-remove-striped": `<path d="M20 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M4 6h14M4 9h14M4 12h10" stroke="currentColor" stroke-width="1" opacity="0.5"/><line x1="17" y1="14" x2="21" y2="14" stroke="currentColor" stroke-width="2"/>`,
+    "piggy-bank-solid": `<path d="M19 5c-1.1 0-2 .9-2 2h-1c0-1.1-.9-2-2-2H6c-1.1 0-2 .9-2 2v1h14V7c0-1.1.9-2 2-2zM4 9v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V9H4zm5 7H7v-2h2v2zm8 0h-2v-2h2v2z" fill="currentColor" stroke="none"/>`,
+    "coins-stacked-solid": `<path d="M12 2L4 6l8 4 8-4-8-4z" fill="currentColor"/><path d="M4 10l8 4 8-4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M4 14l8 4 8-4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M4 18l8 4 8-4" stroke="currentColor" stroke-width="2" fill="none"/>`,
+    "credit-card-scan": `<rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="2" y1="10" x2="22" y2="10" stroke="currentColor" stroke-width="2"/><path d="M12 12v4" stroke="currentColor" stroke-width="2"/><path d="M12 2v3M12 19v3" stroke="currentColor" stroke-width="2"/>`,
+    "ticket-plane-solid": `<path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z" fill="currentColor" stroke="none"/><path d="M12 7l2 10" stroke="white" stroke-width="2" stroke-dasharray="2 2"/><path d="M14 9l3 3-3 3" stroke="white" stroke-width="2" fill="none"/>`,
+    "passport-solid": `<rect x="5" y="3" width="14" height="18" rx="2" fill="currentColor" stroke="none"/><circle cx="12" cy="10" r="3" stroke="white" stroke-width="2" fill="none"/><path d="M9 16h6" stroke="white" stroke-width="2" stroke-linecap="round"/>`,
+    "luggage-striped": `<rect x="6" y="6" width="12" height="15" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M9 6V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3" stroke="currentColor" stroke-width="2"/><line x1="6" y1="10" x2="18" y2="10" stroke="currentColor" stroke-width="1" opacity="0.5"/><line x1="6" y1="14" x2="18" y2="14" stroke="currentColor" stroke-width="1" opacity="0.5"/><line x1="6" y1="18" x2="18" y2="18" stroke="currentColor" stroke-width="1" opacity="0.5"/>`,
+    "hotel-solid": `<path d="M10 22v-6.57h4V22h6V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v18h6z" fill="currentColor"/><rect x="8" y="6" width="2" height="2" fill="white"/><rect x="14" y="6" width="2" height="2" fill="white"/><rect x="8" y="10" width="2" height="2" fill="white"/><rect x="14" y="10" width="2" height="2" fill="white"/>`,
+    "heart-pulse-solid": `<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" fill="currentColor"/><polyline points="8.5 10 10.5 13 13.5 7 15.5 10" stroke="white" stroke-width="1.5" fill="none"/>`,
+    "pill-striped": `<rect x="6" y="4" width="12" height="16" rx="6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="6" y1="12" x2="18" y2="12" stroke="currentColor" stroke-width="2"/><line x1="8" y1="8" x2="16" y2="8" stroke="currentColor" stroke-width="1" opacity="0.5"/><line x1="8" y1="16" x2="16" y2="16" stroke="currentColor" stroke-width="1" opacity="0.5"/>`,
+    "stethoscope-solid": `<path d="M6 4v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="12" cy="20" r="3" fill="currentColor"/>`,
+    "chat-smile-solid": `<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="currentColor"/><path d="M8 10h.01M16 10h.01" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M9 14c1.5 1.5 4.5 1.5 6 0" stroke="white" stroke-width="1.5" stroke-linecap="round"/>`,
+    "mail-open-striped": `<path d="M21.5 11.5L12 19.5 2.5 11.5M2 7l10 7 10-7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M2 7v13a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="5" y1="15" x2="19" y2="15" stroke="currentColor" stroke-width="1" opacity="0.5"/><line x1="8" y1="18" x2="16" y2="18" stroke="currentColor" stroke-width="1" opacity="0.5"/>`,
+    "notification-badge-solid": `<path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" fill="currentColor"/><circle cx="19" cy="4" r="3" fill="#EF4444" stroke="white" stroke-width="1.5"/>`,
+    "flux-award-solid": `<circle cx="12" cy="8" r="6" fill="currentColor"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12" fill="currentColor"/>`,
+    "flux-crown-striped": `<path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M5 13h14M6 10h12" stroke="currentColor" stroke-width="1" opacity="0.5"/>`,
+
+
+    "flux-core-vortex": `<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" stroke="currentColor" stroke-width="2" fill="none" opacity="0.5"/><path d="M12 6a6 6 0 0 0-6 6c0 3.31 2.69 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 18a6 6 0 0 0 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 4"/>`,
+    "flux-energy-node": `<circle cx="12" cy="12" r="3" fill="currentColor"/><path d="M12 2v5M12 17v5M2 12h5M17 12h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1" stroke-dasharray="4 2"/>`,
+    "flux-infinity-loop": `<path d="M8 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M16 8c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" transform="rotate(180 12 12)"/><path d="M12 12h.01" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>`,
+    "flux-motion-forward": `<path d="M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.5"/><path d="M2 12h2" stroke="currentColor" stroke-width="2" opacity="0.2"/>`,
+    "flux-motion-sync": `<path d="M20 10c0-4.42-3.58-8-8-8s-8 3.58-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M4 14c0 4.42 3.58 8 8 8s8-3.58 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M20 10l3-3M20 10l-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M4 14l3 3M4 14l-3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "flux-orbit-path": `<ellipse cx="12" cy="12" rx="10" ry="4" stroke="currentColor" stroke-width="1.5" fill="none" transform="rotate(-45 12 12)"/><circle cx="12" cy="12" r="3" fill="currentColor"/><circle cx="17" cy="7" r="1.5" fill="currentColor"/>`,
+    "flux-blockchain-node": `<rect x="3" y="3" width="6" height="6" rx="1" stroke="currentColor" stroke-width="2" fill="none"/><rect x="15" y="3" width="6" height="6" rx="1" stroke="currentColor" stroke-width="2" fill="none"/><rect x="9" y="15" width="6" height="6" rx="1" stroke="currentColor" stroke-width="2" fill="none"/><path d="M9 6h6M6 9v6h3M18 9v3l-3 3" stroke="currentColor" stroke-width="1.5"/>`,
+    "flux-neural-net": `<circle cx="6" cy="6" r="2" fill="currentColor"/><circle cx="6" cy="18" r="2" fill="currentColor"/><circle cx="18" cy="12" r="2" fill="currentColor"/><line x1="6" y1="6" x2="18" y2="12" stroke="currentColor" stroke-width="1.5"/><line x1="6" y1="18" x2="18" y2="12" stroke="currentColor" stroke-width="1.5"/><line x1="6" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>`,
+    "flux-shape-tri": `<path d="M12 4L20 20H4L12 4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/><path d="M12 9L8 17h8l-4-8" stroke="currentColor" stroke-width="1" opacity="0.5"/>`,
+    "flux-shape-cube": `<path d="M12 2l8 4.5v9l-8 4.5-8-4.5v-9l8-4.5z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2"/>`,
+    "flux-shape-maze": `<rect x="2" y="2" width="20" height="20" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 12h4v4h-4v-4z" fill="currentColor"/><path d="M6 6h12v12H6V6zm4 4h4v4h-4v-4z" stroke="currentColor" stroke-width="1.5" fill="none"/>`,
+
+    "liquid-brand-flux": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-flux-main" x1="2" y1="2" x2="22" y2="22"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#A855F7"/></linearGradient></defs>
+    <path d="M12 2l8 5-3 9-10-2 2-9 3-3z" fill="url(#liq-flux-main)" stroke="#4F46E5" stroke-width="1.5" stroke-linejoin="round"/>
+    <circle cx="12" cy="12" r="3" fill="white" fill-opacity="0.8"/>
+    <path d="M12 2v10" stroke="white" stroke-width="1" stroke-opacity="0.5"/>
+    </svg>`,
+
+    "liquid-orb-energy": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-orb" x1="4" y1="4" x2="20" y2="20"><stop stop-color="#F59E0B"/><stop offset="1" stop-color="#FDE68A"/></linearGradient></defs>
+    <circle cx="12" cy="12" r="10" fill="url(#liq-orb)" stroke="#D97706" stroke-width="1.5"/>
+    <circle cx="12" cy="12" r="6" stroke="white" stroke-width="2" stroke-dasharray="4 4" fill="none" opacity="0.6"/>
+    <path d="M12 2v20M2 12h20" stroke="white" stroke-width="1" opacity="0.3"/>
+    </svg>`,
+
+    "liquid-shield-cyber": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-cshield" x1="6" y1="2" x2="18" y2="22"><stop stop-color="#10B981"/><stop offset="1" stop-color="#6EE7B7"/></linearGradient></defs>
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="url(#liq-cshield)" stroke="#059669" stroke-width="1.5"/>
+    <path d="M12 7v10M7 12h10" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    </svg>`,
+
+    "barcode-zebra": `<path d="M4 5v14M8 5v14M12 5v14M17 5v14M20 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 12h16" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2" opacity="0.5"/>`,
+    "scan-motion-right": `<rect x="2" y="6" width="14" height="12" rx="1" stroke="currentColor" stroke-width="2" fill="none" opacity="0.5"/><path d="M12 12h8m-3-3l3 3-3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="6" y1="9" x2="6" y2="15" stroke="currentColor" stroke-width="2"/><line x1="9" y1="9" x2="9" y2="15" stroke="currentColor" stroke-width="2"/>`,
+    "scanner-gun": `<path d="M3 18v-4a2 2 0 0 1 2-2h3l1-5h6l1 3h3a2 2 0 0 1 2 2v6h-4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M18 12l4 2M18 14l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="18" x2="8" y2="22" stroke="currentColor" stroke-width="2"/>`,
+    "qr-flux-center": `<rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2" fill="none"/><rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2" fill="none"/><rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="17.5" cy="17.5" r="2.5" fill="currentColor"/>`,
+    "qr-scan-frame": `<path d="M2 9V6.5C2 4.01 4.01 2 6.5 2H9M15 2h2.5C19.99 2 22 4.01 22 6.5V9M22 15v2.5c0 2.49-2.01 4.5-4.5 4.5H15M9 22H6.5C4.01 22 2 19.99 2 17.5V15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="7" y="7" width="10" height="10" rx="1" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2"/>`,
+
+    "liquid-qr-code": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-qr" x1="2" y1="2" x2="22" y2="22"><stop stop-color="#3B82F6"/><stop offset="1" stop-color="#93C5FD"/></linearGradient></defs>
+    <rect x="3" y="3" width="7" height="7" rx="2" fill="url(#liq-qr)" stroke="#2563EB" stroke-width="1"/>
+    <rect x="14" y="3" width="7" height="7" rx="2" fill="url(#liq-qr)" stroke="#2563EB" stroke-width="1"/>
+    <rect x="3" y="14" width="7" height="7" rx="2" fill="url(#liq-qr)" stroke="#2563EB" stroke-width="1"/>
+    <circle cx="17.5" cy="17.5" r="3" fill="#2563EB" opacity="0.8"/>
+    <circle cx="17.5" cy="17.5" r="1.5" fill="white"/>
+    </svg>`,
+
+    "liquid-barcode": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-bar" x1="4" y1="4" x2="20" y2="20"><stop stop-color="#10B981"/><stop offset="1" stop-color="#6EE7B7"/></linearGradient></defs>
+    <rect x="4" y="5" width="3" height="14" rx="1" fill="url(#liq-bar)"/>
+    <rect x="9" y="5" width="2" height="14" rx="1" fill="#059669"/>
+    <rect x="13" y="5" width="4" height="14" rx="1" fill="url(#liq-bar)"/>
+    <rect x="19" y="5" width="1" height="14" rx="0.5" fill="#059669"/>
+    <path d="M2 12h20" stroke="white" stroke-width="1" stroke-opacity="0.3"/>
+    </svg>`,
+
+    "barcode-striped": `<rect x="2" y="6" width="20" height="12" rx="1" stroke="currentColor" stroke-width="2" fill="none"/><path d="M6 6v12M10 6v12M14 6v12M18 6v12" stroke="currentColor" stroke-width="1" opacity="0.5"/>`,
+    "qr-code-solid": `<path d="M3 3h8v8H3V3zm2 2v4h4V5H5zm11-2h8v8h-8V3zm2 2v4h4V5h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5zm11 0h2v2h-2v-2zm4 0h2v2h-2v-2zm-4 4h2v2h-2v-2zm4 0h2v2h-2v-2z" fill="currentColor" stroke="none"/>`,
+    "barcode-outline": `<path d="M4 5v14M8 5v14M12 5v14M17 5v14M20 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M1 10h22" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2" opacity="0.3"/>`,
+    "barcode-solid": `<path d="M4 4h2v16H4V4zm4 0h3v16H8V4zm5 0h1v16h-1V4zm3 0h2v16h-2V4zm5 0h1v16h-1V4z" fill="currentColor" stroke="none"/>`,
+    "barcode-scan-laser": `<path d="M4 6v12M8 6v12M12 6v12M16 6v12M20 6v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.5"/><path d="M2 12h20" stroke="#EF4444" stroke-width="2" stroke-linecap="round"/><circle cx="2" cy="12" r="1" fill="#EF4444"/><circle cx="22" cy="12" r="1" fill="#EF4444"/>`,
+    "barcode-off": `<path d="M4 5v4M4 15v4M8 5v2M8 17v2M12 5v14M17 5v14M20 5v4M20 15v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M2 2l20 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "barcode-box-striped": `<rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M6 8v8M10 8v8M14 8v8M18 8v8" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 2"/>`,
+    "qr-code-outline": `<rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M14 14h3v3h-3z" fill="currentColor"/><path d="M18 18h3v3h-3z" fill="currentColor"/><path d="M14 18h3v3h-3z" fill="currentColor" opacity="0.5"/><path d="M18 14h3v3h-3z" fill="currentColor" opacity="0.5"/>`,
+    "qr-code-solid-2": `<path d="M3 3h8v8H3V3zm2 2v4h4V5H5zm11-2h8v8h-8V3zm2 2v4h4V5h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5zm11 0h2v2h-2v-2zm4 0h2v2h-2v-2zm-4 4h2v2h-2v-2zm4 0h2v2h-2v-2z" fill="currentColor" stroke="none"/>`,
+    "qr-flux-brand": `<rect x="2" y="2" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="15" y="2" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="2" y="15" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M15 15h7v7h-7z" fill="currentColor" opacity="0.2"/><circle cx="12" cy="12" r="2.5" fill="currentColor"/> `,
+    "qr-dots": `<circle cx="6" cy="6" r="2.5" fill="currentColor"/><circle cx="18" cy="6" r="2.5" fill="currentColor"/><circle cx="6" cy="18" r="2.5" fill="currentColor"/><circle cx="14" cy="14" r="1.5" fill="currentColor" opacity="0.6"/><circle cx="18" cy="18" r="1.5" fill="currentColor" opacity="0.6"/><circle cx="14" cy="18" r="1.5" fill="currentColor" opacity="0.6"/><circle cx="18" cy="14" r="1.5" fill="currentColor" opacity="0.6"/>`,
+
+   
+
+    "liquid-qr-cube": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-qr-box" x1="4" y1="4" x2="20" y2="20"><stop stop-color="#10B981" stop-opacity="0.8"/><stop offset="1" stop-color="#6EE7B7" stop-opacity="0.3"/></linearGradient></defs>
+    <rect x="4" y="4" width="16" height="16" rx="3" fill="url(#liq-qr-box)" stroke="#059669" stroke-width="1.5"/>
+    <rect x="7" y="7" width="4" height="4" rx="1" fill="white"/>
+    <rect x="13" y="7" width="4" height="4" rx="1" fill="white"/>
+    <rect x="7" y="13" width="4" height="4" rx="1" fill="white"/>
+    <rect x="13" y="13" width="4" height="4" rx="1" fill="white" fill-opacity="0.5"/>
+    </svg>`,
+    
+    "liquid-scanner-gun": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-gun" x1="4" y1="10" x2="20" y2="20"><stop stop-color="#EF4444" stop-opacity="0.9"/><stop offset="1" stop-color="#FCA5A5" stop-opacity="0.4"/></linearGradient></defs>
+    <path d="M4 18v-4a2 2 0 0 1 2-2h3l1-5h6l1 3h3a2 2 0 0 1 2 2v6h-4" fill="url(#liq-gun)" stroke="#B91C1C" stroke-width="1.5"/>
+    <line x1="19" y1="13" x2="23" y2="13" stroke="#F87171" stroke-width="2" stroke-linecap="round"/> <circle cx="16" cy="14" r="1" fill="white"/>
+    <path d="M8 18l-1 4h4" stroke="#B91C1C" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>`,
+
+    "pixel-barcode": `<path d="M2 4h2v16H2V4zm4 0h4v16H6V4zm6 0h2v16h-2V4zm4 0h6v16h-6V4z" fill="currentColor" stroke="none"/>`,
+    "pixel-qr-mini": `<path d="M4 4h6v6H4V4zm8 0h2v2h-2V4zm4 0h2v2h-2V4zm-4 4h2v2h-2V8zm4 0h2v2h-2V8zm-8 4h6v6H4v-6zm8 0h6v6h-6v-6z" fill="currentColor" stroke="none"/>`,
+
+
+    "coffee-bean": `<path d="M12 3c-4.5 0-8 3.5-8 9a8 8 0 0 0 8 9c4.5 0 9-3.5 9-9s-5-9-9-9z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M11 3c1 0 3 1 3 4s-2 4-2 7 3 7 3 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "coffee-bean-fill": `<path d="M12 3c-4.5 0-8 3.5-8 9a8 8 0 0 0 8 9c4.5 0 9-3.5 9-9s-5-9-9-9z" fill="currentColor" stroke="none"/><path d="M11 3c1 0 3 1 3 4s-2 4-2 7 3 7 3 7" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>`,
+    "coffee-bean-striped": `<path d="M12 3c-4.5 0-8 3.5-8 9a8 8 0 0 0 8 9c4.5 0 9-3.5 9-9s-5-9-9-9z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M6 12h3M5 15h5M8 9h3" stroke="currentColor" stroke-width="1" opacity="0.5"/>`,
+    "mug-empty": `<path d="M17 8h1a4 4 0 0 1 0 8h-1" stroke="currentColor" stroke-width="2"/><path d="M3 8v8a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V8H3z" stroke="currentColor" stroke-width="2" fill="none"/>`,
+    "mug-half": `<path d="M17 8h1a4 4 0 0 1 0 8h-1" stroke="currentColor" stroke-width="2"/><path d="M3 8v8a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V8H3z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M3 14h14v2a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-2z" fill="currentColor" opacity="0.5" stroke="none"/>`,
+    "mug-hot": `<path d="M17 8h1a4 4 0 0 1 0 8h-1" stroke="currentColor" stroke-width="2"/><path d="M3 8v8a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V8H3z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M6 2v3M10 2v3M14 2v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "mug-pouring": `<path d="M17 10h1a4 4 0 0 1 0 8h-1" stroke="currentColor" stroke-width="2"/><path d="M3 10v8a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-8H3z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M10 2v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 2h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "coffee-togo": `<path d="M6 5l2 16h8l2-16" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/><path d="M4 5h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M9 2l1-1h4l1 1" stroke="currentColor" stroke-width="2" fill="none"/>`,
+    "coffee-togo-hot": `<path d="M6 5l2 16h8l2-16" stroke="currentColor" stroke-width="2" fill="none"/><rect x="5.5" y="10" width="13" height="6" stroke="currentColor" stroke-width="2" fill="none"/><path d="M9 2l1-1h4l1 1" stroke="currentColor" stroke-width="2"/><path d="M4 5h16" stroke="currentColor" stroke-width="2"/>`,
+    "coffee-machine": `<rect x="4" y="4" width="16" height="18" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8 4v6" stroke="currentColor" stroke-width="2"/><path d="M16 4v6" stroke="currentColor" stroke-width="2"/><path d="M6 14h12" stroke="currentColor" stroke-width="2"/><path d="M12 14v4" stroke="currentColor" stroke-width="2"/><path d="M10 18h4" stroke="currentColor" stroke-width="2"/>`,
+    "french-press": `<rect x="6" y="6" width="12" height="16" rx="1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="12" y1="2" x2="12" y2="16" stroke="currentColor" stroke-width="2"/><line x1="8" y1="16" x2="16" y2="16" stroke="currentColor" stroke-width="2"/><line x1="9" y1="2" x2="15" y2="2" stroke="currentColor" stroke-width="2"/><path d="M18 8h3v8h-3" stroke="currentColor" stroke-width="2"/>`,
+
+    "liquid-coffee-bean": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-bean" x1="4" y1="4" x2="20" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#D97706" stop-opacity="0.9"/><stop offset="1" stop-color="#FDE68A" stop-opacity="0.4"/></linearGradient></defs>
+    <path d="M12 3c-4.5 0-8 3.5-8 9a8 8 0 0 0 8 9c4.5 0 9-3.5 9-9s-5-9-9-9z" fill="url(#liq-bean)" stroke="#92400E" stroke-width="1.5"/>
+    <path d="M11 3c1 0 3 1 3 4s-2 4-2 7 3 7 3 7" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    <ellipse cx="8" cy="12" rx="2" ry="4" fill="white" fill-opacity="0.2" transform="rotate(-10 8 12)"/>
+    </svg>`,
+
+    "liquid-mug-hot": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-mug" x1="2" y1="8" x2="18" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#EA580C" stop-opacity="0.8"/><stop offset="1" stop-color="#FED7AA" stop-opacity="0.3"/></linearGradient></defs>
+    <path d="M17 8h1a4 4 0 0 1 0 8h-1" stroke="#C2410C" stroke-width="1.5"/>
+    <path d="M3 8v8a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V8H3z" fill="url(#liq-mug)" stroke="#C2410C" stroke-width="1.5"/>
+    <path d="M6 2v3M10 2v3M14 2v3" stroke="#F97316" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+    <path d="M5 10h10" stroke="white" stroke-opacity="0.2" stroke-width="1"/>
+    </svg>`,
+
+    "liquid-ice-coffee": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-ice" x1="6" y1="5" x2="18" y2="22"><stop stop-color="#78350F" stop-opacity="0.7"/><stop offset="1" stop-color="#BFDBFE" stop-opacity="0.4"/></linearGradient></defs>
+    <path d="M6 5l2 16h8l2-16" fill="url(#liq-ice)" stroke="#451A03" stroke-width="1.5"/>
+    <path d="M4 5h16" stroke="#451A03" stroke-width="1.5"/>
+    <path d="M14 2l-3 6" stroke="#EF4444" stroke-width="2" stroke-linecap="round"/> <rect x="8" y="14" width="3" height="3" fill="white" fill-opacity="0.5"/> <rect x="13" y="11" width="3" height="3" fill="white" fill-opacity="0.5"/> </svg>`,
+
+
+
+
+    "barcode-read-laser": `<path d="M4 7v-2a2 2 0 0 1 2-2h2M16 3h2a2 2 0 0 1 2 2v2M4 17v2a2 2 0 0 0 2 2h2M16 21h2a2 2 0 0 0 2-2v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M2 12h20" stroke="#EF4444" stroke-width="2" stroke-linecap="round"/><path d="M7 8v8M11 8v8M13 8v8M17 8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.5"/>`,
+    "barcode-read-solid": `<path d="M4 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5z" fill="currentColor" stroke="none"/><rect x="2" y="11" width="20" height="2" fill="#EF4444"/> `,
+    "mobile-scan-outline": `<rect x="5" y="2" width="14" height="20" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8 8h8M8 12h8M8 16h8" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 2"/><path d="M2 10h20" stroke="#EF4444" stroke-width="1.5" opacity="0.8"/>`,
+    "mobile-scan-fill": `<rect x="5" y="2" width="14" height="20" rx="2" fill="currentColor"/><path d="M2 10h20" stroke="#EF4444" stroke-width="2"/><path d="M8 14h8M8 16h8" stroke="white" stroke-width="1" opacity="0.5"/>`,
+    "scanner-handheld": `<path d="M14 3v18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M14 8h-4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h4" stroke="currentColor" stroke-width="2"/><path d="M5 12h3" stroke="currentColor" stroke-width="2" stroke-dasharray="2 2"/><circle cx="14" cy="6" r="1" fill="currentColor"/>`,
+    "barcode-check": `<path d="M4 6v12M8 6v12M12 6v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="18" r="5" fill="currentColor" stroke="none"/><path d="M16 18l1.5 1.5 2.5-2.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "barcode-error": `<path d="M4 6v12M8 6v12M12 6v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="18" r="5" fill="#EF4444" stroke="none"/><path d="M16 16l4 4M20 16l-4 4" stroke="white" stroke-width="1.5" stroke-linecap="round"/>`,
+    "barcode-search": `<path d="M4 6v12M8 6v12M12 6v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="16" r="5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M20 20l2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "qr-striped": `<rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/><rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/><rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="2"/><path d="M14 14h7M14 17h7M14 20h4" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>`,
+    "scan-price": `<path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M2 12l20-10" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="4 2"/><circle cx="7" cy="7" r="1.5" fill="currentColor"/>`,
+
+    "liquid-phone-scan": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-phone-sc" x1="6" y1="2" x2="18" y2="22"><stop stop-color="#3B82F6" stop-opacity="0.8"/><stop offset="1" stop-color="#93C5FD" stop-opacity="0.3"/></linearGradient></defs>
+    <rect x="5" y="2" width="14" height="20" rx="3" fill="url(#liq-phone-sc)" stroke="#2563EB" stroke-width="1.5"/>
+    <path d="M2 10h20" stroke="white" stroke-width="1.5" stroke-linecap="round" filter="drop-shadow(0 0 2px white)"/> <path d="M9 6h6" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+    <rect x="8" y="13" width="8" height="6" rx="1" fill="white" fill-opacity="0.3"/>
+    </svg>`,
+
+    "liquid-barcode-box": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-box-sc" x1="4" y1="4" x2="20" y2="20"><stop stop-color="#10B981" stop-opacity="0.8"/><stop offset="1" stop-color="#6EE7B7" stop-opacity="0.3"/></linearGradient></defs>
+    <path d="M12 3l8 4.5v9l-8 4.5-8-4.5v-9L12 3z" fill="url(#liq-box-sc)" stroke="#059669" stroke-width="1.5"/>
+    <path d="M12 3v18" stroke="#047857" stroke-width="1" opacity="0.3"/>
+    <path d="M7 9l2 1M6 11l4 2M5 13l6 3" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M17 9l-2 1M18 11l-4 2M19 13l-6 3" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>`,
+
+
+    "barcode-read-thin": `<path d="M4 5v14M8 5v14M12 5v14M16 5v14M20 5v14" stroke="currentColor" stroke-width="0.5" stroke-linecap="round"/><path d="M2 12h20" stroke="#EF4444" stroke-width="0.5" stroke-dasharray="2 2"/>`,
+    "qr-scan-thin": `<rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" stroke-width="0.5" fill="none"/><path d="M2 12h20M12 2v20" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>`,
+    "barcode-read-heavy": `<path d="M5 5v14M9 5v14M13 5v14M17 5v14M21 5v14" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M2 12h22" stroke="#EF4444" stroke-width="2"/>`,
+    "scan-frame-heavy": `<path d="M4 4h4v4H4zM16 4h4v4h-4zM4 16h4v4H4zM16 16h4v4h-4z" fill="currentColor"/><path d="M2 2h6v6H2zM16 2h6v6h-6zM2 16h6v6H2zM16 16h6v6h-6z" stroke="currentColor" stroke-width="2" fill="none"/>`,
+    "pixel-barcode-read": `<path d="M4 4h2v16H4V4zm4 0h2v16H8V4zm4 0h2v16h-2V4zm4 0h2v16h-2V4zm4 0h2v16h-2V4z" fill="currentColor"/><rect x="2" y="11" width="20" height="2" fill="#EF4444" opacity="0.8"/>`,
+    "pixel-qr-read": `<path d="M4 4h6v6H4V4zm10 0h6v6h-6V4zm0 10h6v6h-6v-6zM4 14h6v6H4v-6z" fill="currentColor"/><rect x="11" y="11" width="2" height="2" fill="#EF4444"/>`,
+    "barcode-box-striped-v": `<rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M7 8v8M10 8v8M13 8v8M16 8v8" stroke="currentColor" stroke-width="1" stroke-dasharray="2 1"/>`,
+    "scan-area-striped": `<path d="M2 2v6M2 2h6M22 2v6M22 2h-6M2 22v-6M2 22h6M22 22v-6M22 22h-6" stroke="currentColor" stroke-width="2"/><rect x="6" y="6" width="12" height="12" fill="none" stroke="currentColor" stroke-width="0.5" stroke-dasharray="1 1"/>`,
+    "barcode-read-contrast": `<rect x="2" y="4" width="20" height="16" rx="2" fill="currentColor"/><path d="M6 8v8M10 8v8M14 8v8M18 8v8" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="2" y1="12" x2="22" y2="12" stroke="#EF4444" stroke-width="2"/>`,
+    "qr-read-contrast": `<rect x="2" y="2" width="20" height="20" rx="3" fill="currentColor"/><rect x="6" y="6" width="4" height="4" rx="1" fill="white"/><rect x="14" y="6" width="4" height="4" rx="1" fill="white"/><rect x="6" y="14" width="4" height="4" rx="1" fill="white"/><rect x="14" y="14" width="4" height="4" rx="1" fill="#EF4444"/>`,
+    "neon-scan": `<path d="M2 12h20" stroke="#00FF00" stroke-width="1" stroke-dasharray="2 2" filter="drop-shadow(0 0 2px #00FF00)"/><rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M4 9v6M20 9v6" stroke="currentColor" stroke-width="2"/>`,
+    "phone-barcode": `<rect x="6" y="2" width="12" height="20" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M9 8h6M9 11h6M9 14h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>`,
+    "phone-qr": `<rect x="6" y="2" width="12" height="20" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><rect x="9" y="8" width="6" height="6" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="12" cy="11" r="1" fill="currentColor"/>`,
+    "scanner-hand-fill": `<path d="M4 6h12l2 10H6L4 6z" fill="currentColor"/><rect x="8" y="16" width="8" height="6" fill="currentColor"/><line x1="2" y1="8" x2="22" y2="8" stroke="#EF4444" stroke-width="2" stroke-dasharray="2 2"/>`,
+    "bean-thin": `<path d="M12 3c-5 0-9 4-9 9s4 9 9 9 9-4 9-9-4-9-9-9z" stroke="currentColor" stroke-width="0.5" fill="none"/><path d="M12 3c1.5 3 3 6 3 9s-1.5 6-3 9" stroke="currentColor" stroke-width="0.5"/>`,
+    "cup-thin": `<path d="M18 8h1a4 4 0 0 1 0 8h-1M4 8h14v9a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8z" stroke="currentColor" stroke-width="0.5" fill="none"/>`,
+    "bean-heavy": `<path d="M12 3c-5 0-9 4-9 9s4 9 9 9 9-4 9-9-4-9-9-9z" stroke="currentColor" stroke-width="3" fill="none"/><path d="M12 3c1.5 3 3 6 3 9s-1.5 6-3 9" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>`,
+    "cup-heavy": `<path d="M18 8h1a4 4 0 0 1 0 8h-1M4 8h14v9a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8z" stroke="currentColor" stroke-width="3" fill="none"/>`,
+    "pixel-bean": `<path d="M8 4h8v2h2v4h2v4h-2v4h-2v2H8v-2H6v-4H4v-4h2V6h2V4z" fill="currentColor" stroke="none"/><rect x="10" y="6" width="2" height="12" fill="white" opacity="0.3"/>`,
+    "pixel-mug": `<path d="M4 6h12v10h-2v2H6v-2H4V6zm12 2h2v4h-2V8z" fill="currentColor" stroke="none"/><path d="M6 4h2v-2h-2v2zm4 0h2v-2h-2v2zm4 0h2v-2h-2v2z" fill="currentColor" opacity="0.5"/>`, // Buharlı
+    "bean-striped-h": `<path d="M12 3c-5 0-9 4-9 9s4 9 9 9 9-4 9-9-4-9-9-9z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M6 12h12M5 9h14M7 15h10" stroke="currentColor" stroke-width="1" opacity="0.5"/>`,
+    "cup-striped-v": `<path d="M18 8h1a4 4 0 0 1 0 8h-1M4 8h14v9a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M7 8v10M11 8v10M15 8v10" stroke="currentColor" stroke-width="1" opacity="0.5"/>`,
+    "bean-contrast": `<path d="M12 3c-5 0-9 4-9 9s4 9 9 9 9-4 9-9-4-9-9-9z" fill="currentColor" stroke="none"/><path d="M12 3c1.5 3 3 6 3 9s-1.5 6-3 9" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>`,
+    "cup-contrast": `<path d="M18 8h1a4 4 0 0 1 0 8h-1" stroke="currentColor" stroke-width="2"/><path d="M4 8h14v9a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8z" fill="currentColor" stroke="none"/><path d="M8 12h6" stroke="white" stroke-width="2" stroke-linecap="round"/>`,
+    "liquid-bean-roast": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-roast" x1="6" y1="2" x2="18" y2="22"><stop stop-color="#78350F"/><stop offset="1" stop-color="#B45309"/></linearGradient></defs><path d="M12 3c-5 0-9 4-9 9s4 9 9 9 9-4 9-9-4-9-9-9z" fill="url(#liq-roast)" stroke="#451A03" stroke-width="1.5"/><path d="M12 3c1.5 3 3 6 3 9s-1.5 6-3 9" stroke="#451A03" stroke-width="1.5" fill="none"/><circle cx="8" cy="10" r="1.5" fill="white" opacity="0.2"/></svg>`,
+    "liquid-latte-art": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-latte" x1="4" y1="8" x2="20" y2="20"><stop stop-color="#FDE68A"/><stop offset="1" stop-color="#D97706"/></linearGradient></defs><path d="M18 8h1a4 4 0 0 1 0 8h-1M4 8h14v9a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8z" fill="url(#liq-latte)" stroke="#B45309" stroke-width="1.5"/><path d="M11 12c1 1 3 1 4 0s1-3-2-3-3 2-2 3" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/><circle cx="11" cy="14" r="0.5" fill="#B45309"/></svg>`,
+    "bean-leaf": `<path d="M12 3c-5 0-9 4-9 9s4 9 9 9 9-4 9-9-4-9-9-9z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 3c0 4 4 6 4 9" stroke="currentColor" stroke-width="2"/><path d="M12 3c-2 0-3-2-3-3" stroke="currentColor" stroke-width="2"/> `,
+    "cup-leaf": `<path d="M4 8h14v9a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M11 13c0-2 2-3 3-3s3 1 3 3c0 2-3 5-3 5s-3-3-3-5z" fill="currentColor" stroke="none"/>`,
+    "beans-pair": `<circle cx="9" cy="12" r="5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M9 7c1 2 2 4 2 5s-1 4-2 5" stroke="currentColor" stroke-width="2"/><circle cx="15" cy="12" r="5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M15 7c1 2 2 4 2 5s-1 4-2 5" stroke="currentColor" stroke-width="2"/>`,
+    "coffee-bag-pro": `<path d="M5 8h14l-2 14H7L5 8z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8 8V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v3" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="14" r="2" stroke="currentColor" stroke-width="1.5"/>`,
+    "coffee-sleeve": `<path d="M6 5l2 16h8l2-16" stroke="currentColor" stroke-width="2" fill="none"/><path d="M4 5h16" stroke="currentColor" stroke-width="2"/><rect x="5.5" y="10" width="13" height="6" fill="currentColor" opacity="0.2"/>`,
+
+
+
+    "badge-question-red": `<rect x="4" y="4" width="16" height="16" rx="6" fill="#1F2937"/><path d="M12 17h.01M12 14c0-2 3-2 3-4s-2-3-4-3-3 2-3 3" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "badge-check-green": `<rect x="4" y="4" width="16" height="16" rx="6" fill="#1F2937"/><path d="M8 12l3 3 5-5" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "badge-error-red": `<rect x="4" y="4" width="16" height="16" rx="6" fill="#1F2937"/><path d="M15 9l-6 6M9 9l6 6" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "badge-warning-yellow": `<rect x="4" y="4" width="16" height="16" rx="6" fill="#1F2937"/><path d="M12 8v4M12 16h.01" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "badge-info-blue": `<rect x="4" y="4" width="16" height="16" rx="6" fill="#1F2937"/><path d="M12 16v-4M12 8h.01" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "badge-user-blue": `<rect x="4" y="4" width="16" height="16" rx="6" fill="#1F2937"/><path d="M12 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM7 18a5 5 0 0 1 10 0" stroke="#3B82F6" stroke-width="1.5" fill="none"/>`,
+    "badge-logout-red": `<rect x="4" y="4" width="16" height="16" rx="6" fill="#1F2937"/><path d="M15 12H9m3-3l3 3-3 3M7 18a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2" stroke="#EF4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "badge-bell-alert": `<rect x="4" y="4" width="16" height="16" rx="6" fill="#1F2937"/><path d="M12 8a2 2 0 0 1 2 2v3l1 1v1H9v-1l1-1v-3a2 2 0 0 1 2-2z" stroke="#F59E0B" stroke-width="1.5"/><circle cx="16" cy="8" r="2" fill="#EF4444"/>`,
+    "badge-cart-yellow": `<rect x="4" y="4" width="16" height="16" rx="6" fill="#1F2937"/><path d="M8 17a1 1 0 1 0 2 0 1 1 0 0 0-2 0zm8 0a1 1 0 1 0 2 0 1 1 0 0 0-2 0zM6 8h13l-1.5 7H7.5L6 8zM6 8H4" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "badge-tag-green": `<rect x="4" y="4" width="16" height="16" rx="6" fill="#1F2937"/><path d="M16 7h-4l-5 5 4 4 5-5V7z" stroke="#10B981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="14" cy="10" r="1" fill="#10B981"/>`,
+    "badge-settings-blue": `<rect x="4" y="4" width="16" height="16" rx="6" fill="#1F2937"/><path d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6z" stroke="#3B82F6" stroke-width="1.5"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" stroke="#3B82F6" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "badge-search-blue": `<rect x="4" y="4" width="16" height="16" rx="6" fill="#1F2937"/><circle cx="11" cy="11" r="4" stroke="#3B82F6" stroke-width="1.5"/><path d="M16 16l2 2" stroke="#3B82F6" stroke-width="1.5" stroke-linecap="round"/>`,
+    "badge-play-green": `<rect x="4" y="4" width="16" height="16" rx="6" fill="#1F2937"/><path d="M10 9l5 3-5 3V9z" fill="#10B981" stroke="none"/>`,
+    "badge-heart-red": `<rect x="4" y="4" width="16" height="16" rx="6" fill="#1F2937"/><path d="M12 17.5l-1-1C7.5 13.5 5 11 5 8.5a3.5 3.5 0 0 1 7-3.5 3.5 3.5 0 0 1 7 3.5c0 2.5-2.5 5-6 8l-1 1z" fill="#EF4444" stroke="none"/>`,
+    "badge-lock-red": `<rect x="4" y="4" width="16" height="16" rx="6" fill="#1F2937"/><rect x="8" y="11" width="8" height="6" rx="1" stroke="#EF4444" stroke-width="1.5"/><path d="M9 11V8a3 3 0 0 1 6 0v3" stroke="#EF4444" stroke-width="1.5"/>`,
+    "badge-shield-green": `<rect x="4" y="4" width="16" height="16" rx="6" fill="#1F2937"/><path d="M12 18s5-3 5-8V7l-5-2-5 2v3c0 5 5 8 5 8z" stroke="#10B981" stroke-width="1.5" fill="none"/><path d="M9 10l2 2 4-4" stroke="#10B981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "badge-flux-purple": `<rect x="4" y="4" width="16" height="16" rx="6" fill="#1F2937"/><path d="M12 7L9 17h6L12 7z" stroke="#8B5CF6" stroke-width="1.5" stroke-linejoin="round"/><circle cx="12" cy="12" r="2" fill="#8B5CF6"/>`,
+
+
+
+    "scan-frame": `<path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M16 20h2a2 2 0 0 0 2-2v-2M4 16v2a2 2 0 0 0 2 2h2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`,
+    "scan-barcode-2": `<path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M16 20h2a2 2 0 0 0 2-2v-2M4 16v2a2 2 0 0 0 2 2h2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M10 8v8M14 8v8M8 8v8M16 8v8" stroke="currentColor" stroke-width="1.5"/>`,
+    "scan-laser": `<path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M16 20h2a2 2 0 0 0 2-2v-2M4 16v2a2 2 0 0 0 2 2h2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M2 12h20" stroke="#EF4444" stroke-width="2" stroke-linecap="round"/>`,
+    "scan-qr": `<path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M16 20h2a2 2 0 0 0 2-2v-2M4 16v2a2 2 0 0 0 2 2h2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><rect x="9" y="9" width="6" height="6" rx="1" fill="currentColor"/>`,
+    "scan-face": `<path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M16 20h2a2 2 0 0 0 2-2v-2M4 16v2a2 2 0 0 0 2 2h2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M9 10h.01M15 10h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M10 14a2 2 0 0 0 4 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "brand-audi": `<circle cx="6" cy="12" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="10" cy="12" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="14" cy="12" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="18" cy="12" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/>`,
+    "brand-bmw": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M12 6v12M6 12h12" stroke="currentColor" stroke-width="1.5"/>`,
+    "brand-mercedes": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 2l3 10h-6l3-10z" fill="currentColor"/><path d="M12 12l6 4-3 5-3-9z" fill="currentColor"/><path d="M12 12l-6 4 3 5 3-9z" fill="currentColor"/>`,
+    "brand-tesla": `<path d="M4 8c0-3 4-4 8-4s8 1 8 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M12 4v12l3 4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 16l-3 4" stroke="currentColor" stroke-width="2" fill="none"/>`,
+    "brand-renault": `<path d="M12 2L4 8v8l8 6 8-6V8l-8-6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/><path d="M12 6L7 10v4l5 4 5-4v-4l-5-4z" stroke="currentColor" stroke-width="1.5" fill="none"/>`,
+    "brand-maserati": `<path d="M12 2v18M12 22h0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 6c0 4 0 8 4 8s4-4 4-8" stroke="currentColor" stroke-width="2" fill="none"/><path d="M4 6v6c0 2 1 3 4 3M20 6v6c0 2-1 3-4 3" stroke="currentColor" stroke-width="2" fill="none"/>`,
+    "brand-volkswagen": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M4 6l6 12 2-4 2 4 6-12" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/><path d="M8 6l4 8 4-8" stroke="currentColor" stroke-width="1.5" fill="none"/>`,
+    "brand-instagram": `<rect x="4" y="4" width="16" height="16" rx="4" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    
+
+
+    "liquid-apple-music": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="liq-music-app" x1="2" y1="2" x2="22" y2="22"><stop stop-color="#FA2D48"/><stop offset="1" stop-color="#F43F5E"/></linearGradient></defs>
+        <rect x="3" y="3" width="18" height="18" rx="5" fill="url(#liq-music-app)" stroke="#BE123C" stroke-width="1.5"/>
+        <path d="M9 17V9l6-2v8a2 2 0 0 1-2 2H9z" fill="white" fill-opacity="0.9"/>
+        <circle cx="9" cy="17" r="2" fill="white"/>
+        <circle cx="13" cy="15" r="2" fill="white"/>
+        <path d="M5 5a3 3 0 0 1 3-3h8" stroke="white" stroke-width="2" stroke-opacity="0.3" fill="none"/>
+    </svg>`,
+
+   
+    "liquid-game-backgammon": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="liq-bgammon" x1="2" y1="2" x2="22" y2="22"><stop stop-color="#78350F" stop-opacity="0.9"/><stop offset="1" stop-color="#B45309" stop-opacity="0.6"/></linearGradient></defs>
+        <rect x="2" y="2" width="20" height="20" rx="2" fill="url(#liq-bgammon)" stroke="#451A03" stroke-width="1.5"/>
+        <path d="M12 2v20" stroke="#451A03" stroke-width="2"/> <path d="M4 2l1.5 8 1.5-8M8 2l1.5 8 1.5-8" fill="#FCD34D" stroke="none" opacity="0.8"/>
+        <path d="M4 22l1.5-8 1.5 8M8 22l1.5-8 1.5 8" fill="#EF4444" stroke="none" opacity="0.8"/>
+        <circle cx="15" cy="6" r="2" fill="white" stroke="#451A03" stroke-width="1"/>
+        <circle cx="15" cy="11" r="2" fill="white" stroke="#451A03" stroke-width="1"/>
+        <circle cx="19" cy="18" r="2" fill="#1F2937" stroke="white" stroke-width="1"/>
+    </svg>`,
+
+    "liquid-game-chess": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="liq-chess" x1="6" y1="4" x2="18" y2="20"><stop stop-color="#E2E8F0" stop-opacity="0.9"/><stop offset="1" stop-color="#94A3B8" stop-opacity="0.6"/></linearGradient></defs>
+        <path d="M19 20H5v-2h2.5c0-2.5 1-4 2.5-5C9 11 7 9 7 6c0-2 2-3 4-3 1.5 0 3 .5 4 2 .5-1 2-1.5 3 0 1 1.5-.5 3.5-2 5 2 2.5 3.5 5 3.5 8H19v2z" fill="url(#liq-chess)" stroke="#475569" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M11 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" fill="#475569"/> <path d="M12 13c-2 1-3 3-3 5" stroke="white" stroke-width="1.5" fill="none" opacity="0.6"/>
+    </svg>`,
+
+    "liquid-brand-slack": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 15a2 2 0 1 0 2 2v-2H6z" fill="#E11D48"/><path d="M9 15h2v-6H9v6z" fill="#E11D48" fill-opacity="0.8"/>
+        <path d="M9 6a2 2 0 1 0-2 2h2V6z" fill="#06B6D4"/><path d="M9 9h6v2H9V9z" fill="#06B6D4" fill-opacity="0.8"/>
+        <path d="M18 9a2 2 0 1 0-2-2v2h2z" fill="#F59E0B"/><path d="M15 9h-2v6h2V9z" fill="#F59E0B" fill-opacity="0.8"/>
+        <path d="M15 18a2 2 0 1 0 2-2h-2v2z" fill="#10B981"/><path d="M15 15H9v-2h6v2z" fill="#10B981" fill-opacity="0.8"/>
+        <rect x="2" y="2" width="20" height="20" rx="4" stroke="#334155" stroke-width="1.5" fill="none" opacity="0.2"/>
+    </svg>`,
+
+    "liquid-brand-figma": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="8.5" cy="5.5" r="3.5" fill="#F24E1E"/>
+        <path d="M12 2h3.5a3.5 3.5 0 0 1 0 7H12V2z" fill="#FF7262"/>
+        <circle cx="8.5" cy="12.5" r="3.5" fill="#A259FF"/>
+        <circle cx="8.5" cy="19.5" r="3.5" fill="#1ABCFE"/>
+        <path d="M12 9h3.5a3.5 3.5 0 0 1 0 7H12V9z" fill="#0ACF83"/>
+        <path d="M12 2v20" stroke="white" stroke-width="1" opacity="0.3"/>
+    </svg>`,
+
+
+
+    "flux-intersect": `<circle cx="9" cy="12" r="6" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="15" cy="12" r="6" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 9v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>`,
+    "flux-orbit-dot": `<path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z" stroke="currentColor" stroke-width="2" stroke-dasharray="10 10" fill="none"/><circle cx="12" cy="12" r="3" fill="currentColor"/>`,
+    "menu-modern-alt": `<line x1="4" y1="8" x2="14" y2="8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="16" x2="20" y2="16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="8" r="2" fill="currentColor"/>`,
+    "grid-masonry-pro": `<rect x="3" y="3" width="8" height="8" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><rect x="13" y="3" width="8" height="12" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><rect x="3" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="17" cy="19" r="2" fill="currentColor"/>`,
+    "slider-knob-pro": `<path d="M4 12h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="10" y="9" width="4" height="6" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 9v-3M12 15v3" stroke="currentColor" stroke-width="1.5"/>`,
+    "cpu-core-outline": `<rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M9 9l6 6M15 9l-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3" stroke="currentColor" stroke-width="2"/>`,
+    "cloud-sync-outline": `<path d="M20 16.2A4.5 4.5 0 0 0 17.5 8h-1.8A7 7 0 1 0 4 14.9" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M12 14v-4M10 12l2 2 2-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "data-eye-outline": `<path d="M2 12s4-8 10-8 10 8 10 8-4 8-10 8-10-8-10-8z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 16v-2M12 10V8M10 12H8M16 12h-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>`,
+    "target-arrow-pro": `<circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="10 10"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M19 5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M19 5h-4M19 5v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "pen-tool-node": `<path d="M12 19l7-7 3 3-7 7-3-3z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="2" cy="2" r="1" fill="currentColor"/><circle cx="11" cy="11" r="1" fill="currentColor"/>`,
+    "layers-floating": `<path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/><path d="M2 17l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/><path d="M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none" opacity="0.5"/>`,
+    "arrow-corner-bend": `<path d="M4 20v-6a4 4 0 0 1 4-4h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M16 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "arrow-split-branch": `<path d="M4 12h6M10 12l4-4M10 12l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="18" cy="8" r="2" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="16" r="2" stroke="currentColor" stroke-width="2"/>`,
+    "lamp-desk": `<path d="M8 20h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 20v-6" stroke="currentColor" stroke-width="2"/><path d="M6 14l6-10 6 10H6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/><line x1="12" y1="14" x2="12" y2="11" stroke="currentColor" stroke-width="1"/>`,
+    "umbrella-shield": `<path d="M12 2v20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M2 12c0-5.5 4.5-10 10-10s10 4.5 10 10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M2 12h20" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2"/>`,
+    "gift-box-outline": `<rect x="4" y="8" width="16" height="12" rx="1" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 8v12" stroke="currentColor" stroke-width="2"/><path d="M12 8H8a2.5 2.5 0 0 1 0-5c1.5 0 2.5 1.5 4 5z" stroke="currentColor" stroke-width="1.5"/><path d="M12 8h4a2.5 2.5 0 0 0 0-5c-1.5 0-2.5 1.5-4 5z" stroke="currentColor" stroke-width="1.5"/>`,
+
+
+
+    "user-invite-outline": `<circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M2 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M19 8v6M16 11h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "user-invite-solid": `<path d="M1 21v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2" fill="currentColor"/><circle cx="9" cy="7" r="4" fill="currentColor"/><path d="M19 8v6M16 11h6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>`,
+    "user-remove-outline": `<circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M2 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M16 11h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "user-remove-solid": `<path d="M1 21v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2" fill="currentColor"/><circle cx="9" cy="7" r="4" fill="currentColor"/><path d="M16 11h6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>`,
+    "user-block-outline": `<circle cx="8.5" cy="7" r="4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M2 21v-2a4 4 0 0 1 4-4h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="17" cy="17" r="5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M14 14l6 6" stroke="currentColor" stroke-width="2"/>`,
+    "user-block-solid": `<path d="M13.5 13.5c-.8.7-1.3 1.5-1.5 2.5H5a4 4 0 0 0-4 4v2h12.2c-.1-.7-.2-1.4-.2-2.2a6.8 6.8 0 0 1 .5-2.3" fill="currentColor"/><circle cx="9" cy="7" r="4" fill="currentColor"/><circle cx="18" cy="16" r="5" fill="#EF4444"/><path d="M15 13l6 6" stroke="white" stroke-width="2" stroke-linecap="round"/>`,
+    "user-mute-outline": `<circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M2 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M22 9l-6 6M16 9l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`, // Ağzı çarpı ile kapalı gibi
+    "user-report-solid": `<path d="M1 21v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2" fill="currentColor"/><circle cx="9" cy="7" r="4" fill="currentColor"/><path d="M19 8v5" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"/><circle cx="19" cy="16" r="1.5" fill="#F59E0B"/>`,
+    "group-3-outline": `<circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "group-3-solid": `<path d="M17 21v-2a4 4 0 0 0-3-3.87V15a4 4 0 0 0 2-7.75A4 4 0 0 1 16 3.13a4 4 0 0 1 0 7.75 4 4 0 0 0-2 4.12 4 4 0 0 0 3 3.87" fill="currentColor"/><path d="M1 21v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2" fill="currentColor"/><circle cx="9" cy="7" r="4" fill="currentColor"/>`,
+    "group-add-striped": `<circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="5" y1="17" x2="13" y2="17" stroke="currentColor" stroke-width="1" opacity="0.5"/><line x1="20" y1="8" x2="20" y2="14" stroke="currentColor" stroke-width="2"/><line x1="23" y1="11" x2="17" y2="11" stroke="currentColor" stroke-width="2"/>`,
+    "group-settings": `<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" stroke-width="2"/><circle cx="19" cy="6" r="3" stroke="currentColor" stroke-width="2" stroke-dasharray="2 2"/>`,
+    "user-crown-solid": `<path d="M20 21v-2a4 4 0 0 0-3-3.8H7a4 4 0 0 0-3 3.8v2" fill="currentColor"/><circle cx="12" cy="7" r="4" fill="currentColor"/><path d="M9 2l3 3 3-3" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "user-robot-outline": `<rect x="3" y="11" width="18" height="10" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="5" r="2" stroke="currentColor" stroke-width="2"/><line x1="12" y1="7" x2="12" y2="11" stroke="currentColor" stroke-width="2"/><circle cx="8" cy="16" r="1.5" fill="currentColor"/><circle cx="16" cy="16" r="1.5" fill="currentColor"/>`,
+    "user-headset-striped": `<path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M15 7v3c0 2.5-2 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 2"/><circle cx="17" cy="7" r="2" fill="currentColor"/>`,
+
+    "liquid-user-banned": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-ban-u" x1="4" y1="4" x2="20" y2="20"><stop stop-color="#EF4444" stop-opacity="0.8"/><stop offset="1" stop-color="#FECACA" stop-opacity="0.3"/></linearGradient></defs>
+    <circle cx="12" cy="7" r="4" fill="url(#liq-ban-u)" stroke="#B91C1C" stroke-width="1"/>
+    <path d="M20 21v-2a4 4 0 0 0-3-3.8H7a4 4 0 0 0-3 3.8v2" fill="url(#liq-ban-u)" stroke="#B91C1C" stroke-width="1"/>
+    <circle cx="18" cy="18" r="5" fill="#B91C1C" stroke="white" stroke-width="1.5"/>
+    <path d="M16 16l4 4M20 16l-4 4" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>`,
+
+    "liquid-user-vip": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-vip" x1="4" y1="4" x2="20" y2="20"><stop stop-color="#F59E0B" stop-opacity="0.9"/><stop offset="1" stop-color="#FDE68A" stop-opacity="0.4"/></linearGradient></defs>
+    <circle cx="12" cy="7" r="4" fill="url(#liq-vip)" stroke="#D97706" stroke-width="1"/>
+    <path d="M20 21v-2a4 4 0 0 0-3-3.8H7a4 4 0 0 0-3 3.8v2" fill="url(#liq-vip)" stroke="#D97706" stroke-width="1"/>
+    <path d="M12 2l1.5 3h3l-2.5 2 1 3-3-2-3 2 1-3-2.5-2h3z" fill="white" stroke="#D97706" stroke-width="0.5"/> </svg>`,
+
+    "liquid-user-verified": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-verify-u" x1="4" y1="4" x2="20" y2="20"><stop stop-color="#3B82F6" stop-opacity="0.8"/><stop offset="1" stop-color="#93C5FD" stop-opacity="0.3"/></linearGradient></defs>
+    <circle cx="10" cy="7" r="4" fill="url(#liq-verify-u)" stroke="#1D4ED8" stroke-width="1"/>
+    <path d="M18 21v-2a4 4 0 0 0-3-3.8H5a4 4 0 0 0-3 3.8v2" fill="url(#liq-verify-u)" stroke="#1D4ED8" stroke-width="1"/>
+    <circle cx="19" cy="7" r="4" fill="#2563EB" stroke="white" stroke-width="1.5"/>
+    <path d="M17 7l1.5 1.5 2.5-2.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>`,
+
+
+    "users-3-row-outline": `<circle cx="4.5" cy="10" r="2.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M1 17c0-1.5 1-2.5 3.5-2.5S8 15.5 8 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8.5 17c0-1.5 1-2.5 3.5-2.5S15.5 15.5 15.5 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="19.5" cy="10" r="2.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M16 17c0-1.5 1-2.5 3.5-2.5S23 15.5 23 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>`,
+    "users-3-row-solid": `<path d="M4.5 13A2.5 2.5 0 1 0 4.5 8a2.5 2.5 0 0 0 0 5zM1 17c0-1.5 1-2.5 3.5-2.5S8 15.5 8 17v1H1v-1z" fill="currentColor"/><path d="M12 13a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM8.5 17c0-1.5 1-2.5 3.5-2.5S15.5 15.5 15.5 17v1h-7v-1z" fill="currentColor"/><path d="M19.5 13a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM16 17c0-1.5 1-2.5 3.5-2.5S23 15.5 23 17v1h-7v-1z" fill="currentColor"/>`,
+    "users-4-grid-outline": `<circle cx="6" cy="6" r="2.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M2.5 12C2.5 10.5 3.5 10 6 10s3.5.5 3.5 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="6" r="2.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M14.5 12c0-1.5 1-2 3.5-2s3.5.5 3.5 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="6" cy="17" r="2.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M2.5 23c0-1.5 1-2 3.5-2s3.5.5 3.5 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="17" r="2.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M14.5 23c0-1.5 1-2 3.5-2s3.5.5 3.5 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "users-4-grid-solid": `<circle cx="6" cy="6" r="2.5" fill="currentColor"/><path d="M2.5 12C2.5 10.5 3.5 10 6 10s3.5.5 3.5 2v1h-7v-1z" fill="currentColor"/><circle cx="18" cy="6" r="2.5" fill="currentColor"/><path d="M14.5 12c0-1.5 1-2 3.5-2s3.5.5 3.5 2v1h-7v-1z" fill="currentColor"/><circle cx="6" cy="17" r="2.5" fill="currentColor"/><path d="M2.5 23c0-1.5 1-2 3.5-2s3.5.5 3.5 2v1h-7v-1z" fill="currentColor"/><circle cx="18" cy="17" r="2.5" fill="currentColor"/><path d="M14.5 23c0-1.5 1-2 3.5-2s3.5.5 3.5 2v1h-7v-1z" fill="currentColor"/>`,
+    "users-crowd-striped": `<circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8 18c0-2 2-3 4-3s4 1 4 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="6" cy="9" r="2" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.6"/><path d="M3 14c0-1.5 1-2 3-2s3 .5 3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/><circle cx="18" cy="9" r="2" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.6"/><path d="M15 14c0-1.5 1-2 3-2s3 .5 3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>`,
+    "users-meeting": `<circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2" stroke-dasharray="3 3"/><circle cx="12" cy="4" r="2" fill="currentColor"/><circle cx="20" cy="12" r="2" fill="currentColor"/><circle cx="12" cy="20" r="2" fill="currentColor"/><circle cx="4" cy="12" r="2" fill="currentColor"/>`,
+
+    "liquid-team-3": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-team" x1="2" y1="6" x2="22" y2="18"><stop stop-color="#3B82F6" stop-opacity="0.8"/><stop offset="1" stop-color="#8B5CF6" stop-opacity="0.4"/></linearGradient></defs>
+    <circle cx="6" cy="10" r="2" fill="url(#liq-team)" stroke="#2563EB" stroke-width="1"/>
+    <path d="M3 18c0-2 1-3 3-3s3 1 3 3" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    <circle cx="18" cy="10" r="2" fill="url(#liq-team)" stroke="#2563EB" stroke-width="1"/>
+    <path d="M15 18c0-2 1-3 3-3s3 1 3 3" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    <circle cx="12" cy="12" r="3" fill="white" stroke="#2563EB" stroke-width="1.5"/>
+    <path d="M8 20c0-2.5 1.5-4 4-4s4 1.5 4 4" stroke="#2563EB" stroke-width="2" stroke-linecap="round" fill="none"/>
+    </svg>`,
+
+    "liquid-community-dots": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="8" cy="8" r="4" fill="#F472B6" opacity="0.8"/><circle cx="16" cy="8" r="4" fill="#60A5FA" opacity="0.8"/>
+    <circle cx="8" cy="16" r="4" fill="#34D399" opacity="0.8"/><circle cx="16" cy="16" r="4" fill="#FBBF24" opacity="0.8"/>
+    <path d="M2 2h20v20H2z" fill="none" stroke="white" stroke-width="1" stroke-opacity="0.2"/>
+    </svg>`,
+
+
+    "sign-stop-octagon": `<path d="M7.86 2h8.28L22 7.86v8.28L16.14 22H7.86L2 16.14V7.86L7.86 2z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M10 10h4" stroke="currentColor" stroke-width="2"/>`,
+    "sign-yield-triangle": `<path d="M12 22L2 4h20L12 22z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 8v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "sign-no-entry": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M6 12h12" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>`,
+    "sign-warning-2": `<path d="M12 2L2 22h20L12 2z" stroke="currentColor" stroke-width="2" fill="none"/><line x1="12" y1="8" x2="12" y2="14" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="18" r="1" fill="currentColor"/>`,
+    "sign-no-parking": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 8h3a3 3 0 0 1 0 6h-3v4" stroke="currentColor" stroke-width="2"/><line x1="4" y1="20" x2="20" y2="4" stroke="currentColor" stroke-width="2"/>`,
+    "sign-speed-limit": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><text x="12" y="16" font-family="sans-serif" font-size="10" font-weight="bold" fill="currentColor" text-anchor="middle">50</text>`,
+
+   
+    "sign-speed-25": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><text x="12" y="16" font-family="sans-serif" font-size="10" font-weight="bold" fill="currentColor" text-anchor="middle">25</text>`,
+    "sign-speed-30": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><text x="12" y="16" font-family="sans-serif" font-size="10" font-weight="bold" fill="currentColor" text-anchor="middle">30</text>`,
+    "sign-speed-50": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><text x="12" y="16" font-family="sans-serif" font-size="10" font-weight="bold" fill="currentColor" text-anchor="middle">50</text>`,
+    "sign-speed-100": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><text x="12" y="15" font-family="sans-serif" font-size="8" font-weight="bold" fill="currentColor" text-anchor="middle">100</text>`,
+    "sign-speed-110": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><text x="12" y="15" font-family="sans-serif" font-size="8" font-weight="bold" fill="currentColor" text-anchor="middle">110</text>`,
+    "sign-speed-120": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><text x="12" y="15" font-family="sans-serif" font-size="8" font-weight="bold" fill="currentColor" text-anchor="middle">120</text>`,
+
+   
+    "hand-thumbs-up-real": `<path d="M7 22V11h3.8c.8 0 1.5-.5 1.8-1.2l1.4-4.2c.4-1.2 1.5-1.8 2.6-1.6 1.1.2 1.9 1.2 1.9 2.4v4.6h2.5c1.4 0 2.5 1.1 2.5 2.5v6c0 1.4-1.1 2.5-2.5 2.5H7z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M7 11H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3" stroke="currentColor" stroke-width="1.5"/>`,
+    "hand-thumbs-down-real": `<path d="M7 2v11h3.8c.8 0 1.5.5 1.8 1.2l1.4 4.2c.4 1.2 1.5 1.8 2.6 1.6 1.1-.2 1.9-1.2 1.9-2.4v-4.6h2.5c1.4 0 2.5-1.1 2.5-2.5v-6c0-1.4-1.1-2.5-2.5-2.5H7z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M7 13H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h3" stroke="currentColor" stroke-width="1.5"/>`,
+    "chart-line-trend-up": `<path d="M3 17l6-6 4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="21" cy="7" r="2" fill="currentColor"/><circle cx="3" cy="17" r="1.5" fill="currentColor"/>`,
+    "chart-area-wave": `<path d="M3 20V12c3-3 6-4 9-2s6 5 9 3v7H3z" fill="currentColor" opacity="0.3" stroke="none"/><path d="M3 12c3-3 6-4 9-2s6 5 9 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>`,
+    "chart-line-mixed": `<path d="M3 14l5-5 5 8 5-4 3 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M3 12h18" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2" opacity="0.5"/> `,
+    "chart-bar-columns": `<rect x="3" y="12" width="4" height="9" rx="1" fill="currentColor" opacity="0.6"/><rect x="9" y="8" width="4" height="13" rx="1" fill="currentColor" opacity="0.8"/><rect x="15" y="4" width="4" height="17" rx="1" fill="currentColor"/><path d="M3 21h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>`,
+    "chart-bar-horizontal": `<rect x="3" y="6" width="12" height="3" rx="1.5" fill="currentColor" opacity="0.6"/><rect x="3" y="11" width="18" height="3" rx="1.5" fill="currentColor"/><rect x="3" y="16" width="8" height="3" rx="1.5" fill="currentColor" opacity="0.8"/>`,
+    "chart-bar-stacked": `<rect x="8" y="14" width="8" height="7" rx="1" fill="currentColor" opacity="0.5"/><rect x="8" y="8" width="8" height="5" rx="1" fill="currentColor" opacity="0.7"/><rect x="8" y="3" width="8" height="4" rx="1" fill="currentColor"/>`,
+    "chart-bar-win-loss": `<path d="M3 12h18" stroke="currentColor" stroke-width="1" opacity="0.5"/><rect x="5" y="6" width="3" height="6" rx="1" fill="currentColor"/><rect x="10" y="12" width="3" height="6" rx="1" fill="#EF4444"/><rect x="15" y="4" width="3" height="8" rx="1" fill="currentColor"/>`,
+    "chart-donut-modern": `<circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="3" fill="none" stroke-dasharray="35 15" transform="rotate(-45 12 12)"/><circle cx="16" cy="16" r="1.5" fill="currentColor"/>`,
+    "chart-candlestick-2": `<path d="M7 4v16M17 4v16" stroke="currentColor" stroke-width="1.5"/><rect x="5" y="8" width="4" height="6" rx="0.5" fill="currentColor" stroke="none"/><rect x="15" y="12" width="4" height="5" rx="0.5" fill="currentColor" stroke="none" opacity="0.5"/>`,
+    "chart-radar-2": `<path d="M12 2L4.5 7.5 7.5 18h9l3-10.5L12 2z" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M12 6l-4 3 1.5 6h5l1.5-6L12 6z" fill="currentColor" opacity="0.3"/><path d="M12 2v20M4.5 7.5l15 9M19.5 7.5l-15 9" stroke="currentColor" stroke-width="1" opacity="0.3"/>`,
+    "chart-scatter-2": `<path d="M3 21h18M3 3v18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="7" cy="16" r="1.5" fill="currentColor"/><circle cx="11" cy="11" r="2" fill="currentColor"/><circle cx="16" cy="15" r="1.5" fill="currentColor"/><circle cx="18" cy="6" r="2.5" fill="currentColor"/><circle cx="13" cy="19" r="1" fill="currentColor"/>`,
+    "liquid-chart-trend": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-trend" x1="2" y1="10" x2="22" y2="20"><stop stop-color="#3B82F6" stop-opacity="0.8"/><stop offset="1" stop-color="#A855F7" stop-opacity="0.3"/></linearGradient></defs>
+    <path d="M3 16l6-5 5 3 7-8" stroke="#2563EB" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <path d="M3 21V16l6-5 5 3 7-8v15H3z" fill="url(#liq-trend)"/>
+    <circle cx="21" cy="6" r="2.5" fill="#2563EB" stroke="white" stroke-width="1.5"/>
+    </svg>`,
+    "liquid-chart-bars": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-bar-1" x2="0" y2="1"><stop stop-color="#34D399"/><stop offset="1" stop-color="#10B981"/></linearGradient><linearGradient id="liq-bar-2" x2="0" y2="1"><stop stop-color="#60A5FA"/><stop offset="1" stop-color="#2563EB"/></linearGradient><linearGradient id="liq-bar-3" x2="0" y2="1"><stop stop-color="#F472B6"/><stop offset="1" stop-color="#DB2777"/></linearGradient></defs>
+    <rect x="4" y="12" width="4" height="9" rx="2" fill="url(#liq-bar-1)"/>
+    <rect x="10" y="8" width="4" height="13" rx="2" fill="url(#liq-bar-2)"/>
+    <rect x="16" y="4" width="4" height="17" rx="2" fill="url(#liq-bar-3)"/>
+    <path d="M3 22h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+    </svg>`,
+
+
+    "trend-up-line": `<polyline points="23 6 13.5 15.5 8.5 10.5 1 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><polyline points="17 6 23 6 23 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`,
+    "trend-up-circle": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="16 8 12 12 8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="rotate(180 12 10)"/>`,
+    "trend-up-solid": `<path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z" fill="currentColor" stroke="none"/>`,
+    "trend-down-line": `<polyline points="23 18 13.5 8.5 8.5 13.5 1 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><polyline points="17 18 23 18 23 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`,
+    "trend-down-circle": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="8 12 12 16 16 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "trend-down-solid": `<path d="M16 18l2.29-2.29-4.88-4.88-4 4L2 7.41 3.41 6l6 6 4-4 6.3 6.29L22 12v6z" fill="currentColor" stroke="none"/>`,
+    "trend-flat": `<path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`,
+    "chart-candle-outline": `<path d="M7 3v18M17 3v18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><rect x="5" y="6" width="4" height="8" rx="0.5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="15" y="10" width="4" height="8" rx="0.5" stroke="currentColor" stroke-width="2" fill="none"/>`,
+    "chart-candle-mixed": `<path d="M7 3v18" stroke="currentColor" stroke-width="1.5"/><rect x="5" y="6" width="4" height="8" rx="0.5" fill="currentColor" stroke="none"/><path d="M17 3v18" stroke="currentColor" stroke-width="1.5"/><rect x="15" y="10" width="4" height="8" rx="0.5" stroke="currentColor" stroke-width="2" fill="none"/>`,
+    "chart-ohlc": `<path d="M12 3v18M8 6h4M12 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M4 8v8M2 10h2M4 14h2" stroke="currentColor" stroke-width="1.5" opacity="0.5"/><path d="M20 5v14M18 7h2M20 17h2" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>`,
+    "chart-bar-desc": `<path d="M18 20V4" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M12 20v-8" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M6 20v-4" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>`,
+    "chart-bar-asc": `<path d="M6 20V10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M12 20V8" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M18 20V4" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>`,
+    "chart-bar-timeline": `<path d="M3 6h18M3 12h12M3 18h8" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>`,
+    "chart-bar-grouped": `<path d="M6 20v-6M10 20v-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M15 20v-10M19 20v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M2 20h20" stroke="currentColor" stroke-width="1"/>`,
+    "chart-pie-split": `<path d="M21.21 15.89A10 10 0 1 1 8 2.83" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M22 12A10 10 0 0 0 12 2v10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`,
+    "chart-donut-75": `<path d="M12 2a10 10 0 1 0 10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" stroke-opacity="0.3" fill="none"/>`,
+    "chart-radar-fill": `<path d="M12 2l8.5 5v10L12 22 3.5 17V7z" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M12 2v20M3.5 7l17 10M3.5 17l17-10" stroke="currentColor" stroke-width="0.5" opacity="0.5"/><polygon points="12 6 17 9 16 16 8 16 7 9" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="1.5"/>`,
+    "chart-area-fill": `<path d="M3 20V12l5-4 6 5 7-7v14H3z" fill="currentColor" stroke="none"/><path d="M3 12l5-4 6 5 7-7" stroke="currentColor" stroke-width="2" fill="none"/>`,
+    "chart-spline": `<path d="M3 18c0-2 4-10 8-10s5 8 10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="21" cy="12" r="2" fill="currentColor"/>`,
+    "liquid-chart-grow": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-grow" x1="2" y1="10" x2="22" y2="10"><stop stop-color="#10B981" stop-opacity="0.8"/><stop offset="1" stop-color="#6EE7B7" stop-opacity="0.3"/></linearGradient></defs>
+    <path d="M21 7l-7 7-4-4-6 6" stroke="#047857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M21 7v10H4l6-6 4 4z" fill="url(#liq-grow)" opacity="0.6"/>
+    <circle cx="21" cy="7" r="2" fill="#047857" stroke="white" stroke-width="1"/>
+    </svg>`,
+
+    "liquid-chart-pie": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.21 15.89A10 10 0 1 1 8 2.83L12 12z" fill="#3B82F6" stroke="white" stroke-width="1"/>
+    <path d="M22 12A10 10 0 0 0 12 2v10z" fill="#F472B6" stroke="white" stroke-width="1"/>
+    </svg>`,
+
+    "liquid-chart-column": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <rect x="4" y="10" width="4" height="10" rx="1" fill="#34D399" stroke="#059669" stroke-width="1"/>
+    <rect x="10" y="6" width="4" height="14" rx="1" fill="#60A5FA" stroke="#2563EB" stroke-width="1"/>
+    <rect x="16" y="2" width="4" height="18" rx="1" fill="#F87171" stroke="#DC2626" stroke-width="1"/>
+    <path d="M2 20h20" stroke="white" stroke-width="1" stroke-opacity="0.5"/>
+    </svg>`,
+
+
+    "home-shack": `<path d="M4 10L12 4l8 6v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/><path d="M9 22V12h6v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>`,
+    "home-modern-flat": `<rect x="4" y="8" width="16" height="12" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M2 8h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 20V12h4v8" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="14" r="2" stroke="currentColor" stroke-width="1.5"/>`,
+    "home-cottage": `<path d="M2 10L12 2l10 8v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/><path d="M6 12h4v8H6v-8zm10 0h2v4h-2v-4z" stroke="currentColor" stroke-width="1.5"/><path d="M18 6v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/> `,
+    "sport-baseball": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M5.5 6A8 8 0 0 1 5.5 18M18.5 6a8 8 0 0 0 0 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 2"/><path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="1" opacity="0.2"/>`,
+    "sport-baseball-bat": `<path d="M14.5 2.5a2.12 2.12 0 0 1 3 3L7 16l-4 2 2-4 10.5-11.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M5 18l-2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "chat-sparkles-bubble": `<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M17 6l1 2 2 1-2 1-1 2-1-2-2-1 2-1 1-2z" fill="currentColor"/><path d="M20 10l.5 1 1 .5-1 .5-.5 1-.5-1-1-.5 1-.5.5-1z" fill="currentColor"/>`,
+    "chat-heart-bubble": `<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 7.5c-1.5-2-4-2-5.5 0s-1.5 4 0 5.5l5.5 5.5 5.5-5.5c1.5-1.5 1.5-4 0-5.5s-4-2-5.5 0z" fill="currentColor" transform="translate(2, 2) scale(0.7)"/>`,
+    "chat-check-bubble": `<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8 12l3 3 5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "loader-atomic": `<circle cx="12" cy="12" r="2" fill="currentColor"/><path d="M12 2a10 10 0 0 1 0 20 10 10 0 0 1 0-20z" stroke="currentColor" stroke-width="1.5" fill="none" transform="rotate(60 12 12)"/><path d="M12 2a10 10 0 0 1 0 20 10 10 0 0 1 0-20z" stroke="currentColor" stroke-width="1.5" fill="none" transform="rotate(-60 12 12)"/>`,
+    "loader-segments": `<path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M12 22a10 10 0 0 1-10-10" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity="0.3" fill="none"/>`,
+    "loader-liquid-flow": `<path d="M12 2c5.5 0 10 4.5 10 10s-4.5 10-10 10S2 17.5 2 12 6.5 2 12 2z" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M2 12c0 5.5 4.5 10 10 10s10-4.5 10-10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>`,
+
+
+    "loader-wave-bars": `<rect x="2" y="10" width="2" height="5" rx="1" stroke="currentColor" stroke-width="2" fill="none"/><rect x="7" y="7" width="2" height="10" rx="1" stroke="currentColor" stroke-width="2" fill="none"/><rect x="12" y="4" width="2" height="16" rx="1" stroke="currentColor" stroke-width="2" fill="none"/><rect x="17" y="7" width="2" height="10" rx="1" stroke="currentColor" stroke-width="2" fill="none"/><rect x="22" y="10" width="2" height="5" rx="1" stroke="currentColor" stroke-width="2" fill="none"/>`,
+    "loader-dots-pulse": `<circle cx="5" cy="12" r="2" fill="currentColor"/><circle cx="12" cy="12" r="2" fill="currentColor" opacity="0.7"/><circle cx="19" cy="12" r="2" fill="currentColor" opacity="0.4"/>`,
+    "loader-circle-notch": `<path d="M12 2a10 10 0 1 0 10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>`,
+    "loader-hourglass-flow": `<path d="M5 2h14M5 22h14M12 11v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M17 2v8a5 5 0 0 1-10 0V2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M7 22v-8a5 5 0 0 1 10 0v8" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="17" r="1" fill="currentColor"/>`,
+    "loader-infinity-path": `<path d="M12 12c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm0 0c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 2" fill="none"/>`,
+    "car-beetle": `<path d="M2 12h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M5 12a7 7 0 0 1 14 0" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="16" r="2" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="16" r="2" stroke="currentColor" stroke-width="2"/><path d="M9 12v-3a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v3" stroke="currentColor" stroke-width="1.5"/>`,
+    "car-beetle-solid": `<path d="M2 12h20v2H2z" fill="currentColor"/><path d="M5 12a7 7 0 0 1 14 0v2H5z" fill="currentColor"/><circle cx="6" cy="16" r="2" fill="currentColor"/><circle cx="18" cy="16" r="2" fill="currentColor"/><path d="M9 11h6V9a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v2z" fill="white"/>`,
+    "vehicle-carriage": `<path d="M5 16a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm14 0a3 3 0 1 0 0 6 3 3 0 0 0 0-6z" stroke="currentColor" stroke-width="2"/><path d="M2 16h4l2-8h8l2 8h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M8 8h8" stroke="currentColor" stroke-width="1.5" opacity="0.5"/><path d="M14 16h8" stroke="currentColor" stroke-width="2"/>`,
+    "bus-city": `<rect x="4" y="3" width="16" height="16" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M4 14h16" stroke="currentColor" stroke-width="2"/><path d="M6 21v2M18 21v2" stroke="currentColor" stroke-width="2"/><line x1="2" y1="8" x2="4" y2="8" stroke="currentColor" stroke-width="2"/><line x1="20" y1="8" x2="22" y2="8" stroke="currentColor" stroke-width="2"/>`,
+    "truck-pickup": `<path d="M5 17h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="7.5" cy="17.5" r="2.5" stroke="currentColor" stroke-width="2"/><circle cx="16.5" cy="17.5" r="2.5" stroke="currentColor" stroke-width="2"/><path d="M2 11h4l2-4h6l3 4h5v6H2v-6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/>`,
+    "truck-semi": `<rect x="2" y="4" width="12" height="10" rx="1" stroke="currentColor" stroke-width="2" fill="none"/><path d="M14 14h8v-6l-3-4h-5v10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/><circle cx="6" cy="18" r="2" stroke="currentColor" stroke-width="2"/><circle cx="10" cy="18" r="2" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="18" r="2" stroke="currentColor" stroke-width="2"/><line x1="14" y1="10" x2="22" y2="10" stroke="currentColor" stroke-width="1" opacity="0.5"/>`,
+    "truck-semi-solid": `<rect x="1" y="4" width="12" height="10" rx="1" fill="currentColor"/><path d="M13 14h9v-6l-3-4h-6v10z" fill="currentColor"/><circle cx="5" cy="18" r="2" fill="currentColor"/><circle cx="9" cy="18" r="2" fill="currentColor"/><circle cx="19" cy="18" r="2" fill="currentColor"/><rect x="3" y="6" width="8" height="6" fill="white" opacity="0.2"/>`,
+    "car-sedan-striped": `<path d="M2 12h20" stroke="currentColor" stroke-width="2"/><path d="M5 12l2-5h10l2 5" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="6" cy="15" r="2" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="15" r="2" stroke="currentColor" stroke-width="2"/><path d="M8 9h8" stroke="currentColor" stroke-width="1" opacity="0.5"/><path d="M7 12h10" stroke="currentColor" stroke-width="1" opacity="0.5"/>`,
+    "bus-striped": `<rect x="5" y="3" width="14" height="16" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M5 13h14" stroke="currentColor" stroke-width="2"/><path d="M7 16h10M7 10h10" stroke="currentColor" stroke-width="1" opacity="0.5"/><path d="M7 22v2M17 22v2" stroke="currentColor" stroke-width="2"/>`,
+    "liquid-car-beetle": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-beetle" x1="2" y1="6" x2="22" y2="18"><stop stop-color="#06B6D4" stop-opacity="0.9"/><stop offset="1" stop-color="#A5F3FC" stop-opacity="0.3"/></linearGradient></defs>
+    <path d="M2 14h20" stroke="#0891B2" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M5 14a7 7 0 0 1 14 0" fill="url(#liq-beetle)" stroke="#0891B2" stroke-width="1.5"/>
+    <circle cx="6" cy="16" r="2" fill="#155E75" stroke="white" stroke-width="1"/>
+    <circle cx="18" cy="16" r="2" fill="#155E75" stroke="white" stroke-width="1"/>
+    <path d="M9 13v-2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" fill="white" fill-opacity="0.4"/>
+    </svg>`,
+
+    "liquid-truck-heavy": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-truck" x1="2" y1="4" x2="22" y2="18"><stop stop-color="#EF4444" stop-opacity="0.9"/><stop offset="1" stop-color="#FCA5A5" stop-opacity="0.3"/></linearGradient></defs>
+    <rect x="2" y="4" width="12" height="10" rx="1" fill="url(#liq-truck)" stroke="#B91C1C" stroke-width="1.5"/>
+    <path d="M14 14h8v-6l-3-4h-5v10z" fill="#F87171" stroke="#B91C1C" stroke-width="1.5"/>
+    <circle cx="6" cy="17" r="2" fill="#450A0A" stroke="white" stroke-width="1"/>
+    <circle cx="10" cy="17" r="2" fill="#450A0A" stroke="white" stroke-width="1"/>
+    <circle cx="19" cy="17" r="2" fill="#450A0A" stroke="white" stroke-width="1"/>
+    <path d="M4 7h8" stroke="white" stroke-opacity="0.3" stroke-width="1"/>
+    </svg>`,
+
+    "liquid-scooter": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-scoot" x1="4" y1="2" x2="20" y2="22"><stop stop-color="#10B981" stop-opacity="0.8"/><stop offset="1" stop-color="#6EE7B7" stop-opacity="0.3"/></linearGradient></defs>
+    <path d="M17 4h-3v13H5" stroke="#047857" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="6" cy="19" r="2" fill="url(#liq-scoot)" stroke="#047857" stroke-width="1.5"/>
+    <circle cx="18" cy="19" r="2" fill="url(#liq-scoot)" stroke="#047857" stroke-width="1.5"/>
+    <path d="M15 4l2-2" stroke="#047857" stroke-width="2" stroke-linecap="round"/>
+    <path d="M7 19h9" stroke="white" stroke-width="1.5" opacity="0.5"/>
+    </svg>`,
+
+
+    "map-pin-outline": `<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>`,
+    "map-pin-solid": `<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" fill="currentColor" stroke="none"/><circle cx="12" cy="10" r="3" fill="white"/>`,
+    "map-marker-circle": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="4" fill="currentColor"/>`,
+    "map-marker-solid": `<circle cx="12" cy="12" r="10" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="4" fill="white"/>`,
+    "map-flag-pin": `<path d="M4 15h12l-2-5 2-5H4v17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M4 22v-7" stroke="currentColor" stroke-width="2"/>`,
+    "pin-food": `<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 7v5M10 8a2 2 0 0 1 4 0" stroke="currentColor" stroke-width="1.5"/>`,
+    "pin-gas": `<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" fill="none"/><rect x="9" y="7" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/>`,
+    "pin-hotel": `<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M9 12h6M12 9v6" stroke="currentColor" stroke-width="1.5"/>`,
+    "pin-health": `<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8 10h8M12 6v8" stroke="currentColor" stroke-width="2"/>`,
+    "pin-home-fill": `<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" fill="currentColor" stroke="none"/><path d="M12 6L8 9v5h8V9l-4-3z" fill="white"/>`,
+    "map-zoom-in": `<circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2"/><line x1="11" y1="8" x2="11" y2="14" stroke="currentColor" stroke-width="2"/><line x1="8" y1="11" x2="14" y2="11" stroke="currentColor" stroke-width="2"/>`,
+    "map-zoom-out": `<circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2"/><line x1="8" y1="11" x2="14" y2="11" stroke="currentColor" stroke-width="2"/>`,
+    "map-layers": `<polygon points="12 2 2 7 12 12 22 7 12 2" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/><polyline points="2 17 12 22 22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/><polyline points="2 12 12 17 22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/>`,
+    "map-layers-fill": `<polygon points="12 2 2 7 12 12 22 7 12 2" fill="currentColor"/><polyline points="2 17 12 22 22 17" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="2 12 12 17 22 12" stroke="currentColor" stroke-width="2" fill="none"/>`,
+    "map-compass": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`,
+    "location-target": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="2" fill="currentColor"/><line x1="12" y1="2" x2="12" y2="5" stroke="currentColor" stroke-width="2"/><line x1="12" y1="19" x2="12" y2="22" stroke="currentColor" stroke-width="2"/><line x1="2" y1="12" x2="5" y2="12" stroke="currentColor" stroke-width="2"/><line x1="19" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="2"/>`,
+    "nav-arrow-up": `<polygon points="12 2 19 21 12 17 5 21 12 2" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/>`,
+    "nav-arrow-fill": `<polygon points="12 2 19 21 12 17 5 21 12 2" fill="currentColor" stroke="none"/>`,
+    "map-route-2": `<circle cx="6" cy="19" r="3" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="18" cy="5" r="3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M9 19h6c3 0 4-2 4-5v-2c0-3-1-5-4-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 2"/>`,
+    "turn-right": `<path d="M9 20v-6a4 4 0 0 1 4-4h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M15 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "turn-left": `<path d="M15 20v-6a4 4 0 0 0-4-4H5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M9 6L5 10l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+
+    "liquid-map-pin": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-pin-2" x1="4" y1="2" x2="20" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#EF4444" stop-opacity="0.9"/><stop offset="1" stop-color="#FCA5A5" stop-opacity="0.3"/></linearGradient></defs>
+    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" fill="url(#liq-pin-2)" stroke="#B91C1C" stroke-width="1.5"/>
+    <circle cx="12" cy="10" r="3" fill="white" fill-opacity="0.8"/>
+    <path d="M12 2c4 0 7 3 7 7" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+    </svg>`,
+
+    "liquid-map-folded": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-map" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#10B981" stop-opacity="0.8"/><stop offset="1" stop-color="#6EE7B7" stop-opacity="0.2"/></linearGradient></defs>
+    <path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2V6z" fill="url(#liq-map)" stroke="#059669" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M9 4v14" stroke="white" stroke-width="1" opacity="0.5"/>
+    <path d="M15 6v14" stroke="white" stroke-width="1" opacity="0.5"/>
+    <circle cx="15" cy="10" r="2" fill="white"/>
+    </svg>`,
+
+    "liquid-compass": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-compass" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#3B82F6" stop-opacity="0.8"/><stop offset="1" stop-color="#93C5FD" stop-opacity="0.2"/></linearGradient></defs>
+    <circle cx="12" cy="12" r="10" fill="url(#liq-compass)" stroke="#2563EB" stroke-width="1.5"/>
+    <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" fill="white"/>
+    <circle cx="12" cy="12" r="1" fill="#2563EB"/>
+    </svg>`,
+
+
+    "pin-bank": `<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8 11h8M9 11v3M15 11v3M7 14h10" stroke="currentColor" stroke-width="1.5"/><path d="M12 7l-4 2h8l-4-2z" fill="currentColor"/>`,
+    "pin-hospital": `<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 7v6M9 10h6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>`,
+    "pin-school": `<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 6l-4 2 4 2 4-2-4-2z" fill="currentColor"/><path d="M8 8v4c0 1.5 1.5 2 4 2s4-.5 4-2V8" stroke="currentColor" stroke-width="1.5" fill="none"/>`,
+    "pin-cafe": `<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M9 8v4a2 2 0 0 0 4 0V8" stroke="currentColor" stroke-width="1.5"/><path d="M15 8v3" stroke="currentColor" stroke-width="1.5"/><path d="M9 12h6" stroke="currentColor" stroke-width="1.5"/>`,
+    "pin-gym": `<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M7 10h10M7 8v4M17 8v4" stroke="currentColor" stroke-width="2"/><rect x="9" y="9" width="6" height="2" fill="currentColor"/>`,
+    "map-satellite": `<rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M3 12h18M12 3v18" stroke="currentColor" stroke-width="1" opacity="0.3"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><line x1="12" y1="16" x2="12" y2="21" stroke="currentColor" stroke-width="2"/><line x1="8" y1="19" x2="16" y2="19" stroke="currentColor" stroke-width="2"/>`,
+    "map-traffic": `<path d="M3 6h18" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><path d="M3 12h18" stroke="currentColor" stroke-width="3"/><path d="M3 18h18" stroke="#EF4444" stroke-width="3"/>`,
+    "pin-striped": `<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M7 8h10M6 11h12M8 14h8" stroke="currentColor" stroke-width="1" opacity="0.5"/>`,
+    "nav-arrow-solid-circle": `<circle cx="12" cy="12" r="10" fill="currentColor"/><polygon points="12 6 16 15 12 13 8 15 12 6" fill="white"/>`,
+    "map-folded-striped": `<path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2V6z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M9 4v14M15 6v14" stroke="currentColor" stroke-width="1"/><line x1="4" y1="8" x2="8" y2="6" stroke="currentColor" stroke-width="1" opacity="0.5"/><line x1="10" y1="8" x2="14" y2="10" stroke="currentColor" stroke-width="1" opacity="0.5"/><line x1="16" y1="8" x2="20" y2="6" stroke="currentColor" stroke-width="1" opacity="0.5"/>`,
+
+
+    "arrow-expand-all": `<path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`,
+    "arrow-compress-all": `<path d="M4 14h6v6M20 10h-6V4M14 10l7-7M10 14L3 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`,
+    "arrow-return-key": `<path d="M9 10L4 15l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M20 4v7a4 4 0 0 1-4 4H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "arrow-split-3": `<path d="M12 20V4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 4L8 8M12 4l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 12H4v3M12 12h8v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M2 15l2 2 2-2M18 15l2 2 2-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "arrow-merge-side": `<path d="M4 15l3 3 3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M7 18V6a2 2 0 0 1 2-2h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M21 15l-3 3-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 18V10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "arrow-dashed-path": `<path d="M4 19c0-5 4-9 9-9s9-4 9-9" stroke="currentColor" stroke-width="2" stroke-dasharray="4 2" fill="none"/><path d="M18 3l4-2-2 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "arrow-wide-head-up": `<path d="M2 10L12 2l10 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M12 22V4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "arrow-comet-right": `<path d="M22 12L2 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M15 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="12" r="2" fill="currentColor"/><circle cx="10" cy="12" r="1.5" fill="currentColor"/><circle cx="13" cy="12" r="1" fill="currentColor"/>`,
+    "arrow-replay-modern": `<path d="M4 4v5h.58a8 8 0 1 1-1.53 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M4 9H9M4 9L4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "arrow-flux-s": `<path d="M4 4c4 0 6 2 6 8s2 8 6 8h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M17 17l3 3-3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "arrow-cross-target": `<path d="M2 2l20 20M22 2L2 22" stroke="currentColor" stroke-width="1" stroke-dasharray="4 2"/><path d="M12 2l2 2 8-4M22 12l-2 2 4 8M12 22l-2-2-8 4M2 12l2-2-4-8" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>`,
+    "arrow-parallel": `<path d="M4 16h16M4 8h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M17 5l3 3-3 3M17 13l3 3-3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "arrow-spiral": `<path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0m-3 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0m-3 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.5"/><path d="M12 2v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+
+
+    "arrow-fast-forward": `<path d="M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12h11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M5 8h3M4 16h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>`,
+    "arrow-fast-back": `<path d="M11 19l-7-7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 12H11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M19 8h-3M20 16h-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>`,
+    "arrow-bounce-path": `<path d="M4 19a2 2 0 0 1 2-2c2 0 3 4 5 4s3-6 5-6c2 0 3 6 5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M18 18l3 3-3-3 3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "arrow-drag-horizontal": `<path d="M21 12l-4-4m4 4l-4 4m4-4H3m0 0l4-4m-4 4l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="10" y="9" width="4" height="6" rx="1" fill="currentColor" opacity="0.3" stroke="none"/>`,
+    "arrow-drag-vertical": `<path d="M12 3l-4 4m4-4l4 4m-4-4v18m0 0l-4-4m4 4l4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="9" y="10" width="6" height="4" rx="1" fill="currentColor" opacity="0.3" stroke="none"/>`,
+    "arrow-pinch-in": `<path d="M21 21l-6-6m0 0v4m0-4h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 3l6 6m0 0v-4m0 4h-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "arrow-pinch-out": `<path d="M15 15l6 6m-6-6v4m0-4h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 9L3 3m6 6v-4m0 4h-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "arrow-swipe-right": `<path d="M8 18c-2 0-4-2-4-6s2-6 4-6h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M18 3l3 3-3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "arrow-swipe-up": `<path d="M18 16c0 2-2 4-6 4s-6-2-6-4V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M3 10l3-3 3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "arrow-git-branch": `<circle cx="6" cy="18" r="2" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="6" r="2" stroke="currentColor" stroke-width="2"/><path d="M6 16v-5a5 5 0 0 1 5-5h5" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M14 4l2 2-2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "arrow-data-stream": `<path d="M3 12h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M13 12h2" stroke="currentColor" stroke-width="2" stroke-dasharray="1 2"/><path d="M19 12h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M19 9l3 3-3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "arrow-corner-3d": `<path d="M4 20h10a4 4 0 0 0 4-4V6" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M14 10l4-4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 20v-4" stroke="currentColor" stroke-width="1" opacity="0.3"/>`,
+    "arrow-spiral-up": `<path d="M12 20c-4 0-7-2-7-5s3-5 7-5h2" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M14 10c3 0 5-1.5 5-3s-2-3-5-3h-1" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M13 1L10 4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "liquid-arrow-right": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-arr-r" x1="2" y1="12" x2="22" y2="12"><stop stop-color="#3B82F6" stop-opacity="0.9"/><stop offset="1" stop-color="#93C5FD" stop-opacity="0.4"/></linearGradient></defs>
+    <path d="M5 12h14M12 5l7 7-7 7" stroke="none" fill="none"/> <path d="M13 5l7 7-7 7-2-2 3.5-3.5H4v-3h10.5L11 7z" fill="url(#liq-arr-r)" stroke="#2563EB" stroke-width="1"/>
+    <path d="M5 12h8" stroke="white" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+    </svg>`,
+
+    "liquid-arrow-recycle": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-arr-rec" x1="4" y1="4" x2="20" y2="20"><stop stop-color="#10B981" stop-opacity="0.9"/><stop offset="1" stop-color="#6EE7B7" stop-opacity="0.4"/></linearGradient></defs>
+    <path d="M12 4l-3 3 3 3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M21 12a9 9 0 1 1-2.7-6.3" fill="none" stroke="url(#liq-arr-rec)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M17 12a5 5 0 1 1-1.5-3.5" fill="none" stroke="white" stroke-width="0.5" stroke-opacity="0.3"/>
+    </svg>`,
+
+    "arrow-zigzag-abstract": `<path d="M2 12h4l4-8 4 16 4-8h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 12l4 0" stroke="currentColor" stroke-width="2" marker-end="url(#arrowhead)"/>`,
+    "arrow-right-striped": `<path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M5 8h6M8 16h6" stroke="currentColor" stroke-width="1" opacity="0.5"/>`,
+    "arrow-up-contrast": `<circle cx="12" cy="12" r="10" fill="currentColor"/><path d="M12 16V8M8 12l4-4 4 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+
+    "fashion-skirt-pleated": `<path d="M4 6h16l-2 12H6L4 6z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M8 6v12M12 6v12M16 6v12" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>`,
+    "fashion-skirt-long": `<path d="M5 6h14l-3 16H8L5 6z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M12 6v16" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>`,
+    "fashion-jeans-outline": `<path d="M4 6h16v2l-2 14h-4l-2-6-2 6H6L4 8V6z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M12 8v12" stroke="currentColor" stroke-width="2"/><path d="M6 6v4M18 6v4" stroke="currentColor" stroke-width="1.5"/>`,
+    "fashion-shorts-outline": `<path d="M4 6h16v2l-2 8h-4l-2-3-2 3H6L4 8V6z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M12 6v9" stroke="currentColor" stroke-width="2"/>`,
+    "fashion-dress-long": `<path d="M8 2h8l2 4-3 16H9L6 6l2-4z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M6 6h12" stroke="currentColor" stroke-width="1.5"/><path d="M12 6v16" stroke="currentColor" stroke-width="1" opacity="0.3"/>`,
+    "fashion-dress-short": `<path d="M8 2h8l2 4-2 10H8L6 6l2-4z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M6 6h12" stroke="currentColor" stroke-width="1.5"/>`,
+    "fashion-tshirt-outline": `<path d="M4 6l2-4h12l2 4v14H4V6z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M8 2v4M16 2v4" stroke="currentColor" stroke-width="1.5"/>`,
+    "fashion-tshirt-solid": `<path d="M4 6l2-4h12l2 4v14H4V6z" fill="currentColor"/><path d="M8 2v4M16 2v4" stroke="currentColor" stroke-width="1.5"/>`,
+    "fashion-hoodie-outline": `<path d="M4 8l2-4h12l2 4v12H4V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M12 4v8M9 12h6" stroke="currentColor" stroke-width="1.5"/><path d="M8 4c-2 0-4-2-4-2s0 6 4 6 4-6 4-6-2 2-4 2z" stroke="currentColor" stroke-width="2" fill="none"/> `,
+    "fashion-hat-beanie": `<path d="M4 16h16v4H4v-4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M4 16c0-6 4-12 8-12s8 6 8 12" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="2" r="2" fill="currentColor"/>`,
+    "fashion-sunglasses": `<path d="M2 10h4a4 4 0 0 0 8 0h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="6" cy="14" r="4" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="14" r="4" stroke="currentColor" stroke-width="2"/><line x1="10" y1="14" x2="14" y2="14" stroke="currentColor" stroke-width="2"/>`,
+    "fashion-shoe-sneaker": `<path d="M2 18h20v2H2v-2z" stroke="currentColor" stroke-width="2"/><path d="M4 18v-5c0-3 2-5 5-5h8c2 0 3 2 3 5v5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8 13l3-3M12 13l3-3" stroke="currentColor" stroke-width="1.5"/>`,
+    "animal-paw-print": `<circle cx="12" cy="16" r="4" fill="currentColor"/><circle cx="6" cy="8" r="2" fill="currentColor"/><circle cx="12" cy="6" r="2" fill="currentColor"/><circle cx="18" cy="8" r="2" fill="currentColor"/>`,
+
+
+
+
+
+    "connect-node-solid": `<circle cx="5" cy="12" r="3" fill="currentColor"/><circle cx="19" cy="5" r="3" fill="currentColor"/><circle cx="19" cy="19" r="3" fill="currentColor"/><path d="M7.5 13.5l9 4.5M7.5 10.5l9-4.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>`,
+    "connect-api": `<rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M9 9l-2 3 2 3M15 9l2 3-2 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="2" fill="currentColor"/>`,
+    "connect-webhook-striped": `<path d="M18 16c0 2.5-2 4.5-4.5 4.5S9 18.5 9 16c0-2.5 2-4.5 4.5-4.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M13.5 11.5V4a2 2 0 0 0-2-2H6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="6" cy="4" r="2" fill="currentColor"/><path d="M11 18h5M11 16h5" stroke="currentColor" stroke-width="1" opacity="0.5"/>`,
+    "connect-share-contrast": `<rect x="2" y="2" width="20" height="20" rx="4" fill="currentColor"/><circle cx="16" cy="8" r="2" fill="white"/><circle cx="8" cy="12" r="2" fill="white"/><circle cx="16" cy="16" r="2" fill="white"/><line x1="10" y1="11" x2="14" y2="9" stroke="white" stroke-width="1.5"/><line x1="10" y1="13" x2="14" y2="15" stroke="white" stroke-width="1.5"/>`,
+    "connect-signal-dashed": `<path d="M12 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" fill="currentColor"/><path d="M8 12a5.5 5.5 0 0 1 8 0M5 10a9 9 0 0 1 14 0M2 8a13 13 0 0 1 20 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 3" fill="none"/>`,
+    "elec-plug-outline": `<path d="M9 2v6M15 2v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="6" y="8" width="12" height="10" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 18v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "elec-socket-solid": `<rect x="2" y="4" width="20" height="16" rx="4" fill="currentColor"/><circle cx="8" cy="12" r="2" fill="white"/><circle cx="16" cy="12" r="2" fill="white"/>`,
+    "elec-circuit-striped": `<rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M9 9h6v6H9z" stroke="currentColor" stroke-width="1.5"/><path d="M12 4V2M12 22v-2M4 12H2M22 12h-2" stroke="currentColor" stroke-width="2"/><path d="M6 6l2 2M18 6l-2 2M6 18l2-2M18 18l-2-2" stroke="currentColor" stroke-width="1" opacity="0.5"/>`,
+    "elec-voltage-contrast": `<path d="M12 2L2 22h20L12 2z" fill="currentColor"/><path d="M13 9l-3 5h4l-2 5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "elec-resistor": `<path d="M2 12h2l2-5 4 10 4-10 4 10 2-5h2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`,
+    "elec-wireless-charge": `<rect x="6" y="4" width="12" height="16" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 10l-2 3h4l-2 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 20h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "liquid-bolt-power": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-pow" x1="8" y1="2" x2="16" y2="22"><stop stop-color="#FACC15" stop-opacity="0.9"/><stop offset="1" stop-color="#FEF08A" stop-opacity="0.3"/></linearGradient></defs><path d="M13 2L6 14h6l-2 8 10-12h-6l4-8h-5z" fill="url(#liq-pow)" stroke="#EAB308" stroke-width="1.5" stroke-linejoin="round"/><path d="M13 2l-3 6" stroke="white" stroke-width="1.5" opacity="0.6"/></svg>`,
+    "liquid-link-chain": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-chain" x1="2" y1="2" x2="22" y2="22"><stop stop-color="#3B82F6" stop-opacity="0.8"/><stop offset="1" stop-color="#93C5FD" stop-opacity="0.3"/></linearGradient></defs><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="url(#liq-chain)" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="2" fill="white" opacity="0.4"/></svg>`,
+    "liquid-tech-chip": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-chip" x1="4" y1="4" x2="20" y2="20"><stop stop-color="#8B5CF6" stop-opacity="0.9"/><stop offset="1" stop-color="#E9D5FF" stop-opacity="0.4"/></linearGradient></defs><rect x="4" y="4" width="16" height="16" rx="3" fill="url(#liq-chip)" stroke="#7C3AED" stroke-width="1.5"/><rect x="9" y="9" width="6" height="6" rx="1" fill="white" opacity="0.6"/><path d="M12 4V2M12 22v-2M4 12H2M22 12h-2" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"/></svg>`,
+    "light-bulb-off": `<path d="M9 21h6M12 17v4" stroke="currentColor" stroke-width="2"/><path d="M12 2a7 7 0 0 0-7 7c0 2.5 2 4.5 2 7h10c0-2.5 2-4.5 2-7a7 7 0 0 0-7-7z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M2 2l20 20" stroke="currentColor" stroke-width="2"/>`,
+    "battery-low-solid": `<rect x="1" y="6" width="18" height="12" rx="2" fill="currentColor" stroke="none"/><rect x="3" y="8" width="4" height="8" rx="1" fill="#EF4444"/><line x1="23" y1="11" x2="23" y2="13" stroke="currentColor" stroke-width="2"/>`,
+    "wifi-off-outline": `<path d="M1 1l22 22" stroke="currentColor" stroke-width="2"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M1.42 9a16 16 0 0 1 3.6-2.88" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="20" r="1" fill="currentColor"/>`,
+
+
+    "math-infinity-flux": `<path d="M8 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 0c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4z" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.8"/><path d="M16 8c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm0 0c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4 1.79-4 4-4z" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>`,
+    "math-pi-3d": `<path d="M4 7h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M7 7v10c0 1.5 1 2 2 1" stroke="currentColor" stroke-width="2"/><path d="M17 7v10" stroke="currentColor" stroke-width="2"/><path d="M7 4h10" stroke="currentColor" stroke-width="1.5" opacity="0.5"/> `,
+    "math-summation": `<path d="M18 4H6l7 8-7 8h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="6" cy="4" r="1" fill="currentColor"/><circle cx="6" cy="20" r="1" fill="currentColor"/>`,
+    "math-root-neon": `<path d="M3 12h4l3 9 4-17h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M7 12l3 9 4-17" stroke="currentColor" stroke-width="4" stroke-opacity="0.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`,
+    "math-function-curve": `<path d="M4 18c2-5 4-9 8-9s6 5 8 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M12 3v18" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2"/><path d="M3 15h18" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2"/>`,
+    "math-percent-circle": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="8" cy="8" r="2" fill="currentColor"/><circle cx="16" cy="16" r="2" fill="currentColor"/><line x1="6" y1="18" x2="18" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "geo-circles-target": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="2" fill="currentColor"/>`,
+    "geo-venn": `<circle cx="8" cy="12" r="6" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="16" cy="12" r="6" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 7.8a6 6 0 0 0 0 8.4 6 6 0 0 0 0-8.4z" fill="currentColor" opacity="0.3"/>`,
+    "geo-ripple": `<circle cx="12" cy="12" r="2" fill="currentColor"/><circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 2" fill="none"/><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4" fill="none"/>`,
+    "geo-circle-split": `<path d="M12 2a10 10 0 1 0 10 10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 12L12 2" stroke="currentColor" stroke-width="2"/><path d="M12 12L22 12" stroke="currentColor" stroke-width="2"/>`,
+    "geo-tri-penrose": `<path d="M12 4L4 20h16L12 4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/><path d="M12 9L8 17h8l-4-8z" stroke="currentColor" stroke-width="1" opacity="0.5"/>`,
+    "geo-pyramid": `<path d="M12 2L3 18h18L12 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/><path d="M12 2v16M3 18l9-2 9 2" stroke="currentColor" stroke-width="1.5"/>`,
+    "geo-tri-play": `<path d="M6 4l12 8-12 8V4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/><circle cx="10" cy="12" r="1.5" fill="currentColor"/>`,
+    "geo-layers-3d": `<path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/><path d="M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/><path d="M2 17l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/>`,
+    "geo-golden-rect": `<rect x="2" y="5" width="20" height="14" stroke="currentColor" stroke-width="2" fill="none"/><line x1="14" y1="5" x2="14" y2="19" stroke="currentColor" stroke-width="2"/><path d="M14 19a8 8 0 0 1 8-8" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 2"/>`,
+    "geo-mosaic": `<rect x="2" y="2" width="9" height="9" stroke="currentColor" stroke-width="2"/><rect x="13" y="2" width="9" height="9" stroke="currentColor" stroke-width="2"/><rect x="2" y="13" width="9" height="9" stroke="currentColor" stroke-width="2"/><rect x="13" y="13" width="4" height="4" fill="currentColor"/><rect x="18" y="13" width="4" height="4" stroke="currentColor" stroke-width="1.5"/><rect x="13" y="18" width="4" height="4" stroke="currentColor" stroke-width="1.5"/><rect x="18" y="18" width="4" height="4" fill="currentColor"/>`,
+    "forum-thread": `<circle cx="4" cy="4" r="2" fill="currentColor"/><circle cx="10" cy="12" r="2" stroke="currentColor" stroke-width="2"/><circle cx="10" cy="20" r="2" stroke="currentColor" stroke-width="2"/><path d="M4 6v6a2 2 0 0 0 2 2h2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M10 14v2" stroke="currentColor" stroke-width="2"/>`,
+    "forum-sticky": `<path d="M16 3l-4 8h5l-7 10 1-9H6l4-9h6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/><path d="M12 12h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>`,
+    "forum-quote": `<path d="M3 21V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14" stroke="currentColor" stroke-width="2" fill="none"/><path d="M7 10h10M7 14h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M3 7h16" stroke="currentColor" stroke-width="1" opacity="0.5"/>`,
+    "forum-locked": `<rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><rect x="8" y="12" width="8" height="6" rx="1" fill="currentColor"/><path d="M9 12V9a3 3 0 0 1 6 0v3" stroke="currentColor" stroke-width="2"/>`,
+    "shape-cube-glass": `<path d="M12 2l8 4.5v9l-8 4.5-8-4.5v-9l8-4.5z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>`,
+    "shape-cylinder": `<ellipse cx="12" cy="5" rx="8" ry="3" stroke="currentColor" stroke-width="2"/><path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5" stroke="currentColor" stroke-width="2"/><path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2" opacity="0.5"/>`,
+
+
+    "wifi-0": `<circle cx="12" cy="19" r="2" fill="currentColor" stroke="none"/><path d="M2 10l20 20" stroke="currentColor" stroke-width="1" stroke-opacity="0.2" fill="none"/>`,
+    "wifi-1": `<circle cx="12" cy="19" r="2" fill="currentColor" stroke="none"/><path d="M8.5 15.5c1.9-1.9 5.1-1.9 7 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "wifi-2": `<circle cx="12" cy="19" r="2" fill="currentColor" stroke="none"/><path d="M8.5 15.5c1.9-1.9 5.1-1.9 7 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M5 12c3.9-3.9 10.1-3.9 14 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "wifi-3": `<circle cx="12" cy="19" r="2" fill="currentColor" stroke="none"/><path d="M8.5 15.5c1.9-1.9 5.1-1.9 7 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M5 12c3.9-3.9 10.1-3.9 14 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M1.5 8.5c5.8-5.8 15.2-5.8 21 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "wifi-off-3": `<path d="M1 1l22 22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="19" r="2" fill="currentColor"/>`,
+    "wifi-alert": `<path d="M1.5 8.5c5.8-5.8 15.2-5.8 21 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M5 12c3.9-3.9 10.1-3.9 14 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8.5 15.5c1.9-1.9 5.1-1.9 7 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 19v2" stroke="#EF4444" stroke-width="2" stroke-linecap="round"/><path d="M12 15v2" stroke="#EF4444" stroke-width="2" stroke-linecap="round"/>`,
+    "wifi-lock": `<path d="M5 12c3.9-3.9 10.1-3.9 14 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M1.5 8.5c5.8-5.8 15.2-5.8 21 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="10" y="16" width="4" height="5" rx="1" fill="currentColor"/><path d="M12 14v2" stroke="white" stroke-width="1"/>`,
+    "wifi-searching": `<circle cx="12" cy="19" r="2" fill="currentColor" class="flux-wifi-dot"/><path d="M8.5 15.5c1.9-1.9 5.1-1.9 7 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="flux-wifi-wave-1" style="opacity:0.3"/><path d="M5 12c3.9-3.9 10.1-3.9 14 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="flux-wifi-wave-2" style="opacity:0.3"/><path d="M1.5 8.5c5.8-5.8 15.2-5.8 21 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="flux-wifi-wave-3" style="opacity:0.3"/>`,
+    "liquid-wifi-signal": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-wifi-g" x1="12" y1="4" x2="12" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#10B981" stop-opacity="0.9"/><stop offset="1" stop-color="#3B82F6" stop-opacity="0.4"/></linearGradient></defs>
+    <path d="M12 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" fill="#2563EB"/>
+    <path d="M8.5 14c1.9-1.9 5.1-1.9 7 0" stroke="url(#liq-wifi-g)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M5 10.5c3.9-3.9 10.1-3.9 14 0" stroke="url(#liq-wifi-g)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M1.5 7c5.8-5.8 15.2-5.8 21 0" stroke="url(#liq-wifi-g)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M12 4c4 0 8 2 10 4" stroke="white" stroke-width="1" stroke-opacity="0.4" fill="none"/>
+    </svg>`,
+    
+    "liquid-hotspot": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-hotspot" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#F97316" stop-opacity="0.9"/><stop offset="1" stop-color="#FDE68A" stop-opacity="0.3"/></linearGradient></defs>
+    <circle cx="12" cy="12" r="3" fill="#EA580C"/>
+    <path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10 10 10 0 0 1-10-10 10 10 0 0 1 10-10" stroke="url(#liq-hotspot)" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 6"/>
+    <circle cx="12" cy="12" r="6" stroke="url(#liq-hotspot)" stroke-width="2" fill="none"/>
+    </svg>`,
+
+
+
+
+    "circle-concentric-2": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="4" fill="currentColor"/>`,
+    "circle-concentric-3": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="2" fill="currentColor"/>`,
+    "circle-concentric-4": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="7.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="2.5" fill="currentColor"/>`,
+    "circle-target-striped": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="1" opacity="0.5"/><circle cx="12" cy="12" r="2" fill="currentColor"/>`,
+    "circle-venn-2": `<circle cx="8" cy="12" r="7" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="16" cy="12" r="7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 6.5a7 7 0 0 1 0 11 7 7 0 0 1 0-11z" fill="currentColor" opacity="0.2" stroke="none"/>`,
+    "circle-venn-3": `<circle cx="12" cy="8" r="6" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="7" cy="16" r="6" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="17" cy="16" r="6" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M12 13l-2 3h4z" fill="currentColor" opacity="0.3" stroke="none"/>`,
+    "circle-venn-4": `<circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="16" cy="8" r="6" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="8" cy="16" r="6" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="16" cy="16" r="6" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="2" fill="currentColor"/>`,
+    "circle-chain-3": `<circle cx="5" cy="12" r="4" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="19" cy="12" r="4" stroke="currentColor" stroke-width="2" fill="none"/>`,
+    "circle-cluster-3": `<circle cx="12" cy="6" r="4" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="16" r="4" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="16" r="4" stroke="currentColor" stroke-width="2"/>`,
+    "circle-grid-2x2": `<circle cx="7" cy="7" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="7" r="4" stroke="currentColor" stroke-width="2"/><circle cx="7" cy="17" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="17" r="4" stroke="currentColor" stroke-width="2"/>`,
+    "circle-grid-5": `<circle cx="6" cy="6" r="2" fill="currentColor"/><circle cx="18" cy="6" r="2" fill="currentColor"/><circle cx="12" cy="12" r="2" fill="currentColor"/><circle cx="6" cy="18" r="2" fill="currentColor"/><circle cx="18" cy="18" r="2" fill="currentColor"/>`,
+    "circle-honeycomb": `<circle cx="12" cy="6" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="6" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="18" r="3" stroke="currentColor" stroke-width="1.5"/>`,
+    "circle-row-4": `<circle cx="3" cy="12" r="2" fill="currentColor"/><circle cx="9" cy="12" r="2" fill="currentColor"/><circle cx="15" cy="12" r="2" fill="currentColor"/><circle cx="21" cy="12" r="2" fill="currentColor"/><line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="1" opacity="0.3"/>`,
+    "circle-col-3": `<circle cx="12" cy="4" r="3" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="20" r="3" stroke="currentColor" stroke-width="2"/><line x1="12" y1="7" x2="12" y2="9" stroke="currentColor" stroke-width="1"/>`,
+    "circle-growth-h": `<circle cx="4" cy="12" r="2" fill="currentColor"/><circle cx="11" cy="12" r="3" fill="currentColor"/><circle cx="19" cy="12" r="4" fill="currentColor"/>`,
+    "liquid-bubbles-merge": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="liq-b1" x2="1" y2="1"><stop stop-color="#3B82F6" stop-opacity="0.8"/><stop offset="1" stop-color="#93C5FD" stop-opacity="0.2"/></linearGradient>
+        <linearGradient id="liq-b2" x2="0" y2="1"><stop stop-color="#EC4899" stop-opacity="0.8"/><stop offset="1" stop-color="#FBCFE8" stop-opacity="0.2"/></linearGradient></defs>
+        <circle cx="9" cy="12" r="7" fill="url(#liq-b1)" stroke="#2563EB" stroke-width="0.5"/>
+        <circle cx="15" cy="12" r="7" fill="url(#liq-b2)" stroke="#DB2777" stroke-width="0.5" style="mix-blend-mode: multiply;"/>
+        <circle cx="7" cy="10" r="2" fill="white" opacity="0.4"/>
+        <circle cx="17" cy="10" r="2" fill="white" opacity="0.4"/>
+    </svg>`,
+
+    "liquid-circles-orbit": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="liq-orb-c" x1="2" y1="2" x2="22" y2="22"><stop stop-color="#10B981"/><stop offset="1" stop-color="#6EE7B7"/></linearGradient></defs>
+        <circle cx="12" cy="12" r="4" fill="url(#liq-orb-c)"/>
+        <circle cx="12" cy="12" r="9" stroke="#059669" stroke-width="1" fill="none" stroke-dasharray="3 3"/>
+        <circle cx="12" cy="3" r="2" fill="#059669"/>
+        <circle cx="21" cy="12" r="2" fill="#059669"/>
+        <circle cx="12" cy="21" r="2" fill="#059669"/>
+        <circle cx="3" cy="12" r="2" fill="#059669"/>
+    </svg>`,
+
+    "liquid-circles-rgb": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="8" r="6" fill="#EF4444" opacity="0.7"/>
+        <circle cx="7" cy="16" r="6" fill="#22C55E" opacity="0.7"/>
+        <circle cx="17" cy="16" r="6" fill="#3B82F6" opacity="0.7"/>
+        <path d="M12 12l-2 3h4z" fill="white" opacity="0.8"/> </svg>`,
+
+
+
+
+    "border-all-2": `<rect x="4" y="4" width="16" height="16" rx="1" stroke="currentColor" stroke-width="2" fill="none"/>`,
+    "border-none-2": `<rect x="4" y="4" width="16" height="16" rx="1" stroke="currentColor" stroke-width="2" stroke-dasharray="2 4" stroke-opacity="0.3" fill="none"/>`,
+    "border-top-3": `<rect x="4" y="4" width="16" height="16" rx="1" stroke="currentColor" stroke-width="2" stroke-opacity="0.2" fill="none"/><path d="M4 5h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "border-bottom-3": `<rect x="4" y="4" width="16" height="16" rx="1" stroke="currentColor" stroke-width="2" stroke-opacity="0.2" fill="none"/><path d="M4 19h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "border-left-3": `<rect x="4" y="4" width="16" height="16" rx="1" stroke="currentColor" stroke-width="2" stroke-opacity="0.2" fill="none"/><path d="M5 4v16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "border-right-3": `<rect x="4" y="4" width="16" height="16" rx="1" stroke="currentColor" stroke-width="2" stroke-opacity="0.2" fill="none"/><path d="M19 4v16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "border-horizontal": `<rect x="4" y="4" width="16" height="16" rx="1" stroke="currentColor" stroke-width="2" stroke-opacity="0.2" fill="none"/><path d="M4 12h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "border-vertical": `<rect x="4" y="4" width="16" height="16" rx="1" stroke="currentColor" stroke-width="2" stroke-opacity="0.2" fill="none"/><path d="M12 4v16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "border-tl": `<path d="M4 12V4h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M12 4h8v16H4v-8" stroke="currentColor" stroke-width="2" stroke-opacity="0.2" fill="none"/>`, // Top-Left
+    "border-tr": `<path d="M12 4h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M20 12v8H4V4h8" stroke="currentColor" stroke-width="2" stroke-opacity="0.2" fill="none"/>`, // Top-Right
+    "border-bl": `<path d="M4 12v8h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M12 20h8V4H4v8" stroke="currentColor" stroke-width="2" stroke-opacity="0.2" fill="none"/>`, // Bottom-Left
+    "border-br": `<path d="M20 12v8h-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M12 20H4V4h16v8" stroke="currentColor" stroke-width="2" stroke-opacity="0.2" fill="none"/>`, // Bottom-Right
+    "radius-tl": `<path d="M4 12v-4a4 4 0 0 1 4-4h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M12 4h8v16H4v-8" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 2" opacity="0.3" fill="none"/>`,
+    "radius-tr": `<path d="M12 4h4a4 4 0 0 1 4 4v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M20 12v8H4V4h8" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 2" opacity="0.3" fill="none"/>`,
+    "radius-bl": `<path d="M4 12v4a4 4 0 0 0 4 4h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M12 20h8V4H4v8" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 2" opacity="0.3" fill="none"/>`,
+    "radius-br": `<path d="M20 12v4a4 4 0 0 1-4 4h-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M12 20H4V4h16v8" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 2" opacity="0.3" fill="none"/>`,
+    "radius-all": `<rect x="4" y="4" width="16" height="16" rx="6" stroke="currentColor" stroke-width="2" fill="none"/>`, // Tam oval
+    "radius-none": `<rect x="4" y="4" width="16" height="16" rx="0" stroke="currentColor" stroke-width="2" fill="none"/>`, // Tam kare
+    "border-dashed": `<rect x="4" y="4" width="16" height="16" rx="1" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" fill="none"/>`,
+    "border-dotted": `<rect x="4" y="4" width="16" height="16" rx="1" stroke="currentColor" stroke-width="2" stroke-dasharray="1 3" stroke-linecap="round" fill="none"/>`,
+    "border-double": `<rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><rect x="7" y="7" width="10" height="10" rx="1" stroke="currentColor" stroke-width="1.5" opacity="0.5" fill="none"/>`,
+    "border-thick": `<rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" stroke-width="4" fill="none"/>`,
+    "border-outer-3": `<rect x="8" y="8" width="8" height="8" fill="currentColor" opacity="0.2"/><rect x="2" y="2" width="20" height="20" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>`,
+    "border-inner-2": `<rect x="2" y="2" width="20" height="20" rx="2" stroke="currentColor" stroke-width="1" opacity="0.3" fill="none"/><rect x="6" y="6" width="12" height="12" rx="1" stroke="currentColor" stroke-width="2" fill="none"/>`,
+    "border-outer-thick": `<rect x="4" y="4" width="16" height="16" stroke="currentColor" stroke-width="3" fill="none"/><path d="M4 12h16M12 4v16" stroke="currentColor" stroke-width="1" opacity="0.3"/>`,
+    "border-inner-grid": `<rect x="2" y="2" width="20" height="20" stroke="currentColor" stroke-width="1" opacity="0.3" fill="none"/><path d="M2 12h20M12 2v20" stroke="currentColor" stroke-width="2"/>`,
+    "border-clear": `<path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="2" opacity="0.5"/><rect x="2" y="2" width="20" height="20" rx="2" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" fill="none"/>`,
+
+    "liquid-border-radius": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-rad" x1="2" y1="2" x2="22" y2="22"><stop stop-color="#3B82F6"/><stop offset="1" stop-color="#93C5FD"/></linearGradient></defs>
+    <path d="M4 12v-4a4 4 0 0 1 4-4h4" stroke="url(#liq-rad)" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <rect x="4" y="4" width="16" height="16" rx="4" stroke="currentColor" stroke-width="1" stroke-opacity="0.2" fill="none"/>
+    </svg>`,
+    
+    "liquid-border-box": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-box-b" x1="4" y1="4" x2="20" y2="20"><stop stop-color="#10B981"/><stop offset="1" stop-color="#6EE7B7"/></linearGradient></defs>
+    <rect x="4" y="4" width="16" height="16" rx="2" stroke="url(#liq-box-b)" stroke-width="3" fill="none"/>
+    <path d="M4 18l2 2h12l2-2" fill="url(#liq-box-b)" opacity="0.3"/>
+    </svg>`,
+
+
+
+    "archive-box-outline": `<path d="M21 8v13H3V8M1 3h22v5H1z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="10" y1="12" x2="14" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "archive-box-solid": `<path d="M21 8v13H3V8M1 3h22v5H1z" fill="currentColor" stroke="none"/><rect x="10" y="12" width="4" height="2" rx="1" fill="white"/>`,
+    "archive-box-striped": `<path d="M21 8v13H3V8M1 3h22v5H1z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M4 10h16M4 14h16M4 18h16" stroke="currentColor" stroke-width="1" opacity="0.5"/>`,
+    "archive-box-contrast": `<path d="M21 8v13H3V8M1 3h22v5H1z" fill="currentColor"/><line x1="10" y1="12" x2="14" y2="12" stroke="white" stroke-width="2" stroke-linecap="round"/>`,
+    "archive-heart-outline": `<path d="M21 8v13H3V8M1 3h22v5H1z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 15.5l-1-1a3 3 0 0 1 4.2-4.2l-2.1 2.1-1.1 3.1z" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M15 12c0 1.5-1 3-3 4.5" stroke="currentColor" stroke-width="1.5"/>`, 
+    "archive-heart-fill": `<path d="M21 8v13H3V8M1 3h22v5H1z" fill="currentColor"/><path d="M12 17l-1-1c-2.5-2.5-4-4-4-6 0-2.5 2-4.5 4.5-4.5.8 0 1.6.3 2.3.8" fill="white"/>`,
+    "archive-star-outline": `<path d="M21 8v13H3V8M1 3h22v5H1z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 11l1 3h3l-2 2 1 3-3-2-3 2 1-3-2-2h3z" stroke="currentColor" stroke-width="1.5" fill="none"/>`,
+    "archive-star-solid": `<path d="M21 8v13H3V8M1 3h22v5H1z" fill="currentColor"/><path d="M12 11l1 3h3l-2 2 1 3-3-2-3 2 1-3-2-2h3z" fill="white"/>`,
+    "archive-question": `<path d="M21 8v13H3V8M1 3h22v5H1z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 17h.01M12 14c0-2 3-2 3-4s-2-3-4-3-3 2-3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "archive-search": `<path d="M21 8v13H3V8M1 3h22v5H1z" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="11" cy="14" r="3" stroke="currentColor" stroke-width="2"/><line x1="16" y1="19" x2="13.5" y2="16.5" stroke="currentColor" stroke-width="2"/>`,
+    "archive-lock-outline": `<path d="M21 8v13H3V8M1 3h22v5H1z" stroke="currentColor" stroke-width="2" fill="none"/><rect x="10" y="13" width="4" height="3" rx="1" stroke="currentColor" stroke-width="2"/><path d="M11 13v-1a1 1 0 0 1 2 0v1" stroke="currentColor" stroke-width="2"/>`,
+    "archive-lock-fill": `<path d="M21 8v13H3V8M1 3h22v5H1z" fill="currentColor"/><rect x="10" y="13" width="4" height="3" rx="1" fill="white"/><path d="M11 13v-1a1 1 0 0 1 2 0v1" stroke="white" stroke-width="2"/>`,
+    "archive-key": `<path d="M21 8v13H3V8M1 3h22v5H1z" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="10" cy="15" r="2" stroke="currentColor" stroke-width="1.5"/><path d="M12 14l3-3 1 1" stroke="currentColor" stroke-width="1.5"/>`,
+    "archive-error": `<path d="M21 8v13H3V8M1 3h22v5H1z" stroke="currentColor" stroke-width="2" fill="none"/><line x1="9" y1="12" x2="15" y2="18" stroke="currentColor" stroke-width="2"/><line x1="15" y1="12" x2="9" y2="18" stroke="currentColor" stroke-width="2"/>`,
+    "archive-add": `<path d="M21 8v13H3V8M1 3h22v5H1z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 11v6M9 14h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "archive-add-fill": `<path d="M21 8v13H3V8M1 3h22v5H1z" fill="currentColor"/><path d="M12 11v6M9 14h6" stroke="white" stroke-width="2" stroke-linecap="round"/>`,
+    "archive-remove": `<path d="M21 8v13H3V8M1 3h22v5H1z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M9 14h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "archive-sync": `<path d="M21 8v13H3V8M1 3h22v5H1z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M10 13a2 2 0 1 0 2 2" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 2"/><path d="M14 15l-1-1 1-1" stroke="currentColor" stroke-width="1.5"/>`,
+    "archive-settings": `<path d="M21 8v13H3V8M1 3h22v5H1z" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="14" r="2" stroke="currentColor" stroke-width="1.5" stroke-dasharray="1 1"/>`,
+    "archive-music": `<path d="M21 8v13H3V8M1 3h22v5H1z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M10 17V13l4-1v4" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="17" r="1" fill="currentColor"/><circle cx="13" cy="16" r="1" fill="currentColor"/>`,
+    "archive-image": `<path d="M21 8v13H3V8M1 3h22v5H1z" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="9" cy="12" r="1" fill="currentColor"/><path d="M16 13l-3 3-2-2-4 4h9z" fill="currentColor" opacity="0.5"/>`,
+    "archive-video": `<path d="M21 8v13H3V8M1 3h22v5H1z" stroke="currentColor" stroke-width="2" fill="none"/><rect x="8" y="12" width="8" height="6" stroke="currentColor" stroke-width="1.5"/><path d="M11 13l3 2-3 2z" fill="currentColor"/>`,
+    "archive-cloud": `<path d="M21 8v13H3V8M1 3h22v5H1z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8 15a3 3 0 0 1 6 0c0 1 .5 2 2 2h1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>`,
+    "archive-download": `<path d="M21 8v13H3V8M1 3h22v5H1z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 11v5M9 14l3 3 3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "archive-upload": `<path d="M21 8v13H3V8M1 3h22v5H1z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 16v-5M9 13l3-3 3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "liquid-archive-box": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-arch" x1="4" y1="4" x2="20" y2="20"><stop stop-color="#3B82F6" stop-opacity="0.8"/><stop offset="1" stop-color="#93C5FD" stop-opacity="0.3"/></linearGradient></defs>
+    <path d="M21 8v13H3V8" fill="url(#liq-arch)" stroke="#2563EB" stroke-width="1.5"/>
+    <path d="M1 3h22v5H1z" fill="#2563EB" stroke="none"/>
+    <rect x="9" y="12" width="6" height="2" rx="1" fill="white" opacity="0.8"/>
+    <path d="M4 10h2M4 14h2M4 18h2" stroke="white" stroke-opacity="0.3" stroke-width="1"/>
+    </svg>`,
+
+
+    "book-heart-outline": `<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 8c-1.5-2-4-2-5 0s0 4 5 6c5-2 6-4 5-6s-3.5-2-5 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none" transform="scale(0.6) translate(9, 10)"/>`,
+    "book-user-solid": `<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" fill="currentColor" stroke="none"/><circle cx="13" cy="9" r="2.5" fill="white"/><path d="M17 15c0-2-2-3-4-3s-4 1-4 3" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>`,
+    "book-audio-striped": `<rect x="5" y="2" width="14" height="20" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M9 12h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2"/><line x1="7" y1="6" x2="17" y2="6" stroke="currentColor" stroke-width="1" opacity="0.5"/><line x1="7" y1="18" x2="17" y2="18" stroke="currentColor" stroke-width="1" opacity="0.5"/>`,
+    "book-open-contrast": `<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" fill="currentColor"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" fill="currentColor"/><path d="M6 8h2M6 12h2" stroke="white" stroke-width="2" stroke-linecap="round"/>`,
+    "receipt-striped": `<path d="M4 2h16v18l-2-2-2 2-2-2-2 2-2-2-2 2-2-2-2 2V2z" stroke="currentColor" stroke-width="2" fill="none"/><line x1="8" y1="6" x2="16" y2="6" stroke="currentColor" stroke-width="2"/><line x1="8" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="1" opacity="0.5"/><line x1="8" y1="13" x2="12" y2="13" stroke="currentColor" stroke-width="1" opacity="0.5"/><line x1="14" y1="13" x2="16" y2="13" stroke="currentColor" stroke-width="1" opacity="0.5"/><line x1="8" y1="16" x2="16" y2="16" stroke="currentColor" stroke-width="2"/>`,
+    "safe-box-solid": `<rect x="3" y="3" width="18" height="18" rx="2" fill="currentColor"/><circle cx="12" cy="12" r="5" stroke="white" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="2" fill="white"/><path d="M12 7v2M12 15v2M7 12h2M15 12h2" stroke="white" stroke-width="2"/>`,
+    "abacus-outline": `<rect x="2" y="3" width="20" height="18" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="2" y1="8" x2="22" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="2" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="1.5"/><line x1="2" y1="16" x2="22" y2="16" stroke="currentColor" stroke-width="1.5"/><circle cx="6" cy="8" r="1" fill="currentColor"/><circle cx="10" cy="8" r="1" fill="currentColor"/><circle cx="16" cy="12" r="1" fill="currentColor"/><circle cx="12" cy="16" r="1" fill="currentColor"/><circle cx="8" cy="16" r="1" fill="currentColor"/>`,
+    "balance-scale": `<path d="M12 3v18" stroke="currentColor" stroke-width="2"/><path d="M5 8h14" stroke="currentColor" stroke-width="2"/><path d="M2 16a3 3 0 0 0 6 0V8H2v8zm14 0a3 3 0 0 0 6 0V8h-6v8z" stroke="currentColor" stroke-width="2" fill="none"/>`,
+    "search-file-outline": `<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="11" cy="11" r="3" stroke="currentColor" stroke-width="2"/><path d="M16 16l-2.5-2.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "search-user-solid": `<circle cx="11" cy="11" r="8" fill="currentColor"/><path d="M16.65 16.65L21 21" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><circle cx="11" cy="9" r="2" fill="white"/><path d="M7 14c0-2 2-3 4-3s4 1 4 3" fill="white"/>`,
+    "search-map-striped": `<circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M11 7v4l2 2" stroke="currentColor" stroke-width="1.5" opacity="0.5"/><path d="M11 5c-3 0-5 2-5 5" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2"/>`,
+    "loader-square-spin": `<rect x="5" y="5" width="14" height="14" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1" opacity="0.3"/>`, 
+    "loader-double-orbit": `<circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.5" stroke-dasharray="10 10" fill="none"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" transform="rotate(45 12 12)"/>`,
+    "loader-radar": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 12L12 2A10 10 0 0 1 22 12" fill="currentColor" opacity="0.2"/><circle cx="12" cy="12" r="2" fill="currentColor"/>`,
+    "loader-pixel-bar": `<rect x="2" y="10" width="20" height="4" stroke="currentColor" stroke-width="1" fill="none"/><rect x="4" y="11" width="2" height="2" fill="currentColor"/><rect x="8" y="11" width="2" height="2" fill="currentColor"/><rect x="12" y="11" width="2" height="2" fill="currentColor"/><rect x="16" y="11" width="2" height="2" fill="currentColor"/>`,
+    "liquid-book-magic": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-book" x1="4" y1="2" x2="20" y2="22"><stop stop-color="#8B5CF6" stop-opacity="0.9"/><stop offset="1" stop-color="#C4B5FD" stop-opacity="0.3"/></linearGradient></defs>
+    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="#7C3AED" stroke-width="2" fill="none"/>
+    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" fill="url(#liq-book)" stroke="#6D28D9" stroke-width="1.5"/>
+    <path d="M12 8l2 2 4-2-2 6h-4l-2-6z" fill="white" fill-opacity="0.6"/> <path d="M7 4h10" stroke="white" stroke-opacity="0.3" stroke-width="1"/>
+    </svg>`,
+
+    "liquid-coins-gold": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-coin" x1="2" y1="2" x2="22" y2="22"><stop stop-color="#F59E0B" stop-opacity="0.9"/><stop offset="1" stop-color="#FEF3C7" stop-opacity="0.4"/></linearGradient></defs>
+    <ellipse cx="12" cy="8" rx="8" ry="3" fill="url(#liq-coin)" stroke="#D97706" stroke-width="1.5"/>
+    <path d="M4 8v8c0 1.66 3.58 3 8 3s8-1.34 8-3V8" fill="url(#liq-coin)" stroke="#D97706" stroke-width="1.5"/>
+    <ellipse cx="12" cy="8" rx="5" ry="1.5" stroke="white" stroke-width="1" fill="none" opacity="0.6"/>
+    <path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3" stroke="#D97706" stroke-width="1.5" opacity="0.5"/>
+    </svg>`,
+
+    "liquid-calculator-orange": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-cal-org" x1="4" y1="2" x2="20" y2="22"><stop stop-color="#F97316" stop-opacity="0.9"/><stop offset="1" stop-color="#FFEDD5" stop-opacity="0.3"/></linearGradient></defs>
+    <rect x="5" y="2" width="14" height="20" rx="3" fill="url(#liq-cal-org)" stroke="#EA580C" stroke-width="1.5"/>
+    <rect x="8" y="5" width="8" height="4" rx="1" fill="white" fill-opacity="0.8"/>
+    <circle cx="8" cy="13" r="1" fill="white" fill-opacity="0.6"/>
+    <circle cx="12" cy="13" r="1" fill="white" fill-opacity="0.6"/>
+    <circle cx="16" cy="13" r="1" fill="white" fill-opacity="0.6"/>
+    <circle cx="8" cy="17" r="1" fill="white" fill-opacity="0.6"/>
+    <circle cx="12" cy="17" r="1" fill="white" fill-opacity="0.6"/>
+    <circle cx="16" cy="17" r="1" fill="white" fill-opacity="0.6"/>
+    </svg>`,
+
+
+
+    "book-star-outline": `<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 8l1 3h3l-2 2 1 3-3-2-3 2 1-3-2-2h3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>`,
+    "book-star-solid": `<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" fill="currentColor" stroke="none"/><path d="M12 7l1.5 3.5h3.5l-3 2.5 1 4-3-2.5-3 2.5 1-4-3-2.5h3.5z" fill="white"/>`,
+    "book-star-striped": `<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="currentColor" stroke-width="2" fill="none"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8 6h3M15 6h3M8 15h10M8 10h2M16 10h2" stroke="currentColor" stroke-width="1" opacity="0.5"/><circle cx="13" cy="9" r="3" stroke="currentColor" stroke-width="1.5" fill="none"/>`,
+    "book-star-contrast": `<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" fill="currentColor" stroke="none"/><path d="M13 6l1 3h3l-2.5 2 1 3-2.5-2-2.5 2 1-3-2.5-2h3z" stroke="white" stroke-width="1.5" fill="none"/>`,
+    "book-user-outline": `<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="currentColor" stroke-width="2" fill="none"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="13" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M17 15c0-2-2-3-4-3s-4 1-4 3" stroke="currentColor" stroke-width="1.5" fill="none"/>`,
+    "book-user-striped": `<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="currentColor" stroke-width="2" fill="none"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" stroke="currentColor" stroke-width="2" fill="none"/><line x1="8" y1="6" x2="9" y2="6" stroke="currentColor" stroke-width="1" opacity="0.5"/><line x1="17" y1="6" x2="18" y2="6" stroke="currentColor" stroke-width="1" opacity="0.5"/><line x1="8" y1="16" x2="18" y2="16" stroke="currentColor" stroke-width="1" opacity="0.5"/><circle cx="13" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M16 13c0-1-1.5-2-3-2s-3 1-3 2" stroke="currentColor" stroke-width="1.5"/>`,
+    "book-user-contrast": `<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" fill="currentColor"/><circle cx="13" cy="9" r="2.5" fill="white"/><path d="M17 15c0-2-2-3-4-3s-4 1-4 3" stroke="white" stroke-width="2" fill="none"/>`,
+    "book-question-outline": `<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="currentColor" stroke-width="2" fill="none"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M13 14h.01M13 11c0-2 3-2 3-4s-2-3-4-3-3 2-3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "book-question-solid": `<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" fill="currentColor" stroke="none"/><path d="M13 14h.01M13 11c0-2 3-2 3-4s-2-3-4-3-3 2-3 3" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>`,
+    "book-question-striped": `<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="currentColor" stroke-width="2" fill="none"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8 6h2M16 6h2M8 15h2M16 15h2" stroke="currentColor" stroke-width="1" opacity="0.5"/><path d="M13 12v1" stroke="currentColor" stroke-width="2"/><circle cx="13" cy="9" r="3" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 2" fill="none"/>`,
+    "book-lock-solid": `<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" fill="currentColor" stroke="none"/><rect x="10" y="11" width="6" height="4" rx="1" fill="white"/><path d="M11 11V9a2 2 0 0 1 4 0v2" stroke="white" stroke-width="1.5" fill="none"/>`,
+    "book-lock-contrast": `<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" fill="currentColor"/><path d="M13 8a3 3 0 0 0-3 3v1h6v-1a3 3 0 0 0-3-3z" stroke="white" stroke-width="1.5" fill="none"/><rect x="9" y="12" width="8" height="5" rx="1" stroke="white" stroke-width="1.5" fill="none"/>`,
+    "book-open-lock-striped": `<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="currentColor" stroke-width="2" fill="none"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8 15h10M8 6h2M16 6h2" stroke="currentColor" stroke-width="1" opacity="0.5"/><rect x="10" y="10" width="6" height="4" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M15 10V8a2 2 0 0 0-4 0" stroke="currentColor" stroke-width="1.5" fill="none"/>`,
+    "book-plus-solid": `<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" fill="currentColor" stroke="none"/><path d="M13 7v8M9 11h8" stroke="white" stroke-width="2" stroke-linecap="round"/>`,
+    "book-search-contrast": `<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" fill="currentColor" stroke="none"/><circle cx="12" cy="10" r="3" stroke="white" stroke-width="2" fill="none"/><line x1="15" y1="13" x2="17" y2="15" stroke="white" stroke-width="2" stroke-linecap="round"/>`,
+    "book-download-striped": `<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="currentColor" stroke-width="2" fill="none"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8 6h2M16 6h2" stroke="currentColor" stroke-width="1" opacity="0.5"/><path d="M13 8v6M10 11l3 3 3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "book-code-solid": `<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" fill="currentColor" stroke="none"/><path d="M10 9l-2 2 2 2M16 9l2 2-2 2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "book-music-contrast": `<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" fill="currentColor" stroke="none"/><circle cx="11" cy="13" r="1.5" fill="white"/><circle cx="15" cy="12" r="1.5" fill="white"/><path d="M12 13V8l4-1v5" stroke="white" stroke-width="1.5"/>`,
+    "liquid-book-spell": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-spell" x1="6" y1="2" x2="20" y2="22"><stop stop-color="#8B5CF6" stop-opacity="0.9"/><stop offset="1" stop-color="#C4B5FD" stop-opacity="0.4"/></linearGradient></defs>
+    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" fill="url(#liq-spell)" stroke="#7C3AED" stroke-width="1.5"/>
+    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="#7C3AED" stroke-width="1.5" fill="none"/>
+    <path d="M13 8l1 3h3l-2 2 1 3-3-2-3 2 1-3-2-2h3z" fill="white" fill-opacity="0.6"/> <path d="M8 6h2M16 16h2" stroke="white" stroke-opacity="0.3" stroke-width="1"/>
+    </svg>`,
+
+    "liquid-book-diary": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-diary" x1="6" y1="2" x2="20" y2="22"><stop stop-color="#EC4899" stop-opacity="0.9"/><stop offset="1" stop-color="#FBCFE8" stop-opacity="0.4"/></linearGradient></defs>
+    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" fill="url(#liq-diary)" stroke="#BE123C" stroke-width="1.5"/>
+    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="#BE123C" stroke-width="1.5" fill="none"/>
+    <rect x="11" y="9" width="4" height="6" rx="1" fill="white" fill-opacity="0.4" stroke="white" stroke-width="1"/> <path d="M13 9V7a1 1 0 0 1 2 0v2" stroke="white" stroke-width="1.5" stroke-opacity="0.7"/>
+    </svg>`,
+
+    "liquid-book-study": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-study" x1="6" y1="2" x2="20" y2="22"><stop stop-color="#3B82F6" stop-opacity="0.9"/><stop offset="1" stop-color="#93C5FD" stop-opacity="0.4"/></linearGradient></defs>
+    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" fill="url(#liq-study)" stroke="#1D4ED8" stroke-width="1.5"/>
+    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="#1D4ED8" stroke-width="1.5" fill="none"/>
+    <path d="M9 8h8M9 12h8M9 16h5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.6"/>
+    <circle cx="17" cy="16" r="1" fill="white"/>
+    </svg>`,
+
+
+    "user-heart-combine": `<path d="M20 21v-2a4 4 0 0 0-3-3.8H7a4 4 0 0 0-3 3.8v2" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M19 6a2.5 2.5 0 0 1 4 2.5c0 2-2.5 4-4 5-1.5-1-4-3-4-5a2.5 2.5 0 0 1 4-2.5z" fill="currentColor" stroke="white" stroke-width="1.5"/>`,
+    "user-star-combine": `<path d="M20 21v-2a4 4 0 0 0-3-3.8H7a4 4 0 0 0-3 3.8v2" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="19 2 20 5 23 5 21 7 22 10 19 8 16 10 17 7 15 5 18 5" fill="currentColor" stroke="white" stroke-width="1.5"/>`,
+    "user-check-combine": `<path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="8.5" cy="7" r="4" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="19" cy="11" r="4" fill="currentColor" stroke="white" stroke-width="2"/><path d="M17 11l1.5 1.5 2.5-2.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "user-shield-combine": `<path d="M20 21v-2a4 4 0 0 0-3-3.8H7a4 4 0 0 0-3 3.8v2" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M19 14s3-1 3-4V8l-3-1-3 1v2c0 3 3 4 3 4z" fill="currentColor" stroke="white" stroke-width="1.5"/>`,
+    "file-heart-combine": `<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M14 2v6h6" stroke="currentColor" stroke-width="2"/><path d="M16 16c0 2-2.5 4-4 5-1.5-1-4-3-4-5a2.5 2.5 0 0 1 4-2.5c1.5 0 2.5 1.5 2.5 1.5s1-1.5 2.5-1.5a2.5 2.5 0 0 1 1.5 2.5" fill="currentColor" stroke="white" stroke-width="1.5"/>`,
+    "file-lock-combine": `<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M14 2v6h6" stroke="currentColor" stroke-width="2"/><rect x="9" y="14" width="6" height="4" rx="1" fill="currentColor" stroke="white" stroke-width="1.5"/><path d="M10 14v-1a2 2 0 1 1 4 0v1" stroke="currentColor" stroke-width="1.5"/>`,
+    "file-cloud-combine": `<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M14 2v6h6" stroke="currentColor" stroke-width="2"/><path d="M8 16a3 3 0 0 1 6 0h1a3 3 0 0 0-6 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "star-heart-combine": `<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 15.5l-1-1a3 3 0 0 1 4.2-4.2l-2.1 2.1-1.1 3.1z" fill="currentColor"/>`,
+    "heart-star-combine": `<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="12 8 13 11 16 11 13.5 13 14.5 16 12 14 9.5 16 10.5 13 8 11 11 11" fill="currentColor"/>`,
+    "shield-check-combine": `<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="16" cy="16" r="5" fill="currentColor" stroke="white" stroke-width="2"/><path d="M14 16l1.5 1.5 2.5-2.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "cart-heart-combine": `<circle cx="9" cy="21" r="1" fill="currentColor"/><circle cx="20" cy="21" r="1" fill="currentColor"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" stroke="currentColor" stroke-width="2" fill="none"/><path d="M14 10c0-1.5-1.5-2.5-3-2.5s-3 1-3 2.5 1.5 3 3 4 1.5-1 3-4z" fill="currentColor" stroke="none"/>`,
+    "cart-percent-combine": `<circle cx="9" cy="21" r="1" fill="currentColor"/><circle cx="20" cy="21" r="1" fill="currentColor"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="13" cy="9" r="1" fill="currentColor"/><circle cx="17" cy="13" r="1" fill="currentColor"/><line x1="17" y1="9" x2="13" y2="13" stroke="currentColor" stroke-width="2"/>`,
+    "liquid-user-star": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-u-star" x1="2" y1="2" x2="22" y2="22"><stop stop-color="#8B5CF6" stop-opacity="0.8"/><stop offset="1" stop-color="#C4B5FD" stop-opacity="0.3"/></linearGradient></defs>
+    <circle cx="10" cy="10" r="8" fill="url(#liq-u-star)" stroke="#7C3AED" stroke-width="1.5"/>
+    <circle cx="10" cy="8" r="3" fill="white" fill-opacity="0.5"/>
+    <path d="M6 16c0-2 2-3 4-3s4 1 4 3" stroke="white" stroke-width="1.5" fill="none"/>
+    <polygon points="19 15 20 17 22 17 20.5 18.5 21 20.5 19 19.5 17 20.5 17.5 18.5 16 17 18 17" fill="#F59E0B" stroke="white" stroke-width="1"/>
+    </svg>`,
+
+    "liquid-folder-heart": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-f-heart" x1="2" y1="2" x2="22" y2="22"><stop stop-color="#EC4899" stop-opacity="0.9"/><stop offset="1" stop-color="#FBCFE8" stop-opacity="0.4"/></linearGradient></defs>
+    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" fill="url(#liq-f-heart)" stroke="#BE123C" stroke-width="1.5"/>
+    <path d="M12 16c1.5-1.5 3.5-2 5-2s3.5.5 5 2" stroke="white" stroke-width="1" fill="none" opacity="0.3"/>
+    <path d="M12 14.5c-1.5-1.5-2.5-1-3.5 0s-1 2.5 0 3.5l3.5 3.5 3.5-3.5c1-1 1-2.5 0-3.5s-2.5-1-3.5 0" fill="white" stroke="#BE123C" stroke-width="1"/>
+    </svg>`,
+
+    "liquid-cloud-lock": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-c-lock" x1="2" y1="2" x2="22" y2="22"><stop stop-color="#3B82F6" stop-opacity="0.8"/><stop offset="1" stop-color="#93C5FD" stop-opacity="0.3"/></linearGradient></defs>
+    <path d="M16 10h-1.26A8 8 0 1 0 7 20h9" fill="url(#liq-c-lock)" stroke="#2563EB" stroke-width="1.5"/>
+    <rect x="16" y="14" width="6" height="5" rx="1" fill="#10B981" stroke="white" stroke-width="1"/>
+    <path d="M17 14v-1a2 2 0 0 1 4 0v1" stroke="#10B981" stroke-width="1.5" fill="none"/>
+    </svg>`,
+
+
+
+    "currency-usd-outline": `<path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`,
+    "currency-eur-outline": `<path d="M19 4.5a8.5 8.5 0 1 0 0 15M5 10h10M5 14h10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`,
+    "currency-jpy-outline": `<path d="M6 2l6 8 6-8M12 10v12M8 13h8M8 17h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`,
+    "money-bag-outline": `<path d="M5 20h14v-7a7 7 0 0 0-14 0v7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M12 13v2M10 15h4" stroke="currentColor" stroke-width="2"/><path d="M9 6c0-2 1.5-3 3-3s3 1 3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>`,
+    "money-bag-solid": `<path d="M12 3c-1.66 0-3 1.34-3 3v1h6V6c0-1.66-1.34-3-3-3z" fill="currentColor"/><path d="M19 8H5a3 3 0 0 0-3 3v9a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-9a3 3 0 0 0-3-3zM12 16h-2v-2h2v2z" fill="currentColor"/>`,
+    "coins-outline": `<circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M9 6v6M7 9h4" stroke="currentColor" stroke-width="2"/><circle cx="15" cy="15" r="7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M15 12v6M13 15h4" stroke="currentColor" stroke-width="2"/>`,
+    "coins-solid": `<circle cx="9" cy="9" r="7" fill="currentColor"/><path d="M9 6v6M7 9h4" stroke="white" stroke-width="2"/><circle cx="15" cy="15" r="7" fill="currentColor" stroke="white" stroke-width="2"/><path d="M15 12v6M13 15h4" stroke="white" stroke-width="2"/>`,
+    "liquid-currency-eur": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-eur" x1="2" y1="2" x2="22" y2="22"><stop stop-color="#3B82F6" stop-opacity="0.8"/><stop offset="1" stop-color="#93C5FD" stop-opacity="0.3"/></linearGradient></defs>
+    <path d="M19 4.5a8.5 8.5 0 1 0 0 15" stroke="url(#liq-eur)" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M5 10h10M5 14h10" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+    <path d="M6 12a6 6 0 0 1 10-3.46" stroke="white" stroke-width="1" stroke-opacity="0.4" fill="none"/>
+    </svg>`,
+
+
+    "state-danger-bio": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 8v4M12 16h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M7.5 17l-2 2M16.5 17l2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "state-surprised": `<circle cx="12" cy="14" r="6" stroke="currentColor" stroke-width="2" fill="none"/><path d="M10 13h.01M14 13h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="12" cy="17" r="1" fill="currentColor"/><path d="M12 2v4M6 4l2 3M18 4l-2 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "state-stagnant": `<path d="M2 12h4c1 0 1-2 2-2s1 4 2 4 1-2 2-2 1 2 2 2h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="20" cy="12" r="2" fill="currentColor" opacity="0.5"/>`,
+    "media-play-pause-combine": `<path d="M6 4v16l12-8z" fill="currentColor" opacity="0.3"/> <rect x="6" y="4" width="4" height="16" rx="1" fill="currentColor"/><rect x="14" y="4" width="4" height="16" rx="1" fill="currentColor"/>`,
+    "media-skip-forward-radio": `<path d="M4 4l10 8-10 8V4z" fill="currentColor"/><rect x="16" y="4" width="4" height="16" rx="1" fill="currentColor"/>`,
+    "media-skip-backward-radio": `<path d="M20 4l-10 8 10 8V4z" fill="currentColor"/><rect x="4" y="4" width="4" height="16" rx="1" fill="currentColor"/>`,
+    "ui-divider-wave": `<path d="M2 12c3-3 6-3 9 0s6 3 9 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>`,
+    "concept-quantum-state": `<circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 2" fill="none"/><circle cx="8" cy="12" r="3" fill="currentColor" opacity="0.6"/><circle cx="16" cy="12" r="3" fill="currentColor" opacity="0.6"/><path d="M12 6V2M12 22v-4M2 12h4M18 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>`,
+    "concept-neural-link": `<path d="M9 18c-3 0-5-2-5-5s3-6 6-6 4 0 6 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M15 6c3 0 5 2 5 5s-3 6-6 6-4 0-6-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M10 12h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="12" r="1.5" fill="currentColor"/><circle cx="15" cy="12" r="1.5" fill="currentColor"/>`,
+    "concept-digital-nomad": `<rect x="3" y="13" width="12" height="8" rx="1" stroke="currentColor" stroke-width="2" fill="none"/><path d="M15 19h6v2h-6z" fill="currentColor"/><path d="M18 4c2 3 4 3 4 6s-4 4-6 4v-2c1 0 4-1 4-4s-1-2-2-4z" fill="currentColor"/><path d="M18 4c-2 3-4 3-4 6s4 4 6 4" stroke="currentColor" stroke-width="1.5" fill="none"/>`,
+    "state-danger-contrast": `<circle cx="12" cy="12" r="10" fill="currentColor"/><path d="M12 7v6M12 17h.01" stroke="white" stroke-width="3" stroke-linecap="round"/>`,
+    "state-surprised-striped": `<circle cx="12" cy="14" r="6" stroke="currentColor" stroke-width="2" fill="none"/><path d="M10 13h.01M14 13h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="12" cy="17" r="1" fill="currentColor"/><path d="M12 2v4M6 4l2 3M18 4l-2 3" stroke="currentColor" stroke-width="2"/><path d="M8 14h8M9 16h6" stroke="currentColor" stroke-width="1" opacity="0.5"/>`,
+
+
+    "app-photos-ios-outline": `<path d="M12 12c0-4.418 3.582-8 8-8v8H12z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 12c0 4.418-3.582 8-8 8v-8h8z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 12c-4.418 0-8-3.582-8-8h8v8z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 12c4.418 0 8 3.582 8 8h-8v-8z" stroke="currentColor" stroke-width="2" fill="none"/>`,
+    "liquid-app-photos": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 12c0-4.418 3.582-8 8-8v8H12z" fill="#FBBF24" opacity="0.8"/>
+    <path d="M12 12c0 4.418-3.582 8-8 8v-8h8z" fill="#3B82F6" opacity="0.8"/>
+    <path d="M12 12c-4.418 0-8-3.582-8-8h8v8z" fill="#EF4444" opacity="0.8"/>
+    <path d="M12 12c4.418 0 8 3.582 8 8h-8v-8z" fill="#10B981" opacity="0.8"/>
+    <circle cx="12" cy="12" r="1" fill="white"/>
+    </svg>`,
+
+    "app-reminders-outline": `<circle cx="5.5" cy="7" r="2.5" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="5.5" cy="17" r="2.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="11" y1="7" x2="21" y2="7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="11" y1="17" x2="21" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="11" y1="12" x2="18" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.5"/>`,
+    "app-settings-solid": `<path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" fill="currentColor"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1.51 1H16a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" fill="currentColor"/>`,
+    "tech-monitor-stand": `<rect x="3" y="3" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 15v4" stroke="currentColor" stroke-width="2"/><path d="M8 21h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 19l-3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 19l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "tech-monitor-portable": `<rect x="2" y="4" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M16 18l2 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6 18l-2 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "tech-mouse-vertical": `<path d="M12 3c4 0 7 5 7 12s-3 7-7 7-5-2-5-7V8c0-3 2-5 5-5z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 3v8" stroke="currentColor" stroke-width="1.5"/><path d="M15 7c0 2-1 4-3 4" stroke="currentColor" stroke-width="1.5" fill="none"/>`,
+    "tech-stream-deck": `<rect x="2" y="4" width="20" height="16" rx="3" stroke="currentColor" stroke-width="2" fill="none"/><rect x="5" y="7" width="4" height="4" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="10" y="7" width="4" height="4" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="15" y="7" width="4" height="4" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="5" y="13" width="4" height="4" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="10" y="13" width="4" height="4" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="15" y="13" width="4" height="4" rx="1" stroke="currentColor" stroke-width="1.5"/>`,
+    "state-shocked-head-modern": `<path d="M12 14a5 5 0 0 0-5 5v3h10v-3a5 5 0 0 0-5-5z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 14V8M9 9l-3-3M15 9l3-3M7 12H3M17 12h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="10" cy="17" r="1" fill="currentColor"/><circle cx="14" cy="17" r="1" fill="currentColor"/><path d="M12 20a2 2 0 0 1-2-2h4a2 2 0 0 1-2 2z" fill="currentColor"/>`,
+    "state-flatline-monitor": `<rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M2 12h5l2-4 2 8 2-4h9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12h-6" stroke="currentColor" stroke-width="2" stroke="#EF4444" stroke-dasharray="2 2"/> `,
+    "state-frozen-ice": `<path d="M12 2l2 4 4 2-4 2-2 4-2-4-4-2 4-2 2-4z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="1.5" opacity="0.5"/><path d="M5 5l14 14M5 19L19 5" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>`,
+    "state-hypnotized": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0m-3 0a6 6 0 1 0 12 0a6 6 0 1 0 -12 0" stroke="currentColor" stroke-width="1.5" opacity="0.7"/><path d="M9 15l-2 2M15 15l2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "unique-haptic-touch": `<path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" fill="currentColor"/><path d="M12 6c4 0 7 3 7 6s-3 6-7 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6"/><path d="M12 2c6 0 10 4 10 10s-4 10-10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.3"/><path d="M8 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6 8L3 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6 16l-3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "unique-smart-contract": `<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M14 2v6h6" stroke="currentColor" stroke-width="2"/><path d="M10 12h4M10 16h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="8" y="11" width="8" height="6" rx="1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="2 2"/>`,
+    "unique-neural-net": `<circle cx="6" cy="6" r="2" fill="currentColor"/><circle cx="6" cy="18" r="2" fill="currentColor"/><circle cx="18" cy="6" r="2" fill="currentColor"/><circle cx="18" cy="18" r="2" fill="currentColor"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="6" y1="6" x2="12" y2="12" stroke="currentColor" stroke-width="1.5" opacity="0.5"/><line x1="6" y1="18" x2="12" y2="12" stroke="currentColor" stroke-width="1.5" opacity="0.5"/><line x1="18" y1="6" x2="12" y2="12" stroke="currentColor" stroke-width="1.5" opacity="0.5"/><line x1="18" y1="18" x2="12" y2="12" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>`,
+    "state-shocked-solid": `<path d="M12 14a5 5 0 0 0-5 5v3h10v-3a5 5 0 0 0-5-5z" fill="currentColor"/><path d="M12 14V8M9 9l-3-3M15 9l3-3M7 12H3M17 12h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="10" cy="17" r="1" fill="white"/><circle cx="14" cy="17" r="1" fill="white"/><path d="M12 20a2 2 0 0 1-2-2h4a2 2 0 0 1-2 2z" fill="white"/>`,
+    "tech-monitor-stand-striped": `<rect x="3" y="3" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 15v4" stroke="currentColor" stroke-width="2"/><path d="M8 21h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 19l-3 2M12 19l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6 6h12M6 9h12M6 12h12" stroke="currentColor" stroke-width="1" opacity="0.5"/>`,
+    "measure-tape-solid": `<path d="M2 12h20" stroke="currentColor" stroke-width="2" stroke-dasharray="2 2"/><rect x="4" y="6" width="16" height="12" rx="2" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="3" fill="white"/>`,
+    "measure-tape-striped": `<rect x="4" y="6" width="16" height="12" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M6 8h12M6 11h12M6 14h12" stroke="currentColor" stroke-width="1" opacity="0.5"/><path d="M20 12h2M2 12h2" stroke="currentColor" stroke-width="2"/>`,
+    "measure-ruler-angle": `<path d="M18 2l-4 4-6 6-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M22 6l-4 4-6 6-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 6l-2 2M12 10l-2 2M8 14l-2 2" stroke="currentColor" stroke-width="1.5"/>`,
+    "measure-caliper": `<path d="M6 4v16M2 20h8M16 4v12" stroke="currentColor" stroke-width="2"/><path d="M6 8h10" stroke="currentColor" stroke-width="1.5"/><rect x="10" y="6" width="8" height="4" stroke="currentColor" stroke-width="1.5" fill="none"/>`,
+    "weapon-grenade-solid": `<path d="M12 3v2M9 4l-2 2" stroke="currentColor" stroke-width="2"/><rect x="7" y="6" width="10" height="14" rx="4" fill="currentColor"/><path d="M7 10h10M7 14h10M12 6v14" stroke="white" stroke-width="1.5" opacity="0.5"/>`,
+    "weapon-grenade-striped": `<rect x="7" y="6" width="10" height="14" rx="4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M9 8h6M9 11h6M9 14h6M9 17h6" stroke="currentColor" stroke-width="1" opacity="0.5"/><path d="M12 2v4" stroke="currentColor" stroke-width="2"/><circle cx="15" cy="4" r="1" stroke="currentColor" stroke-width="2"/>`,
+    "weapon-pistol-solid": `<path d="M2 12h8l6-6h6v4l-4 4v2h-4v4H8l-2-2z" fill="currentColor" stroke="none"/><circle cx="19" cy="8" r="1" fill="white"/>`,
+    "weapon-scope-crosshair": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><line x1="12" y1="2" x2="12" y2="22" stroke="currentColor" stroke-width="1.5"/><line x1="2" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2" fill="currentColor"/>`,
+    "weapon-sword-solid": `<path d="M14.5 17.5L3 6V3h3l11.5 11.5" fill="currentColor" stroke="none"/><path d="M13 19l6-6M16 16l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M19 21l2-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "audio-recognize-solid": `<circle cx="12" cy="12" r="10" fill="currentColor"/><path d="M12 8v8M8 10v4M16 10v4" stroke="white" stroke-width="2" stroke-linecap="round"/>`,
+    "audio-recognize-striped": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 7v10M8 9v6M16 9v6M4 12h2M20 12h-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>`,
+    "music-guitar-electric-solid": `<path d="M8 20l4-4 8-8-2-2-8 8-4 4v2h2z" fill="currentColor"/><circle cx="9" cy="19" r="1" fill="white"/><path d="M18 4l2 2" stroke="white" stroke-width="1"/>`,
+    "music-vinyl-solid": `<circle cx="12" cy="12" r="10" fill="currentColor"/><circle cx="12" cy="12" r="3" fill="white"/><circle cx="12" cy="12" r="1" fill="currentColor"/>`,
+    "plane-fighter-solid": `<path d="M12 2L2 16l10-2 10 2L12 2z" fill="currentColor"/><path d="M12 14v6l-3 2v-2l3-2z" fill="currentColor"/>`,
+    "plane-airliner-solid": `<path d="M12 2C10 2 9 4 9 7v6L2 18v2l7-2v4l-2 1v1l5-2 5 2v-1l-2-1v-4l7 2v-2l-7-5V7c0-3-1-5-3-5z" fill="currentColor"/>`,
+    "plane-helicopter-solid": `<path d="M2 6h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 6v4" stroke="currentColor" stroke-width="2"/><rect x="6" y="10" width="12" height="8" rx="4" fill="currentColor"/><path d="M12 18v4M8 22h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "auth-app-solid": `<path d="M12 2L3 7v6c0 5.5 5 10 9 10s9-4.5 9-10V7l-9-5z" fill="currentColor"/><circle cx="12" cy="12" r="4" stroke="white" stroke-width="2" fill="none"/><path d="M12 12v-2" stroke="white" stroke-width="2" stroke-linecap="round"/>`,
+    "auth-biometric-phone": `<rect x="5" y="2" width="14" height="20" rx="2" fill="currentColor"/><path d="M12 15v2" stroke="white" stroke-width="2"/><circle cx="12" cy="16" r="2" stroke="white" stroke-width="1" stroke-dasharray="2 1" fill="none"/>`,
+    "auth-password-gen": `<rect x="2" y="6" width="20" height="12" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="6" cy="12" r="1.5" fill="currentColor"/><circle cx="10" cy="12" r="1.5" fill="currentColor"/><circle cx="14" cy="12" r="1.5" fill="currentColor"/><circle cx="18" cy="12" r="1.5" fill="currentColor"/>`,
+    "sticker-peel-solid": `<path d="M4 4h10l6 6v10H4V4z" fill="currentColor"/><path d="M14 4v6h6" fill="white" opacity="0.3"/>`,
+    "sticker-star-striped": `<path d="M12 2l3 6 6 1-4 4 1 6-6-3-6 3 1-6-4-4 6-1z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8 10h8M7 13h10" stroke="currentColor" stroke-width="1" opacity="0.5"/>`,
+    "preview-file-solid": `<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" fill="currentColor"/><path d="M12 11c2.5 0 4.5 1.5 4.5 3s-2 3-4.5 3-4.5-1.5-4.5-3 2-3 4.5-3z" fill="white"/><circle cx="12" cy="14" r="1.5" fill="currentColor"/>`,
+    "preview-live": `<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="10 9 15 12 10 15" fill="currentColor"/>`,
+    "hourglass-start-solid": `<path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4V2z" fill="currentColor"/><path d="M6 2h12" stroke="white" stroke-width="2"/>`,
+    "hourglass-end-solid": `<path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4V2z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8 18h8v2H8z" fill="currentColor"/>`,
+
+
+    "port-usb-c-outline": `<rect x="4" y="6" width="16" height="12" rx="4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8 12h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="7" y="2" width="2" height="4" fill="currentColor"/><rect x="15" y="2" width="2" height="4" fill="currentColor"/>`,
+    "port-usb-c-solid": `<rect x="4" y="6" width="16" height="12" rx="4" fill="currentColor"/><path d="M8 12h8" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M7 2h2v4H7zM15 2h2v4h-2z" fill="currentColor"/>`,
+    "port-usb-a-outline": `<rect x="4" y="8" width="16" height="8" rx="1" stroke="currentColor" stroke-width="2" fill="none"/><path d="M4 12h16" stroke="currentColor" stroke-width="1.5"/><path d="M2 8h2M20 8h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="7" y="4" width="10" height="4" rx="1" stroke="currentColor" stroke-width="2" fill="none"/>`,
+    "port-usb-a-solid": `<rect x="4" y="8" width="16" height="8" rx="1" fill="currentColor"/><path d="M8 12h2v2H8zM14 12h2v2h-2z" fill="white"/><rect x="7" y="4" width="10" height="4" rx="1" fill="currentColor"/>`,
+    "port-hdmi-outline": `<path d="M2 6h20v10l-2 4H4l-2-4V6z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M6 6v4M10 6v4M14 6v4M18 6v4" stroke="currentColor" stroke-width="1.5"/>`,
+    "port-ethernet-contrast": `<rect x="2" y="6" width="20" height="12" rx="2" fill="currentColor"/><path d="M6 18v4M18 18v4" stroke="currentColor" stroke-width="2"/><rect x="8" y="10" width="8" height="4" rx="1" fill="white"/><path d="M10 12h4" stroke="currentColor" stroke-width="1.5"/>`,
+    "port-thunderbolt": `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M13 3l-3 9h5l-3 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`,
+    "monitor-slim-outline": `<rect x="2" y="3" width="20" height="14" rx="1" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 17v4M8 21h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "monitor-curved-solid": `<path d="M2 6c0-2 4-3 10-3s10 1 10 3v10c0 2-4 3-10 3s-10-1-10-3V6z" fill="currentColor"/><path d="M12 19v2M8 21h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "monitor-dual-setup": `<rect x="2" y="5" width="10" height="10" rx="1" stroke="currentColor" stroke-width="2" fill="none"/><rect x="12" y="5" width="10" height="10" rx="1" stroke="currentColor" stroke-width="2" fill="none"/><path d="M7 15v4M17 15v4M5 19h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "monitor-share-cast": `<rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M2 21h4M22 21h-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 17v4" stroke="currentColor" stroke-width="2"/><path d="M2 17a10 10 0 0 1 10-10M2 13a6 6 0 0 1 6-6M2 9a2 2 0 0 1 2-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.6"/>`,
+    "monitor-touch-outline": `<rect x="4" y="2" width="16" height="20" rx="3" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="16" r="2" fill="currentColor" opacity="0.3"/><path d="M12 16l3-5M12 16l-3-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "knife-chef-solid": `<path d="M3 6l2-2 14 2c2 1 3 4 3 8 0 4-3 6-6 6H4v-4H2V6h1z" fill="currentColor"/><circle cx="6" cy="9" r="1" fill="white"/>`,
+    "spoon-minimal-contrast": `<path d="M12 3c-4 0-7 3-7 7 0 3 3 6 7 6v5" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="10" r="4" fill="currentColor"/><path d="M12 16v5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`,
+    "coffee-cup-striped": `<path d="M6 4h12v12a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V4z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M4 8h16M4 12h16M4 16h16" stroke="currentColor" stroke-width="1" opacity="0.5"/><path d="M18 8h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M8 2l2-2M14 2l2-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.5"/> `,
+    "dining-chopsticks": `<path d="M2 2l20 8M2 6l20 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 10l2 2M18 14l2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.5"/>`,
+    "tech-iot-hub": `<circle cx="12" cy="12" r="3" fill="currentColor"/><circle cx="12" cy="12" r="7" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3" fill="none"/><circle cx="12" cy="4" r="2" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="12" r="2" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="20" r="2" stroke="currentColor" stroke-width="2"/><circle cx="4" cy="12" r="2" stroke="currentColor" stroke-width="2"/>`,
+    "tech-data-flow-striped": `<path d="M4 12h16" stroke="currentColor" stroke-width="4" stroke-linecap="round" opacity="0.2"/><path d="M4 12h4M12 12h4M20 12h.01" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 6"/>`,
+    "tech-wireless-power": `<path d="M12 18a6 6 0 0 0 6-6M12 18a6 6 0 0 1-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 14a2 2 0 0 0 2-2M12 14a2 2 0 0 1-2-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.6"/><path d="M12 10V4l-2 3h4l-2 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="1" fill="currentColor"/>`,
+    "liquid-port-usbc": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-usbc" x1="4" y1="6" x2="20" y2="18"><stop stop-color="#3B82F6" stop-opacity="0.9"/><stop offset="1" stop-color="#93C5FD" stop-opacity="0.4"/></linearGradient></defs>
+    <rect x="4" y="6" width="16" height="12" rx="4" fill="url(#liq-usbc)" stroke="#2563EB" stroke-width="1.5"/>
+    <path d="M8 12h8" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <path d="M7 14h10" stroke="white" stroke-width="1" stroke-opacity="0.5"/>
+    </svg>`,
+
+    "liquid-monitor-curved": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-mon" x1="2" y1="4" x2="22" y2="18"><stop stop-color="#10B981" stop-opacity="0.9"/><stop offset="1" stop-color="#6EE7B7" stop-opacity="0.4"/></linearGradient></defs>
+    <path d="M2 6c0-2 4-3 10-3s10 1 10 3v10c0 2-4 3-10 3s-10-1-10-3V6z" fill="url(#liq-mon)" stroke="#059669" stroke-width="1.5"/>
+    <path d="M12 19v2M8 21h8" stroke="#059669" stroke-width="2" stroke-linecap="round"/>
+    <path d="M5 8c2-1 5-2 7-2s5 1 7 2" stroke="white" stroke-width="1.5" stroke-opacity="0.5" fill="none"/>
+    </svg>`,
+
+    "liquid-coffee-cup": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="liq-cof" x1="6" y1="4" x2="18" y2="20"><stop stop-color="#F97316" stop-opacity="0.9"/><stop offset="1" stop-color="#FDE68A" stop-opacity="0.4"/></linearGradient></defs>
+    <path d="M6 4h12v12a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V4z" fill="url(#liq-cof)" stroke="#EA580C" stroke-width="1.5"/>
+    <path d="M18 8h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2" stroke="#EA580C" stroke-width="1.5" fill="none"/>
+    <path d="M8 2l2-2M14 2l2-2" stroke="#EA580C" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+    <path d="M8 10h8M9 14h6" stroke="white" stroke-width="1" stroke-opacity="0.4"/>
+    </svg>`,
 
 };
 

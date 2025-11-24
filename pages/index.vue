@@ -11,20 +11,23 @@ const selectedIcon = ref(null);
 const isModalOpen = ref(false);
 const copied = ref(false);
 const activeCategory = ref('all');
-
-// Default Output Settings
-const customize = ref({ 
-  size: 64, 
-  color: "#818cf8", 
-  stroke: 2, 
-  type: "class", 
-  spin: false 
+// Varsayılan Ayarları Cookie'ye Bağla
+// 'flux_settings' adında bir çerez oluşturur, yoksa varsayılanları kullanır.
+const customize = useCookie('flux_settings', {
+    default: () => ({ 
+        size: 64, 
+        color: "#818cf8", 
+        stroke: 1, 
+        type: "class", 
+        spin: false 
+    }),
+    watch: true // Değişiklikleri otomatik izle ve kaydet
 });
 
 // Type değişince kalınlığı sıfırla
 watch(() => customize.value.type, (newType) => {
     if (newType === 'class') {
-        customize.value.stroke = 2;
+        customize.value.stroke = 1;
     }
 });
 
@@ -89,7 +92,7 @@ const generatedCode = computed(() => {
   const sizeValue = customize.value.size;
   const colorValue = customize.value.color;
   const strokeValue = customize.value.stroke;
-  const strokeAttr = strokeValue !== 2 ? ` stroke-width="${strokeValue}"` : '';
+  const strokeAttr = strokeValue !== 1 ? ` stroke-width="${strokeValue}"` : '';
   const spinAttr = customize.value.spin ? ' spin' : '';
   const spinClass = customize.value.spin ? ' flux-spin' : '';
   const customStyle = `style="font-size: ${sizeValue}px; color: ${colorValue};"`;
@@ -167,7 +170,7 @@ const copyToClipboard = () => {
     <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4 pb-20">
       <div v-for="name in displayedIcons" :key="name" @click="openModal(name)" class="group relative bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 flex flex-col items-center justify-center gap-4 cursor-pointer hover:border-indigo-500 dark:hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300 overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-tr from-indigo-500/0 to-purple-500/0 group-hover:from-indigo-500/5 group-hover:to-purple-500/5 transition-all duration-500 pointer-events-none"></div>
-        <FluxIcon :name="name" size="32" class="text-slate-600 dark:text-slate-400 group-hover:text-indigo-500 group-hover:scale-110 transition-all duration-300 relative z-10" />
+        <FluxIcon :name="name" size="32" class="text-slate-600 dark:text-slate-400 group-hover:text-indigo-500 group-hover:scale-110 transition-all duration-300 relative z-10" :stroke-width="customize.stroke" />
         <span class="text-[10px] font-bold text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white truncate w-full text-center capitalize relative z-10 transition-colors">{{ name.replace(/-/g, ' ') }}</span>
       </div>
     </div>
