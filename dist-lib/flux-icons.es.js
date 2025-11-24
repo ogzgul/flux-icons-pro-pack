@@ -457,7 +457,7 @@ const d = {
   compass: '<circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>',
   "globe-2": '<circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>',
   crosshair: '<circle cx="12" cy="12" r="10"/><line x1="22" y1="12" x2="18" y2="12"/><line x1="6" y1="12" x2="2" y2="12"/><line x1="12" y1="6" x2="12" y2="2"/><line x1="12" y1="22" x2="12" y2="18"/>',
-  flag: '<path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/>',
+  "empty-flag": '<path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/>',
   // =================================================
   // 39. HAVA DURUMU DETAY (WEATHER PRO)
   // =================================================
@@ -3509,7 +3509,7 @@ const d = {
   "file-flux": '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="14 2 14 8 20 8" stroke="currentColor" stroke-width="2"/><rect x="7" y="12" width="10" height="2" rx="1" fill="currentColor"/><rect x="7" y="16" width="7" height="2" rx="1" fill="currentColor" opacity="0.5"/>',
   "archive-flux": '<path d="M21 8v13H3V8" stroke="currentColor" stroke-width="2"/><rect x="1" y="3" width="22" height="5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="8" y="12" width="8" height="4" rx="1" fill="currentColor"/><line x1="4" y1="8" x2="4" y2="3" stroke="currentColor" stroke-width="2"/>',
   "map-pin-flux": '<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="10" r="3" fill="currentColor"/><path d="M12 21a9 9 0 0 1-9-11" stroke="currentColor" stroke-width="2" stroke-dasharray="2 2" opacity="0.5"/>',
-  "flag-flux": '<path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" stroke="currentColor" stroke-width="2" fill="none"/><line x1="4" y1="22" x2="4" y2="15" stroke="currentColor" stroke-width="2"/><path d="M4 15s1-1 4-1 5 2 8 2" fill="currentColor" opacity="0.2"/>',
+  "empty-flag-flux": '<path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" stroke="currentColor" stroke-width="2" fill="none"/><line x1="4" y1="22" x2="4" y2="15" stroke="currentColor" stroke-width="2"/><path d="M4 15s1-1 4-1 5 2 8 2" fill="currentColor" opacity="0.2"/>',
   "cart-flux": '<circle cx="9" cy="21" r="1" fill="currentColor"/><circle cx="20" cy="21" r="1" fill="currentColor"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M6 6h17l-1.68 8.39a2 2 0 0 1-2 1.61H9.68a2 2 0 0 1-2-1.61L6 6z" fill="currentColor" opacity="0.1"/>',
   "tag-flux": '<path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="7" cy="7" r="2" fill="currentColor"/><path d="M12 12l3 3" stroke="currentColor" stroke-width="2" opacity="0.5"/>',
   "plus-circle-solid": '<circle cx="12" cy="12" r="10" fill="currentColor" stroke="none"/><path d="M12 8v8M8 12h8" stroke="white" stroke-width="2" stroke-linecap="round"/>',
