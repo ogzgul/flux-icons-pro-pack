@@ -12,34 +12,39 @@ const isModalOpen = ref(false);
 const copied = ref(false);
 const activeCategory = ref('all');
 
-// Varsayılan Ayarları Cookie'ye Bağla
+// Varsayılan Ayarlar (Cookie)
 const customize = useCookie('flux_settings', {
     default: () => ({ 
         size: 64, 
-        color: "#000000", // DÜZELTME 1: Varsayılan renk artık SİYAH
+        color: "#000000", 
         stroke: 1, 
         type: "class", 
         spin: false 
     }),
-    watch: true 
+    watch: true
 });
 
-// Class modunda stroke her zaman sabit olsun
+// Class modunda stroke sabit
 watch(() => customize.value.type, (newType) => {
     if (newType === 'class') {
         customize.value.stroke = 1;
     }
 });
 
-// --- RENK PALETİ KONTROLÜ ---
+// --- RENK DEĞİŞTİRİLEBİLİR Mİ? ---
 const isColorable = computed(() => {
     if (!selectedIcon.value) return true;
     const name = selectedIcon.value;
+    // Bu tiplerin rengi sabittir (Siyah veya Orijinal)
     const staticTypes = ['liquid-', 'flag-', 'sticker-', 'original', 'brand-', 'fill', 'solid'];
     if (staticTypes.some(type => name.includes(type))) {
         return false;
     }
     return true; 
+});
+
+const effectiveColor = computed(() => {
+    return isColorable.value ? customize.value.color : '#000000'; 
 });
 
 // --- KATEGORİLER ---
@@ -56,41 +61,28 @@ const categories = [
 
 // --- FİLTRELEME ---
 const allIconNames = computed(() => Object.keys(icons).sort());
-
 const filteredIcons = computed(() => {
   const query = searchQuery.value.toLowerCase();
   const category = activeCategory.value;
-
   return allIconNames.value.filter(name => {
     const matchesSearch = name.includes(query);
     let matchesCategory = true;
-    if (category !== 'all') {
-      matchesCategory = name.startsWith(category);
-    }
+    if (category !== 'all') matchesCategory = name.startsWith(category);
     return matchesSearch && matchesCategory;
   });
 });
-
-const displayedIcons = computed(() => {
-  return filteredIcons.value.slice(0, visibleCount.value);
-});
+const displayedIcons = computed(() => filteredIcons.value.slice(0, visibleCount.value));
 
 const handleScroll = () => {
-  const totalHeight = document.documentElement.scrollHeight;
-  const currentScroll = window.scrollY + window.innerHeight;
-  if (currentScroll >= totalHeight - 100) {
-    if (visibleCount.value < filteredIcons.value.length) {
-      visibleCount.value += 50;
-    }
+  if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 100) {
+    if (visibleCount.value < filteredIcons.value.length) visibleCount.value += 50;
   }
 };
-
 const selectCategory = (id) => {
     activeCategory.value = id;
     visibleCount.value = 50;
     window.scrollTo({ top: 0, behavior: 'smooth' });
 };
-
 onMounted(() => window.addEventListener("scroll", handleScroll));
 onUnmounted(() => window.removeEventListener("scroll", handleScroll));
 
@@ -101,12 +93,14 @@ const closeModal = () => { isModalOpen.value = false; };
 const generatedCode = computed(() => {
   if (!selectedIcon.value) return "";
   const sizeValue = customize.value.size;
-  const colorValue = customize.value.color;
+  // Renk seçilebiliyorsa seçilen rengi, değilse siyahı kullan.
+  const colorValue = isColorable.value ? customize.value.color : '#000000'; 
   const strokeValue = customize.value.stroke;
   const strokeAttr = strokeValue !== 1 ? ` stroke-width="${strokeValue}"` : '';
   const spinAttr = customize.value.spin ? ' spin' : '';
   const spinClass = customize.value.spin ? ' flux-spin' : '';
   
+  // Renk stili sadece renk değişebiliyorsa eklenir
   const colorStyle = isColorable.value ? ` color: ${colorValue};` : '';
   const customStyle = `style="font-size: ${sizeValue}px;${colorStyle}"`;
 
@@ -114,11 +108,13 @@ const generatedCode = computed(() => {
     return `<i class="flux-icon flux-icon-${selectedIcon.value}${spinClass}" ${customStyle}></i>`;
   }
   if (customize.value.type === "component") {
-    return `<FluxIcon name="${selectedIcon.value}" size="${sizeValue}" color="${colorValue}"${strokeAttr}${spinAttr} />`;
+    const colorProp = isColorable.value ? ` color="${colorValue}"` : '';
+    return `<FluxIcon name="${selectedIcon.value}" size="${sizeValue}"${colorProp}${strokeAttr}${spinAttr} />`;
   } 
   if (customize.value.type === "html") {
       const svgSpinClass = customize.value.spin ? ' class="flux-spin"' : '';
-      return `<svg width="${sizeValue}" height="${sizeValue}" viewBox="0 0 24 24" fill="none" stroke="${colorValue}" stroke-width="${strokeValue}" stroke-linecap="round" stroke-linejoin="round"${svgSpinClass}>${icons[selectedIcon.value]}</svg>`;
+      const svgColor = isColorable.value ? colorValue : 'currentColor';
+      return `<svg width="${sizeValue}" height="${sizeValue}" viewBox="0 0 24 24" fill="none" stroke="${svgColor}" stroke-width="${strokeValue}" stroke-linecap="round" stroke-linejoin="round"${svgSpinClass}>${icons[selectedIcon.value]}</svg>`;
   }
   return "";
 });
@@ -135,7 +131,6 @@ const copyToClipboard = () => {
     
     <div class="sticky top-0 z-30 bg-slate-50/95 dark:bg-slate-950/95 backdrop-blur-md py-6 mb-8 border-b border-slate-200 dark:border-slate-800 shadow-sm transition-all">
         <div class="flex flex-col items-center gap-6 max-w-4xl mx-auto px-4">
-            
             <div class="relative w-full group">
                 <div class="absolute inset-0 bg-indigo-500/10 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                 <span class="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 pointer-events-none z-20">
@@ -146,11 +141,8 @@ const copyToClipboard = () => {
                     <span class="text-indigo-600 dark:text-indigo-400">{{ displayedIcons.length }}</span> / {{ filteredIcons.length }}
                 </div>
             </div>
-
             <div class="flex flex-wrap justify-center gap-2 w-full">
-                <button v-for="cat in categories" :key="cat.id" @click="selectCategory(cat.id)" class="px-4 py-2 rounded-full text-sm font-semibold transition-all border" :class="activeCategory === cat.id ? 'bg-indigo-600 text-white border-indigo-600 shadow-lg shadow-indigo-500/30 transform scale-105' : 'bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-800 hover:border-indigo-300 dark:hover:border-indigo-700 hover:bg-slate-50 dark:hover:bg-slate-800'">
-                    {{ cat.name }}
-                </button>
+                <button v-for="cat in categories" :key="cat.id" @click="selectCategory(cat.id)" class="px-4 py-2 rounded-full text-sm font-semibold transition-all border" :class="activeCategory === cat.id ? 'bg-indigo-600 text-white border-indigo-600 shadow-lg shadow-indigo-500/30 transform scale-105' : 'bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-800 hover:border-indigo-300 dark:hover:border-indigo-700 hover:bg-slate-50 dark:hover:bg-slate-800'">{{ cat.name }}</button>
             </div>
         </div>
     </div>
@@ -187,7 +179,15 @@ const copyToClipboard = () => {
         
         <div class="w-full md:w-5/12 bg-slate-50 flex items-center justify-center p-10 relative border-b md:border-b-0 md:border-r border-slate-200 group">
           <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#000000 1px, transparent 1px); background-size: 20px 20px;"></div>
-          <FluxIcon :name="selectedIcon" :size="customize.size" :color="customize.color" :stroke-width="customize.stroke" :spin="customize.spin" class="relative z-10 drop-shadow-2xl transition-all duration-300 group-hover:scale-105" />
+          
+          <FluxIcon 
+            :name="selectedIcon" 
+            :size="customize.size" 
+            :color="effectiveColor" 
+            :stroke-width="customize.stroke" 
+            :spin="customize.spin" 
+            class="relative z-10 drop-shadow-2xl transition-all duration-300 group-hover:scale-105" 
+          />
         </div>
 
         <div class="w-full md:w-7/12 p-6 flex flex-col gap-6">
@@ -211,6 +211,10 @@ const copyToClipboard = () => {
                         <FluxIcon name="plus" size="14" class="text-slate-400 pointer-events-none"/>
                     </div>
                 </div>
+              </div>
+              <div v-else class="text-[11px] font-medium text-slate-500 bg-slate-100 dark:bg-slate-800/50 p-3 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                  <FluxIcon name="lock-solid" size="14" class="shrink-0 opacity-50" />
+                  <span>This icon has fixed colors.</span>
               </div>
 
               <div class="grid gap-4" :class="customize.type !== 'class' ? 'grid-cols-2' : 'grid-cols-1'">
