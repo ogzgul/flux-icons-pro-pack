@@ -4608,7 +4608,7 @@ const d = {
     name: { type: String, required: !0 },
     size: { type: [Number, String], default: 24 },
     color: { type: String, default: "currentColor" },
-    strokeWidth: { type: [Number, String], default: 2 },
+    strokeWidth: { type: [Number, String], default: 1 },
     className: { type: String, default: "" },
     spin: { type: Boolean, default: !1 }
   },
