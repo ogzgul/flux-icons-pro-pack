@@ -4,23 +4,17 @@ import { icons } from '../lib/icons.js';
 
 const DIST_DIR = path.resolve(process.cwd(), 'dist-font');
 
-// BU LİSTE ÇOK ÖNEMLİ!
-// Sadece buradaki kelimeleri içeren ikonlar "Resim" gibi davranır (Rengi değişmez).
-// Geriye kalan HER ŞEY (backspace-fill dahil) "Maske" gibi davranır (Rengi değişir).
-const TRULY_COLORED_TYPES = [
-    'liquid-', 
-    'flag-', 
-    'sticker-', 
-    'emoji-',       // Eğer sarı yüzlü emojilerse buraya, değilse çıkar
-    'illustration-'
-];
+// Renkli olması gereken ikonlar (Bunlar maske değil, direkt resim olacak)
+const COLORED_TYPES = ['flag-', 'brand-', 'emoji-', 'crypto-', 'logo-','liquid-'];
 
 async function generateCssIcons() {
-  console.log('🎨 CSS İkon Sistemi Oluşturuluyor (Color Fix v2)...');
+  console.log('🎨 CSS İkon Sistemi Oluşturuluyor (v3 - Final)...');
 
+  // Temizlik ve Klasör Oluşturma
   if (fs.existsSync(DIST_DIR)) fs.rmSync(DIST_DIR, { recursive: true, force: true });
   fs.mkdirSync(DIST_DIR, { recursive: true });
 
+  // Temel CSS
   let cssContent = `
 /* Flux Icons - Universal CSS */
 .flux-icon {
@@ -31,12 +25,20 @@ async function generateCssIcons() {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  content: '';
+  content: ''; /* İçi boş olsa bile görünsün */
 }
 
-/* Yardımcılar */
+/* Boyutlandırma Yardımcıları */
+.flux-lg { font-size: 1.33em; }
+.flux-xl { font-size: 1.5em; }
+.flux-2x { font-size: 2em; }
+.flux-3x { font-size: 3em; }
 .flux-spin { animation: flux-spin 2s infinite linear; }
-@keyframes flux-spin { 100% { transform: rotate(360deg); } }
+
+@keyframes flux-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 `;
 
   const iconNames = Object.keys(icons);
@@ -45,60 +47,42 @@ async function generateCssIcons() {
   iconNames.forEach(name => {
     let rawSvg = icons[name];
 
-    // 1. KARAR MEKANİZMASI: Bu ikon özel renkli mi?
-    const isTrulyColored = TRULY_COLORED_TYPES.some(type => name.includes(type));
+    // Bu ikon renkli mi?
+    const isColored = COLORED_TYPES.some(t => name.includes(t)) || 
+                      (rawSvg.includes('fill=') && !rawSvg.includes('fill="none"'));
 
-    let fullSvg;
-
-    if (isTrulyColored) {
-        // === RENKLİ İKONLAR (Resim Modu) ===
-        // Orijinal renklerini koru. Dokunma.
-        fullSvg = rawSvg.trim().startsWith('<svg') 
-            ? rawSvg 
-            : `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">${rawSvg}</svg>`;
-    } else {
-        // === BOYANABİLİR İKONLAR (Maske Modu) ===
-        // Solid, Fill, Outline, Brand... Hepsi buraya girer.
-        // Maske çalışması için ikonun SİMAH olması şarttır.
-        
-        let inner = rawSvg;
-        if (rawSvg.trim().startsWith('<svg')) {
-            inner = rawSvg.replace(/^<svg[^>]*>/i, '').replace(/<\/svg>$/i, '');
-        }
-
-        // Rengi siyaha zorla (Maske için)
-        // currentColor'ı siyaha çevir
-        inner = inner.replace(/currentColor/g, 'black');
-        
-        // Eğer içinde hiç renk yoksa, varsayılan olarak siyah ekle
-        let svgAttrs = 'viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"';
-        if (!inner.includes('fill=') && !inner.includes('stroke=')) {
-             svgAttrs += ' fill="black"'; 
-        } else if (inner.includes('stroke=') && !inner.includes('fill=')) {
-             svgAttrs += ' fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"';
-        }
-
-        fullSvg = `<svg ${svgAttrs}>${inner}</svg>`;
+    // SVG'yi standart hale getir
+    if (!rawSvg.trim().startsWith('<svg')) {
+        // Çizgisel ikonlar için varsayılan özellikler
+        const strokeAttr = isColored ? '' : 'fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"';
+        rawSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" ${strokeAttr}>${rawSvg}</svg>`;
     }
 
-    // URL Encode
-    const encodedSvg = fullSvg
-      .replace(/"/g, "'")
-      .replace(/%/g, '%25')
-      .replace(/#/g, '%23')
-      .replace(/{/g, '%7B')
-      .replace(/}/g, '%7D')
-      .replace(/</g, '%3C')
-      .replace(/>/g, '%3E')
-      .replace(/\s+/g, ' ');
+    // URL Encode işlemi (CSS içinde çalışması için şart)
+    // # karakterini %23'e çevirmek çok önemlidir!
+    const encodedSvg = rawSvg
+        .replace(/"/g, "'")
+        .replace(/>\s+</g, "><")
+        .replace(/\s+/g, " ")
+        .replace(/%/g, "%25")
+        .replace(/#/g, "%23")
+        .replace(/{/g, "%7B")
+        .replace(/}/g, "%7D")
+        .replace(/</g, "%3C")
+        .replace(/>/g, "%3E");
 
     const dataUri = `data:image/svg+xml,${encodedSvg}`;
 
-    if (isTrulyColored) {
-      // RENKLİ (Değişmez)
-      cssContent += `.flux-icon-${name} { background-image: url("${dataUri}"); }\n`;
+    if (isColored) {
+      // --- RENKLİ İKON (Arkaplan Resmi) ---
+      // Rengi değişmez, olduğu gibi görünür.
+      cssContent += `
+.flux-icon-${name} {
+  background-image: url("${dataUri}");
+}`;
     } else {
-      // MASKE (Rengi Değişir - background-color: currentColor sayesinde)
+      // --- ÇİZGİSEL İKON (Maske) ---
+      // currentColor ile boyanabilir.
       cssContent += `
 .flux-icon-${name} {
   background-color: currentColor;
@@ -110,15 +94,18 @@ async function generateCssIcons() {
   mask-position: center;
   -webkit-mask-size: contain;
   mask-size: contain;
-}\n`;
+}`;
     }
     count++;
   });
 
-  fs.writeFileSync(path.join(DIST_DIR, 'FluxIcons.css'), cssContent, 'utf-8');
+  // Dosyayı Yaz (Küçük harf standardı)
   fs.writeFileSync(path.join(DIST_DIR, 'flux-icons.css'), cssContent, 'utf-8');
+  
+  // Uyumluluk için büyük harflisini de oluştur (Eski linkler kırılmasın)
+  fs.writeFileSync(path.join(DIST_DIR, 'FluxIcons.css'), cssContent, 'utf-8');
 
-  console.log(`✅ ${count} ikon işlendi.`);
+  console.log(`✅ ${count} ikon başarıyla CSS'e dönüştürüldü!`);
 }
 
 generateCssIcons();

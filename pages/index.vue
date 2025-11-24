@@ -4,34 +4,45 @@ import { useFluxIcons } from '@/composables/useFluxIcons';
 
 const { icons } = useFluxIcons();
 
-// --- SETTINGS ---
+// --- AYARLAR ---
 const searchQuery = ref("");
 const visibleCount = ref(50);
 const selectedIcon = ref(null);
 const isModalOpen = ref(false);
 const copied = ref(false);
 const activeCategory = ref('all');
+
 // Varsayılan Ayarları Cookie'ye Bağla
-// 'flux_settings' adında bir çerez oluşturur, yoksa varsayılanları kullanır.
 const customize = useCookie('flux_settings', {
     default: () => ({ 
         size: 64, 
-        color: "#818cf8", 
+        color: "#000000", // DÜZELTME 1: Varsayılan renk artık SİYAH
         stroke: 1, 
         type: "class", 
         spin: false 
     }),
-    watch: true // Değişiklikleri otomatik izle ve kaydet
+    watch: true 
 });
 
-// Type değişince kalınlığı sıfırla
+// Class modunda stroke her zaman sabit olsun
 watch(() => customize.value.type, (newType) => {
     if (newType === 'class') {
         customize.value.stroke = 1;
     }
 });
 
-// --- CATEGORIES ---
+// --- RENK PALETİ KONTROLÜ ---
+const isColorable = computed(() => {
+    if (!selectedIcon.value) return true;
+    const name = selectedIcon.value;
+    const staticTypes = ['liquid-', 'flag-', 'sticker-', 'original', 'brand-', 'fill', 'solid'];
+    if (staticTypes.some(type => name.includes(type))) {
+        return false;
+    }
+    return true; 
+});
+
+// --- KATEGORİLER ---
 const categories = [
   { id: 'all', name: 'All' },
   { id: 'liquid-', name: 'Liquid Glass' },
@@ -43,7 +54,7 @@ const categories = [
   { id: 'chart-', name: 'Charts' }
 ];
 
-// --- FILTERING LOGIC ---
+// --- FİLTRELEME ---
 const allIconNames = computed(() => Object.keys(icons).sort());
 
 const filteredIcons = computed(() => {
@@ -86,7 +97,7 @@ onUnmounted(() => window.removeEventListener("scroll", handleScroll));
 const openModal = (name) => { selectedIcon.value = name; isModalOpen.value = true; copied.value = false; };
 const closeModal = () => { isModalOpen.value = false; };
 
-// --- CODE GENERATOR ---
+// --- KOD ÇIKTISI ---
 const generatedCode = computed(() => {
   if (!selectedIcon.value) return "";
   const sizeValue = customize.value.size;
@@ -95,7 +106,9 @@ const generatedCode = computed(() => {
   const strokeAttr = strokeValue !== 1 ? ` stroke-width="${strokeValue}"` : '';
   const spinAttr = customize.value.spin ? ' spin' : '';
   const spinClass = customize.value.spin ? ' flux-spin' : '';
-  const customStyle = `style="font-size: ${sizeValue}px; color: ${colorValue};"`;
+  
+  const colorStyle = isColorable.value ? ` color: ${colorValue};` : '';
+  const customStyle = `style="font-size: ${sizeValue}px;${colorStyle}"`;
 
   if (customize.value.type === "class") {
     return `<i class="flux-icon flux-icon-${selectedIcon.value}${spinClass}" ${customStyle}></i>`;
@@ -125,33 +138,17 @@ const copyToClipboard = () => {
             
             <div class="relative w-full group">
                 <div class="absolute inset-0 bg-indigo-500/10 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                
                 <span class="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 pointer-events-none z-20">
                     <FluxIcon name="search" size="22" />
                 </span>
-                
-                <input 
-                    v-model="searchQuery" 
-                    type="text" 
-                    placeholder="Search 1000+ icons..." 
-                    class="relative z-10 w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-full py-4 pl-14 pr-32 text-lg shadow-lg focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all placeholder:text-slate-400" 
-                />
-                
+                <input v-model="searchQuery" type="text" placeholder="Search 1000+ icons..." class="relative z-10 w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-full py-4 pl-14 pr-32 text-lg shadow-lg focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all placeholder:text-slate-400" />
                 <div class="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-bold font-mono bg-slate-100 dark:bg-slate-800 text-slate-500 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-700 z-20 pointer-events-none">
                     <span class="text-indigo-600 dark:text-indigo-400">{{ displayedIcons.length }}</span> / {{ filteredIcons.length }}
                 </div>
             </div>
 
             <div class="flex flex-wrap justify-center gap-2 w-full">
-                <button 
-                    v-for="cat in categories" 
-                    :key="cat.id"
-                    @click="selectCategory(cat.id)"
-                    class="px-4 py-2 rounded-full text-sm font-semibold transition-all border"
-                    :class="activeCategory === cat.id 
-                        ? 'bg-indigo-600 text-white border-indigo-600 shadow-lg shadow-indigo-500/30 transform scale-105' 
-                        : 'bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-800 hover:border-indigo-300 dark:hover:border-indigo-700 hover:bg-slate-50 dark:hover:bg-slate-800'"
-                >
+                <button v-for="cat in categories" :key="cat.id" @click="selectCategory(cat.id)" class="px-4 py-2 rounded-full text-sm font-semibold transition-all border" :class="activeCategory === cat.id ? 'bg-indigo-600 text-white border-indigo-600 shadow-lg shadow-indigo-500/30 transform scale-105' : 'bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-800 hover:border-indigo-300 dark:hover:border-indigo-700 hover:bg-slate-50 dark:hover:bg-slate-800'">
                     {{ cat.name }}
                 </button>
             </div>
@@ -188,8 +185,8 @@ const copyToClipboard = () => {
       
       <div class="relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 w-full max-w-3xl rounded-2xl shadow-2xl flex flex-col md:flex-row overflow-hidden transform transition-all scale-100 ring-1 ring-white/10">
         
-        <div class="w-full md:w-5/12 bg-slate-50 dark:bg-slate-950 flex items-center justify-center p-10 relative border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-800 group">
-          <div class="absolute inset-0 opacity-5 dark:opacity-10" style="background-image: radial-gradient(currentColor 1px, transparent 1px); background-size: 20px 20px;"></div>
+        <div class="w-full md:w-5/12 bg-slate-50 flex items-center justify-center p-10 relative border-b md:border-b-0 md:border-r border-slate-200 group">
+          <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#000000 1px, transparent 1px); background-size: 20px 20px;"></div>
           <FluxIcon :name="selectedIcon" :size="customize.size" :color="customize.color" :stroke-width="customize.stroke" :spin="customize.spin" class="relative z-10 drop-shadow-2xl transition-all duration-300 group-hover:scale-105" />
         </div>
 
@@ -205,10 +202,10 @@ const copyToClipboard = () => {
           </div>
           
           <div class="space-y-6">
-              <div>
+              <div v-if="isColorable">
                 <label class="text-[10px] font-bold text-slate-400 uppercase block mb-3 tracking-wider">Color</label>
                 <div class="flex gap-3 items-center">
-                    <button v-for="c in ['#6366f1','#10b981','#f43f5e','#f59e0b','#3b82f6','#000000','#ffffff']" :key="c" @click="customize.color=c" class="w-8 h-8 rounded-full border border-slate-200 dark:border-slate-700 shadow-sm hover:scale-110 focus:ring-2 ring-offset-2 ring-offset-white dark:ring-offset-slate-900 ring-indigo-500 transition-all" :style="{background:c}"></button>
+                    <button v-for="c in ['#000000','#ffffff','#6366f1','#10b981','#f43f5e','#f59e0b']" :key="c" @click="customize.color=c" class="w-8 h-8 rounded-full border border-slate-200 dark:border-slate-700 shadow-sm hover:scale-110 focus:ring-2 ring-offset-2 ring-offset-white dark:ring-offset-slate-900 ring-indigo-500 transition-all" :style="{background:c}"></button>
                     <div class="w-8 h-8 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center overflow-hidden relative cursor-pointer hover:border-indigo-500 transition-colors bg-slate-50 dark:bg-slate-800">
                         <input type="color" v-model="customize.color" class="absolute -top-2 -left-2 w-16 h-16 cursor-pointer p-0 border-0 opacity-0"/>
                         <FluxIcon name="plus" size="14" class="text-slate-400 pointer-events-none"/>
