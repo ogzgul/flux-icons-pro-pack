@@ -12,11 +12,6 @@ export default defineNuxtConfig({
     url: 'https://flux-icon.com',
   },
 
-  // Google Analytics Ayarı
-  gtag: {
-    id: 'G-XXXXXXXXXX' // Kendi ID'ni buraya yazmayı unutma
-  },
-
   css: [
     '~/assets/css/main.css',       // DOĞRU (Tilde ile başlar)
     '~/assets/css/animations.css'  // DOĞRU (Tilde ile başlar)
