@@ -1,4 +1,4 @@
-import { computed as c, createElementBlock as s, openBlock as h, normalizeStyle as n, normalizeClass as a } from "vue";
+import { computed as e, createElementBlock as c, openBlock as s, normalizeStyle as n, normalizeClass as a } from "vue";
 const d = {
   // ==========================================
   // 1. SOSYAL MEDYA & MARKALAR
@@ -4599,7 +4599,7 @@ const d = {
     <path d="M8 2l2-2M14 2l2-2" stroke="#EA580C" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
     <path d="M8 10h8M9 14h6" stroke="white" stroke-width="1" stroke-opacity="0.4"/>
     </svg>`
-}, p = ["width", "height", "fill", "stroke", "stroke-width", "innerHTML"], k = {
+}, p = ["width", "height", "fill", "stroke-width", "innerHTML"], k = {
   key: 1,
   style: { color: "red", "font-size": "10px", display: "inline-block", width: "24px", "text-align": "center" }
 }, y = {
@@ -4608,37 +4608,43 @@ const d = {
     name: { type: String, required: !0 },
     size: { type: [Number, String], default: 24 },
     color: { type: String, default: "currentColor" },
-    strokeWidth: { type: [Number, String], default: 1 },
+    strokeWidth: { type: [Number, String], default: 1.5 },
+    // Varsayılan incelttik
     className: { type: String, default: "" },
-    spin: { type: Boolean, default: !1 }
+    spin: { type: Boolean, default: !1 },
+    // YENİ: Animasyon Prop'u
+    animation: { type: String, default: "" }
   },
   setup(r) {
-    const i = r, l = c(() => d[i.name] || ""), t = c(() => {
-      const o = l.value, e = i.name;
-      return e.startsWith("liquid-") || e.startsWith("flag-") || e.startsWith("sticker-") ? "original" : o.includes('stroke="none"') || o.includes("fill=") && !o.includes('fill="none"') ? "solid" : "outline";
-    });
-    return (o, e) => l.value ? (h(), s("svg", {
+    const o = r, l = e(() => d[o.name] || ""), i = e(() => {
+      const t = o.name;
+      return t.startsWith("liquid-") || t.startsWith("flag-") || t.startsWith("sticker-") || t.startsWith("brand-original") ? "original" : "universal";
+    }), h = e(() => o.animation ? `flux-anim-${o.animation}` : "");
+    return (t, u) => l.value ? (s(), c("svg", {
       key: 0,
       width: r.size,
       height: r.size,
       viewBox: "0 0 24 24",
-      class: a([r.className, { "flux-spin": r.spin }]),
+      class: a([
+        r.className,
+        { "flux-spin": r.spin },
+        h.value
+      ]),
       style: n({ color: r.color }),
-      fill: t.value === "outline" || t.value === "original" ? "none" : "currentColor",
-      stroke: t.value === "outline" ? "currentColor" : "none",
-      "stroke-width": t.value === "outline" ? r.strokeWidth : "0",
+      fill: (i.value === "original", "none"),
+      "stroke-width": i.value === "original" ? 0 : r.strokeWidth,
       "stroke-linecap": "round",
       "stroke-linejoin": "round",
       innerHTML: l.value
-    }, null, 14, p)) : (h(), s("span", k, "?"));
+    }, null, 14, p)) : (s(), c("span", k, "?"));
   }
-}, w = {
+}, x = {
   install: (r) => {
     r.component("FluxIcon", y);
   }
 };
 export {
   y as FluxIcon,
-  w as default,
+  x as default,
   d as icons
 };
