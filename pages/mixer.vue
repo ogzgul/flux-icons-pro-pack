@@ -2,6 +2,12 @@
 import { ref, computed, watch, onMounted } from 'vue';
 import { useFluxIcons } from '@/composables/useFluxIcons';
 
+// --- SAYFA BAŞLIĞI ---
+useHead({
+  title: 'Mixer'
+});
+
+
 const { icons } = useFluxIcons();
 
 // --- STATE ---
