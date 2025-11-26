@@ -50,7 +50,19 @@ onMounted(() => {
     </nav>
 
     <slot />
-    
+    <footer class="bg-slate-100 dark:bg-slate-900 py-8 mt-12 border-t border-slate-200 dark:border-slate-800">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-sm text-slate-500">
+      © {{ new Date().getFullYear() }} Flux Icons. All rights reserved.
+    </div>
+    <div class="flex gap-6 text-sm font-medium text-slate-600 dark:text-slate-400">
+      <NuxtLink to="/about" class="hover:text-indigo-600 transition-colors">About</NuxtLink>
+      <NuxtLink to="/privacy-policy" class="hover:text-indigo-600 transition-colors">Privacy</NuxtLink>
+      <NuxtLink to="/terms" class="hover:text-indigo-600 transition-colors">Terms</NuxtLink>
+      <NuxtLink to="/contact" class="hover:text-indigo-600 transition-colors">Contact</NuxtLink>
+    </div>
+  </div>
+</footer>
   </div>
 </template>
 
