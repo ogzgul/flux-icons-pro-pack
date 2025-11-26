@@ -45,15 +45,15 @@ export default defineNuxtConfig({
       ],
 
 // AdSense Kodu (İlerde aktifleşince buraya ID gelecek)
-      /*
+  
       script: [
         {
-          src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX',
+          src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8958196183964469',
           async: true,
           crossorigin: 'anonymous'
         }
       ]
-      */
+
 
 
     }
