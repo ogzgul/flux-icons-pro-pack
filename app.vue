@@ -21,10 +21,18 @@ useHead({
       <textarea name="message"></textarea>
     </form>
 
-    <!-- Asıl uygulama -->
+   <div class="flex flex-col min-h-screen bg-slate-50 dark:bg-slate-950">
     <NuxtLayout>
-      <NuxtPage />
+      
+      <div class="flex-grow">
+        <NuxtPage />
+      </div>
+
+      <FluxFooter />
+
       <CookieBanner />
+
     </NuxtLayout>
+  </div>
   </div>
 </template>

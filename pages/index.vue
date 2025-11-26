@@ -2,7 +2,47 @@
 import { ref, computed, onMounted, onUnmounted, watch } from "vue";
 import { useFluxIcons } from '@/composables/useFluxIcons';
 
+// --- SEO META ---
+useHead({
+  title: 'Flux Icons - 1500+ Modern SVG Icons for Vue & Nuxt',
+  meta: [
+    { name: 'description', content: 'The ultimate open-source icon library for modern web development. Over 1500+ customizable SVG icons including Solid, Outline, Liquid, and Animated styles. Optimized for Vue.js and Nuxt.js.' },
+    { name: 'keywords', content: 'vue icons, nuxt icons, svg icons, open source icons, web design icons, animated icons, liquid icons' }
+  ]
+});
+
 const { icons } = useFluxIcons();
+
+// --- EŞ ANLAMLI SÖZLÜĞÜ (AKILLI ARAMA) ---
+const aliases = {
+  'invoice': 'receipt',
+  'bill': 'receipt',
+  'picture': 'image',
+  'photo': 'image',
+  'security': 'shield',
+  'safe': 'lock',
+  'people': 'user',
+  'person': 'user',
+  'profile': 'user',
+  'garbage': 'trash',
+  'delete': 'trash',
+  'remove': 'trash',
+  'add': 'plus',
+  'create': 'plus',
+  'music': 'note',
+  'song': 'note',
+  'play': 'media',
+  'video': 'film',
+  'movie': 'film',
+  'gear': 'setting',
+  'config': 'setting',
+  'wifi': 'signal',
+  'internet': 'wifi',
+  'connection': 'link',
+  'mail': 'envelope',
+  'message': 'chat',
+  'sms': 'chat'
+};
 
 // --- AYARLAR ---
 const searchQuery = ref("");
@@ -20,7 +60,7 @@ const customize = useCookie('flux_settings', {
         stroke: 1, 
         type: "class", 
         spin: false,
-        animation: "" // YENİ: Varsayılan animasyon yok
+        animation: ""
     }),
     watch: true 
 });
@@ -43,7 +83,6 @@ const isColorable = computed(() => {
     return true; 
 });
 
-// --- EFEKTİF RENK ---
 const effectiveColor = computed(() => {
     return isColorable.value ? customize.value.color : '#000000'; 
 });
@@ -60,25 +99,48 @@ const categories = [
   { id: 'chart-', name: 'Charts' }
 ];
 
-// --- FİLTRELEME ---
+// --- GELİŞMİŞ FİLTRELEME (DÜZELTİLDİ) ---
 const allIconNames = computed(() => Object.keys(icons).sort());
 const filteredIcons = computed(() => {
-  const query = searchQuery.value.toLowerCase();
+  // 1. Boşlukları temizle ve küçük harfe çevir
+  let query = searchQuery.value.trim().toLowerCase();
   const category = activeCategory.value;
+
+  // 2. Alias (Eş Anlamlı) Kısmi Arama
+  // Kullanıcının yazdığı 'inv', 'invoice' anahtarının içinde geçiyor mu?
+  // Geçiyorsa, o anahtarın karşılığı olan 'receipt' kelimesini de arama listesine ekle.
+  const matchedAliases = Object.keys(aliases)
+    .filter(key => key.includes(query)) // 'inv' -> 'invoice' bulur
+    .map(key => aliases[key]); // 'invoice' -> 'receipt' alır
+
   return allIconNames.value.filter(name => {
-    const matchesSearch = name.includes(query);
+    // Arama Mantığı: 
+    // 1. İsimde query geçiyor mu? (receipt -> receipt)
+    // 2. VEYA bulunan eş anlamlılardan biri isimde geçiyor mu? (inv -> invoice -> receipt)
+    const matchesSearch = name.includes(query) || matchedAliases.some(alias => name.includes(alias));
+    
     let matchesCategory = true;
     if (category !== 'all') matchesCategory = name.startsWith(category);
+    
     return matchesSearch && matchesCategory;
   });
 });
+
 const displayedIcons = computed(() => filteredIcons.value.slice(0, visibleCount.value));
 
+// --- GELİŞMİŞ SCROLL (DÜZELTİLDİ) ---
 const handleScroll = () => {
-  if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 100) {
-    if (visibleCount.value < filteredIcons.value.length) visibleCount.value += 50;
+  const scrollPosition = window.scrollY + window.innerHeight;
+  const totalHeight = document.documentElement.scrollHeight;
+  
+  // En dibe gelmesini bekleme, 300px kala yükle (Daha akıcı)
+  if (scrollPosition >= totalHeight - 400) {
+    if (visibleCount.value < filteredIcons.value.length) {
+        visibleCount.value += 50;
+    }
   }
 };
+
 const selectCategory = (id) => {
     activeCategory.value = id;
     visibleCount.value = 50;
@@ -90,15 +152,13 @@ onUnmounted(() => window.removeEventListener("scroll", handleScroll));
 const openModal = (name) => { selectedIcon.value = name; isModalOpen.value = true; copied.value = false; };
 const closeModal = () => { isModalOpen.value = false; };
 
-// --- KOD ÇIKTISI (GÜNCELLENDİ) ---
+// --- KOD ÇIKTISI ---
 const generatedCode = computed(() => {
   if (!selectedIcon.value) return "";
   const sizeValue = customize.value.size;
   const colorValue = isColorable.value ? customize.value.color : '#000000'; 
   const strokeValue = customize.value.stroke;
   const strokeAttr = strokeValue !== 1 ? ` stroke-width="${strokeValue}"` : '';
-  
-  // Animasyonlar
   const spinProp = customize.value.spin ? ' spin' : '';
   const spinClass = customize.value.spin ? ' flux-spin' : '';
   const animProp = customize.value.animation ? ` animation="${customize.value.animation}"` : '';
@@ -107,18 +167,13 @@ const generatedCode = computed(() => {
   const colorStyle = ` color: ${colorValue};`;
   const customStyle = `style="font-size: ${sizeValue}px;${colorStyle}"`;
 
-  // 1. CLASS (HTML)
   if (customize.value.type === "class") {
     return `<i class="flux-icon flux-icon-${selectedIcon.value}${spinClass}${animClass}" ${customStyle}></i>`;
   }
-  
-  // 2. COMPONENT
   if (customize.value.type === "component") {
     const colorProp = isColorable.value ? ` color="${colorValue}"` : '';
     return `<FluxIcon name="${selectedIcon.value}" size="${sizeValue}"${colorProp}${strokeAttr}${spinProp}${animProp} />`;
   } 
-  
-  // 3. SVG
   if (customize.value.type === "html") {
       const svgClasses = (spinClass + animClass).trim();
       const classAttr = svgClasses ? ` class="${svgClasses}"` : '';
@@ -138,8 +193,36 @@ const copyToClipboard = () => {
 <template>
   <main class="max-w-7xl mx-auto p-6 min-h-screen">
     
+    <div class="text-center py-12 max-w-3xl mx-auto space-y-6">
+        <h1 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
+            Supercharge Your UI with <span class="text-indigo-600 dark:text-indigo-400">Flux Icons</span>
+        </h1>
+        <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+            The ultimate collection of <span class="font-bold text-slate-800 dark:text-slate-200">1500+</span> pixel-perfect, animated, and customizable SVG icons. Designed specifically for Vue.js, Nuxt, and modern web applications.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 text-left">
+            <div class="p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow text-left">
+                <FluxIcon name="magic-wand" size="32" class="text-pink-500 mb-3" />
+                <h3 class="font-bold text-slate-900 dark:text-white mb-1">Fully Animated</h3>
+                <p class="text-xs text-slate-500">Bring your UI to life with built-in hover effects like shake, bounce, and beat.</p>
+            </div>
+            <div class="p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow">
+                <FluxIcon name="layers-floating" size="32" class="text-indigo-500 mb-3" />
+                <h3 class="font-bold text-slate-900 dark:text-white mb-1">Multiple Styles</h3>
+                <p class="text-xs text-slate-500">Choose from Outline, Solid, Striped, and our exclusive Liquid Glass style.</p>
+            </div>
+            <div class="p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow">
+                <FluxIcon name="code-block" size="32" class="text-emerald-500 mb-3" />
+                <h3 class="font-bold text-slate-900 dark:text-white mb-1">Developer First</h3>
+                <p class="text-xs text-slate-500">Tree-shakeable Vue components, pure SVG, or Webfont. Your choice.</p>
+            </div>
+        </div>
+    </div>
+
     <div class="sticky top-0 z-30 bg-slate-50/95 dark:bg-slate-950/95 backdrop-blur-md py-6 mb-8 border-b border-slate-200 dark:border-slate-800 shadow-sm transition-all">
         <div class="flex flex-col items-center gap-6 max-w-4xl mx-auto px-4">
+            
             <div class="relative w-full group">
                 <div class="absolute inset-0 bg-indigo-500/10 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                 <span class="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 pointer-events-none z-20">
@@ -150,13 +233,14 @@ const copyToClipboard = () => {
                     <span class="text-indigo-600 dark:text-indigo-400">{{ displayedIcons.length }}</span> / {{ filteredIcons.length }}
                 </div>
             </div>
+
             <div class="flex flex-wrap justify-center gap-2 w-full">
                 <button v-for="cat in categories" :key="cat.id" @click="selectCategory(cat.id)" class="px-4 py-2 rounded-full text-sm font-semibold transition-all border" :class="activeCategory === cat.id ? 'bg-indigo-600 text-white border-indigo-600 shadow-lg shadow-indigo-500/30 transform scale-105' : 'bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-800 hover:border-indigo-300 dark:hover:border-indigo-700 hover:bg-slate-50 dark:hover:bg-slate-800'">{{ cat.name }}</button>
             </div>
+
            
         </div>
     </div>
-
 
 
     <div class="max-w-4xl mx-auto px-4 mb-8">
@@ -175,7 +259,6 @@ const copyToClipboard = () => {
             </div>
         </NuxtLink>
     </div>
-
 
 
     <div v-if="filteredIcons.length === 0" class="text-center py-20">
@@ -200,6 +283,26 @@ const copyToClipboard = () => {
         <FluxIcon name="loader-5" spin size="16" class="text-indigo-500" /> Loading more icons...
       </span>
     </div>
+
+    <section class="max-w-4xl mx-auto mt-20 pt-10 border-t border-slate-200 dark:border-slate-800">
+        <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Why Choose Flux Icons?</h2>
+        <div class="prose prose-slate dark:prose-invert max-w-none text-sm text-slate-600 dark:text-slate-400 space-y-4">
+            <p>
+                Flux Icons is not just another icon set; it's a comprehensive design system built for modern web applications. Whether you are building a dashboard, a marketing site, or a mobile app, Flux Icons provides the versatility and quality you need.
+            </p>
+            <p>
+                Our library includes over 1500 icons across various categories like User Interface, Finance, Education, and Technology. With unique styles like "Liquid Glass" and "Striped", you can make your project stand out from the crowd.
+            </p>
+            <h3 class="text-lg font-semibold text-slate-800 dark:text-slate-200 mt-6">Key Features:</h3>
+            <ul class="list-disc pl-5 space-y-2">
+                <li><strong>Framework Agnostic:</strong> Use as SVG, Webfont, or Vue/Nuxt component.</li>
+                <li><strong>Fully Customizable:</strong> Adjust size, stroke width, and color with ease.</li>
+                <li><strong>Performance Optimized:</strong> Lightweight SVGs ensure fast load times.</li>
+                <li><strong>Open Source:</strong> Free to use in personal and commercial projects.</li>
+            </ul>
+        </div>
+    </section>
+
   </main>
 
   <Transition name="fade">
@@ -210,7 +313,6 @@ const copyToClipboard = () => {
         
         <div class="w-full md:w-5/12 bg-white flex items-center justify-center p-10 relative border-b md:border-b-0 md:border-r border-slate-200 group">
           <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#000000 1px, transparent 1px); background-size: 20px 20px;"></div>
-          
           <FluxIcon 
             :name="selectedIcon" 
             :size="customize.size" 
@@ -218,7 +320,7 @@ const copyToClipboard = () => {
             :stroke-width="customize.stroke" 
             :spin="customize.spin" 
             :animation="customize.animation"
-            class="relative z-10 transition-all duration-300 group-hover:scale-105" 
+            class="relative z-10 drop-shadow-2xl transition-all duration-300 group-hover:scale-105" 
           />
         </div>
 
@@ -269,7 +371,7 @@ const copyToClipboard = () => {
                     </label>
                 </div>
                 <div class="flex gap-2 flex-wrap">
-                    <button v-for="anim in ['none', 'shake', 'beat', 'bounce-y', 'pop', 'wiggle', 'drive', 'float', 'spin-pulse', 'glow', 'flip-x', 'flip-y', 'tada', 'rubber', 'swing']"
+                    <button v-for="anim in ['none', 'shake', 'beat', 'bounce-y', 'pop', 'wiggle', 'drive', 'float', 'spin-pulse', 'glow', 'flip-x', 'flip-y', 'tada', 'rubber', 'swing']" 
                             :key="anim"
                             @click="customize.animation = (anim === 'none' ? '' : anim)"
                             class="px-3 py-1.5 text-xs font-medium rounded-lg border transition-all"

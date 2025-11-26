@@ -1,7 +1,22 @@
 ﻿// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    'nuxt-gtag',
+    '@nuxtjs/sitemap' // <-- BURAYA EKLE
+  ],
+  // Sitemap Ayarı (Kendi site adresini yaz)
+  // HATA VEREN "site: {}" YERİNE BUNU KULLAN:
+  site: {
+    Url: 'https://flux-icon.com',
+  },
+
+  // Google Analytics Ayarı
+  gtag: {
+    id: 'G-XXXXXXXXXX' // Kendi ID'ni buraya yazmayı unutma
+  },
+
   css: [
     '~/assets/css/main.css',       // DOĞRU (Tilde ile başlar)
     '~/assets/css/animations.css'  // DOĞRU (Tilde ile başlar)
@@ -27,7 +42,21 @@ export default defineNuxtConfig({
         
         // Eğer PNG attıysan (örneğin logo.png):
         { rel: 'icon', type: 'image/png',sizes: '256x256', href: '/logo.png' }
+      ],
+
+// AdSense Kodu (İlerde aktifleşince buraya ID gelecek)
+      /*
+      script: [
+        {
+          src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX',
+          async: true,
+          crossorigin: 'anonymous'
+        }
       ]
+      */
+
+
     }
-  }
+  },
+  
 })
