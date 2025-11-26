@@ -148,22 +148,22 @@ const copyToClipboard = () => {
     </div>
 
 
-<div class="max-w-4xl mx-auto px-4 mb-8">
-    <NuxtLink to="/mixer" class="block bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-6 text-white shadow-lg hover:shadow-xl hover:scale-[1.01] transition-all group">
-        <div class="flex items-center justify-between">
-            <div>
-                <h3 class="text-xl font-bold flex items-center gap-2">
-                    <FluxIcon name="layers-floating" class="text-yellow-300" /> 
-                    Yeni: Icon Mixer
-                </h3>
-                <p class="text-indigo-100 text-sm mt-1">Kendi ikon kombinasyonlarını yarat. Dosya + Kilit? Kullanıcı + Yıldız? Sen seç!</p>
+    <div class="max-w-4xl mx-auto px-4 mb-8">
+        <NuxtLink to="/mixer" class="block bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-6 text-white shadow-lg hover:shadow-xl hover:scale-[1.01] transition-all group">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h3 class="text-xl font-bold flex items-center gap-2">
+                        <FluxIcon name="layers-floating" class="text-yellow-300" /> 
+                        New: Icon Mixer
+                    </h3>
+                    <p class="text-indigo-100 text-sm mt-1">Create custom icon combinations. File + Lock? User + Star? You decide!</p>
+                </div>
+                <div class="bg-white/20 p-2 rounded-lg group-hover:bg-white/30 transition-colors">
+                    <FluxIcon name="arrow-right-heavy" />
+                </div>
             </div>
-            <div class="bg-white/20 p-2 rounded-lg group-hover:bg-white/30 transition-colors">
-                <FluxIcon name="arrow-right-heavy" />
-            </div>
-        </div>
-    </NuxtLink>
-</div>
+        </NuxtLink>
+    </div>
 
 
     <div v-if="filteredIcons.length === 0" class="text-center py-20">
