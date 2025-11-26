@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   // Sitemap Ayarı (Kendi site adresini yaz)
   // HATA VEREN "site: {}" YERİNE BUNU KULLAN:
   site: {
-    Url: 'https://flux-icon.com',
+    url: 'https://flux-icon.com',
   },
 
   // Google Analytics Ayarı
