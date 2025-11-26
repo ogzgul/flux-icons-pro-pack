@@ -19,9 +19,10 @@ const customize = useCookie('flux_settings', {
         color: "#000000", 
         stroke: 1, 
         type: "class", 
-        spin: false 
+        spin: false,
+        animation: "" // YENİ: Varsayılan animasyon yok
     }),
-    watch: true
+    watch: true 
 });
 
 // Class modunda stroke sabit
@@ -31,11 +32,10 @@ watch(() => customize.value.type, (newType) => {
     }
 });
 
-// --- RENK DEĞİŞTİRİLEBİLİR Mİ? ---
+// --- RENK PALETİ KONTROLÜ ---
 const isColorable = computed(() => {
     if (!selectedIcon.value) return true;
     const name = selectedIcon.value;
-    // Bu tiplerin rengi sabittir (Siyah veya Orijinal)
     const staticTypes = ['liquid-', 'flag-', 'sticker-', 'original', 'brand-', 'fill', 'solid'];
     if (staticTypes.some(type => name.includes(type))) {
         return false;
@@ -43,6 +43,7 @@ const isColorable = computed(() => {
     return true; 
 });
 
+// --- EFEKTİF RENK ---
 const effectiveColor = computed(() => {
     return isColorable.value ? customize.value.color : '#000000'; 
 });
@@ -89,32 +90,40 @@ onUnmounted(() => window.removeEventListener("scroll", handleScroll));
 const openModal = (name) => { selectedIcon.value = name; isModalOpen.value = true; copied.value = false; };
 const closeModal = () => { isModalOpen.value = false; };
 
-// --- KOD ÇIKTISI ---
+// --- KOD ÇIKTISI (GÜNCELLENDİ) ---
 const generatedCode = computed(() => {
   if (!selectedIcon.value) return "";
   const sizeValue = customize.value.size;
-  // Renk seçilebiliyorsa seçilen rengi, değilse siyahı kullan.
   const colorValue = isColorable.value ? customize.value.color : '#000000'; 
   const strokeValue = customize.value.stroke;
   const strokeAttr = strokeValue !== 1 ? ` stroke-width="${strokeValue}"` : '';
-  const spinAttr = customize.value.spin ? ' spin' : '';
-  const spinClass = customize.value.spin ? ' flux-spin' : '';
   
-  // Renk stili sadece renk değişebiliyorsa eklenir
-  const colorStyle = isColorable.value ? ` color: ${colorValue};` : '';
+  // Animasyonlar
+  const spinProp = customize.value.spin ? ' spin' : '';
+  const spinClass = customize.value.spin ? ' flux-spin' : '';
+  const animProp = customize.value.animation ? ` animation="${customize.value.animation}"` : '';
+  const animClass = customize.value.animation ? ` flux-anim-${customize.value.animation}` : '';
+  
+  const colorStyle = ` color: ${colorValue};`;
   const customStyle = `style="font-size: ${sizeValue}px;${colorStyle}"`;
 
+  // 1. CLASS (HTML)
   if (customize.value.type === "class") {
-    return `<i class="flux-icon flux-icon-${selectedIcon.value}${spinClass}" ${customStyle}></i>`;
+    return `<i class="flux-icon flux-icon-${selectedIcon.value}${spinClass}${animClass}" ${customStyle}></i>`;
   }
+  
+  // 2. COMPONENT
   if (customize.value.type === "component") {
     const colorProp = isColorable.value ? ` color="${colorValue}"` : '';
-    return `<FluxIcon name="${selectedIcon.value}" size="${sizeValue}"${colorProp}${strokeAttr}${spinAttr} />`;
+    return `<FluxIcon name="${selectedIcon.value}" size="${sizeValue}"${colorProp}${strokeAttr}${spinProp}${animProp} />`;
   } 
+  
+  // 3. SVG
   if (customize.value.type === "html") {
-      const svgSpinClass = customize.value.spin ? ' class="flux-spin"' : '';
+      const svgClasses = (spinClass + animClass).trim();
+      const classAttr = svgClasses ? ` class="${svgClasses}"` : '';
       const svgColor = isColorable.value ? colorValue : 'currentColor';
-      return `<svg width="${sizeValue}" height="${sizeValue}" viewBox="0 0 24 24" fill="none" stroke="${svgColor}" stroke-width="${strokeValue}" stroke-linecap="round" stroke-linejoin="round"${svgSpinClass}>${icons[selectedIcon.value]}</svg>`;
+      return `<svg width="${sizeValue}" height="${sizeValue}" viewBox="0 0 24 24" fill="none" stroke="${svgColor}" stroke-width="${strokeValue}" stroke-linecap="round" stroke-linejoin="round"${classAttr}>${icons[selectedIcon.value]}</svg>`;
   }
   return "";
 });
@@ -144,8 +153,10 @@ const copyToClipboard = () => {
             <div class="flex flex-wrap justify-center gap-2 w-full">
                 <button v-for="cat in categories" :key="cat.id" @click="selectCategory(cat.id)" class="px-4 py-2 rounded-full text-sm font-semibold transition-all border" :class="activeCategory === cat.id ? 'bg-indigo-600 text-white border-indigo-600 shadow-lg shadow-indigo-500/30 transform scale-105' : 'bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-800 hover:border-indigo-300 dark:hover:border-indigo-700 hover:bg-slate-50 dark:hover:bg-slate-800'">{{ cat.name }}</button>
             </div>
+           
         </div>
     </div>
+
 
 
     <div class="max-w-4xl mx-auto px-4 mb-8">
@@ -164,6 +175,7 @@ const copyToClipboard = () => {
             </div>
         </NuxtLink>
     </div>
+
 
 
     <div v-if="filteredIcons.length === 0" class="text-center py-20">
@@ -196,7 +208,7 @@ const copyToClipboard = () => {
       
       <div class="relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 w-full max-w-3xl rounded-2xl shadow-2xl flex flex-col md:flex-row overflow-hidden transform transition-all scale-100 ring-1 ring-white/10">
         
-        <div class="w-full md:w-5/12 bg-slate-50 flex items-center justify-center p-10 relative border-b md:border-b-0 md:border-r border-slate-200 group">
+        <div class="w-full md:w-5/12 bg-white flex items-center justify-center p-10 relative border-b md:border-b-0 md:border-r border-slate-200 group">
           <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#000000 1px, transparent 1px); background-size: 20px 20px;"></div>
           
           <FluxIcon 
@@ -205,7 +217,8 @@ const copyToClipboard = () => {
             :color="effectiveColor" 
             :stroke-width="customize.stroke" 
             :spin="customize.spin" 
-            class="relative z-10 drop-shadow-2xl transition-all duration-300 group-hover:scale-105" 
+            :animation="customize.animation"
+            class="relative z-10 transition-all duration-300 group-hover:scale-105" 
           />
         </div>
 
@@ -247,17 +260,26 @@ const copyToClipboard = () => {
                 </div>
               </div>
 
-              <div v-if="customize.type === 'class'" class="text-[11px] font-medium text-amber-600 bg-amber-50 dark:bg-amber-900/20 p-3 rounded-lg border border-amber-100 dark:border-amber-800/50 flex items-start gap-2">
-                  <FluxIcon name="info-circle-solid" size="16" class="shrink-0 mt-0.5" />
-                  <span>Webfont mode uses fixed stroke width. Use 'SVG' or 'Vue' mode for adjustable thickness.</span>
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                    <label class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Animation</label>
+                    <label class="flex items-center gap-2 cursor-pointer hover:text-indigo-500 transition-colors">
+                         <span class="text-[10px] font-bold text-slate-500 uppercase">Spin</span>
+                         <input type="checkbox" v-model="customize.spin" class="w-4 h-4 accent-indigo-600 rounded border-gray-300 cursor-pointer">
+                    </label>
+                </div>
+                <div class="flex gap-2 flex-wrap">
+                    <button v-for="anim in ['none', 'shake', 'beat', 'bounce-y', 'pop', 'wiggle', 'drive', 'float', 'spin-pulse', 'glow', 'flip-x', 'flip-y', 'tada', 'rubber', 'swing']"
+                            :key="anim"
+                            @click="customize.animation = (anim === 'none' ? '' : anim)"
+                            class="px-3 py-1.5 text-xs font-medium rounded-lg border transition-all"
+                            :class="customize.animation === anim || (anim==='none' && !customize.animation) 
+                                ? 'bg-indigo-600 text-white border-indigo-600 shadow-sm' 
+                                : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-indigo-300 dark:hover:border-indigo-500'">
+                        {{ anim === 'none' ? 'None' : anim.charAt(0).toUpperCase() + anim.slice(1) }}
+                    </button>
+                </div>
               </div>
-
-              <label class="flex items-center justify-between bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl border border-slate-200 dark:border-slate-700 cursor-pointer hover:border-indigo-500 transition-colors group">
-                 <span class="text-xs font-bold text-slate-600 dark:text-slate-300 flex items-center gap-2 group-hover:text-indigo-500 transition-colors">
-                    <FluxIcon name="refresh-cw" size="16" :spin="true" class="text-indigo-500" /> Animated (Spin)
-                 </span>
-                 <input type="checkbox" v-model="customize.spin" class="w-5 h-5 accent-indigo-600 rounded border-gray-300 focus:ring-indigo-500 cursor-pointer">
-              </label>
           </div>
 
           <div class="mt-auto">
@@ -283,7 +305,10 @@ const copyToClipboard = () => {
   </Transition>
 </template>
 
-<style>
+<style scoped>
 .fade-enter-active, .fade-leave-active { transition: opacity 0.2s ease; }
 .fade-enter-from, .fade-leave-to { opacity: 0; }
+.custom-scrollbar::-webkit-scrollbar { width: 6px; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: #475569; border-radius: 4px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
 </style>

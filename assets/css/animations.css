@@ -1,0 +1,177 @@
+/* assets/css/flux-animations.css */
+
+/* ==============================
+   KLASİKLER (GÜÇLENDİRİLMİŞ)
+   ============================== */
+
+/* 1. SHAKE (Güçlü Sallanma) */
+/* Bildirimler ve ziller için ideal */
+@keyframes flux-shake {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(-15deg); }
+  40% { transform: rotate(15deg); }
+  60% { transform: rotate(-10deg); }
+  80% { transform: rotate(10deg); }
+}
+.flux-anim-shake {
+  animation: flux-shake 0.5s ease-in-out infinite;
+}
+
+/* 2. BEAT (Güçlü Kalp Atışı) */
+/* Favori ve beğeniler için */
+@keyframes flux-beat {
+  0%, 100% { transform: scale(1); }
+  15% { transform: scale(1.25); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.15); }
+  60% { transform: scale(1); }
+}
+.flux-anim-beat {
+  animation: flux-beat 1.2s ease-in-out infinite;
+}
+
+/* 3. BOUNCE (Yüksek Zıplama) */
+/* Konum pinleri ve oklar için */
+@keyframes flux-bounce-y {
+  0%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-30%); animation-timing-function: cubic-bezier(0.8,0,1,1); }
+  60% { transform: translateY(0); animation-timing-function: cubic-bezier(0,0,0.2,1); }
+  70% { transform: translateY(-15%); }
+}
+.flux-anim-bounce-y {
+  animation: flux-bounce-y 1s infinite;
+}
+
+/* 4. POP (Patlama Efekti) */
+/* Butonlar ve öne çıkanlar için */
+@keyframes flux-pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
+.flux-anim-pop {
+  animation: flux-pop 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+}
+
+/* 5. WIGGLE (Hızlı Titreme) */
+/* Hata veya uyarı durumları için */
+@keyframes flux-wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(12deg); }
+  75% { transform: rotate(-12deg); }
+}
+.flux-anim-wiggle {
+  animation: flux-wiggle 0.3s ease-in-out infinite;
+}
+
+/* ==============================
+   HAREKET & YÖN (MOTION)
+   ============================== */
+
+/* 6. DRIVE (Sürüş - İleri Geri) */
+/* Araçlar ve oklar için */
+@keyframes flux-drive {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(12px); }
+  100% { transform: translateX(0); }
+}
+.flux-anim-drive {
+  animation: flux-drive 1s ease-in-out infinite;
+}
+
+/* 7. FLOAT (Süzülme - Havada Asılı Kalma) */
+/* Hayalet, bulut, uçak için */
+@keyframes flux-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.flux-anim-float {
+  animation: flux-float 2s ease-in-out infinite;
+}
+
+/* 8. SPIN PULSE (Dönerken Büyüme) */
+/* Yükleme ve işlem ikonları için */
+@keyframes flux-spin-pulse {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.2); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+.flux-anim-spin-pulse {
+  animation: flux-spin-pulse 1.5s linear infinite;
+}
+
+/* ==============================
+   EFEKTLER & DÖNÜŞÜMLER (FX)
+   ============================== */
+
+/* 9. GLOW (Neon Parlama) */
+/* Önemli ve dikkat çekici ikonlar için */
+@keyframes flux-glow {
+  0%, 100% { filter: drop-shadow(0 0 2px currentColor); opacity: 1; transform: scale(1); }
+  50% { filter: drop-shadow(0 0 8px currentColor); opacity: 0.8; transform: scale(1.05); }
+}
+.flux-anim-glow {
+  animation: flux-glow 2s ease-in-out infinite;
+}
+
+/* 10. FLIP X (Yatay Takla) */
+/* Para birimi ve kartlar için */
+@keyframes flux-flip-x {
+  0% { transform: perspective(400px) rotateY(0); }
+  100% { transform: perspective(400px) rotateY(360deg); }
+}
+.flux-anim-flip-x {
+  animation: flux-flip-x 2.5s linear infinite;
+}
+
+/* 11. FLIP Y (Dikey Takla) */
+/* Saat ve takvim için */
+@keyframes flux-flip-y {
+  0% { transform: perspective(400px) rotateX(0); }
+  100% { transform: perspective(400px) rotateX(360deg); }
+}
+.flux-anim-flip-y {
+  animation: flux-flip-y 2.5s linear infinite;
+}
+
+/* 12. TADA (Sürpriz / Kutlama) */
+/* Hediye ve parti ikonları için */
+@keyframes flux-tada {
+  0% { transform: scale(1); }
+  10%, 20% { transform: scale(0.9) rotate(-3deg); }
+  30%, 50%, 70%, 90% { transform: scale(1.1) rotate(3deg); }
+  40%, 60%, 80% { transform: scale(1.1) rotate(-3deg); }
+  100% { transform: scale(1) rotate(0); }
+}
+.flux-anim-tada {
+  animation: flux-tada 1.2s ease-in-out infinite;
+}
+
+/* 13. RUBBER (Lastik Efekti) */
+/* Tıklanabilirlik hissi için */
+@keyframes flux-rubber {
+  0% { transform: scale3d(1, 1, 1); }
+  30% { transform: scale3d(1.25, 0.75, 1); }
+  40% { transform: scale3d(0.75, 1.25, 1); }
+  50% { transform: scale3d(1.15, 0.85, 1); }
+  65% { transform: scale3d(0.95, 1.05, 1); }
+  75% { transform: scale3d(1.05, 0.95, 1); }
+  100% { transform: scale3d(1, 1, 1); }
+}
+.flux-anim-rubber {
+  animation: flux-rubber 1s ease-in-out infinite;
+}
+
+/* 14. SWING (Sarkaç) */
+/* Asılı tabelalar ve etiketler için */
+@keyframes flux-swing {
+  20% { transform: rotate(15deg); }
+  40% { transform: rotate(-10deg); }
+  60% { transform: rotate(5deg); }
+  80% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+.flux-anim-swing {
+  transform-origin: top center;
+  animation: flux-swing 2s ease-in-out infinite;
+}

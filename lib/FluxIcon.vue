@@ -1,35 +1,31 @@
 <script setup>
 import { computed } from 'vue';
-import { icons } from './icons.js'; // Veriyi yan dosyadan çekiyoruz
+import { icons } from './icons.js';
 
 const props = defineProps({
   name: { type: String, required: true },
   size: { type: [Number, String], default: 24 },
   color: { type: String, default: "currentColor" },
-  strokeWidth: { type: [Number, String], default: 1 },
+  strokeWidth: { type: [Number, String], default: 1.5 }, // Varsayılan incelttik
   className: { type: String, default: "" },
-  spin: { type: Boolean, default: false }
+  spin: { type: Boolean, default: false },
+  // YENİ: Animasyon Prop'u
+  animation: { type: String, default: "" }
 });
 
 const iconPath = computed(() => icons[props.name] || "");
 
-// İkonun türünü analiz eden akıllı kontrol
 const iconType = computed(() => {
-  const path = iconPath.value;
   const name = props.name;
-
-  // 1. Liquid / Renkli İkonlar (Bunlara müdahale etme, olduğu gibi göster)
-  if (name.startsWith('liquid-') || name.startsWith('flag-') || name.startsWith('sticker-')) {
+  if (name.startsWith('liquid-') || name.startsWith('flag-') || name.startsWith('sticker-') || name.startsWith('brand-original')) {
     return 'original';
   }
+  return 'universal';
+});
 
-  // 2. Dolu (Solid/Brand) İkonlar (Stroke yok, Fill var)
-  if (path.includes('stroke="none"') || (path.includes('fill=') && !path.includes('fill="none"'))) {
-    return 'solid';
-  }
-
-  // 3. Varsayılan: Çizgisel (Outline) İkonlar
-  return 'outline';
+const animationClass = computed(() => {
+    if (!props.animation) return "";
+    return `flux-anim-${props.animation}`;
 });
 </script>
 
@@ -39,24 +35,26 @@ const iconType = computed(() => {
     :width="size" 
     :height="size" 
     viewBox="0 0 24 24" 
-    :class="[className, { 'flux-spin': spin }]"
+    :class="[
+        className, 
+        { 'flux-spin': spin },
+        animationClass
+    ]"
     :style="{ color: color }"
     
-    :fill="iconType === 'outline' ? 'none' : (iconType === 'original' ? 'none' : 'currentColor')"
-    
-    :stroke="iconType === 'outline' ? 'currentColor' : 'none'"
-    
-    :stroke-width="iconType === 'outline' ? strokeWidth : '0'"
+    :fill="iconType === 'original' ? 'none' : 'none'" 
+    :stroke-width="iconType === 'original' ? 0 : strokeWidth"
     
     stroke-linecap="round" 
     stroke-linejoin="round"
     v-html="iconPath"
   ></svg>
+  
   <span v-else style="color:red; font-size:10px; display:inline-block; width:24px; text-align:center;">?</span>
 </template>
 
 <style>
-/* Global Animasyon (Scoped DEĞİL, her yerde çalışsın) */
+/* Sadece temel spin burada, diğerleri CSS dosyasından gelecek */
 @keyframes flux-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
