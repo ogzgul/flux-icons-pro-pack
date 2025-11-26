@@ -6,7 +6,7 @@ const props = defineProps({
   name: { type: String, required: true },
   size: { type: [Number, String], default: 24 },
   color: { type: String, default: "currentColor" },
-  strokeWidth: { type: [Number, String], default: 1.5 }, // Varsayılan incelttik
+  strokeWidth: { type: [Number, String], default: 1 }, // Varsayılan incelttik
   className: { type: String, default: "" },
   spin: { type: Boolean, default: false },
   // YENİ: Animasyon Prop'u
