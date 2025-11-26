@@ -36,6 +36,7 @@ onMounted(() => {
         <div class="flex items-center gap-6">
           <div class="hidden md:flex items-center gap-1 bg-slate-100 dark:bg-slate-900 p-1 rounded-lg border border-slate-200 dark:border-slate-800">
              <NuxtLink to="/" class="px-4 py-1.5 rounded-md text-sm font-medium transition-all" active-class="bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm">Icons</NuxtLink>
+             <NuxtLink to="/mixer" class="px-4 py-1.5 rounded-md text-sm font-medium transition-all" active-class="bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm">Mixer</NuxtLink>
              <NuxtLink to="/docs" class="px-4 py-1.5 rounded-md text-sm font-medium transition-all" active-class="bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm">Docs</NuxtLink>
              <NuxtLink to="/install" class="px-4 py-1.5 rounded-md text-sm font-medium transition-all" active-class="bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm">Installation</NuxtLink>
           </div>
