@@ -1,13 +1,15 @@
 # Flux Icons Pro Pack ⚡️
 
+[![Sponsor](https://img.shields.io/badge/Sponsor-💖-ff4081?style=for-the-badge)](https://github.com/sponsors/ogzgul)
 ![Version](https://img.shields.io/npm/v/flux-icons-pro-pack)
 ![License](https://img.shields.io/npm/l/flux-icons-pro-pack)
+[![NPM](https://img.shields.io/npm/dm/flux-icons-pro-pack?color=blue&label=npm)](https://www.npmjs.com/package/flux-icons-pro-pack)
 
 **1000+ Modern, Animated, Customizable SVG Icons for Vue 3, Nuxt & Universal Web Projects.**  
 Flux Icons offers a distinct “disconnected line” style, solid brand icons, color sets, and built-in animation support.
 
 👉 Full documentation: https://flux-icon.com
-
+👉 NPM Package: https://www.npmjs.com/package/flux-icons-pro-pack
 ---
 
 ## ✨ Features
