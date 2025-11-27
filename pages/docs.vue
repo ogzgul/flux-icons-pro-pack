@@ -161,6 +161,12 @@
       </div>
     </div>
   </div>
+  <Transition name="toast">
+        <div v-if="showToast" class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-6 py-3 rounded-full shadow-2xl flex items-center gap-3 z-[100] border border-slate-700 dark:border-slate-200">
+            <FluxIcon name="check-circle-fill" class="text-emerald-500" size="20" />
+            <span class="text-sm font-bold">{{ toastMessage }}</span>
+        </div>
+    </Transition>
 </template>
 
 <script setup>
@@ -171,14 +177,25 @@ useHead({
   ]
 });
 
+// --- TOAST STATE ---
+const showToast = ref(false);
+const toastMessage = ref('');
+
 const copy = (text) => {
-    navigator.clipboard.writeText(text);
-    alert('Copied to clipboard!');
+  navigator.clipboard.writeText(text);
+  showToastWithMsg('Copied to clipboard! 🎉');
 };
 
 const copyAnim = (anim) => {
-    const code = `<FluxIcon name="star-duotone" animation="${anim}" />`;
-    copy(code);
+  const code = `<FluxIcon name="star-duo" animation="${anim}" />`;
+  navigator.clipboard.writeText(code);
+  showToastWithMsg(`Animation "${anim}" copied! 🚀`);
+};
+
+const showToastWithMsg = (msg) => {
+    toastMessage.value = msg;
+    showToast.value = true;
+    setTimeout(() => showToast.value = false, 3000);
 };
 </script>
 
