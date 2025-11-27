@@ -39,6 +39,8 @@ onMounted(() => {
              <NuxtLink to="/mixer" class="px-4 py-1.5 rounded-md text-sm font-medium transition-all" active-class="bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm">Mixer</NuxtLink>
              <NuxtLink to="/docs" class="px-4 py-1.5 rounded-md text-sm font-medium transition-all" active-class="bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm">Docs</NuxtLink>
              <NuxtLink to="/install" class="px-4 py-1.5 rounded-md text-sm font-medium transition-all" active-class="bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm">Installation</NuxtLink>
+             <NuxtLink to="/contact" class="px-4 py-1.5 rounded-md text-sm font-medium transition-all" active-class="bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm">Contact</NuxtLink>
+
           </div>
 
           <button @click="toggleTheme" class="p-2 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:text-indigo-500 transition-colors">

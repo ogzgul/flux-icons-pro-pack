@@ -128,6 +128,18 @@ const handleSubmit = async () => {
               placeholder="you@example.com"
             />
           </div>
+          <div class="mt-6 text-center text-sm text-slate-500 dark:text-slate-400">
+            <p class="mb-2">Enjoying Flux Icons or want to support its development?</p>
+            <NuxtLink
+              to="https://github.com/sponsors/ogzgul"
+              target="_blank"
+              class="inline-flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-medium hover:underline"
+            >
+              <FluxIcon name="heart-sharp" size="18" /> Become a Sponsor
+            </NuxtLink>
+          </div>
+
+
 
           <div>
             <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">

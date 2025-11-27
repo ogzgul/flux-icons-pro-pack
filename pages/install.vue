@@ -42,14 +42,14 @@ const copyToClipboard = async (text, type) => {
             <div class="bg-slate-950 text-slate-200 p-4 rounded-lg font-mono text-xs md:text-sm flex justify-between items-center gap-4">
                 <span class="break-all text-indigo-300">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flux-icons-pro-pack@1.0.30/dist-font/flux-icons.css" /&gt;</span>
                <button 
-  @click="copyToClipboard('<link rel=\'stylesheet\' href=\'https://cdn.jsdelivr.net/npm/flux-icons-pro-pack@1.0.30/dist-font/flux-icons.css\' />', 'cdn')" 
-  class="shrink-0 px-3 py-1.5 rounded text-xs font-bold transition-all flex items-center gap-2"
-  :class="copiedState.cdn ? 'bg-emerald-500 text-white' : 'bg-slate-800 text-slate-400 hover:bg-indigo-600 hover:text-white'"
->
-  <FluxIcon v-if="copiedState.cdn" name="check" size="14" />
-  <FluxIcon v-else name="copy" size="14" />
-  {{ copiedState.cdn ? 'Copied!' : 'Copy' }}
-</button>
+                    @click="copyToClipboard('<link rel=\'stylesheet\' href=\'https://cdn.jsdelivr.net/npm/flux-icons-pro-pack@1.0.30/dist-font/flux-icons.css\' />', 'cdn')" 
+                    class="shrink-0 px-3 py-1.5 rounded text-xs font-bold transition-all flex items-center gap-2"
+                    :class="copiedState.cdn ? 'bg-emerald-500 text-white' : 'bg-slate-800 text-slate-400 hover:bg-indigo-600 hover:text-white'"
+                    >
+                    <FluxIcon v-if="copiedState.cdn" name="check" size="14" />
+                    <FluxIcon v-else name="copy" size="14" />
+                    {{ copiedState.cdn ? 'Copied!' : 'Copy' }}
+                </button>
 
             </div>
 
@@ -76,6 +76,12 @@ const copyToClipboard = async (text, type) => {
                 <span>npm install flux-icons-pro-pack</span>
                 <button class="text-slate-500 hover:text-white">Copy</button>
             </div>
+
+            <p class="mt-3 text-sm text-indigo-600 dark:text-indigo-400 font-medium">
+                <NuxtLink to="https://www.npmjs.com/package/flux-icons-pro-pack" target="_blank" class="hover:underline">
+                    View on NPM →
+                </NuxtLink>
+            </p>
         </section>
 
         <section class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 shadow-sm">
