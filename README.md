@@ -7,9 +7,10 @@
 
 **1000+ Modern, Animated, Customizable SVG Icons for Vue 3, Nuxt & Universal Web Projects.**  
 Flux Icons offers a distinct “disconnected line” style, solid brand icons, color sets, and built-in animation support.
-
-👉 Full documentation: https://flux-icon.com
+## Links  
+👉 Full documentation: https://flux-icon.com  
 👉 NPM Package: https://www.npmjs.com/package/flux-icons-pro-pack
+
 ---
 
 ## ✨ Features
