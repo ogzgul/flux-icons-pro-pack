@@ -1,7 +1,25 @@
 <script setup>
-import { ref, onMounted } from 'vue'
-
+import { ref, onMounted, onUnmounted } from 'vue' // onUnmounted'ı import'a eklemeyi unutma
 const isDark = ref(true)
+const showScrollButton = ref(false)
+
+const checkScroll = () => {
+  // 300px aşağı inince butonu göster
+  showScrollButton.value = window.scrollY > 300
+}
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+
+onMounted(() => {
+  document.documentElement.classList.add('dark') 
+  window.addEventListener('scroll', checkScroll) // Scroll dinleyicisini başlat
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', checkScroll) // Sayfadan çıkınca dinleyiciyi kaldır
+})
 
 const toggleTheme = () => {
   isDark.value = !isDark.value
@@ -52,7 +70,16 @@ onMounted(() => {
     </nav>
 
     <slot />
-    
+    <Transition name="fade">
+      <button 
+        v-if="showScrollButton"
+        @click="scrollToTop"
+        class="fixed bottom-8 right-8 p-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full shadow-xl z-50 transition-all hover:scale-110 hover:-translate-y-1 group"
+        aria-label="Scroll to top"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:animate-bounce"><path d="M18 15l-6-6-6 6"/></svg>
+      </button>
+    </Transition>
   </div>
 </template>
 
@@ -62,4 +89,15 @@ onMounted(() => {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
 .dark ::-webkit-scrollbar-thumb { background: #334155; }
+
+/* Fade Transition */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
 </style>

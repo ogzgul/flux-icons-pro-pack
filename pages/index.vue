@@ -102,27 +102,33 @@ const categories = [
 // --- GELİŞMİŞ FİLTRELEME (DÜZELTİLDİ) ---
 const allIconNames = computed(() => Object.keys(icons).sort());
 const filteredIcons = computed(() => {
-  // 1. Boşlukları temizle ve küçük harfe çevir
-  let query = searchQuery.value.trim().toLowerCase();
+  const rawQuery = searchQuery.value.trim().toLowerCase();
   const category = activeCategory.value;
 
-  // 2. Alias (Eş Anlamlı) Kısmi Arama
-  // Kullanıcının yazdığı 'inv', 'invoice' anahtarının içinde geçiyor mu?
-  // Geçiyorsa, o anahtarın karşılığı olan 'receipt' kelimesini de arama listesine ekle.
-  const matchedAliases = Object.keys(aliases)
-    .filter(key => key.includes(query)) // 'inv' -> 'invoice' bulur
-    .map(key => aliases[key]); // 'invoice' -> 'receipt' alır
+  // Boşsa hepsini kategoriye göre ver
+  const tokens = rawQuery.split(/\s+/).filter(Boolean);
 
-  return allIconNames.value.filter(name => {
-    // Arama Mantığı: 
-    // 1. İsimde query geçiyor mu? (receipt -> receipt)
-    // 2. VEYA bulunan eş anlamlılardan biri isimde geçiyor mu? (inv -> invoice -> receipt)
-    const matchesSearch = name.includes(query) || matchedAliases.some(alias => name.includes(alias));
-    
-    let matchesCategory = true;
-    if (category !== 'all') matchesCategory = name.startsWith(category);
-    
-    return matchesSearch && matchesCategory;
+  return allIconNames.value.filter((name) => {
+    // Kategori filtresi
+    if (category !== 'all' && !name.startsWith(category)) return false;
+    if (!tokens.length) return true;
+
+    // Arama index’i: heart-lock + "heart lock"
+    const searchIndex = `${name} ${name.replace(/-/g, ' ')}`.toLowerCase();
+
+    // Her token için eşleşme: direkt isimde ya da alias üzerinden
+    const matchesAllTokens = tokens.every((token) => {
+      if (searchIndex.includes(token)) return true;
+
+      // token ile eşleşen alias’ları bul (örn: inv → invoice → receipt)
+      const aliasTargets = Object.entries(aliases)
+        .filter(([key]) => key.includes(token))
+        .map(([, value]) => value.toLowerCase());
+
+      return aliasTargets.some((alias) => searchIndex.includes(alias));
+    });
+
+    return matchesAllTokens;
   });
 });
 
