@@ -11,7 +11,9 @@ export default defineNuxtConfig({
   site: {
     url: 'https://flux-icon.com',
   },
-
+  gtag: {
+      id: 'G-3C1VRW18EF' // <--- KENDİ GA4 ÖLÇÜM KİMLİĞİNİ BURAYA YAPIŞTIR
+    },
   css: [
     '~/assets/css/main.css',       // DOĞRU (Tilde ile başlar)
     '~/assets/css/animations.css'  // DOĞRU (Tilde ile başlar)
