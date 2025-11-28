@@ -5,7 +5,7 @@ import { icons } from '../lib/icons.js';
 const DIST_DIR = path.resolve(process.cwd(), 'dist-font');
 
 // Renkli olması gereken ikonlar (Bunlar maske değil, direkt resim olacak)
-const COLORED_TYPES = ['flag-', 'brand-', 'emoji-', 'crypto-', 'logo-','liquid-'];
+const COLORED_TYPES = ['flag-', 'brand-', 'emoji-', 'crypto-', 'logo-','liquid-','avatar-'];
 
 async function generateCssIcons() {
   console.log('🎨 CSS İkon Sistemi Oluşturuluyor (v3 - Final)...');

@@ -140,7 +140,7 @@ const handleScroll = () => {
   const totalHeight = document.documentElement.scrollHeight;
   
   // En dibe gelmesini bekleme, 300px kala yükle (Daha akıcı)
-  if (scrollPosition >= totalHeight - 400) {
+  if (scrollPosition >= totalHeight - 800) {
     if (visibleCount.value < filteredIcons.value.length) {
         visibleCount.value += 50;
     }

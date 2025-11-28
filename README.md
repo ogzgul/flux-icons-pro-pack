@@ -34,7 +34,7 @@ Add inside `<head>`:
 Or :
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flux-icons-pro-pack@1.0.31/dist-font/flux-icons.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flux-icons-pro-pack@1.0.32/dist-font/flux-icons.css" />
 ```
 Use anywhere:
 
