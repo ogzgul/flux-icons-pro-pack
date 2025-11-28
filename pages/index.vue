@@ -41,7 +41,8 @@ const aliases = {
   'connection': 'link',
   'mail': 'envelope',
   'message': 'chat',
-  'sms': 'chat'
+  'sms': 'chat',
+  'payment':'bank'
 };
 
 // --- AYARLAR ---
