@@ -78,7 +78,7 @@ const handleKeydown = (e) => {
 const isColorable = computed(() => {
     if (!selectedIcon.value) return true;
     const name = selectedIcon.value;
-    const staticTypes = ['liquid-', 'flag-', 'sticker-', 'original', 'brand-', 'fill', 'solid','avatar-','vivid-'];
+    const staticTypes = ['liquid-', 'flag-', 'sticker-', 'original', 'brand-', 'fill', 'solid','avatar-','vivid-','aero-'];
     if (staticTypes.some(type => name.includes(type))) {
         return false;
     }
@@ -104,31 +104,72 @@ const categories = [
 // --- FİLTRELEME ---
 const allIconNames = computed(() => Object.keys(icons).sort());
 const filteredIcons = computed(() => {
-  // 1. Boşlukları temizle ve küçük harfe çevir
-  let query = searchQuery.value.trim().toLowerCase();
+  const rawQuery = searchQuery.value.trim().toLowerCase();
   const category = activeCategory.value;
 
-  // 2. Alias (Eş Anlamlı) Kontrolü (Mevcut kodundan)
+  // Alias (eş anlamlı) tablosu
   const aliases = {
-      'invoice': 'receipt', 'bill': 'receipt', 'picture': 'image', 'photo': 'image', 
-      'security': 'shield', 'safe': 'lock', 'people': 'user', 'person': 'user', 
-      'profile': 'user', 'garbage': 'trash', 'delete': 'trash', 'remove': 'trash', 
-      'add': 'plus', 'create': 'plus', 'music': 'note', 'song': 'note', 
-      'play': 'media', 'video': 'film', 'movie': 'film', 'gear': 'setting', 
-      'config': 'setting', 'wifi': 'signal', 'internet': 'wifi', 'connection': 'link', 
-      'mail': 'envelope', 'message': 'chat', 'sms': 'chat','payment':'bank','tick':'check'
+    invoice: 'receipt',
+    bill: 'receipt',
+    picture: 'image',
+    photo: 'image',
+    security: 'shield',
+    safe: 'lock',
+    people: 'user',
+    person: 'user',
+    profile: 'user',
+    garbage: 'trash',
+    delete: 'trash',
+    remove: 'trash',
+    add: 'plus',
+    create: 'plus',
+    music: 'note',
+    song: 'note',
+    play: 'media',
+    video: 'film',
+    movie: 'film',
+    gear: 'setting',
+    config: 'setting',
+    wifi: 'signal',
+    internet: 'wifi',
+    connection: 'link',
+    mail: 'envelope',
+    message: 'chat',
+    sms: 'chat',
+    payment: 'bank',
+    tick: 'check',
+    file: 'file',
+    heart: 'heart'
   };
-  
-  const aliasKey = Object.keys(aliases).find(key => query.includes(key));
-  const extraQuery = aliasKey ? aliases[aliasKey] : '';
 
-  return allIconNames.value.filter(name => {
-    const matchesSearch = name.includes(query) || (extraQuery && name.includes(extraQuery));
-    let matchesCategory = true;
-    if (category !== 'all') matchesCategory = name.startsWith(category);
-    return matchesSearch && matchesCategory;
+  // Hiç arama yoksa (sadece kategori)
+  if (!rawQuery && category === 'all') {
+    return allIconNames.value;
+  }
+
+  // Query'i kelimelere böl (file heart, aero file, vs.)
+  const rawTokens = rawQuery.split(/\s+/).filter(Boolean);
+
+  // Her token'ı alias'a çevir
+  const tokens = rawTokens.map((t) => {
+    const aliasKey = Object.keys(aliases).find((key) => t.includes(key));
+    return aliasKey ? aliases[aliasKey] : t;
+  });
+
+  return allIconNames.value.filter((name) => {
+    // Kategori filtresi
+    if (category !== 'all' && !name.startsWith(category)) return false;
+
+    // İkon adını normalize et: tire/alt çizgi -> boşluk
+    const normalizedName = name.toLowerCase().replace(/[-_]/g, ' ');
+
+    // Tüm kelimeler ikon adında geçmeli
+    const matchesSearch = tokens.every((t) => normalizedName.includes(t));
+
+    return matchesSearch;
   });
 });
+
 
 const displayedIcons = computed(() => filteredIcons.value.slice(0, visibleCount.value));
 

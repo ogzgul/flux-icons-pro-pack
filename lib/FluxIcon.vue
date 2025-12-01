@@ -17,7 +17,7 @@ const iconPath = computed(() => icons[props.name] || "");
 
 const iconType = computed(() => {
   const name = props.name;
-  if (name.startsWith('liquid-') || name.startsWith('flag-') || name.startsWith('avatar-') || name.startsWith('sticker-') || name.startsWith('brand-original')) {
+  if (name.startsWith('liquid-') || name.startsWith('flag-') || name.startsWith('avatar-') || name.startsWith('aero-') || name.startsWith('sticker-') || name.startsWith('brand-original')) {
     return 'original';
   }
   return 'universal';

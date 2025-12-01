@@ -6909,6 +6909,2085 @@
     <path d="M7 4v16" stroke="#78350F" stroke-width="1" opacity="0.3"/> <path d="M4 7h16" stroke="white" stroke-width="1" opacity="0.2"/> </svg>`,
 
 
+
+
+
+
+
+// =================================================
+    // FLUX AERO:
+    // Not: Menüler ve temel UI elemanları artık "su damlası" gibi.
+    // =================================================
+
+    // Aero Home (Ev - Mavi Baloncuk)
+    "aero-home": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-aero-home" cx="30%" cy="30%" r="80%"><stop offset="0%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#1D4ED8"/></radialGradient></defs>
+    <path d="M2 12l10-9 10 9v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z" fill="url(#grad-aero-home)" stroke="#1E3A8A" stroke-width="0.5"/>
+    <path d="M12 6l6 6" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/> <path d="M6 14c0-3 3-5 6-5s6 2 6 5" fill="none" stroke="white" stroke-width="2" opacity="0.9"/>
+    <circle cx="7" cy="14" r="1.5" fill="white" opacity="0.6"/>
+    </svg>`,
+
+    // Aero Search (Büyüteç - Cam Küre)
+    "aero-search": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-aero-search" cx="30%" cy="30%" r="70%"><stop offset="0%" stop-color="#A5B4FC"/><stop offset="100%" stop-color="#4338CA"/></radialGradient></defs>
+    <circle cx="11" cy="11" r="9" fill="url(#grad-aero-search)" stroke="#312E81" stroke-width="0.5"/>
+    <path d="M21 21l-4.35-4.35" stroke="#312E81" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="8" cy="8" rx="4" ry="2" fill="white" opacity="0.4" transform="rotate(-45 8 8)"/> <circle cx="11" cy="11" r="6" stroke="white" stroke-width="1.5" opacity="0.3"/>
+    </svg>`,
+
+    // Aero Menu (Hamburger - Sosis Balonlar)
+    "aero-menu": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-menu" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F472B6"/><stop offset="100%" stop-color="#BE123C"/></linearGradient></defs>
+    <rect x="3" y="4" width="18" height="4" rx="2" fill="url(#grad-aero-menu)"/>
+    <rect x="3" y="10" width="18" height="4" rx="2" fill="url(#grad-aero-menu)"/>
+    <rect x="3" y="16" width="18" height="4" rx="2" fill="url(#grad-aero-menu)"/>
+    <path d="M4 5h10" stroke="white" stroke-width="1" opacity="0.5"/>
+    <path d="M4 11h10" stroke="white" stroke-width="1" opacity="0.5"/>
+    <path d="M4 17h10" stroke="white" stroke-width="1" opacity="0.5"/>
+    </svg>`,
+
+    // Aero Settings (Dişli - Metalik Balon)
+    "aero-settings": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-aero-set" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#94A3B8"/><stop offset="100%" stop-color="#475569"/></radialGradient></defs>
+    <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" fill="#1E293B"/>
+    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1.51 1H16a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" fill="url(#grad-aero-set)"/>
+    <circle cx="12" cy="12" r="5" stroke="white" stroke-width="1" opacity="0.2"/>
+    <path d="M12 2v4" stroke="white" stroke-width="1" opacity="0.5"/>
+    </svg>`,
+
+
+    // Aero User (Mavi Kafa)
+    "aero-user": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-aero-user" cx="30%" cy="30%" r="70%"><stop offset="0%" stop-color="#67E8F9"/><stop offset="100%" stop-color="#0891B2"/></radialGradient></defs>
+    <circle cx="12" cy="8" r="5" fill="url(#grad-aero-user)" stroke="#155E75" stroke-width="0.5"/>
+    <path d="M3 20c0-5 4-9 9-9s9 4 9 9" fill="url(#grad-aero-user)" stroke="#155E75" stroke-width="0.5"/>
+    <circle cx="10" cy="6" r="1.5" fill="white" opacity="0.6"/> <path d="M7 15c2-1 6-2 10 0" stroke="white" stroke-width="1.5" opacity="0.4" fill="none"/> </svg>`,
+
+    // Aero Group (Takım - Renkli Toplar)
+    "aero-users-group": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-grp-1" cx="30%" cy="30%"><stop stop-color="#A78BFA"/><stop stop-color="#6D28D9"/></radialGradient><radialGradient id="grad-grp-2" cx="30%" cy="30%"><stop stop-color="#34D399"/><stop stop-color="#059669"/></radialGradient></defs>
+    <circle cx="16" cy="9" r="4" fill="url(#grad-grp-1)"/>
+    <path d="M10 19c0-3 2-6 6-6s6 3 6 6" fill="url(#grad-grp-1)"/>
+    <circle cx="8" cy="11" r="5" fill="url(#grad-grp-2)" stroke="white" stroke-width="1"/>
+    <path d="M1 22c0-4 3-7 7-7s7 3 7 7" fill="url(#grad-grp-2)" stroke="white" stroke-width="1"/>
+    </svg>`,
+
+
+    // Aero Kredi Kartı (Mor/Pembe Jöle)
+    "aero-payment-card": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-card" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#C084FC"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs>
+    <rect x="2" y="6" width="20" height="14" rx="3" fill="url(#grad-aero-card)" stroke="#5B21B6" stroke-width="0.5"/>
+    <rect x="2" y="9" width="20" height="3" fill="#4C1D95" opacity="0.5"/>
+    <rect x="5" y="14" width="4" height="3" rx="1" fill="#FCD34D"/> <path d="M11 15h6M11 17h4" stroke="white" stroke-width="1" opacity="0.5" stroke-linecap="round"/>
+    <path d="M4 7c2 0 16 0 16 0" stroke="white" stroke-width="1" opacity="0.3"/> </svg>`,
+
+    // Aero Cüzdan (Dolgun Deri)
+    "aero-wallet": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-aero-wal" cx="20%" cy="20%" r="80%"><stop offset="0%" stop-color="#92400E"/><stop offset="100%" stop-color="#451A03"/></radialGradient></defs>
+    <path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h14v4" fill="#B45309"/>
+    <path d="M4 6v12a2 2 0 0 0 2 2h14v-8a2 2 0 0 0-2-2H4z" fill="url(#grad-aero-wal)"/>
+    <circle cx="18" cy="14" r="2" fill="#FCD34D" stroke="#B45309" stroke-width="1"/>
+    <path d="M6 8c5 0 10 2 10 4" stroke="white" stroke-width="1" opacity="0.2" fill="none"/>
+    </svg>`,
+
+    // Aero Invoice (Fatura - Cam Tüp İçinde Kağıt)
+    "aero-invoice": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-inv" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#E2E8F0"/><stop offset="100%" stop-color="#CBD5E1"/></linearGradient></defs>
+    <path d="M6 2h12v20l-2-2-2 2-2-2-2 2-2-2-2 2V2z" fill="url(#grad-aero-inv)" stroke="#94A3B8" stroke-width="0.5"/>
+    <line x1="9" y1="6" x2="15" y2="6" stroke="#64748B" stroke-width="2" stroke-linecap="round"/>
+    <line x1="9" y1="10" x2="13" y2="10" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="9" y1="13" x2="15" y2="13" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round"/>
+    <rect x="5" y="2" width="14" height="20" rx="2" fill="#3B82F6" opacity="0.1"/> <path d="M17 4v16" stroke="white" stroke-width="1" opacity="0.4"/>
+    </svg>`,
+
+    // Aero Chat (3D Baloncuk)
+    "aero-chat": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-aero-chat" cx="30%" cy="30%" r="70%"><stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#059669"/></radialGradient></defs>
+    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="url(#grad-aero-chat)" stroke="#047857" stroke-width="0.5"/>
+    <ellipse cx="10" cy="8" rx="3" ry="1.5" fill="white" opacity="0.4" transform="rotate(-10 10 8)"/>
+    <circle cx="7" cy="12" r="1" fill="white"/><circle cx="12" cy="12" r="1" fill="white"/><circle cx="17" cy="12" r="1" fill="white"/>
+    </svg>`,
+
+    // Aero Notification (Zil - Altın)
+    "aero-bell": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-aero-bell" cx="40%" cy="40%" r="60%"><stop offset="0%" stop-color="#FCD34D"/><stop offset="100%" stop-color="#B45309"/></radialGradient></defs>
+    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" fill="url(#grad-aero-bell)" stroke="#92400E" stroke-width="0.5"/>
+    <circle cx="12" cy="20" r="2" fill="#B45309"/>
+    <ellipse cx="10" cy="8" rx="2" ry="4" fill="white" opacity="0.3" transform="rotate(-15 10 8)"/>
+    </svg>`,
+
+    // Aero Lock (Kilit - Yeşil Cam)
+    "aero-lock": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-aero-lock" cx="30%" cy="30%" r="70%"><stop offset="0%" stop-color="#A7F3D0"/><stop offset="100%" stop-color="#059669"/></radialGradient></defs>
+    <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="#4B5563" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <rect x="5" y="11" width="14" height="10" rx="3" fill="url(#grad-aero-lock)" stroke="#047857" stroke-width="0.5"/>
+    <circle cx="12" cy="16" r="2" fill="#065F46"/>
+    <path d="M12 16v2" stroke="#065F46" stroke-width="2"/>
+    <path d="M7 13h4" stroke="white" stroke-width="1" opacity="0.6"/>
+    </svg>`,
+
+    // Aero Shield (Kalkan - Mavi Çelik)
+    "aero-shield": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-shield" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#64748B"/><stop offset="100%" stop-color="#1E293B"/></linearGradient></defs>
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="url(#grad-aero-shield)" stroke="#334155" stroke-width="1"/>
+    <path d="M12 22V2" stroke="white" stroke-width="1" opacity="0.1"/>
+    <path d="M9 12l2 2 4-4" stroke="#4ADE80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>`,
+
+    // Aero Dosya (Genel - Mavi)
+    "aero-file-generic": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-file" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#2563EB"/></linearGradient></defs>
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" fill="url(#grad-aero-file)" stroke="#1D4ED8" stroke-width="0.5"/>
+    <path d="M14 2v6h6" fill="#1E3A8A" opacity="0.2"/>
+    <path d="M14 3v5h5" stroke="white" stroke-width="1" opacity="0.5"/>
+    <path d="M4 10h10" stroke="white" stroke-width="1" opacity="0.3" transform="translate(2, 0)"/>
+    <path d="M4 14h8" stroke="white" stroke-width="1" opacity="0.3" transform="translate(2, 0)"/>
+    </svg>`,
+
+    // Aero Resim Dosyası (Mor - Galeri)
+    "aero-file-image": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-img" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#C084FC"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs>
+    <rect x="3" y="3" width="18" height="18" rx="3" fill="url(#grad-aero-img)" stroke="#5B21B6" stroke-width="0.5"/>
+    <circle cx="8.5" cy="8.5" r="2.5" fill="white" opacity="0.8"/>
+    <path d="M21 15l-5-5L5 21" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+    <path d="M3 10v10c0 1 1 2 2 2h14" stroke="white" stroke-width="1" opacity="0.2" fill="none"/>
+    </svg>`,
+
+    // Aero Kod Dosyası (Yeşil - Terminal)
+    "aero-file-code": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-code" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#059669"/></linearGradient></defs>
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" fill="url(#grad-aero-code)" stroke="#065F46" stroke-width="0.5"/>
+    <path d="M8 13l-2 2 2 2M16 13l2 2-2 2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M12 11l-2 6" stroke="white" stroke-width="1.5" opacity="0.6"/>
+    </svg>`,
+
+
+    // Aero Klasör (Sarı - Standart)
+    "aero-folder": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-folder" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FCD34D"/><stop offset="100%" stop-color="#D97706"/></linearGradient></defs>
+    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" fill="url(#grad-aero-folder)" stroke="#B45309" stroke-width="0.5"/>
+    <path d="M2 10h20" stroke="#B45309" stroke-width="1" opacity="0.3"/> <rect x="4" y="12" width="16" height="6" rx="1" fill="white" opacity="0.3"/> <path d="M4 6c2 0 4 1 6 1" stroke="white" stroke-width="1.5" opacity="0.6"/>
+    </svg>`,
+
+    // Aero Klasör Açık (Dosyalar Çıkmış)
+    "aero-folder-open": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-fold-o" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FDBA74"/><stop offset="100%" stop-color="#C2410C"/></linearGradient></defs>
+    <path d="M2 8a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2v8H2V8z" fill="#9A3412"/> <rect x="6" y="6" width="12" height="10" rx="1" fill="white" opacity="0.8"/> <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7l2-2h16l2 2v7z" fill="url(#grad-aero-fold-o)" stroke="#9A3412" stroke-width="0.5"/> </svg>`,
+
+
+    // Aero Kullanıcı Ekle (Yeşil Artı)
+    "aero-user-add": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-aero-u-add" cx="30%" cy="30%"><stop stop-color="#E0E7FF"/><stop offset="100%" stop-color="#6366F1"/></radialGradient></defs>
+    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" fill="url(#grad-aero-u-add)"/>
+    <circle cx="9" cy="7" r="4" fill="url(#grad-aero-u-add)"/>
+    <circle cx="19" cy="11" r="4" fill="#22C55E" stroke="white" stroke-width="2"/> <path d="M19 9v4M17 11h4" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>`,
+
+    // Aero Takım (Renkli Balonlar)
+    "aero-users-team": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="8" r="4" fill="#60A5FA" stroke="#2563EB" stroke-width="0.5"/>
+    <circle cx="18" cy="14" r="4" fill="#F472B6" stroke="#DB2777" stroke-width="0.5"/>
+    <circle cx="6" cy="14" r="4" fill="#34D399" stroke="#059669" stroke-width="0.5"/>
+    <path d="M12 5c1-1 2-1 3 0" stroke="white" stroke-width="1" opacity="0.6"/>
+    <path d="M6 11c1-1 2-1 3 0" stroke="white" stroke-width="1" opacity="0.6"/>
+    </svg>`,
+
+
+    // Aero ATM (Mavi/Gri Metalik)
+    "aero-atm": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-atm" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#94A3B8"/><stop offset="100%" stop-color="#475569"/></linearGradient></defs>
+    <rect x="4" y="4" width="16" height="18" rx="2" fill="url(#grad-aero-atm)" stroke="#334155" stroke-width="0.5"/>
+    <rect x="6" y="6" width="12" height="6" rx="1" fill="#06B6D4"/> <path d="M7 14h2M11 14h2M15 14h2" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    <path d="M4 22h16" stroke="#1E293B" stroke-width="2"/>
+    <rect x="14" y="16" width="4" height="4" rx="0.5" fill="#22C55E"/> </svg>`,
+
+    // Aero Kasa (Altın Topuzlu)
+    "aero-safe": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-safe" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#64748B"/><stop offset="100%" stop-color="#334155"/></linearGradient></defs>
+    <rect x="3" y="3" width="18" height="18" rx="3" fill="url(#grad-aero-safe)" stroke="#1E293B" stroke-width="1"/>
+    <circle cx="15" cy="12" r="4" fill="#FCD34D" stroke="#B45309" stroke-width="1"/> <circle cx="15" cy="12" r="1" fill="#B45309"/>
+    <path d="M15 12h2" stroke="#B45309" stroke-width="1.5"/>
+    <path d="M6 4v16" stroke="#1E293B" stroke-width="1" opacity="0.5"/>
+    </svg>`,
+
+    // Aero Küp (İzometrik - Mavi)
+    "aero-shape-cube": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 2l10 5v10l-10 5-10-5V7z" fill="#1E3A8A"/> <path d="M12 2l10 5-10 5-10-5z" fill="#60A5FA"/> <path d="M12 12l10-5v10l-10 5z" fill="#2563EB"/> <path d="M2 7l10 5v10l-10-5z" fill="#3B82F6"/> <path d="M12 2l5 2.5" stroke="white" stroke-width="1" opacity="0.5"/>
+    </svg>`,
+
+    // Aero Küre (Mükemmel Yuvarlak - Kırmızı)
+    "aero-shape-sphere": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-aero-sph" cx="30%" cy="30%" r="70%"><stop offset="0%" stop-color="#FCA5A5"/><stop offset="100%" stop-color="#B91C1C"/></radialGradient></defs>
+    <circle cx="12" cy="12" r="10" fill="url(#grad-aero-sph)"/>
+    <ellipse cx="8" cy="8" rx="4" ry="2" fill="white" opacity="0.4" transform="rotate(-45 8 8)"/> </svg>`,
+
+
+    // Aero Loader (Dönen Halka)
+    "aero-loader-ring": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-load" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#C084FC" stop-opacity="0"/></linearGradient></defs>
+    <path d="M12 2a10 10 0 1 1-3 0" stroke="url(#grad-aero-load)" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="12" cy="2" r="1.5" fill="#6366F1"/>
+    </svg>`,
+
+    // Aero Kalkan (Koruma - Yeşil)
+    "aero-shield-glass": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-sh" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#047857"/></linearGradient></defs>
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="url(#grad-aero-sh)" stroke="#065F46" stroke-width="0.5"/>
+    <path d="M12 2v10" stroke="white" stroke-width="1" opacity="0.3"/>
+    <path d="M5 7c2-1 5-1 7 0" stroke="white" stroke-width="1.5" opacity="0.4" fill="none"/>
+    </svg>`,
+
+
+    // Aero Kutu (Açık - Mavi Işık)
+    "aero-box-open": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-box" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#93C5FD"/><stop offset="100%" stop-color="#2563EB"/></linearGradient></defs>
+    <path d="M21 16.5c0 2.5-4 4.5-9 4.5s-9-2-9-4.5V7.5c0 2.5 4 4.5 9 4.5s9-2 9-4.5v9z" fill="url(#grad-aero-box)" stroke="#1E40AF" stroke-width="0.5"/>
+    <ellipse cx="12" cy="7.5" rx="9" ry="4.5" fill="#EFF6FF" opacity="0.3" stroke="#1E40AF" stroke-width="0.5"/> <path d="M3 7.5c0 2.5 4 4.5 9 4.5s9-2 9-4.5" stroke="white" stroke-width="1" opacity="0.6" fill="none"/>
+    <path d="M12 12v9" stroke="white" stroke-width="1" opacity="0.3"/> <circle cx="12" cy="10" r="2" fill="white" opacity="0.8" filter="blur(2px)"/> </svg>`,
+
+    // Aero Kutu (Kapalı/Hediye - Mor)
+    "aero-box-gift": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-gift" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F472B6"/><stop offset="100%" stop-color="#9333EA"/></linearGradient></defs>
+    <path d="M12 22l-9-5V9l9-5 9 5v8l-9 5z" fill="url(#grad-aero-gift)" stroke="#7E22CE" stroke-width="0.5"/>
+    <path d="M12 4v18M3 9l9 5 9-5" stroke="#7E22CE" stroke-width="1" opacity="0.5"/>
+    <path d="M12 4l-5 3 5 3 5-3-5-3z" fill="white" opacity="0.4"/> <path d="M12 9l-9-5" stroke="white" stroke-width="1" opacity="0.5"/>
+    </svg>`,
+
+
+    // Aero Mesaj (Tekli - Camgöbeği)
+    "aero-chat-bubble": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-aero-msg" cx="30%" cy="30%" r="70%"><stop offset="0%" stop-color="#A5F3FC"/><stop offset="100%" stop-color="#0891B2"/></radialGradient></defs>
+    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="url(#grad-aero-msg)" stroke="#155E75" stroke-width="0.5"/>
+    <ellipse cx="10" cy="8" rx="3" ry="1.5" fill="white" opacity="0.5" transform="rotate(-15 10 8)"/>
+    <circle cx="8" cy="12" r="1" fill="white"/><circle cx="12" cy="12" r="1" fill="white"/><circle cx="16" cy="12" r="1" fill="white"/>
+    </svg>`,
+
+    // Aero Mesaj (Bildirimli - Kırmızı)
+    "aero-chat-alert": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-aero-alert" cx="30%" cy="30%" r="70%"><stop offset="0%" stop-color="#FECACA"/><stop offset="100%" stop-color="#DC2626"/></radialGradient></defs>
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" fill="url(#grad-aero-alert)" stroke="#991B1B" stroke-width="0.5"/>
+    <path d="M22 6l-10 7L2 6" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+    <circle cx="19" cy="5" r="3" fill="#EF4444" stroke="white" stroke-width="1.5"/> </svg>`,
+
+
+    // Tek Tik (Gri - Gönderildi)
+    "aero-check-single-gray": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20 6L9 17l-5-5" stroke="#94A3B8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.5" transform="translate(-0.5, -0.5)"/>
+    </svg>`,
+
+    // Çift Tik (Gri - İletildi)
+    "aero-check-double-gray": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7 12l5 5 10-10" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M2 12l5 5m0-5l5-5" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>`,
+
+    // Çift Tik (Yeşil - Okundu/Verified)
+    "aero-check-double-green": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <defs><linearGradient id="grad-check" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4ADE80"/><stop offset="100%" stop-color="#16A34A"/></linearGradient></defs>
+    <path d="M7 12l5 5 10-10" stroke="url(#grad-check)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M2 12l5 5m0-5l5-5" stroke="url(#grad-check)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M7 12l5 5 10-10" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.6" transform="translate(-0.5, -0.5)"/>
+    </svg>`,
+
+
+    // Aero Loader (3 Toplu Dönüş)
+    "aero-loader-dots": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="4" cy="12" r="3" fill="#60A5FA"><animate attributeName="cy" values="12;6;12" dur="0.6s" repeatCount="indefinite" /></circle>
+    <circle cx="12" cy="12" r="3" fill="#818CF8"><animate attributeName="cy" values="12;6;12" dur="0.6s" begin="0.2s" repeatCount="indefinite" /></circle>
+    <circle cx="20" cy="12" r="3" fill="#A78BFA"><animate attributeName="cy" values="12;6;12" dur="0.6s" begin="0.4s" repeatCount="indefinite" /></circle>
+    </svg>`,
+
+    // Aero Orbit (Yörünge - Atomik)
+    "aero-loader-orbit": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-core" cx="50%" cy="50%"><stop stop-color="#FBBF24"/><stop stop-color="#D97706"/></radialGradient></defs>
+    <circle cx="12" cy="12" r="4" fill="url(#grad-core)"/>
+    <path d="M12 2a10 10 0 0 1 10 10" stroke="#FBBF24" stroke-width="2" stroke-linecap="round" opacity="0.6">
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1s" repeatCount="indefinite" />
+    </path>
+    <path d="M12 22a10 10 0 0 1-10-10" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" opacity="0.6">
+         <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1.5s" repeatCount="indefinite" />
+    </path>
+    </svg>`,
+
+    // Aero Ok (Sağ - Neon Mavi)
+    "aero-arrow-right": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-arr-r" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#2563EB"/></linearGradient></defs>
+    <path d="M5 12h14M12 5l7 7-7 7" stroke="url(#grad-arr-r)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M5 12h14M12 5l7 7-7 7" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.5" transform="translate(0, -1)"/>
+    </svg>`,
+
+    // Aero Ok (Yukarı - Neon Yeşil)
+    "aero-arrow-up": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-arr-u" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#059669"/></linearGradient></defs>
+    <path d="M12 19V5M5 12l7-7 7 7" stroke="url(#grad-arr-u)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M12 19V5M5 12l7-7 7 7" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.5" transform="translate(-1, 0)"/>
+    </svg>`,
+
+
+    // Aero Uyarı (Üçgen - Sarı)
+    "aero-alert-triangle": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-alert-y" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FEF08A"/><stop offset="100%" stop-color="#EAB308"/></linearGradient></defs>
+    <path d="M12 3L2 21h20L12 3z" fill="url(#grad-alert-y)" stroke="#CA8A04" stroke-width="0.5"/>
+    <path d="M12 8v6" stroke="#A16207" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="12" cy="17" r="1.5" fill="#A16207"/>
+    <path d="M12 3l-7 14" stroke="white" stroke-width="1" opacity="0.4"/>
+    </svg>`,
+
+    // Aero Info (Daire - Mavi)
+    "aero-info-circle": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-info" cx="30%" cy="30%" r="70%"><stop offset="0%" stop-color="#E0F2FE"/><stop offset="100%" stop-color="#3B82F6"/></radialGradient></defs>
+    <circle cx="12" cy="12" r="10" fill="url(#grad-info)" stroke="#1D4ED8" stroke-width="0.5"/>
+    <path d="M12 16v-4" stroke="#1E3A8A" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="12" cy="8" r="1.5" fill="#1E3A8A"/>
+    <ellipse cx="9" cy="9" rx="3" ry="1.5" fill="white" opacity="0.5" transform="rotate(-20 9 9)"/>
+    </svg>`,
+
+
+    // Nebula Dosya (Genel)
+    "aero-nebula-file": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-neb-file" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F8FAFC"/><stop offset="100%" stop-color="#E2E8F0"/></linearGradient></defs>
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" fill="url(#grad-neb-file)" stroke="#94A3B8" stroke-width="0.5"/>
+    <path d="M14 2v6h6" fill="#CBD5E1" opacity="0.5"/>
+    <path d="M4 10h10" stroke="white" stroke-width="1" opacity="0.7" transform="translate(2,0)"/>
+    <path d="M4 14h8" stroke="white" stroke-width="1" opacity="0.7" transform="translate(2,0)"/>
+    <path d="M4 18h12" stroke="white" stroke-width="1" opacity="0.7" transform="translate(2,0)"/>
+    </svg>`,
+
+    // Nebula Klasör (Kapalı)
+    "aero-nebula-folder": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-neb-fold" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F1F5F9"/><stop offset="100%" stop-color="#CBD5E1"/></linearGradient></defs>
+    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" fill="url(#grad-neb-fold)" stroke="#94A3B8" stroke-width="0.5"/>
+    <path d="M2 10h20" stroke="#94A3B8" stroke-width="0.5" opacity="0.5"/>
+    <path d="M4 6c2 0 5 1 8 1" stroke="white" stroke-width="1.5" opacity="0.8" fill="none"/> </svg>`,
+
+    // Nebula Klasör (Açık)
+    "aero-nebula-folder-open": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-neb-fold-o" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F8FAFC"/><stop offset="100%" stop-color="#94A3B8"/></linearGradient></defs>
+    <path d="M2 8a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2v8H2V8z" fill="#64748B"/> <rect x="5" y="6" width="14" height="10" rx="1" fill="white" opacity="0.9"/> <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7l2-2h16l2 2v7z" fill="url(#grad-neb-fold-o)" stroke="#64748B" stroke-width="0.5"/>
+    </svg>`,
+
+
+    // Nebula User (Profil)
+    "aero-nebula-user": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-neb-user" cx="30%" cy="30%" r="80%"><stop offset="0%" stop-color="#F1F5F9"/><stop offset="100%" stop-color="#94A3B8"/></radialGradient></defs>
+    <circle cx="12" cy="8" r="5" fill="url(#grad-neb-user)" stroke="#64748B" stroke-width="0.5"/>
+    <path d="M3 20c0-5 4-9 9-9s9 4 9 9" fill="url(#grad-neb-user)" stroke="#64748B" stroke-width="0.5"/>
+    <circle cx="10" cy="6" r="2" fill="white" opacity="0.5"/> <path d="M6 15c2-1 6-2 12 0" stroke="white" stroke-width="1" opacity="0.4" fill="none"/>
+    </svg>`,
+
+    // Nebula Users (Grup)
+    "aero-nebula-users": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="16" cy="9" r="4" fill="#CBD5E1" stroke="#64748B" stroke-width="0.5"/>
+    <path d="M10 19c0-3 2-6 6-6s6 3 6 6" fill="#CBD5E1"/>
+    <circle cx="8" cy="11" r="5" fill="#F8FAFC" stroke="#475569" stroke-width="0.5"/>
+    <path d="M1 22c0-4 3-7 7-7s7 3 7 7" fill="#F8FAFC" stroke="#475569" stroke-width="0.5"/>
+    </svg>`,
+
+    // Nebula Home (Ev)
+    "aero-nebula-home": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-neb-home" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F1F5F9"/><stop offset="100%" stop-color="#94A3B8"/></linearGradient></defs>
+    <path d="M2 12l10-9 10 9v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z" fill="url(#grad-neb-home)" stroke="#475569" stroke-width="0.5"/>
+    <path d="M12 6l6 6" stroke="white" stroke-width="1.5" opacity="0.6" stroke-linecap="round"/>
+    <rect x="8" y="14" width="8" height="8" rx="1" fill="#64748B" opacity="0.2"/>
+    </svg>`,
+
+    // Nebula Search (Büyüteç)
+    "aero-nebula-search": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-neb-search" cx="30%" cy="30%" r="70%"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="100%" stop-color="#CBD5E1"/></radialGradient></defs>
+    <circle cx="11" cy="11" r="9" fill="url(#grad-neb-search)" stroke="#64748B" stroke-width="0.5"/>
+    <path d="M21 21l-4.35-4.35" stroke="#475569" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="8" cy="8" rx="4" ry="2" fill="white" opacity="0.6" transform="rotate(-45 8 8)"/>
+    </svg>`,
+
+    // Nebula Settings (Dişli)
+    "aero-nebula-settings": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-neb-gear" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#E2E8F0"/><stop offset="100%" stop-color="#64748B"/></radialGradient></defs>
+    <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" fill="#334155"/>
+    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1.51 1H16a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" fill="url(#grad-neb-gear)"/>
+    <path d="M12 4v4M12 16v4" stroke="white" stroke-width="1" opacity="0.4"/>
+    </svg>`,
+
+
+    // Nebula Kredi Kartı (Platin)
+    "aero-nebula-card": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-neb-card" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F8FAFC"/><stop offset="100%" stop-color="#94A3B8"/></linearGradient></defs>
+    <rect x="2" y="6" width="20" height="14" rx="2" fill="url(#grad-neb-card)" stroke="#64748B" stroke-width="0.5"/>
+    <rect x="4" y="11" width="4" height="3" rx="1" fill="#E2E8F0" stroke="#94A3B8" stroke-width="0.5"/> <path d="M9 15h8" stroke="white" stroke-width="1.5" opacity="0.6"/>
+    <path d="M2 9h20" stroke="#475569" stroke-width="1" opacity="0.2"/>
+    </svg>`,
+
+    // Nebula Kalkan (Güvenlik)
+    "aero-nebula-shield": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-neb-shield" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#E2E8F0"/><stop offset="100%" stop-color="#64748B"/></linearGradient></defs>
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="url(#grad-neb-shield)" stroke="#475569" stroke-width="0.5"/>
+    <path d="M12 2v10" stroke="white" stroke-width="1" opacity="0.3"/>
+    <path d="M5 7c3-1 6-1 8 0" stroke="white" stroke-width="1.5" opacity="0.5" fill="none"/>
+    </svg>`,
+
+    // Nebula Loader (Gri Halka)
+    "aero-nebula-loader": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-neb-load" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#94A3B8"/><stop offset="100%" stop-color="#F1F5F9" stop-opacity="0"/></linearGradient></defs>
+    <path d="M12 2a10 10 0 1 1-3 0" stroke="url(#grad-neb-load)" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="12" cy="2" r="1.5" fill="#94A3B8"/>
+    </svg>`,
+
+    // Aero Telefon (Mavi Cam Ekran)
+    "aero-device-phone": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-ph" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#2563EB"/></linearGradient></defs>
+    <rect x="6" y="2" width="12" height="20" rx="3" fill="#1E3A8A" stroke="#1E40AF" stroke-width="0.5"/> <rect x="7" y="3" width="10" height="18" rx="2" fill="url(#grad-aero-ph)"/> <path d="M7 3h10v18H7z" stroke="white" stroke-width="1" opacity="0.3" fill="none"/> <path d="M10 5h4" stroke="#1E3A8A" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/> <circle cx="12" cy="18" r="1" fill="white" opacity="0.5"/> </svg>`,
+
+    // Aero Laptop (Açık - Mor Klavye)
+    "aero-device-laptop": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-lap" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#C084FC"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs>
+    <path d="M3 15h18v-9c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v9z" fill="url(#grad-aero-lap)" stroke="#5B21B6" stroke-width="0.5"/> <path d="M3 4l2 11h14l2-11" stroke="white" stroke-width="1" opacity="0.2" fill="none"/> <path d="M1 15h22l-2 4H3l-2-4z" fill="#4C1D95"/> <path d="M9 17h6" stroke="#8B5CF6" stroke-width="1.5" stroke-linecap="round"/> </svg>`,
+
+    // Aero Akıllı Saat (Yeşil Kordon)
+    "aero-device-watch": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-aero-watch" cx="50%" cy="50%"><stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#059669"/></radialGradient></defs>
+    <path d="M9 4v16h6V4H9z" fill="#064E3B" opacity="0.8"/> <rect x="6" y="6" width="12" height="12" rx="3" fill="url(#grad-aero-watch)" stroke="#065F46" stroke-width="0.5"/>
+    <circle cx="12" cy="12" r="4" stroke="white" stroke-width="1" opacity="0.5" fill="none"/>
+    <path d="M12 12l2-2" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    <rect x="18" y="9" width="1" height="2" fill="#064E3B"/> </svg>`,
+
+
+    // Aero Kulaklık (Kafa Üstü - Gümüş/Mavi)
+    "aero-media-headphones": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-head" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#93C5FD"/><stop offset="100%" stop-color="#3B82F6"/></linearGradient></defs>
+    <path d="M4 12v-4a8 8 0 0 1 16 0v4" stroke="#64748B" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <rect x="2" y="12" width="5" height="7" rx="2" fill="url(#grad-aero-head)" stroke="#1D4ED8" stroke-width="0.5"/>
+    <rect x="17" y="12" width="5" height="7" rx="2" fill="url(#grad-aero-head)" stroke="#1D4ED8" stroke-width="0.5"/>
+    <path d="M3 12h3v7H3z" fill="white" opacity="0.3"/> <path d="M18 12h3v7h-3z" fill="white" opacity="0.3"/> </svg>`,
+
+    // Aero Oyun Kolu (Gamepad - Neon Kırmızı)
+    "aero-media-gamepad": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-game" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FCA5A5"/><stop offset="100%" stop-color="#DC2626"/></linearGradient></defs>
+    <path d="M2 12c0-3 3-5 6-5h8c3 0 6 2 6 5s-3 5-6 5H8c-3 0-6-2-6-5z" fill="url(#grad-aero-game)" stroke="#991B1B" stroke-width="0.5"/>
+    <circle cx="7" cy="12" r="1.5" fill="#7F1D1D"/> <circle cx="17" cy="10" r="1" fill="#FCD34D"/> <circle cx="19" cy="13" r="1" fill="#3B82F6"/> <path d="M4 9c2-1 6-2 10 0" stroke="white" stroke-width="1.5" opacity="0.4" fill="none"/>
+    </svg>`,
+
+    // Aero İngiliz Anahtarı (Tamir - Metalik)
+    "aero-tool-wrench": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-wrench" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#E2E8F0"/><stop offset="100%" stop-color="#64748B"/></linearGradient></defs>
+    <path d="M19.5 6.5l-2-2a2 2 0 0 0-2.8 0l-9 9a2 2 0 0 0 0 2.8l2 2a2 2 0 0 0 2.8 0l9-9a2 2 0 0 0 0-2.8z" fill="url(#grad-aero-wrench)" stroke="#334155" stroke-width="0.5"/>
+    <path d="M4 20l4-4" stroke="#334155" stroke-width="2" stroke-linecap="round"/>
+    <path d="M16 6l3 3" stroke="white" stroke-width="1" opacity="0.6"/>
+    </svg>`,
+
+    // Aero Pusula (Yön - Altın/Mavi)
+    "aero-tool-compass": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-aero-comp" cx="50%" cy="50%"><stop offset="0%" stop-color="#FEF9C3"/><stop offset="100%" stop-color="#CA8A04"/></radialGradient></defs>
+    <circle cx="12" cy="12" r="10" fill="#1E293B" stroke="#CA8A04" stroke-width="1"/>
+    <circle cx="12" cy="12" r="8" fill="url(#grad-aero-comp)" opacity="0.2"/>
+    <path d="M12 12l-3 3 3-8 3 8-3-3z" fill="#EF4444" stroke="#B91C1C" stroke-width="0.5"/> <circle cx="12" cy="12" r="1" fill="#B45309"/>
+    </svg>`,
+
+    // Aero Su Damlası (Saf Mavi)
+    "aero-nature-drop": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-aero-drop" cx="40%" cy="60%" r="70%"><stop offset="0%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#1E3A8A"/></radialGradient></defs>
+    <path d="M12 22c5 0 9-4 9-9 0-6-9-13-9-13S3 7 3 13c0 5 4 9 9 9z" fill="url(#grad-aero-drop)" stroke="#1D4ED8" stroke-width="0.5"/>
+    <path d="M8 14c1 2 4 2 5 0" stroke="white" stroke-width="1" opacity="0.2" fill="none"/>
+    <ellipse cx="9" cy="10" rx="2" ry="4" fill="white" opacity="0.4" transform="rotate(-20 9 10)"/> </svg>`,
+
+    // Aero Ateş (Sıcak Turuncu)
+    "aero-nature-fire": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-fire" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#FCD34D"/></linearGradient></defs>
+    <path d="M12 22c4 0 7-3 7-7 0-5-4-8-7-13-3 5-7 8-7 13 0 4 3 7 7 7z" fill="url(#grad-aero-fire)" stroke="#991B1B" stroke-width="0.5"/>
+    <path d="M12 16c1 0 2 1 2 3" stroke="white" stroke-width="1" opacity="0.4" fill="none"/>
+    <path d="M10 10c1-2 3-2 4 0" stroke="white" stroke-width="1" opacity="0.3" fill="none"/>
+    </svg>`,
+
+    // Aero Yaprak (Taze Yeşil)
+    "aero-nature-leaf-pro": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-leaf" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#15803D"/><stop offset="100%" stop-color="#86EFAC"/></linearGradient></defs>
+    <path d="M3 21c0-8 6-14 14-16 .5 6-3 14-14 16z" fill="url(#grad-aero-leaf)" stroke="#14532D" stroke-width="0.5"/>
+    <path d="M3 21l14-16" stroke="#166534" stroke-width="1"/>
+    <path d="M8 14c2-1 5-3 7-6" stroke="white" stroke-width="1" opacity="0.4" fill="none"/>
+    </svg>`,
+
+    // Aero Kredi Kartı (Ön Yüz - Altın/Mor)
+    "aero-card-front": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-card-f" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FBBF24"/><stop offset="50%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs>
+    <rect x="2" y="5" width="20" height="14" rx="2" fill="url(#grad-aero-card-f)" stroke="#B45309" stroke-width="0.5"/>
+    <rect x="4" y="7" width="5" height="4" rx="1" fill="#FEF3C7" stroke="#F59E0B" stroke-width="0.5"/> <path d="M4 8h3M4 9h3M4 10h3" stroke="#F59E0B" stroke-width="0.5" opacity="0.5"/>
+    <text x="4" y="16" font-family="monospace" font-size="2" fill="white" opacity="0.9" font-weight="bold">**** **** **** 1234</text>
+    <path d="M14 15h2v2h-2z" fill="white" opacity="0.8"/> <circle cx="17" cy="16" r="1" fill="white" opacity="0.8"/>
+    <path d="M2 5h20" stroke="white" stroke-width="1.5" opacity="0.3" transform="translate(0, 1)"/> </svg>`,
+
+    // Aero Hızlı Ok (Sağ - Kırmızı)
+    "aero-arrow-speed-right": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-speed-r" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#FCA5A5" stop-opacity="0"/><stop offset="100%" stop-color="#DC2626"/></linearGradient></defs>
+    <path d="M2 12h14M13 5l7 7-7 7" stroke="url(#grad-speed-r)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M18 12h2" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.6"/> <path d="M5 12h4" stroke="#DC2626" stroke-width="2" opacity="0.3" stroke-dasharray="2 4"/> </svg>`,
+
+    // Aero Hızlı Ok (Sol - Mor)
+    "aero-arrow-speed-left": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-speed-l" x1="1" y1="0" x2="0" y2="0"><stop offset="0%" stop-color="#C084FC" stop-opacity="0"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs>
+    <path d="M22 12H8M11 5L4 12l7 7" stroke="url(#grad-speed-l)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M6 12h2" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+    <path d="M19 12h-4" stroke="#7C3AED" stroke-width="2" opacity="0.3" stroke-dasharray="2 4"/>
+    </svg>`,
+
+    // Aero Hızlı Ok (Yukarı - Mavi)
+    "aero-arrow-speed-up": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-speed-u" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#93C5FD" stop-opacity="0"/><stop offset="100%" stop-color="#2563EB"/></linearGradient></defs>
+    <path d="M12 22V8M5 11l7-7 7 7" stroke="url(#grad-speed-u)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M12 6v2" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+    <path d="M12 19v-4" stroke="#2563EB" stroke-width="2" opacity="0.3" stroke-dasharray="2 4"/>
+    </svg>`,
+
+    // Aero Hızlı Ok (Aşağı - Yeşil)
+    "aero-arrow-speed-down": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-speed-d" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#86EFAC" stop-opacity="0"/><stop offset="100%" stop-color="#16A34A"/></linearGradient></defs>
+    <path d="M12 2v14M19 13l-7 7-7-7" stroke="url(#grad-speed-d)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M12 18v-2" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+    <path d="M12 5v4" stroke="#16A34A" stroke-width="2" opacity="0.3" stroke-dasharray="2 4"/>
+    </svg>`,
+
+    // Aero Error (X - Kırmızı Cam)
+    "aero-error-x": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-aero-err" cx="50%" cy="50%"><stop offset="0%" stop-color="#FECACA"/><stop offset="100%" stop-color="#DC2626"/></radialGradient></defs>
+    <circle cx="12" cy="12" r="10" fill="url(#grad-aero-err)" stroke="#991B1B" stroke-width="0.5"/>
+    <path d="M15 9l-6 6M9 9l6 6" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="8" cy="8" rx="4" ry="2" fill="white" opacity="0.4" transform="rotate(-45 8 8)"/> </svg>`,
+
+    // Aero Warning (Ünlem - Sarı Cam)
+    "aero-warning": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FEF08A"/><stop offset="100%" stop-color="#EAB308"/></linearGradient></defs>
+    <path d="M12 3L2 21h20L12 3z" fill="url(#grad-aero-warn)" stroke="#A16207" stroke-width="0.5"/>
+    <path d="M12 8v6" stroke="#854D0E" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="12" cy="17" r="2" fill="#854D0E"/>
+    <path d="M12 4l-7 14" stroke="white" stroke-width="1.5" opacity="0.4"/>
+    </svg>`,
+
+
+    // Aero Loader (Jöle Dalga)
+    "aero-loader-jelly": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <defs><linearGradient id="grad-jelly" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#60A5FA"/><stop offset="1" stop-color="#A78BFA"/></linearGradient></defs>
+    <path fill="url(#grad-jelly)" d="M2 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8-8-3.6-8-8z">
+        <animate attributeName="d" values="M2 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8-8-3.6-8-8z;M2 12c0-6 4-10 10-10s10 4 10 10-4 10-10 10-10-4-10-10z;M2 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8-8-3.6-8-8z" dur="2s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="12" cy="12" r="4" fill="white" opacity="0.3"/>
+    </svg>`,
+
+    // Aero Loader (Atomik Çekirdek)
+    "aero-loader-atomic": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="3" fill="#34D399">
+        <animate attributeName="r" values="3;4;3" dur="1s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0.5;1" dur="1s" repeatCount="indefinite"/>
+    </circle>
+    <ellipse cx="12" cy="12" rx="10" ry="4" stroke="#34D399" stroke-width="0.5" fill="none" opacity="0.5">
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1.5s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="12" cy="12" rx="10" ry="4" stroke="#34D399" stroke-width="0.5" fill="none" opacity="0.5" transform="rotate(60 12 12)">
+        <animateTransform attributeName="transform" type="rotate" from="60 12 12" to="420 12 12" dur="1.5s" repeatCount="indefinite"/>
+    </ellipse>
+     <ellipse cx="12" cy="12" rx="10" ry="4" stroke="#34D399" stroke-width="0.5" fill="none" opacity="0.5" transform="rotate(-60 12 12)">
+        <animateTransform attributeName="transform" type="rotate" from="-60 12 12" to="300 12 12" dur="1.5s" repeatCount="indefinite"/>
+    </ellipse>
+    </svg>`,
+
+    // Aero Loader (Sıvı Bar)
+    "aero-loader-liquid-bar": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <rect x="2" y="10" width="20" height="4" rx="2" fill="#E2E8F0" stroke="#94A3B8" stroke-width="0.5"/>
+    <rect x="2" y="10" width="0" height="4" rx="2" fill="#3B82F6">
+        <animate attributeName="width" values="0;20;20" keyTimes="0;0.7;1" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="x" values="2;2;22" keyTimes="0;0.7;1" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <path d="M2 11h20" stroke="white" stroke-width="1" opacity="0.4"/>
+    </svg>`,
+    
+
+
+    // Nebula Düzenle (Kalem - Glass)
+    "aero-nebula-edit": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-neb-edit" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F8FAFC"/><stop offset="100%" stop-color="#94A3B8"/></linearGradient></defs>
+    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#64748B" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.3"/>
+    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" fill="url(#grad-neb-edit)" stroke="#475569" stroke-width="0.5"/>
+    <path d="M16 5l3 3" stroke="white" stroke-width="1" opacity="0.6"/>
+    </svg>`,
+
+    // Nebula Sil (Çöp Kutusu - Glass)
+    "aero-nebula-trash": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-neb-trash" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F1F5F9"/><stop offset="100%" stop-color="#CBD5E1"/></linearGradient></defs>
+    <path d="M3 6h18" stroke="#64748B" stroke-width="2" stroke-linecap="round"/>
+    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" fill="url(#grad-neb-trash)" stroke="#64748B" stroke-width="0.5"/>
+    <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" fill="url(#grad-neb-trash)" stroke="#64748B" stroke-width="0.5"/>
+    <line x1="10" y1="11" x2="10" y2="17" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    <line x1="14" y1="11" x2="14" y2="17" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    </svg>`,
+
+    // Nebula Paylaş (Share Node - Glass)
+    "aero-nebula-share": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-neb-share" cx="30%" cy="30%"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="100%" stop-color="#94A3B8"/></radialGradient></defs>
+    <circle cx="18" cy="5" r="3" fill="url(#grad-neb-share)" stroke="#475569" stroke-width="0.5"/>
+    <circle cx="6" cy="12" r="3" fill="url(#grad-neb-share)" stroke="#475569" stroke-width="0.5"/>
+    <circle cx="18" cy="19" r="3" fill="url(#grad-neb-share)" stroke="#475569" stroke-width="0.5"/>
+    <path d="M8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98" stroke="#64748B" stroke-width="2"/>
+    </svg>`,
+
+    // Nebula İndir (Download - Glass Arrow)
+    "aero-nebula-download": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-neb-down" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F8FAFC"/><stop offset="100%" stop-color="#64748B"/></linearGradient></defs>
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="#64748B" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
+    <path d="M7 10l5 5 5-5" stroke="#334155" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M12 15V3" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+    <path d="M7 10l5 5 5-5" stroke="white" stroke-width="1" fill="none" opacity="0.6" transform="translate(0, -1)"/>
+    </svg>`,
+
+
+    // Nebula Takvim (Calendar)
+    "aero-nebula-calendar": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-neb-cal" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F1F5F9"/><stop offset="100%" stop-color="#94A3B8"/></linearGradient></defs>
+    <rect x="3" y="4" width="18" height="18" rx="2" fill="url(#grad-neb-cal)" stroke="#475569" stroke-width="0.5"/>
+    <path d="M16 2v4M8 2v4M3 10h18" stroke="#475569" stroke-width="1.5" stroke-linecap="round"/>
+    <rect x="7" y="14" width="2" height="2" rx="0.5" fill="white" opacity="0.7"/>
+    <rect x="11" y="14" width="2" height="2" rx="0.5" fill="white" opacity="0.7"/>
+    <rect x="15" y="14" width="2" height="2" rx="0.5" fill="white" opacity="0.7"/>
+    </svg>`,
+
+    // Nebula Saat (Time/Clock)
+    "aero-nebula-clock": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-neb-clock" cx="30%" cy="30%" r="70%"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="100%" stop-color="#CBD5E1"/></radialGradient></defs>
+    <circle cx="12" cy="12" r="10" fill="url(#grad-neb-clock)" stroke="#475569" stroke-width="0.5"/>
+    <path d="M12 6v6l4 2" stroke="#334155" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="12" cy="12" r="1" fill="#334155"/>
+    <path d="M12 2a10 10 0 0 1 7 3" stroke="white" stroke-width="1" opacity="0.6" fill="none"/>
+    </svg>`,
+
+    // Nebula Konum (Pin/Map)
+    "aero-nebula-location": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-neb-pin" cx="40%" cy="40%" r="60%"><stop offset="0%" stop-color="#F8FAFC"/><stop offset="100%" stop-color="#64748B"/></radialGradient></defs>
+    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" fill="url(#grad-neb-pin)" stroke="#334155" stroke-width="0.5"/>
+    <circle cx="12" cy="10" r="3" fill="white" opacity="0.8" stroke="#334155" stroke-width="0.5"/>
+    <ellipse cx="9" cy="8" rx="3" ry="2" fill="white" opacity="0.4" transform="rotate(-30 9 8)"/>
+    </svg>`,
+
+    // Nebula Göz (Göster/Gizle)
+    "aero-nebula-eye": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-neb-eye" cx="50%" cy="50%"><stop offset="0%" stop-color="#F1F5F9"/><stop offset="100%" stop-color="#CBD5E1"/></radialGradient></defs>
+    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" fill="url(#grad-neb-eye)" stroke="#64748B" stroke-width="0.5"/>
+    <circle cx="12" cy="12" r="3" fill="#334155"/>
+    <circle cx="13" cy="11" r="1" fill="white"/>
+    <path d="M12 5c3 0 6 2 8 4" stroke="white" stroke-width="1" opacity="0.5" fill="none"/>
+    </svg>`,
+
+    // Nebula Kalp (Like)
+    "aero-nebula-heart": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-neb-heart" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F8FAFC"/><stop offset="100%" stop-color="#94A3B8"/></linearGradient></defs>
+    <path d="M20.8 4.6a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="url(#grad-neb-heart)" stroke="#475569" stroke-width="0.5"/>
+    <path d="M6 7c2-2 5-2 6 0" stroke="white" stroke-width="1.5" opacity="0.6" fill="none"/>
+    </svg>`,
+
+    // Nebula Yıldız (Favori)
+    "aero-nebula-star": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-neb-star" cx="50%" cy="40%"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="100%" stop-color="#CBD5E1"/></radialGradient></defs>
+    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="url(#grad-neb-star)" stroke="#64748B" stroke-width="0.5"/>
+    <path d="M12 2l3 6 7 1" stroke="white" stroke-width="1" opacity="0.5" fill="none"/>
+    </svg>`,
+
+    // Nebula Resim (Galeri)
+    "aero-nebula-image": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-neb-pic" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#E2E8F0"/><stop offset="100%" stop-color="#F8FAFC"/></linearGradient></defs>
+    <rect x="3" y="3" width="18" height="18" rx="2" fill="url(#grad-neb-pic)" stroke="#475569" stroke-width="0.5"/>
+    <circle cx="8.5" cy="8.5" r="1.5" fill="#64748B"/>
+    <path d="M21 15l-5-5L5 21" fill="none" stroke="#64748B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>`,
+
+    // Nebula Link (Zincir)
+    "aero-nebula-link": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" stroke="#94A3B8" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" stroke="#CBD5E1" stroke-width="3" stroke-linecap="round"/>
+    </svg>`,
+
+    // Nebula Filtre (Huni)
+    "aero-nebula-filter": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-neb-filt" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F1F5F9"/><stop offset="100%" stop-color="#94A3B8"/></linearGradient></defs>
+    <path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z" fill="url(#grad-neb-filt)" stroke="#475569" stroke-width="0.5"/>
+    <path d="M2 3h20" stroke="white" stroke-width="1.5" opacity="0.5"/>
+    </svg>`,
+
+
+    // Aero Altın Para (Dönen Işıltı)
+    "aero-gold-coin-shine": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-gold-coin" cx="40%" cy="40%" r="70%"><stop offset="0%" stop-color="#FEF08A"/><stop offset="50%" stop-color="#EAB308"/><stop offset="100%" stop-color="#A16207"/></radialGradient></defs>
+    <circle cx="12" cy="12" r="10" fill="url(#grad-gold-coin)" stroke="#854D0E" stroke-width="0.5"/>
+    <circle cx="12" cy="12" r="7" stroke="#FDE047" stroke-width="1" fill="none" opacity="0.6"/>
+    <text x="12" y="16" font-family="serif" font-weight="bold" font-size="12" fill="#713F12" text-anchor="middle" opacity="0.8">$</text>
+    <ellipse cx="8" cy="8" rx="3" ry="1.5" fill="white" opacity="0.5" transform="rotate(-45 8 8)"/> </svg>`,
+
+    // Aero Altın Taç (Kraliyet - Mücevherli)
+    "aero-gold-crown-jewel": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-gold-crown" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FCD34D"/><stop offset="100%" stop-color="#B45309"/></linearGradient></defs>
+    <path d="M2 18h20l-2-12-4 6-4-6-4 6-4-6z" fill="url(#grad-gold-crown)" stroke="#92400E" stroke-width="0.5"/>
+    <circle cx="12" cy="15" r="2" fill="#DC2626" stroke="#7F1D1D" stroke-width="0.5"/> <circle cx="12" cy="15" r="0.5" fill="white" opacity="0.8"/>
+    <path d="M5 18L3 6M21 6l-2 12" stroke="white" stroke-width="1" opacity="0.3"/>
+    </svg>`,
+
+    // Aero Külçe Altın (Yığın)
+    "aero-gold-ingot-stack": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-ingot" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FEF9C3"/><stop offset="100%" stop-color="#CA8A04"/></linearGradient></defs>
+    <path d="M8 13l4-2 10 2v5l-4 2-10-2V13z" fill="#B45309"/> <path d="M4 10l4-2 10 2v5l-4 2-10-2V10z" fill="url(#grad-ingot)" stroke="#B45309" stroke-width="0.5"/>
+    <path d="M8 8l4 2-4 2-4-2 4-2z" fill="#FFF7ED" opacity="0.6"/> <path d="M12 4l4-2 4 2v5l-4 2-4-2V4z" fill="url(#grad-ingot)" stroke="#B45309" stroke-width="0.5" transform="translate(-4, -2)"/>
+    </svg>`,
+
+    // Aero Elmas (Altın Çerçeveli)
+    "aero-gold-diamond": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-gold-dia" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#E0F2FE"/><stop offset="100%" stop-color="#38BDF8"/></linearGradient></defs>
+    <path d="M6 5L2 10l10 13 10-13-4-5H6z" fill="url(#grad-gold-dia)" stroke="#0EA5E9" stroke-width="0.5"/>
+    <path d="M6 5l-4 5 10 13" stroke="#CA8A04" stroke-width="1.5" fill="none" opacity="0.6"/> <path d="M18 5l4 5-10 13" stroke="#CA8A04" stroke-width="1.5" fill="none" opacity="0.6"/>
+    <path d="M7 10l5-5 5 5-5 13z" fill="white" opacity="0.3"/>
+    </svg>`,
+
+
+    // Liquid Gold Spinner (Erimiş Altın Halka)
+    "aero-loader-liquid-gold": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <defs><linearGradient id="grad-spin-gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FDE047"/><stop offset="100%" stop-color="#854D0E"/></linearGradient></defs>
+    <circle cx="12" cy="12" r="10" stroke="#FEF9C3" stroke-width="2" opacity="0.3"/>
+    <path d="M12 2a10 10 0 0 1 10 10" stroke="url(#grad-spin-gold)" stroke-width="3" stroke-linecap="round" fill="none">
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="12" cy="2" r="1.5" fill="#FACC15">
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1s" repeatCount="indefinite"/>
+    </circle>
+    </svg>`,
+
+    // Kum Saati (Sonsuz Akış - Mavi/Mor)
+    "aero-loader-hourglass-flow": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-hour" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#A78BFA"/></linearGradient></defs>
+    <path d="M6 2v6l6 6 6-6V2H6zm0 20v-6l6-6 6 6v6H6z" stroke="#475569" stroke-width="2" stroke-linejoin="round" fill="none"/>
+    <path d="M6 2h12v4L12 12 6 6V2z" fill="url(#grad-hour)" opacity="0.8">
+        <animate attributeName="d" values="M6 2h12v4L12 12 6 6V2z;M6 2h12v0L12 12 6 0V2z;M6 2h12v4L12 12 6 6V2z" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="12" cy="14" r="0" fill="#8B5CF6">
+        <animate attributeName="r" values="0;4;0" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="12;20;20" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    </svg>`,
+
+    // Radar Tarayıcı (Hedef Arama - Yeşil)
+    "aero-loader-radar-scan": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-radar" cx="50%" cy="50%"><stop offset="0%" stop-color="#4ADE80" stop-opacity="0.2"/><stop offset="100%" stop-color="#4ADE80" stop-opacity="0"/></radialGradient></defs>
+    <circle cx="12" cy="12" r="10" stroke="#166534" stroke-width="2"/>
+    <circle cx="12" cy="12" r="6" stroke="#166534" stroke-width="1" opacity="0.5"/>
+    <circle cx="12" cy="12" r="2" fill="#22C55E"/>
+    <path d="M12 12L12 2" stroke="#4ADE80" stroke-width="2" stroke-linecap="round">
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="12" cy="12" r="10" fill="url(#grad-radar)">
+         <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    </svg>`,
+
+    // DNA Sarmalı (Dönen Genetik)
+    "aero-loader-dna-spin": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <circle cx="7" cy="6" r="2" fill="#F472B6"><animate attributeName="cy" values="6;18;6" dur="1.5s" repeatCount="indefinite"/></circle>
+        <circle cx="17" cy="18" r="2" fill="#60A5FA"><animate attributeName="cy" values="18;6;18" dur="1.5s" repeatCount="indefinite"/></circle>
+        <line x1="7" y1="6" x2="17" y2="18" stroke="#94A3B8" stroke-width="1.5" opacity="0.5">
+            <animate attributeName="y1" values="6;18;6" dur="1.5s" repeatCount="indefinite"/>
+            <animate attributeName="y2" values="18;6;18" dur="1.5s" repeatCount="indefinite"/>
+        </line>
+        <circle cx="7" cy="12" r="2" fill="#A78BFA"><animate attributeName="r" values="1;3;1" dur="1.5s" repeatCount="indefinite"/></circle>
+        <circle cx="17" cy="12" r="2" fill="#A78BFA"><animate attributeName="r" values="3;1;3" dur="1.5s" repeatCount="indefinite"/></circle>
+    </g>
+    </svg>`,
+
+
+    // Aero Kalkan (Enerji Koruması)
+    "aero-fx-shield-energy": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-en-shield" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#22D3EE"/><stop offset="100%" stop-color="#0891B2"/></linearGradient></defs>
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="url(#grad-en-shield)" stroke="#155E75" stroke-width="0.5" opacity="0.8"/>
+    <path d="M12 2v20" stroke="white" stroke-width="1" opacity="0.4"/>
+    <circle cx="12" cy="12" r="6" stroke="white" stroke-width="1.5" fill="none" stroke-dasharray="2 2">
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="10s" linear infinite/>
+    </circle>
+    </svg>`,
+
+    // Aero Ok (Yanan Hız - Neon)
+    "aero-fx-arrow-fire": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-fire-arr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#F87171"/><stop offset="100%" stop-color="#F59E0B"/></linearGradient></defs>
+    <path d="M4 12h14M13 5l7 7-7 7" stroke="url(#grad-fire-arr)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M19 12l-1-1" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="5" cy="12" r="1" fill="#FCA5A5"><animate attributeName="cx" values="5;0" dur="0.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0" dur="0.5s" repeatCount="indefinite"/></circle>
+    <circle cx="8" cy="12" r="0.5" fill="#FCA5A5"><animate attributeName="cx" values="8;3" dur="0.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0" dur="0.5s" repeatCount="indefinite"/></circle>
+    </svg>`,
+
+    // Aero Kalp (Canlı Atış - Kırmızı Cam)
+    "aero-heart-beat-live": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-live-heart" cx="50%" cy="30%" r="80%"><stop offset="0%" stop-color="#FCA5A5"/><stop offset="100%" stop-color="#DC2626"/></radialGradient></defs>
+    <g transform-origin="center">
+        <path d="M20.8 4.6a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="url(#grad-live-heart)" stroke="#991B1B" stroke-width="0.5">
+            <animateTransform attributeName="transform" type="scale" values="1;1.15;1" dur="0.8s" repeatCount="indefinite" keyTimes="0;0.3;1" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1"/>
+        </path>
+        <path d="M6 8c1-2 4-3 6-1" stroke="white" stroke-width="1.5" opacity="0.6" fill="none">
+             <animateTransform attributeName="transform" type="scale" values="1;1.1;1" dur="0.8s" repeatCount="indefinite"/>
+        </path>
+    </g>
+    </svg>`,
+
+    // Aero Fan (Turbo Soğutma - Dönen)
+    "aero-fan-spin-live": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-live-fan" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#67E8F9"/><stop offset="100%" stop-color="#0891B2"/></linearGradient></defs>
+    <circle cx="12" cy="12" r="11" stroke="#155E75" stroke-width="2" fill="#083344" fill-opacity="0.2"/>
+    <g>
+        <path d="M12 12L12 2A10 10 0 0 1 22 12" fill="url(#grad-live-fan)" opacity="0.9"/>
+        <path d="M12 12L12 22A10 10 0 0 1 2 12" fill="url(#grad-live-fan)" opacity="0.9"/>
+        <path d="M12 12L2 12A10 10 0 0 1 12 2" fill="url(#grad-live-fan)" opacity="0.6" transform="rotate(90 12 12)"/>
+        <path d="M12 12L22 12A10 10 0 0 1 12 22" fill="url(#grad-live-fan)" opacity="0.6" transform="rotate(90 12 12)"/>
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1s" repeatCount="indefinite"/>
+    </g>
+    <circle cx="12" cy="12" r="2" fill="white"/>
+    </svg>`,
+
+
+    // Aero Tekli Sağ (Camgöbeği)
+    "aero-arrow-single-right": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-arr-sr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#22D3EE"/><stop offset="100%" stop-color="#0284C7"/></linearGradient></defs>
+    <path d="M13 5l7 7-7 7" stroke="url(#grad-arr-sr)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M13 5l7 7-7 7" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.5" transform="translate(-1, -1)"/>
+    </svg>`,
+
+    // Aero Tekli Sol (Mor)
+    "aero-arrow-single-left": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-arr-sl" x1="1" y1="0" x2="0" y2="0"><stop offset="0%" stop-color="#E879F9"/><stop offset="100%" stop-color="#9333EA"/></linearGradient></defs>
+    <path d="M11 19l-7-7 7-7" stroke="url(#grad-arr-sl)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M11 19l-7-7 7-7" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.5" transform="translate(1, -1)"/>
+    </svg>`,
+
+    // Aero İkili Hızlı Sağ (Turbo - Turuncu)
+    "aero-arrow-double-right": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-arr-dr" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#FDBA74"/><stop offset="100%" stop-color="#EA580C"/></linearGradient></defs>
+    <path d="M13 17l5-5-5-5M6 17l5-5-5-5" stroke="url(#grad-arr-dr)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M13 17l5-5-5-5M6 17l5-5-5-5" stroke="white" stroke-width="1" opacity="0.5" fill="none" transform="translate(0, -1)"/>
+    </svg>`,
+
+    // Aero Alev (Hot/Trending - Hareketli)
+    "aero-fire-live": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-live-fire" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#EF4444"/><stop offset="100%" stop-color="#FACC15"/></linearGradient></defs>
+    <path d="M12 22c4 0 7-3 7-7 0-5-4-8-7-13-3 5-7 8-7 13 0 4 3 7 7 7z" fill="url(#grad-live-fire)">
+         <animate attributeName="d" values="M12 22c4 0 7-3 7-7 0-5-4-8-7-13-3 5-7 8-7 13 0 4 3 7 7 7z; M12 22c3.5 0 6.5-3 6.5-7 0-5-3.5-8-6.5-12-3 4-6.5 7-6.5 12 0 4 3 7 6.5 7z; M12 22c4 0 7-3 7-7 0-5-4-8-7-13-3 5-7 8-7 13 0 4 3 7 7 7z" dur="0.8s" repeatCount="indefinite"/>
+    </path>
+    <path d="M12 16c1 0 2 1 2 3" stroke="white" stroke-width="1.5" opacity="0.6" fill="none"/>
+    </svg>`,
+
+    // Aero Like (Başparmak Yukarı - Mavi)
+    "aero-thumbs-up": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-like" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#2563EB"/><stop offset="100%" stop-color="#60A5FA"/></linearGradient></defs>
+    <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3" fill="url(#grad-like)" stroke="#1E40AF" stroke-width="0.5"/>
+    <path d="M15 7c1 0 2 3 0 5" stroke="white" stroke-width="1.5" opacity="0.4" fill="none"/>
+    </svg>`,
+
+    // Aero Dislike (Başparmak Aşağı - Kırmızı)
+    "aero-thumbs-down": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-dislike" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F87171"/><stop offset="100%" stop-color="#B91C1C"/></linearGradient></defs>
+    <path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zM17 2h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-3" fill="url(#grad-dislike)" stroke="#7F1D1D" stroke-width="0.5"/>
+    <path d="M9 17c-1 0-2-3 0-5" stroke="white" stroke-width="1.5" opacity="0.4" fill="none"/>
+    </svg>`,
+
+    // Aero Pie Chart (Pasta - Dilimli)
+    "aero-chart-pie": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.21 15.89A10 10 0 1 1 8 2.83" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/>
+    <path d="M22 12A10 10 0 0 0 12 2v10z" fill="#6366F1" stroke="#4F46E5" stroke-width="0.5"/>
+    <path d="M12 12L12 2" stroke="white" stroke-width="1" opacity="0.5"/>
+    <path d="M12 12L22 12" stroke="white" stroke-width="1" opacity="0.5"/>
+    </svg>`,
+
+    // Aero Yükseliş (Trend Up - Yeşil Ok)
+    "aero-chart-trend": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-trend" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#22C55E"/><stop offset="100%" stop-color="#86EFAC"/></linearGradient></defs>
+    <path d="M23 6l-9.5 9.5-5-5L1 18" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M17 6h6v6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M23 6L13.5 15.5" stroke="url(#grad-trend)" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="23" cy="6" r="2" fill="#22C55E"/>
+    </svg>`,
+
+
+    // Aero Trash (Dolu - Kırmızı)
+    "aero-trash-full": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-trash-f" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FECACA"/><stop offset="100%" stop-color="#EF4444"/></linearGradient></defs>
+    <path d="M3 6h18" stroke="#991B1B" stroke-width="2" stroke-linecap="round"/>
+    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" fill="url(#grad-trash-f)" stroke="#991B1B" stroke-width="0.5"/>
+    <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" fill="#EF4444"/>
+    <line x1="10" y1="11" x2="10" y2="17" stroke="white" stroke-width="1.5" opacity="0.6"/>
+    <line x1="14" y1="11" x2="14" y2="17" stroke="white" stroke-width="1.5" opacity="0.6"/>
+    </svg>`,
+
+    // Aero Trash (Boş - Yeşil/Geri Dönüşüm)
+    "aero-trash-recycle": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-trash-r" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#A7F3D0"/><stop offset="100%" stop-color="#10B981"/></linearGradient></defs>
+    <path d="M3 6h18" stroke="#065F46" stroke-width="2" stroke-linecap="round"/>
+    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" fill="url(#grad-trash-r)" stroke="#065F46" stroke-width="0.5"/>
+    <path d="M12 11l-2 3h4l-2 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </svg>`,
+
+    // Aero Araba (Spor - Kırmızı)
+    "aero-car-sport": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-car-s" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#FCA5A5"/><stop offset="100%" stop-color="#DC2626"/></linearGradient></defs>
+    <path d="M5 17h14v-5H5v5z" fill="#991B1B"/> <path d="M2 12h20" stroke="#991B1B" stroke-width="1"/>
+    <path d="M5 12l2-5h10l2 5" fill="url(#grad-car-s)" stroke="#991B1B" stroke-width="0.5"/> <circle cx="7" cy="17" r="3" fill="#1F2937" stroke="#4B5563" stroke-width="1"/>
+    <circle cx="17" cy="17" r="3" fill="#1F2937" stroke="#4B5563" stroke-width="1"/>
+    <path d="M7 17a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" fill="#D1D5DB"/> <path d="M17 17a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" fill="#D1D5DB"/>
+    </svg>`,
+
+    // Yakut Kalp (Aşk - Kırmızı)
+    "aero-heart-ruby": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-heart-red" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F472B6"/><stop offset="100%" stop-color="#BE123C"/></linearGradient></defs>
+    <path d="M20.8 4.6a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="url(#grad-heart-red)" stroke="#881337" stroke-width="0.5"/>
+    <path d="M6 8c1-2 4-3 6-1" stroke="white" stroke-width="1.5" opacity="0.6" fill="none" stroke-linecap="round"/> </svg>`,
+
+    // Safir Kalp (Güven - Mavi)
+    "aero-heart-sapphire": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-heart-blue" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#1D4ED8"/></linearGradient></defs>
+    <path d="M20.8 4.6a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="url(#grad-heart-blue)" stroke="#1E3A8A" stroke-width="0.5"/>
+    <path d="M18 8c-1-2-4-3-6-1" stroke="white" stroke-width="1.5" opacity="0.5" fill="none" stroke-linecap="round"/>
+    </svg>`,
+
+    // Zümrüt Kalp (Doğa/Sağlık - Yeşil)
+    "aero-heart-emerald": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-heart-green" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#047857"/></linearGradient></defs>
+    <path d="M20.8 4.6a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="url(#grad-heart-green)" stroke="#064E3B" stroke-width="0.5"/>
+    <path d="M7 10c1-1 3-1 4 0" stroke="white" stroke-width="1.5" opacity="0.5" fill="none" stroke-linecap="round"/>
+    </svg>`,
+
+    // Altın Kalp (Premium - Sarı)
+    "aero-heart-gold": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-heart-gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FDE047"/><stop offset="100%" stop-color="#CA8A04"/></linearGradient></defs>
+    <path d="M20.8 4.6a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="url(#grad-heart-gold)" stroke="#854D0E" stroke-width="0.5"/>
+    <circle cx="17" cy="9" r="1" fill="white" opacity="0.8"/> </svg>`,
+
+    // Ametist Kalp (Mistik - Mor)
+    "aero-heart-amethyst": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-heart-purp" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#C084FC"/><stop offset="100%" stop-color="#7E22CE"/></linearGradient></defs>
+    <path d="M20.8 4.6a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="url(#grad-heart-purp)" stroke="#581C87" stroke-width="0.5"/>
+    <path d="M12 8l3 3" stroke="white" stroke-width="1" opacity="0.4"/>
+    </svg>`,
+
+
+    // Aero Bar Chart (Yükselen Sütunlar)
+    "aero-chart-bar-growth": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-bar-1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#2563EB"/></linearGradient><linearGradient id="grad-bar-2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#A78BFA"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient><linearGradient id="grad-bar-3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#059669"/></linearGradient></defs>
+    <rect x="3" y="12" width="4" height="8" rx="1" fill="url(#grad-bar-1)" stroke="#1E40AF" stroke-width="0.5"/>
+    <rect x="10" y="8" width="4" height="12" rx="1" fill="url(#grad-bar-2)" stroke="#5B21B6" stroke-width="0.5"/>
+    <rect x="17" y="4" width="4" height="16" rx="1" fill="url(#grad-bar-3)" stroke="#047857" stroke-width="0.5"/>
+    <path d="M3 21h18" stroke="#475569" stroke-width="2" stroke-linecap="round"/>
+    </svg>`,
+
+    // Aero Pie Chart (Dilimli Pasta - 3D)
+    "aero-chart-pie-3d": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 12L2 12A10 10 0 0 1 12 2V12z" fill="#60A5FA" stroke="#2563EB" stroke-width="0.5"/>
+    <path d="M12 12L12 2A10 10 0 0 1 22 12H12z" fill="#F472B6" stroke="#DB2777" stroke-width="0.5"/>
+    <path d="M12 12L22 12A10 10 0 0 1 12 22V12z" fill="#34D399" stroke="#059669" stroke-width="0.5"/>
+    <path d="M12 12L12 22A10 10 0 0 1 2 12H12z" fill="#FBBF24" stroke="#D97706" stroke-width="0.5"/>
+    <circle cx="12" cy="12" r="2" fill="white" opacity="0.5"/> </svg>`,
+
+    // Aero Analytics (Eğri Grafik - Neon)
+    "aero-chart-analytics": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2 20h20" stroke="#475569" stroke-width="2" stroke-linecap="round"/>
+    <path d="M4 15l4-2 4 5 4-8 4 4" stroke="#6366F1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <circle cx="8" cy="13" r="2" fill="#A5B4FC"/>
+    <circle cx="16" cy="10" r="2" fill="#A5B4FC"/>
+    <path d="M4 15l4-2 4 5 4-8 4 4" stroke="white" stroke-width="1" opacity="0.5" fill="none"/>
+    </svg>`,
+
+    // Aero Upload (Buluta Yükle - Mavi)
+    "aero-cloud-upload": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-cloud-up" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#E0F2FE"/><stop offset="100%" stop-color="#7DD3FC"/></linearGradient></defs>
+    <path d="M17.5 19c0 2.167-1.667 4-3.929 4.1L13 23H6c-3.314 0-6-2.686-6-6 0-2.958 2.131-5.425 4.942-5.916C5.232 6.614 9.204 3 14 3c4.97 0 9 4.03 9 9 0 .32-.017.634-.05 1.082A5.505 5.505 0 0 1 17.5 19z" fill="url(#grad-cloud-up)" stroke="#0EA5E9" stroke-width="0.5"/>
+    <path d="M12 16V9" stroke="#0369A1" stroke-width="2" stroke-linecap="round"/>
+    <path d="M9 12l3-3 3 3" stroke="#0369A1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>`,
+
+    // Aero Download (İndir - Yeşil Ok)
+    "aero-cloud-download": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-cloud-down" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F0FDF4"/><stop offset="100%" stop-color="#86EFAC"/></linearGradient></defs>
+    <path d="M17.5 19c0 2.167-1.667 4-3.929 4.1L13 23H6c-3.314 0-6-2.686-6-6 0-2.958 2.131-5.425 4.942-5.916C5.232 6.614 9.204 3 14 3c4.97 0 9 4.03 9 9 0 .32-.017.634-.05 1.082A5.505 5.505 0 0 1 17.5 19z" fill="url(#grad-cloud-down)" stroke="#22C55E" stroke-width="0.5"/>
+    <path d="M12 8v7" stroke="#15803D" stroke-width="2" stroke-linecap="round"/>
+    <path d="M9 12l3 3 3-3" stroke="#15803D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>`,
+
+    // Aero Infinity (Sonsuz Döngü)
+    "aero-loader-infinity": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 8c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm8 0c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4z" stroke="#6366F1" stroke-width="2" stroke-linecap="round" fill="none" stroke-dasharray="2 4">
+        <animate attributeName="stroke-dashoffset" from="0" to="24" dur="1s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="6" cy="12" r="1.5" fill="#8B5CF6"><animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite"/></circle>
+    <circle cx="18" cy="12" r="1.5" fill="#8B5CF6"><animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></circle>
+    </svg>`,
+
+    // Aero Pulsar (Yayılan Halka)
+    "aero-loader-pulsar": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="2" fill="#F43F5E"/>
+    <circle cx="12" cy="12" r="2" stroke="#F43F5E" stroke-width="1" fill="none">
+        <animate attributeName="r" values="2;10" dur="1.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="12" cy="12" r="2" stroke="#F43F5E" stroke-width="1" fill="none">
+        <animate attributeName="r" values="2;10" dur="1.5s" begin="0.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" dur="1.5s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    </svg>`,
+
+    // Aero Liquid Spin (Dönen Sıvı)
+    "aero-loader-liquid-spin": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-liq-spin" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#06B6D4"/><stop offset="100%" stop-color="#3B82F6"/></linearGradient></defs>
+    <circle cx="12" cy="12" r="10" stroke="#E2E8F0" stroke-width="2" fill="none"/>
+    <path d="M12 2a10 10 0 0 1 10 10" stroke="url(#grad-liq-spin)" stroke-width="3" stroke-linecap="round" fill="none">
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1s" repeatCount="indefinite"/>
+    </path>
+    </svg>`,
+
+    // Aero Araba (Spor - Kırmızı Jöle)
+    "aero-car-sport-red": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-car-r" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#F87171"/><stop offset="100%" stop-color="#B91C1C"/></linearGradient></defs>
+    <path d="M3 12h18v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5z" fill="#991B1B"/>
+    <path d="M5 12L7 6h10l2 6" fill="url(#grad-car-r)" stroke="#7F1D1D" stroke-width="0.5"/>
+    <circle cx="7" cy="17" r="3" fill="#1F2937" stroke="#4B5563" stroke-width="1"/>
+    <circle cx="17" cy="17" r="3" fill="#1F2937" stroke="#4B5563" stroke-width="1"/>
+    <circle cx="7" cy="17" r="1" fill="#9CA3AF"/> <circle cx="17" cy="17" r="1" fill="#9CA3AF"/>
+    <path d="M8 8h8" stroke="white" stroke-width="1" opacity="0.3"/> </svg>`,
+
+    // Aero Uçak (Seyahat - Beyaz/Mavi)
+    "aero-plane-fly": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-plane" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="100%" stop-color="#E2E8F0"/></linearGradient></defs>
+    <path d="M2 12l20-9-9 20-2-8-9-3z" fill="url(#grad-plane)" stroke="#94A3B8" stroke-width="1"/>
+    <path d="M13 15l9-12" stroke="#64748B" stroke-width="1" opacity="0.5"/>
+    <path d="M6 13l4 1" stroke="white" stroke-width="1" opacity="0.8"/> </svg>`,
+
+
+    "aero-heart-vital": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <radialGradient id="grad-vital-h" cx="30%" cy="30%" r="80%">
+            <stop offset="0%" stop-color="#FF7171"/>
+            <stop offset="40%" stop-color="#EF4444"/>
+            <stop offset="100%" stop-color="#991B1B"/>
+        </radialGradient>
+        <filter id="glow-heart" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+            <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+    </defs>
+    <g transform-origin="center">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" 
+              fill="url(#grad-vital-h)" stroke="#7F1D1D" stroke-width="0.5" filter="url(#glow-heart)">
+            <animateTransform attributeName="transform" type="scale" 
+                values="1; 1.15; 1.05; 1.2; 1" 
+                keyTimes="0; 0.15; 0.30; 0.45; 1" 
+                dur="1.2s" repeatCount="indefinite" />
+        </path>
+        
+        <path d="M6 8c1-2 4-3 6-1" stroke="white" stroke-width="2" opacity="0.5" fill="none" stroke-linecap="round">
+             <animateTransform attributeName="transform" type="scale" values="1; 1.1; 1.05; 1.15; 1" keyTimes="0; 0.15; 0.30; 0.45; 1" dur="1.2s" repeatCount="indefinite" />
+        </path>
+    </g>
+    </svg>`,
+
+    // Aero Arşiv Kutusu (Mor/Mavi Cam)
+    "aero-box-archive": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-arch-box" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#818CF8"/><stop offset="100%" stop-color="#4338CA"/></linearGradient></defs>
+    <path d="M21 8v13H3V8" fill="url(#grad-arch-box)" stroke="#312E81" stroke-width="0.5" opacity="0.9"/>
+    <path d="M1 3h22v5H1z" fill="#6366F1" stroke="#312E81" stroke-width="0.5"/>
+    <rect x="10" y="12" width="4" height="2" rx="1" fill="white" opacity="0.8"/> <path d="M3 4h2" stroke="white" stroke-width="1" opacity="0.5"/>
+    <path d="M21 9v11" stroke="white" stroke-width="1" opacity="0.2"/>
+    </svg>`,
+
+    // Aero Bookmark (Favori - Kırmızı Kurdele)
+    "aero-bookmark-ribbon": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-ribbon" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#F87171"/><stop offset="100%" stop-color="#B91C1C"/></linearGradient></defs>
+    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" fill="url(#grad-ribbon)" stroke="#7F1D1D" stroke-width="0.5"/>
+    <path d="M17 3H7" stroke="white" stroke-width="1" opacity="0.3"/>
+    <path d="M7 5v10" stroke="white" stroke-width="1" opacity="0.2"/>
+    <circle cx="12" cy="8" r="2" fill="#FECACA" opacity="0.4"/> </svg>`,
+
+    // Aero Bayrak (Hedef/Ülke - Dalgalı Cam)
+    "aero-flag-waving": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-flag" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#059669"/></linearGradient></defs>
+    <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" fill="url(#grad-flag)" stroke="#064E3B" stroke-width="0.5"/>
+    <path d="M4 22v-7" stroke="#475569" stroke-width="3" stroke-linecap="round"/>
+    <path d="M5 5c2 0 4 1 6 2" stroke="white" stroke-width="1" opacity="0.4" fill="none"/>
+    <path d="M14 8c2 0 4-1 5-1" stroke="white" stroke-width="1" opacity="0.4" fill="none"/>
+    </svg>`,
+
+    // Aero Liquid Spin (Sıvı Çember)
+    "aero-loader-liquid-circle": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-liq-spin" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F472B6"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs>
+    <circle cx="12" cy="12" r="10" stroke="#E2E8F0" stroke-width="2" fill="none"/>
+    <path d="M12 2a10 10 0 0 1 10 10" stroke="url(#grad-liq-spin)" stroke-width="4" stroke-linecap="round" fill="none">
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="12" cy="2" r="2" fill="#F472B6">
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1s" repeatCount="indefinite"/>
+    </circle>
+    </svg>`,
+
+    // Aero DNA (Genetik Yükleme)
+    "aero-loader-dna": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <circle cx="6" cy="12" r="2" fill="#3B82F6"><animate attributeName="cy" values="6;18;6" dur="1.2s" repeatCount="indefinite"/></circle>
+        <circle cx="18" cy="12" r="2" fill="#10B981"><animate attributeName="cy" values="18;6;18" dur="1.2s" repeatCount="indefinite"/></circle>
+        <line x1="6" y1="6" x2="18" y2="18" stroke="#CBD5E1" stroke-width="1.5" opacity="0.5">
+            <animate attributeName="y1" values="6;18;6" dur="1.2s" repeatCount="indefinite"/>
+            <animate attributeName="y2" values="18;6;18" dur="1.2s" repeatCount="indefinite"/>
+        </line>
+    </g>
+    </svg>`,
+
+    // Aero WiFi (Sinyal Arama)
+    "aero-loader-wifi-search": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="20" r="2" fill="#6366F1"/>
+    <path d="M8.53 16.11a6 6 0 0 1 6.95 0" stroke="#6366F1" stroke-width="2" stroke-linecap="round" opacity="0.3">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite" begin="0s"/>
+    </path>
+    <path d="M5 12.55a11 11 0 0 1 14.08 0" stroke="#6366F1" stroke-width="2" stroke-linecap="round" opacity="0.3">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite" begin="0.3s"/>
+    </path>
+    <path d="M1.42 9a16 16 0 0 1 21.16 0" stroke="#6366F1" stroke-width="2" stroke-linecap="round" opacity="0.3">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite" begin="0.6s"/>
+    </path>
+    </svg>`,
+
+    // Aero Göz (Şifre Göster - Cam Mercek)
+    "aero-form-eye": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-eye" cx="50%" cy="50%"><stop offset="0%" stop-color="#F1F5F9"/><stop offset="100%" stop-color="#94A3B8"/></radialGradient></defs>
+    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" fill="url(#grad-eye)" stroke="#475569" stroke-width="0.5"/>
+    <circle cx="12" cy="12" r="3" fill="#1E293B"/>
+    <circle cx="13" cy="11" r="1" fill="white"/> <path d="M12 5c3 0 6 2 8 4" stroke="white" stroke-width="1" opacity="0.6" fill="none"/>
+    </svg>`,
+
+    // Aero Tik (Onay Kutusu - 3D)
+    "aero-form-checkbox-checked": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-check-box" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#059669"/></linearGradient></defs>
+    <rect x="3" y="3" width="18" height="18" rx="4" fill="url(#grad-check-box)" stroke="#047857" stroke-width="0.5"/>
+    <path d="M9 12l2 2 4-4" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="drop-shadow(0 1px 2px rgba(0,0,0,0.2))"/>
+    <path d="M4 4h16" stroke="white" stroke-width="1" opacity="0.3"/>
+    </svg>`,
+
+
+    // Aero Sonsuzluk (Liquid Infinity - Mor/Mavi)
+    "aero-loader-infinity-flow": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-inf-flow" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#3B82F6"/></linearGradient></defs>
+    <path d="M8 8c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm8 0c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4z" stroke="#E2E8F0" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.3"/>
+    <path d="M8 8c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm8 0c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4z" stroke="url(#grad-inf-flow)" stroke-width="2" stroke-linecap="round" fill="none" stroke-dasharray="10 15">
+        <animate attributeName="stroke-dashoffset" from="25" to="0" dur="1s" repeatCount="indefinite" />
+    </path>
+    </svg>`,
+
+    // Aero Altıgen (Hex Pulse - Teknoloji)
+    "aero-loader-hex-pulse": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-hex-p" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#10B981"/><stop offset="100%" stop-color="#059669"/></linearGradient></defs>
+    <path d="M12 2l9 5v10l-9 5-9-5V7z" stroke="#059669" stroke-width="0.5" fill="url(#grad-hex-p)" fill-opacity="0.2"/>
+    <path d="M12 6l5 3v6l-5 3-5-3V9z" stroke="#34D399" stroke-width="2" fill="none">
+        <animate attributeName="opacity" values="0.2;1;0.2" dur="1.5s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="scale" values="0.8;1.1;0.8" dur="1.5s" repeatCount="indefinite" additive="sum"/>
+    </path>
+    </svg>`,
+
+    // Aero DNA (Genetik Sarmal - Dönen)
+    "aero-loader-dna-helix": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <line x1="8" y1="4" x2="16" y2="20" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+        <line x1="16" y1="4" x2="8" y2="20" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="8" cy="4" r="2" fill="#F472B6"><animate attributeName="cy" values="4;20;4" dur="2s" repeatCount="indefinite"/></circle>
+        <circle cx="16" cy="20" r="2" fill="#60A5FA"><animate attributeName="cy" values="20;4;20" dur="2s" repeatCount="indefinite"/></circle>
+        <circle cx="16" cy="4" r="2" fill="#A78BFA"><animate attributeName="cy" values="4;20;4" dur="2s" repeatCount="indefinite" begin="1s"/></circle>
+        <circle cx="8" cy="20" r="2" fill="#34D399"><animate attributeName="cy" values="20;4;20" dur="2s" repeatCount="indefinite" begin="1s"/></circle>
+    </g>
+    </svg>`,
+
+    // Aero Wifi (Sinyal Arama)
+    "aero-loader-wifi-scan": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="20" r="2" fill="#6366F1"/>
+    <path d="M8.5 16a6 6 0 0 1 7 0" stroke="#6366F1" stroke-width="2" stroke-linecap="round" opacity="0.3">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite" begin="0s"/>
+    </path>
+    <path d="M5 12.5a11 11 0 0 1 14 0" stroke="#6366F1" stroke-width="2" stroke-linecap="round" opacity="0.3">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite" begin="0.3s"/>
+    </path>
+    <path d="M1.5 9a16 16 0 0 1 21 0" stroke="#6366F1" stroke-width="2" stroke-linecap="round" opacity="0.3">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite" begin="0.6s"/>
+    </path>
+    </svg>`,
+
+
+    // Aero Mikrofon (Podcast - Cam Tüp)
+    "aero-mic-studio": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-mic" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#E2E8F0"/><stop offset="100%" stop-color="#94A3B8"/></linearGradient></defs>
+    <rect x="8" y="2" width="8" height="14" rx="4" fill="url(#grad-aero-mic)" stroke="#475569" stroke-width="0.5"/>
+    <path d="M12 3v10" stroke="white" stroke-width="1" opacity="0.5" stroke-linecap="round"/>
+    <path d="M5 10v1a7 7 0 0 0 14 0v-1" stroke="#475569" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <line x1="12" y1="19" x2="12" y2="22" stroke="#475569" stroke-width="2"/>
+    <line x1="8" y1="22" x2="16" y2="22" stroke="#475569" stroke-width="2" stroke-linecap="round"/>
+    </svg>`,
+
+    // Aero Kamera (Drone - Uçan Göz)
+    "aero-drone-cam": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-aero-drone" cx="50%" cy="50%"><stop offset="0%" stop-color="#38BDF8"/><stop offset="100%" stop-color="#0284C7"/></radialGradient></defs>
+    <circle cx="12" cy="12" r="5" fill="url(#grad-aero-drone)" stroke="#0369A1" stroke-width="1"/>
+    <circle cx="12" cy="12" r="2" fill="#0C4A6E"/> <circle cx="13" cy="11" r="0.5" fill="white"/>
+    <path d="M4 4l5 5M15 15l5 5M20 4l-5 5M9 15l-5 5" stroke="#0369A1" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="4" cy="4" r="2" fill="#E0F2FE" opacity="0.5"><animate attributeName="r" values="2;3;2" dur="0.2s" repeatCount="indefinite"/></circle>
+    <circle cx="20" cy="4" r="2" fill="#E0F2FE" opacity="0.5"><animate attributeName="r" values="2;3;2" dur="0.2s" repeatCount="indefinite"/></circle>
+    <circle cx="20" cy="20" r="2" fill="#E0F2FE" opacity="0.5"><animate attributeName="r" values="2;3;2" dur="0.2s" repeatCount="indefinite"/></circle>
+    <circle cx="4" cy="20" r="2" fill="#E0F2FE" opacity="0.5"><animate attributeName="r" values="2;3;2" dur="0.2s" repeatCount="indefinite"/></circle>
+    </svg>`,
+
+    // Aero Palet (Renk Karıştırıcı)
+    "aero-art-palette": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-pal" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F3F4F6"/><stop offset="100%" stop-color="#D1D5DB"/></linearGradient></defs>
+    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.9 0 1.6-.7 1.6-1.7 0-.4-.2-.8-.4-1.1-.3-.3-.4-.7-.4-1.1a1.6 1.6 0 0 1 1.6-1.6h2c3 0 5.5-2.5 5.5-5.5C21.9 6 17.5 2 12 2z" fill="url(#grad-aero-pal)" stroke="#9CA3AF" stroke-width="0.5"/>
+    <circle cx="7.5" cy="7.5" r="2" fill="#EF4444" stroke="white" stroke-width="0.5"/>
+    <circle cx="16.5" cy="7.5" r="2" fill="#3B82F6" stroke="white" stroke-width="0.5"/>
+    <circle cx="7.5" cy="16.5" r="2" fill="#10B981" stroke="white" stroke-width="0.5"/>
+    <circle cx="16.5" cy="16.5" r="2" fill="#F59E0B" stroke="white" stroke-width="0.5"/>
+    </svg>`,
+
+    // Aero Parmak İzi (Biyometrik Cam)
+    "aero-security-fingerprint": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-print" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#A7F3D0"/><stop offset="100%" stop-color="#10B981"/></linearGradient></defs>
+    <rect x="5" y="2" width="14" height="20" rx="3" fill="none" stroke="#059669" stroke-width="2"/>
+    <path d="M12 12c0-3 2.5-5 5-5M7 7c2.5 0 5 2.5 5 5v5c0 2.5-2.5 5-5 5s-5-2.5-5-5 2.5-5 5-5" stroke="url(#grad-aero-print)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M5 4h14" stroke="white" stroke-width="1" opacity="0.2"/>
+    </svg>`,
+
+    // Aero Göz (Siber İzleme - Kırmızı)
+    "aero-security-eye-red": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-eye-red" cx="50%" cy="50%"><stop offset="0%" stop-color="#FECACA"/><stop offset="100%" stop-color="#991B1B"/></radialGradient></defs>
+    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" fill="#7F1D1D" fill-opacity="0.1" stroke="#991B1B" stroke-width="1"/>
+    <circle cx="12" cy="12" r="5" fill="url(#grad-eye-red)" stroke="#7F1D1D" stroke-width="0.5"/>
+    <circle cx="12" cy="12" r="2" fill="#450A0A"/>
+    <circle cx="13" cy="11" r="1" fill="white" opacity="0.8"/>
+    <line x1="12" y1="2" x2="12" y2="5" stroke="#EF4444" stroke-width="1"/>
+    <line x1="12" y1="19" x2="12" y2="22" stroke="#EF4444" stroke-width="1"/>
+    </svg>`,
+
+
+    // Aero Roket (Kalkış - Alevli)
+    "aero-rocket-blast": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-rock-b" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#E2E8F0"/><stop offset="100%" stop-color="#64748B"/></linearGradient></defs>
+    <path d="M12 2l-5 9 5 2 5-2-5-9z" fill="url(#grad-rock-b)" stroke="#334155" stroke-width="0.5"/>
+    <path d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" fill="#3B82F6" stroke="#1E3A8A" stroke-width="0.5"/>
+    <path d="M7 11l-3 5h6l-3-5zm10 0l3 5h-6l3-5z" fill="#475569"/>
+    <path d="M9 17l3 5 3-5" fill="#EF4444">
+        <animate attributeName="d" values="M9 17l3 5 3-5; M9 17l3 7 3-5; M9 17l3 5 3-5" dur="0.2s" repeatCount="indefinite"/>
+    </path>
+    </svg>`,
+
+    // Aero Yapay Zeka (Beyin Ağı)
+    "aero-ai-network": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="2" fill="#6366F1"/>
+    <circle cx="6" cy="8" r="1.5" fill="#A5B4FC"/><line x1="12" y1="12" x2="6" y2="8" stroke="#A5B4FC" stroke-width="1"/>
+    <circle cx="18" cy="8" r="1.5" fill="#A5B4FC"/><line x1="12" y1="12" x2="18" y2="8" stroke="#A5B4FC" stroke-width="1"/>
+    <circle cx="6" cy="16" r="1.5" fill="#A5B4FC"/><line x1="12" y1="12" x2="6" y2="16" stroke="#A5B4FC" stroke-width="1"/>
+    <circle cx="18" cy="16" r="1.5" fill="#A5B4FC"/><line x1="12" y1="12" x2="18" y2="16" stroke="#A5B4FC" stroke-width="1"/>
+    <circle cx="12" cy="5" r="1.5" fill="#A5B4FC"/><line x1="12" y1="12" x2="12" y2="5" stroke="#A5B4FC" stroke-width="1"/>
+    <circle cx="12" cy="12" r="9" stroke="#6366F1" stroke-width="0.5" fill="none" stroke-dasharray="2 2">
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="10s" linear infinite/>
+    </circle>
+    </svg>`,
+
+
+    // Aero Çark (Gear Spin - Mavi/Mor Cam)
+    "aero-loader-gear-spin": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <defs><linearGradient id="grad-gear" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs>
+    <g>
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="url(#grad-gear)" opacity="0.3"/>
+        <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12s4.48 10 10 10 10-4.48 10-10zm-2 0c0 4.41-3.59 8-8 8s-8-3.59-8-8 3.59-8 8-8 8 3.59 8 8z" fill="url(#grad-gear)" opacity="0.5">
+            <animateTransform attributeName="transform" type="rotate" from="360 12 12" to="0 12 12" dur="3s" repeatCount="indefinite"/>
+        </path>
+        <path d="M19.5 12c0-4.14-3.36-7.5-7.5-7.5S4.5 7.86 4.5 12s3.36 7.5 7.5 7.5 7.5-3.36 7.5-7.5zm-1.5 0c0 3.31-2.69 6-6 6s-6-2.69-6-6 2.69-6 6-6 6 2.69 6 6z" fill="url(#grad-gear)" opacity="0.8">
+             <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1.5s" repeatCount="indefinite"/>
+        </path>
+        <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z" fill="white" opacity="0.9"/>
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="3s" repeatCount="indefinite"/>
+    </g>
+    </svg>`,
+
+    // Aero Grid (3x3 Düzen - Cam Bloklar)
+    "aero-grid-layout": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-grid" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#E0F2FE"/><stop offset="100%" stop-color="#7DD3FC"/></linearGradient><linearGradient id="grad-grid-sel" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#38BDF8"/><stop offset="100%" stop-color="#0284C7"/></linearGradient></defs>
+    <rect x="3" y="3" width="5" height="5" rx="1" fill="url(#grad-grid)" stroke="#0EA5E9" stroke-width="0.5"/>
+    <rect x="9.5" y="3" width="5" height="5" rx="1" fill="url(#grad-grid)" stroke="#0EA5E9" stroke-width="0.5"/>
+    <rect x="16" y="3" width="5" height="5" rx="1" fill="url(#grad-grid)" stroke="#0EA5E9" stroke-width="0.5"/>
+    <rect x="3" y="9.5" width="5" height="5" rx="1" fill="url(#grad-grid)" stroke="#0EA5E9" stroke-width="0.5"/>
+    <rect x="9.5" y="9.5" width="5" height="5" rx="1" fill="url(#grad-grid-sel)" stroke="#0369A1" stroke-width="0.5"/> <rect x="16" y="9.5" width="5" height="5" rx="1" fill="url(#grad-grid)" stroke="#0EA5E9" stroke-width="0.5"/>
+    <rect x="3" y="16" width="5" height="5" rx="1" fill="url(#grad-grid)" stroke="#0EA5E9" stroke-width="0.5"/>
+    <rect x="9.5" y="16" width="5" height="5" rx="1" fill="url(#grad-grid)" stroke="#0EA5E9" stroke-width="0.5"/>
+    <rect x="16" y="16" width="5" height="5" rx="1" fill="url(#grad-grid)" stroke="#0EA5E9" stroke-width="0.5"/>
+    </svg>`,
+
+
+    // Aero Ok Sol (Geri - Mavi/Mor)
+    "aero-arrow-thick-left": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-arr-l" x1="1" y1="0" x2="0" y2="0"><stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#3B82F6"/></linearGradient></defs>
+    <path d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21v-2z" fill="url(#grad-arr-l)"/>
+    <path d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21v-2z" stroke="white" stroke-width="0.5" opacity="0.5" transform="translate(0.5, 0.5)"/>
+    </svg>`,
+
+    // Aero Ok Sağ (İleri - Mavi/Mor)
+    "aero-arrow-thick-right": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-arr-r" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#8B5CF6"/></linearGradient></defs>
+    <path d="M3 11h14.17l-3.58-3.59L15 6l6 6-6 6-1.41-1.41L17.17 13H3v-2z" fill="url(#grad-arr-r)"/>
+    <path d="M3 11h14.17l-3.58-3.59L15 6l6 6-6 6-1.41-1.41L17.17 13H3v-2z" stroke="white" stroke-width="0.5" opacity="0.5" transform="translate(-0.5, 0.5)"/>
+    </svg>`,
+
+
+    // Aero Android (Zümrüt Yeşili Cam)
+    "aero-brand-android": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-android" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#059669"/></linearGradient></defs>
+    <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9997.9993-.9997c.5511 0 .9993.4486.9993.9997s-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9997.9993-.9997c.5511 0 .9993.4486.9993.9997s-.4482.9997-.9993.9997m11.4045-6.02l1.997-3.459a.415.415 0 0 0-.152-.5676.416.416 0 0 0-.568.1522l-2.0298 3.5161c-1.678-.764-3.5455-1.1888-5.4875-1.1888-1.942 0-3.8095.4248-5.4875 1.1888L4.124 5.4471a.416.416 0 0 0-.568-.1522.415.415 0 0 0-.152.5676l1.997 3.459C2.6917 11.1887 0 14.711 0 18.746h24c0-4.035-2.6917-7.5573-5.1185-9.4246" fill="url(#grad-android)"/>
+    <circle cx="6.477" cy="14.342" r="1" fill="white" opacity="0.8"/>
+    <circle cx="17.523" cy="14.342" r="1" fill="white" opacity="0.8"/>
+    </svg>`,
+
+
+    // Aero Flaş (Kamera Flaşı - Sarı/Turuncu)
+    "aero-flash": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-flash" cx="50%" cy="50%"><stop offset="0%" stop-color="#FEF08A"/><stop offset="100%" stop-color="#EAB308"/></radialGradient></defs>
+    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="url(#grad-flash)" stroke="#A16207" stroke-width="0.5"/>
+    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="white" opacity="0.4">
+        <animate attributeName="opacity" values="0.4;0.8;0.4" dur="0.5s" repeatCount="indefinite"/>
+    </path>
+    </svg>`,
+
+    // Aero Yıldırım (Elektrik - Mavi/Mor)
+    "aero-lightning-bolt": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-bolt" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs>
+    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="url(#grad-bolt)" stroke="#4C1D95" stroke-width="0.5"/>
+    <path d="M14 2l-1 8 10-12M3 14h9" stroke="white" stroke-width="1" opacity="0.3"/>
+    <animate attributeName="opacity" values="1;0.7;1" dur="1s" repeatCount="indefinite"/>
+    </svg>`,
+
+    // File Heart (Outline - Düzeltilmiş)
+    "file-heart-outline": `<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 2v6h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 17.5l-1-1a4 4 0 0 1 5.6-5.6l-1.8 5.6-2.8 1z" fill="currentColor" style="display:none"/> <path d="M12 18.35l-1.45-1.32C5.4 12.36 2 9.28 2 5.5 2 2.42 4.42 0 7.5 0c1.74 0 3.41.81 4.5 2.09C13.09.81 14.76 0 16.5 0 19.58 0 22 2.42 22 5.5c0 3.78-3.4 6.86-8.55 11.54L12 18.35z" stroke="currentColor" stroke-width="1.5" fill="none" transform="translate(0, 10) scale(0.5) translate(12, 0)" style="display:none"/> <path d="M12 18.5l-1.35-1.2C6.5 13.5 4 11 4 8.5a3.5 3.5 0 0 1 6-2.5 3.5 3.5 0 0 1 6 2.5c0 2.5-2.5 5-6.65 8.8L8 18.5z" fill="none" stroke="currentColor" stroke-width="2" transform="translate(4, 5) scale(0.7)"/>`,
+
+    // File Heart (Fill - Dolu)
+    "file-heart-fill": `<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" fill="currentColor"/><path d="M14 2v6h6" fill="rgba(0,0,0,0.1)"/><path d="M12 17.5l-1-1C7 13 5 11 5 8.5a3 3 0 0 1 5-2.5 3 3 0 0 1 5 2.5c0 2.5-2 4.5-6 8l-1 1z" fill="white" transform="translate(4, 6) scale(0.7)"/>`,
+
+    // Aero File Heart (Premium Glass)
+    "aero-file-heart": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-f-heart" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F472B6"/><stop offset="100%" stop-color="#BE123C"/></linearGradient></defs>
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" fill="url(#grad-aero-f-heart)" stroke="#9F1239" stroke-width="0.5"/>
+    <path d="M14 2v6h6" fill="#881337" opacity="0.3"/>
+    <path d="M12 17.5c4-4 6-6 6-8.5a3 3 0 0 0-5-2.5 3 3 0 0 0-5 2.5c0 2.5 2 4.5 6 8.5z" fill="white" opacity="0.9" transform="translate(0, 1)"/>
+    <path d="M4 10h4" stroke="white" stroke-width="1" opacity="0.4"/>
+    </svg>`,
+
+    // Aero Vortex (Girdap - Mor)
+    "aero-loader-vortex": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-vortex" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#C084FC"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs>
+    <circle cx="12" cy="12" r="10" stroke="#E9D5FF" stroke-width="1" fill="none" opacity="0.3"/>
+    <path d="M12 2a10 10 0 0 1 10 10" stroke="url(#grad-vortex)" stroke-width="3" stroke-linecap="round" fill="none">
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="12" cy="12" r="4" fill="url(#grad-vortex)">
+        <animate attributeName="r" values="4;6;4" dur="1.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    </svg>`,
+
+    // Aero Atom (Yörünge - Bilim)
+    "aero-loader-atom-spin": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="3" fill="#3B82F6"/>
+    <ellipse cx="12" cy="12" rx="10" ry="3" stroke="#60A5FA" stroke-width="1" fill="none" transform="rotate(0 12 12)">
+        <animateTransform attributeName="transform" type="rotate" values="0 12 12; 360 12 12" dur="3s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="12" cy="12" rx="10" ry="3" stroke="#60A5FA" stroke-width="1" fill="none" transform="rotate(60 12 12)">
+        <animateTransform attributeName="transform" type="rotate" values="60 12 12; 420 12 12" dur="3s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="12" cy="12" rx="10" ry="3" stroke="#60A5FA" stroke-width="1" fill="none" transform="rotate(120 12 12)">
+        <animateTransform attributeName="transform" type="rotate" values="120 12 12; 480 12 12" dur="3s" repeatCount="indefinite"/>
+    </ellipse>
+    </svg>`,
+
+    // Aero Dolum (Sıvı Kutu)
+    "aero-loader-box-fill": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-box-load" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#10B981"/><stop offset="100%" stop-color="#34D399"/></linearGradient></defs>
+    <rect x="4" y="4" width="16" height="16" rx="2" stroke="#059669" stroke-width="2" fill="none"/>
+    <rect x="6" y="18" width="12" height="0" rx="1" fill="url(#grad-box-load)">
+        <animate attributeName="height" values="0;14;14" keyTimes="0;0.8;1" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="18;6;6" keyTimes="0;0.8;1" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    </svg>`,
+
+
+    // Aero İngiliz Anahtarı (Mavi Cam)
+    "aero-wrench-tool": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-wrench" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#93C5FD"/><stop offset="100%" stop-color="#2563EB"/></linearGradient></defs>
+    <path d="M19.5 6.5l-2-2a2 2 0 0 0-2.8 0l-9 9a2 2 0 0 0 0 2.8l2 2a2 2 0 0 0 2.8 0l9-9a2 2 0 0 0 0-2.8z" fill="url(#grad-wrench)" stroke="#1E40AF" stroke-width="0.5"/>
+    <path d="M4 20l4-4" stroke="#1E40AF" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="16" cy="8" r="1" fill="white" opacity="0.6"/>
+    <path d="M14 6l4 4" stroke="white" stroke-width="1" opacity="0.4"/>
+    </svg>`,
+
+    // Aero Çekiç (İnşaat - Turuncu/Ahşap)
+    "aero-hammer-tool": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-hammer" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#94A3B8"/><stop offset="100%" stop-color="#475569"/></linearGradient></defs>
+    <path d="M19 14l-6-6-3 3 6 6" stroke="#78350F" stroke-width="4" stroke-linecap="round"/> <path d="M3 12l3-3 5 5-3 3z" fill="url(#grad-hammer)" stroke="#334155" stroke-width="0.5"/> <rect x="4" y="11" width="4" height="2" fill="white" opacity="0.4" transform="rotate(-45 6 12)"/>
+    </svg>`,
+
+    // Aero Çöp Kutusu (Geri Dönüşüm - Yeşil)
+    "aero-trash-recycle-green": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-trash-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#86EFAC"/><stop offset="100%" stop-color="#15803D"/></linearGradient></defs>
+    <path d="M3 6h18" stroke="#14532D" stroke-width="2" stroke-linecap="round"/>
+    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" fill="url(#grad-trash-g)" stroke="#14532D" stroke-width="0.5"/>
+    <path d="M10 11l2 2 2-2" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M12 13v-4" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M8 4h8v2H8z" fill="#14532D" opacity="0.8"/>
+    </svg>`,
+
+    // Aero Sepet (Sepete Ekle - Mor)
+    "aero-cart-add": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-cart-add" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#C084FC"/><stop offset="100%" stop-color="#7E22CE"/></linearGradient></defs>
+    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" fill="url(#grad-cart-add)" stroke="#581C87" stroke-width="0.5"/>
+    <circle cx="10" cy="21" r="2" fill="#581C87"/>
+    <circle cx="20" cy="21" r="2" fill="#581C87"/>
+    <circle cx="16" cy="10" r="3" fill="#4ADE80" stroke="#166534" stroke-width="1"/>
+    <path d="M16 8v4M14 10h4" stroke="#166534" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>`,
+
+    // Aero Etiket (İndirim - Kırmızı)
+    "aero-tag-sale": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-tag-sale" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FCA5A5"/><stop offset="100%" stop-color="#B91C1C"/></linearGradient></defs>
+    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" fill="url(#grad-tag-sale)" stroke="#7F1D1D" stroke-width="0.5"/>
+    <circle cx="7" cy="7" r="1.5" fill="white" opacity="0.9"/>
+    <text x="14" y="16" font-family="sans-serif" font-weight="bold" font-size="6" fill="white" text-anchor="middle" transform="rotate(45 14 16)">%</text>
+    </svg>`,
+
+
+    // Aero PDF (Kırmızı Belge)
+    "aero-file-type-pdf": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-pdf" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FECACA"/><stop offset="100%" stop-color="#EF4444"/></linearGradient></defs>
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" fill="url(#grad-pdf)" stroke="#991B1B" stroke-width="0.5"/>
+    <rect x="7" y="12" width="10" height="6" rx="1" fill="white" opacity="0.8"/>
+    <text x="12" y="16" font-family="sans-serif" font-weight="bold" font-size="4" fill="#B91C1C" text-anchor="middle">PDF</text>
+    </svg>`,
+
+    // Aero ZIP (Sarı Arşiv)
+    "aero-file-type-zip": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-zip" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FEF08A"/><stop offset="100%" stop-color="#EAB308"/></linearGradient></defs>
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" fill="url(#grad-zip)" stroke="#A16207" stroke-width="0.5"/>
+    <path d="M10 2v8M14 2v8" stroke="#854D0E" stroke-width="1" stroke-dasharray="2 1"/>
+    <rect x="9" y="10" width="6" height="4" rx="1" fill="#854D0E"/>
+    </svg>`,
+
+
+    // Aero Ses Açık (Volume Max - Mor/Pembe)
+    "aero-volume-max": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-vol" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#C084FC"/><stop offset="100%" stop-color="#DB2777"/></linearGradient></defs>
+    <path d="M11 5L6 9H2v6h4l5 4V5z" fill="url(#grad-aero-vol)" stroke="#7E22CE" stroke-width="0.5"/>
+    <path d="M11 5L6 9H2v6h4l5 4V5z" stroke="white" stroke-width="1" opacity="0.4" fill="none"/> <path d="M19.07 4.93a10 10 0 0 1 0 14.14" stroke="url(#grad-aero-vol)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M15.54 8.46a5 5 0 0 1 0 7.07" stroke="url(#grad-aero-vol)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M19.07 4.93a10 10 0 0 1 0 14.14" stroke="white" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+    </svg>`,
+
+    // Aero Ses Kapalı (Mute - Kırmızı)
+    "aero-volume-mute": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-mute" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#FCA5A5"/><stop offset="100%" stop-color="#DC2626"/></linearGradient></defs>
+    <path d="M11 5L6 9H2v6h4l5 4V5z" fill="url(#grad-aero-mute)" stroke="#991B1B" stroke-width="0.5"/>
+    <path d="M11 5L6 9H2v6h4l5 4V5z" stroke="white" stroke-width="1" opacity="0.4" fill="none"/>
+    <path d="M23 9l-6 6M17 9l6 6" stroke="#DC2626" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M23 9l-6 6M17 9l6 6" stroke="white" stroke-width="1" stroke-linecap="round" opacity="0.5" transform="translate(-0.5, -0.5)"/>
+    </svg>`,
+
+    // Aero Mikrofon (Kayıt - Gümüş/Mavi)
+    "aero-microphone": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-mic2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#E2E8F0"/><stop offset="100%" stop-color="#94A3B8"/></linearGradient></defs>
+    <rect x="9" y="2" width="6" height="12" rx="3" fill="url(#grad-aero-mic2)" stroke="#475569" stroke-width="0.5"/>
+    <path d="M12 3v10" stroke="white" stroke-width="1" opacity="0.5"/>
+    <path d="M5 10v1a7 7 0 0 0 14 0v-1" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <line x1="12" y1="19" x2="12" y2="22" stroke="#3B82F6" stroke-width="2"/>
+    <line x1="8" y1="22" x2="16" y2="22" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/>
+    </svg>`,
+
+    // Aero Batarya (Dolu - Yeşil Sıvı)
+    "aero-battery-full": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-batt" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#4ADE80"/><stop offset="100%" stop-color="#16A34A"/></linearGradient></defs>
+    <rect x="2" y="6" width="18" height="12" rx="2" stroke="#475569" stroke-width="2" fill="none" opacity="0.5"/>
+    <path d="M22 11v2" stroke="#475569" stroke-width="2" stroke-linecap="round"/>
+    <rect x="4" y="8" width="14" height="8" rx="1" fill="url(#grad-aero-batt)"/>
+    <path d="M4 8h14" stroke="white" stroke-width="1" opacity="0.4"/>
+    <path d="M11 6v12" stroke="white" stroke-width="2" opacity="0.3"/> </svg>`,
+
+    // Aero Batarya (Düşük - Kırmızı)
+    "aero-battery-low": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-batt-low" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#F87171"/><stop offset="100%" stop-color="#DC2626"/></linearGradient></defs>
+    <rect x="2" y="6" width="18" height="12" rx="2" stroke="#475569" stroke-width="2" fill="none" opacity="0.5"/>
+    <path d="M22 11v2" stroke="#475569" stroke-width="2" stroke-linecap="round"/>
+    <rect x="4" y="8" width="4" height="8" rx="1" fill="url(#grad-aero-batt-low)"/>
+    <path d="M4 8h4" stroke="white" stroke-width="1" opacity="0.4"/>
+    </svg>`,
+
+    // Aero Güç Tuşu (Power - Neon Mavi)
+    "aero-power-button": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-aero-pwr" cx="50%" cy="50%"><stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#1E3A8A"/></radialGradient></defs>
+    <path d="M18.36 6.64a9 9 0 1 1-12.73 0" stroke="url(#grad-aero-pwr)" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M12 2v10" stroke="url(#grad-aero-pwr)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M18.36 6.64a9 9 0 1 1-12.73 0" stroke="white" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.5" transform="translate(0, -0.5)"/>
+    <path d="M12 2v10" stroke="white" stroke-width="1" stroke-linecap="round" opacity="0.5" transform="translate(-0.5, 0)"/>
+    </svg>`,
+
+    // Aero Command (Mac Key - Cam Küp)
+    "aero-key-command": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-cmd" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#E0E7FF"/><stop offset="100%" stop-color="#6366F1"/></linearGradient></defs>
+    <rect x="4" y="4" width="16" height="16" rx="3" fill="url(#grad-aero-cmd)" stroke="#4338CA" stroke-width="0.5"/>
+    <path d="M15 9a3 3 0 1 0-3-3v3h3zm-3 6v3a3 3 0 1 0 3-3h-3zm-3 0h3v-3H9a3 3 0 1 0 0 3zm0-6h3V6H9a3 3 0 1 0 0 3z" stroke="#4338CA" stroke-width="1.5" fill="none"/>
+    <path d="M4 5h16" stroke="white" stroke-width="1" opacity="0.6"/>
+    <path d="M4 4c2 5 1 16 0 16" stroke="white" stroke-width="2" opacity="0.2"/>
+    </svg>`,
+
+    // Aero Mouse (Kablosuz - Beyaz/Gri)
+    "aero-device-mouse": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-mouse" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F8FAFC"/><stop offset="100%" stop-color="#94A3B8"/></linearGradient></defs>
+    <rect x="6" y="3" width="12" height="18" rx="6" fill="url(#grad-aero-mouse)" stroke="#475569" stroke-width="0.5"/>
+    <line x1="12" y1="3" x2="12" y2="9" stroke="#475569" stroke-width="1"/>
+    <path d="M6 9h12" stroke="#475569" stroke-width="0.5"/>
+    <path d="M8 5c2-1 6-1 8 0" stroke="white" stroke-width="1.5" opacity="0.8" fill="none"/>
+    </svg>`,
+
+    // Aero Klavye (Tuş Takımı)
+    "aero-device-keyboard": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-key" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#E2E8F0"/><stop offset="100%" stop-color="#CBD5E1"/></linearGradient></defs>
+    <rect x="2" y="6" width="20" height="12" rx="2" fill="url(#grad-aero-key)" stroke="#64748B" stroke-width="0.5"/>
+    <path d="M2 14h20" stroke="#64748B" stroke-width="0.5"/>
+    <rect x="4" y="8" width="2" height="2" rx="0.5" fill="#475569" opacity="0.5"/>
+    <rect x="8" y="8" width="2" height="2" rx="0.5" fill="#475569" opacity="0.5"/>
+    <rect x="12" y="8" width="2" height="2" rx="0.5" fill="#475569" opacity="0.5"/>
+    <rect x="16" y="8" width="2" height="2" rx="0.5" fill="#475569" opacity="0.5"/>
+    <rect x="7" y="15" width="10" height="2" rx="1" fill="#334155"/> <path d="M2 6h20" stroke="white" stroke-width="1" opacity="0.6"/>
+    </svg>`,
+
+    // Aero Wifi (Full - Mavi)
+    "aero-conn-wifi": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-wifi" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#2563EB"/></linearGradient></defs>
+    <path d="M5 12.55a11 11 0 0 1 14.08 0" stroke="url(#grad-aero-wifi)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M1.42 9a16 16 0 0 1 21.16 0" stroke="url(#grad-aero-wifi)" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+    <path d="M8.53 16.11a6 6 0 0 1 6.95 0" stroke="url(#grad-aero-wifi)" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="12" cy="20" r="2" fill="#2563EB"/>
+    <path d="M5 12.55a11 11 0 0 1 14.08 0" stroke="white" stroke-width="1" stroke-linecap="round" opacity="0.4" transform="translate(0, -0.5)"/>
+    </svg>`,
+
+    // Aero Bluetooth (Mavi Cam)
+    "aero-conn-bluetooth": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-bt" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#1D4ED8"/></linearGradient></defs>
+    <path d="M7 7l10 10-5 4V3l5 4-10 10" stroke="url(#grad-aero-bt)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M7 7l10 10-5 4V3l5 4-10 10" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.3" transform="translate(-0.5, -0.5)"/>
+    </svg>`,
+
+
+    // =================================================
+    // Not: Gerçekçi, içinden ışık geçen alevler.
+    // =================================================
+
+    // Aero Alev (Standart - Turuncu/Kırmızı)
+    "aero-fire-standard": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-fire-std" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#DC2626"/><stop offset="100%" stop-color="#FBBF24"/></linearGradient></defs>
+    <path d="M12 22c4 0 7-3 7-7 0-5-4-8-7-13-3 5-7 8-7 13 0 4 3 7 7 7z" fill="url(#grad-aero-fire-std)" stroke="#991B1B" stroke-width="0.5"/>
+    <path d="M12 16c1 0 2 1 2 3" stroke="white" stroke-width="1.5" opacity="0.6" fill="none" stroke-linecap="round"/>
+    <path d="M10 10c1-2 3-2 4 0" stroke="white" stroke-width="1.5" opacity="0.4" fill="none"/>
+    <circle cx="12" cy="19" r="2" fill="#FEF3C7" opacity="0.3" filter="blur(2px)"/> </svg>`,
+
+    // Aero Alev (Mavi Gaz - Neon)
+    "aero-fire-blue": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-aero-fire-blue" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#2563EB"/><stop offset="100%" stop-color="#60A5FA"/></linearGradient></defs>
+    <path d="M12 22c4 0 7-3 7-7 0-5-4-8-7-13-3 5-7 8-7 13 0 4 3 7 7 7z" fill="url(#grad-aero-fire-blue)" stroke="#1E40AF" stroke-width="0.5"/>
+    <path d="M12 15c2 0 3 2 3 4" stroke="white" stroke-width="1.5" opacity="0.6" fill="none" stroke-linecap="round"/>
+    <circle cx="12" cy="18" r="3" fill="#E0F2FE" opacity="0.4" filter="blur(3px)"/>
+    </svg>`,
+
+    // Aero Kamp Ateşi (Odunlu)
+    "aero-fire-camp": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-camp" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#EA580C"/><stop offset="100%" stop-color="#FDE047"/></linearGradient></defs>
+    <path d="M6 21l12-4M18 21l-12-4" stroke="#78350F" stroke-width="3" stroke-linecap="round"/> <path d="M12 18c3 0 5-3 5-6 0-4-3-6-5-10-2 4-5 6-5 10 0 3 2 6 5 6z" fill="url(#grad-camp)" stroke="#9A3412" stroke-width="0.5"/>
+    <path d="M12 14c1-1 2-1 2 1" stroke="white" stroke-width="1" opacity="0.5"/>
+    </svg>`,
+
+    // =================================================
+    // 2151. AERO LOADERS: DÖNEN ÇARKLAR (SPINNING GEARS)
+    // Not: Mekanik ve hipnotik yükleyiciler.
+    // =================================================
+
+    // Aero Dişli (Tekli - Dönen Gri Metal)
+    "aero-loader-gear-metal": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-gear-metal" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#E2E8F0"/><stop offset="100%" stop-color="#94A3B8"/></linearGradient></defs>
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="url(#grad-gear-metal)"/>
+    <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12s4.48 10 10 10 10-4.48 10-10zm-2 0c0 4.41-3.59 8-8 8s-8-3.59-8-8 3.59-8 8-8 8 3.59 8 8z" fill="#475569" opacity="0.2"/>
+    <g>
+        <path d="M19.5 12c0-4.14-3.36-7.5-7.5-7.5S4.5 7.86 4.5 12s3.36 7.5 7.5 7.5 7.5-3.36 7.5-7.5zm-1.5 0c0 3.31-2.69 6-6 6s-6-2.69-6-6 2.69-6 6-6 6 2.69 6 6z" fill="#64748B"/>
+        <rect x="11" y="2" width="2" height="4" fill="#64748B"/><rect x="11" y="18" width="2" height="4" fill="#64748B"/>
+        <rect x="2" y="11" width="4" height="2" fill="#64748B"/><rect x="18" y="11" width="4" height="2" fill="#64748B"/>
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="3s" repeatCount="indefinite"/>
+    </g>
+    <circle cx="12" cy="12" r="3" fill="#F1F5F9" stroke="#94A3B8" stroke-width="2"/>
+    </svg>`,
+
+    // Aero Dişli (Çiftli - Altın/Gümüş)
+    "aero-loader-gears-dual": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <circle cx="8" cy="8" r="6" fill="#FCD34D" stroke="#B45309" stroke-width="1" stroke-dasharray="4 2">
+             <animateTransform attributeName="transform" type="rotate" from="0 8 8" to="360 8 8" dur="4s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="16" cy="16" r="6" fill="#E2E8F0" stroke="#475569" stroke-width="1" stroke-dasharray="4 2">
+             <animateTransform attributeName="transform" type="rotate" from="360 16 16" to="0 16 16" dur="4s" repeatCount="indefinite"/>
+        </circle>
+    </g>
+    </svg>`,
+
+    
+
+    // Aero Hesap Makinesi (Turuncu Tuşlar)
+    "aero-math-calc": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-calc" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#475569"/><stop offset="100%" stop-color="#1E293B"/></linearGradient></defs>
+    <rect x="5" y="2" width="14" height="20" rx="3" fill="url(#grad-calc)" stroke="#334155" stroke-width="0.5"/>
+    <rect x="7" y="4" width="10" height="4" rx="1" fill="#94A3B8"/> <rect x="7" y="10" width="3" height="3" rx="1" fill="#F97316"/>
+    <rect x="11" y="10" width="3" height="3" rx="1" fill="#64748B"/>
+    <rect x="15" y="10" width="3" height="3" rx="1" fill="#64748B"/>
+    <rect x="7" y="14" width="3" height="3" rx="1" fill="#64748B"/>
+    <rect x="11" y="14" width="3" height="3" rx="1" fill="#64748B"/>
+    <rect x="15" y="14" width="3" height="3" rx="1" fill="#64748B"/>
+    <rect x="7" y="18" width="7" height="3" rx="1" fill="#64748B"/>
+    <rect x="15" y="18" width="3" height="3" rx="1" fill="#F97316"/>
+    </svg>`,
+
+    // Aero Pi Sayısı (Matematik - Mor)
+    "aero-math-pi": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-pi" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#C084FC"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs>
+    <circle cx="12" cy="12" r="10" fill="#F3F4F6"/>
+    <path d="M7 7h10M9 7v10c0 1-1 2-2 2M15 7v10" stroke="url(#grad-pi)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M7 7h10" stroke="white" stroke-width="1" opacity="0.5" transform="translate(0, -1)"/>
+    </svg>`,
+
+    // Aero Grafik (Eğri - Yükseliş)
+    "aero-math-graph": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <rect x="2" y="2" width="20" height="20" rx="2" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <path d="M4 16c2 0 4-2 6-5s4-3 6-8" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <circle cx="16" cy="3" r="2" fill="#3B82F6"/>
+    <path d="M4 20h16" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2"/>
+    <path d="M4 16c2 0 4-2 6-5" stroke="white" stroke-width="1" opacity="0.5" fill="none"/>
+    </svg>`,
+
+   
+    // Aero Search User (Kullanıcı Ara)
+    "aero-search-user": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-sea-u" cx="30%" cy="30%" r="70%"><stop offset="0%" stop-color="#A5B4FC"/><stop offset="100%" stop-color="#4338CA"/></radialGradient></defs>
+    <circle cx="10" cy="10" r="8" fill="url(#grad-sea-u)" stroke="#312E81" stroke-width="0.5"/>
+    <path d="M18 18l4 4" stroke="#312E81" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="10" cy="8" r="2" fill="white" opacity="0.9"/>
+    <path d="M7 13c1-2 5-2 6 0" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    </svg>`,
+
+    // Aero Search File (Dosya Ara)
+    "aero-search-file": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-sea-f" cx="30%" cy="30%" r="70%"><stop offset="0%" stop-color="#6EE7B7"/><stop offset="100%" stop-color="#059669"/></radialGradient></defs>
+    <circle cx="10" cy="10" r="8" fill="url(#grad-sea-f)" stroke="#064E3B" stroke-width="0.5"/>
+    <path d="M18 18l4 4" stroke="#064E3B" stroke-width="3" stroke-linecap="round"/>
+    <rect x="7" y="7" width="6" height="6" rx="1" fill="white" opacity="0.8"/>
+    <path d="M8 9h4M8 11h3" stroke="#064E3B" stroke-width="1"/>
+    </svg>`,
+
+    // Aero Bar (Sıvı Dolum - Mavi)
+    "aero-progress-liquid": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-prog-liq" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#2563EB"/></linearGradient></defs>
+    <rect x="2" y="10" width="20" height="6" rx="3" fill="#E2E8F0" stroke="#94A3B8" stroke-width="0.5"/>
+    <rect x="2" y="10" width="14" height="6" rx="3" fill="url(#grad-prog-liq)"/>
+    <path d="M3 11h12" stroke="white" stroke-width="1" opacity="0.4" stroke-linecap="round"/>
+    </svg>`,
+
+    // Aero Bar (Striped - Yeşil)
+    "aero-progress-striped": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="pat-stripe" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="2" height="4" transform="translate(0,0)" fill="white" opacity="0.3"></rect></pattern></defs>
+    <rect x="2" y="10" width="20" height="6" rx="3" fill="#E2E8F0"/>
+    <rect x="2" y="10" width="16" height="6" rx="3" fill="#10B981"/>
+    <rect x="2" y="10" width="16" height="6" rx="3" fill="url(#pat-stripe)"/>
+    </svg>`,
+
+
+
+    // Aero Sıvı Kutu (Liquid Box Fill)
+    "aero-loader-box-liquid": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-box-liq" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#60A5FA"/></linearGradient></defs>
+    <rect x="4" y="4" width="16" height="16" rx="3" stroke="#1D4ED8" stroke-width="0.5" fill="none" opacity="0.3"/>
+    <path d="M4 20c0 1.6 1.4 3 3 3h10c1.6 0 3-1.4 3-3V15c-2 0-3 1-5 1s-3-1-5-1-3 1-6 1z" fill="url(#grad-box-liq)">
+        <animate attributeName="d" values="M4 20c0 1.6 1.4 3 3 3h10c1.6 0 3-1.4 3-3V18c-2 0-3 1-5 1s-3-1-5-1-3 1-6 1z; M4 20c0 1.6 1.4 3 3 3h10c1.6 0 3-1.4 3-3V6c-2 0-3 1-5 1s-3-1-5-1-3 1-6 1z; M4 20c0 1.6 1.4 3 3 3h10c1.6 0 3-1.4 3-3V18c-2 0-3 1-5 1s-3-1-5-1-3 1-6 1z" dur="3s" repeatCount="indefinite"/>
+    </path>
+    </svg>`,
+
+    // Aero Dönen Küp (Spinning Cube - 3D)
+    "aero-loader-cube-spin": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-cube-sp" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#A78BFA"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs>
+    <rect x="7" y="7" width="10" height="10" rx="2" fill="url(#grad-cube-sp)" stroke="#5B21B6" stroke-width="0.5">
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="7" y="7" width="10" height="10" rx="2" stroke="#C4B5FD" stroke-width="1" fill="none" opacity="0.5">
+        <animateTransform attributeName="transform" type="rotate" from="45 12 12" to="405 12 12" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    </svg>`,
+
+    // Aero İkili Halka (Dual Ring - Neon)
+    "aero-loader-dual-ring": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="8" stroke="#0EA5E9" stroke-width="2" stroke-linecap="round" fill="none" stroke-dasharray="10 20">
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="12" cy="12" r="5" stroke="#F472B6" stroke-width="2" stroke-linecap="round" fill="none" stroke-dasharray="8 10">
+        <animateTransform attributeName="transform" type="rotate" from="360 12 12" to="0 12 12" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="12" cy="12" r="1" fill="white" opacity="0.8">
+        <animate attributeName="r" values="1;2;1" dur="1s" repeatCount="indefinite"/>
+    </circle>
+    </svg>`,
+
+
+    // Aero Kopyala (Copy - Çift Cam Levha)
+    "aero-action-copy": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-copy" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#E2E8F0"/><stop offset="100%" stop-color="#94A3B8"/></linearGradient></defs>
+    <rect x="8" y="8" width="12" height="14" rx="2" fill="#CBD5E1" stroke="#475569" stroke-width="0.5" opacity="0.5"/> <rect x="4" y="2" width="12" height="14" rx="2" fill="url(#grad-copy)" stroke="#475569" stroke-width="0.5"/> <path d="M6 5h8" stroke="white" stroke-width="1" opacity="0.6"/>
+    <path d="M6 8h6" stroke="white" stroke-width="1" opacity="0.6"/>
+    </svg>`,
+
+    // Aero Yapıştır (Paste - Pano)
+    "aero-action-paste": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-paste" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FCD34D"/><stop offset="100%" stop-color="#D97706"/></linearGradient></defs>
+    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" stroke="#92400E" stroke-width="2" fill="none" opacity="0.5"/>
+    <rect x="8" y="2" width="8" height="4" rx="1" fill="url(#grad-paste)" stroke="#B45309" stroke-width="0.5"/> <rect x="6" y="8" width="12" height="12" rx="1" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="0.5" opacity="0.9"/> <path d="M8 11h8M8 14h8M8 17h5" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>`,
+
+    // Aero Çöp Kutusu (Delete - Kırmızı Cam)
+    "aero-action-delete": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-del-red" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FCA5A5"/><stop offset="100%" stop-color="#DC2626"/></linearGradient></defs>
+    <path d="M3 6h18" stroke="#991B1B" stroke-width="2" stroke-linecap="round"/>
+    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" fill="url(#grad-del-red)" stroke="#7F1D1D" stroke-width="0.5"/>
+    <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" fill="#EF4444"/>
+    <line x1="10" y1="11" x2="10" y2="17" stroke="white" stroke-width="1.5" opacity="0.6"/>
+    <line x1="14" y1="11" x2="14" y2="17" stroke="white" stroke-width="1.5" opacity="0.6"/>
+    </svg>`,
+
+
+    // Aero Progress Circle (Yüzde 75 - Yeşil)
+    "aero-progress-circle-75": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-prog-c" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#059669"/></linearGradient></defs>
+    <circle cx="12" cy="12" r="10" stroke="#E2E8F0" stroke-width="2" fill="none"/>
+    <path d="M12 2a10 10 0 1 1-10 10" stroke="url(#grad-prog-c)" stroke-width="3" stroke-linecap="round" fill="none"/> <text x="12" y="15" font-family="sans-serif" font-weight="bold" font-size="7" fill="#065F46" text-anchor="middle">75</text>
+    </svg>`,
+
+    // Aero Bar Chart (Analiz - Çok Renkli)
+    "aero-chart-multi": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <rect x="3" y="12" width="4" height="8" rx="1" fill="#60A5FA" stroke="#2563EB" stroke-width="0.5"/>
+    <rect x="10" y="6" width="4" height="14" rx="1" fill="#F472B6" stroke="#DB2777" stroke-width="0.5"/>
+    <rect x="17" y="9" width="4" height="11" rx="1" fill="#34D399" stroke="#059669" stroke-width="0.5"/>
+    <path d="M2 21h20" stroke="#475569" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M4 12l6-6 7 3" stroke="white" stroke-width="1" opacity="0.4" fill="none"/> </svg>`,
+
+
+    // Aero Kasa Kapısı (Büyük Kilit - Çelik/Mavi)
+    "aero-bank-vault-door": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-vault" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#E0F2FE"/><stop offset="100%" stop-color="#0369A1"/></radialGradient></defs>
+    <circle cx="12" cy="12" r="11" fill="#0F172A"/> <circle cx="12" cy="12" r="9" fill="url(#grad-vault)" stroke="#075985" stroke-width="0.5"/>
+    <circle cx="12" cy="12" r="4" fill="#0F172A" stroke="#38BDF8" stroke-width="2"/> <path d="M12 8v-6M12 22v-6M16 12h6M2 12h6" stroke="#075985" stroke-width="2"/>
+    <circle cx="14" cy="10" r="1" fill="white" opacity="0.8"/> <path d="M12 12l2-2" stroke="#38BDF8" stroke-width="2" stroke-linecap="round">
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="5s" repeatCount="indefinite"/>
+    </path>
+    </svg>`,
+
+
+    // Aero Küp (Prizma - Mor)
+    "aero-shape-prism": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-prism" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#D8B4FE"/><stop offset="100%" stop-color="#7E22CE"/></linearGradient></defs>
+    <path d="M12 2l10 6-10 6-10-6z" fill="#C084FC" stroke="#6B21A8" stroke-width="0.5"/>
+    <path d="M2 8l10 6v10L2 18z" fill="url(#grad-prism)" stroke="#6B21A8" stroke-width="0.5"/>
+    <path d="M22 8l-10 6v10l10-6z" fill="#A855F7" stroke="#6B21A8" stroke-width="0.5"/>
+    <path d="M12 8v6" stroke="white" stroke-width="1" opacity="0.3"/>
+    </svg>`,
+
+    // Aero Hyper Gear (Mekanik Canavar - Metalik Mavi)
+    "aero-loader-hyper-gear": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <defs><linearGradient id="grad-hyper-gear" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#93C5FD"/><stop offset="50%" stop-color="#2563EB"/><stop offset="100%" stop-color="#1E3A8A"/></linearGradient></defs>
+    <circle cx="12" cy="12" r="11" stroke="#3B82F6" stroke-width="0.5" fill="none" opacity="0.3"/>
+    <circle cx="12" cy="12" r="11" stroke="white" stroke-width="0.5" fill="none" opacity="0.2" stroke-dasharray="5 5"/>
+    
+    <g fill="url(#grad-hyper-gear)" stroke="#1E3A8A" stroke-width="0.5">
+        <path d="M21.9,9.6c-0.3-1-0.6-1.9-1.1-2.8l-2.3,0.8c-0.7-0.9-1.5-1.7-2.4-2.4l0.8-2.3C16,2.5,15,2.2,14,1.9V4.3 c-1.1-0.2-2.3-0.2-3.4,0V1.9C9.6,2.2,8.7,2.5,7.8,3L8.6,5.3C7.7,6,6.9,6.8,6.2,7.7L3.9,6.9C3.4,7.8,3,8.7,2.7,9.6h2.4 c-0.2,1.1-0.2,2.3,0,3.4H2.7c0.3,1,0.6,1.9,1.1,2.8l2.3-0.8c0.7,0.9,1.5,1.7,2.4,2.4l-0.8,2.3c0.9,0.5,1.9,0.8,2.8,1.1v-2.4 c1.1,0.2,2.3,0.2,3.4,0v2.4c1-0.3,1.9-0.6,2.8-1.1l-0.8-2.3c0.9-0.7,1.7-1.5,2.4-2.4l2.3,0.8c0.5-0.9,0.8-1.9,1.1-2.8h-2.4 c0.2-1.1,0.2-2.3,0-3.4H21.9z M12,16c-2.2,0-4-1.8-4-4s1.8-4,4-4s4,1.8,4,4S14.2,16,12,16z">
+             <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="2s" repeatCount="indefinite" easing="ease-in-out"/>
+        </path>
+        <circle cx="12" cy="12" r="3" fill="#1E3A8A" stroke="white" stroke-width="1" opacity="0.8"/>
+        <circle cx="12" cy="12" r="1.5" fill="white"/>
+    </g>
+    </svg>`,
+
+
+    // Aero Sonic Streak (Mavi Hız Hüzmesi)
+    "aero-loader-sonic": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-sonic" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#38BDF8" stop-opacity="0"/><stop offset="100%" stop-color="#0284C7"/></linearGradient></defs>
+    <circle cx="12" cy="12" r="10" stroke="#E0F2FE" stroke-width="2" fill="none" opacity="0.2"/>
+    <path d="M12 2a10 10 0 0 1 10 10" stroke="url(#grad-sonic)" stroke-width="4" stroke-linecap="round" fill="none" stroke-dasharray="20 40">
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="0.6s" repeatCount="indefinite"/>
+        <animate attributeName="stroke-width" values="4;6;4" dur="0.6s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="12" cy="2" r="2.5" fill="#38BDF8" filter="blur(2px)">
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="0.6s" repeatCount="indefinite"/>
+    </circle>
+    </svg>`,
+
+    // Aero Heart Circle (Kalp Çemberi Yükleniyor)
+    "aero-loader-heart-ring": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <g fill="#F472B6">
+        <path d="M12 2.5a2.5 2.5 0 0 0-2.5 2.5c0 2.5 2.5 4.5 2.5 4.5s2.5-2 2.5-4.5a2.5 2.5 0 0 0-2.5-2.5z" transform="translate(0, -1)"><animate attributeName="opacity" values="0.2;1;0.2" dur="1s" repeatCount="indefinite" begin="0s"/></path>
+        <path d="M18.7 5.3a2.5 2.5 0 0 0-2.5 2.5c0 2.5 2.5 4.5 2.5 4.5s2.5-2 2.5-4.5a2.5 2.5 0 0 0-2.5-2.5z" transform="rotate(45 12 12) translate(0, -1)"><animate attributeName="opacity" values="0.2;1;0.2" dur="1s" repeatCount="indefinite" begin="0.125s"/></path>
+        <path d="M21.5 12a2.5 2.5 0 0 0-2.5 2.5c0 2.5 2.5 4.5 2.5 4.5s2.5-2 2.5-4.5a2.5 2.5 0 0 0-2.5-2.5z" transform="rotate(90 12 12) translate(0, -1)"><animate attributeName="opacity" values="0.2;1;0.2" dur="1s" repeatCount="indefinite" begin="0.25s"/></path>
+        <path d="M18.7 18.7a2.5 2.5 0 0 0-2.5 2.5c0 2.5 2.5 4.5 2.5 4.5s2.5-2 2.5-4.5a2.5 2.5 0 0 0-2.5-2.5z" transform="rotate(135 12 12) translate(0, -1)"><animate attributeName="opacity" values="0.2;1;0.2" dur="1s" repeatCount="indefinite" begin="0.375s"/></path>
+        <path d="M12 21.5a2.5 2.5 0 0 0-2.5 2.5c0 2.5 2.5 4.5 2.5 4.5s2.5-2 2.5-4.5a2.5 2.5 0 0 0-2.5-2.5z" transform="rotate(180 12 12) translate(0, -1)"><animate attributeName="opacity" values="0.2;1;0.2" dur="1s" repeatCount="indefinite" begin="0.5s"/></path>
+        <path d="M5.3 18.7a2.5 2.5 0 0 0-2.5 2.5c0 2.5 2.5 4.5 2.5 4.5s2.5-2 2.5-4.5a2.5 2.5 0 0 0-2.5-2.5z" transform="rotate(225 12 12) translate(0, -1)"><animate attributeName="opacity" values="0.2;1;0.2" dur="1s" repeatCount="indefinite" begin="0.625s"/></path>
+        <path d="M2.5 12a2.5 2.5 0 0 0-2.5 2.5c0 2.5 2.5 4.5 2.5 4.5s2.5-2 2.5-4.5a2.5 2.5 0 0 0-2.5-2.5z" transform="rotate(270 12 12) translate(0, -1)"><animate attributeName="opacity" values="0.2;1;0.2" dur="1s" repeatCount="indefinite" begin="0.75s"/></path>
+        <path d="M5.3 5.3a2.5 2.5 0 0 0-2.5 2.5c0 2.5 2.5 4.5 2.5 4.5s2.5-2 2.5-4.5a2.5 2.5 0 0 0-2.5-2.5z" transform="rotate(315 12 12) translate(0, -1)"><animate attributeName="opacity" values="0.2;1;0.2" dur="1s" repeatCount="indefinite" begin="0.875s"/></path>
+    </g>
+    </svg>`,
+
+    // Aero Zoom In (Büyüteç Artı - Mavi Cam)
+    "aero-zoom-in": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-zoom-in" cx="30%" cy="30%" r="70%"><stop offset="0%" stop-color="#E0F2FE"/><stop offset="100%" stop-color="#3B82F6"/></radialGradient></defs>
+    <circle cx="11" cy="11" r="9" fill="url(#grad-zoom-in)" stroke="#1D4ED8" stroke-width="0.5"/>
+    <path d="M21 21l-4.35-4.35" stroke="#1E3A8A" stroke-width="3" stroke-linecap="round"/>
+    <path d="M11 8v6M8 11h6" stroke="#1E3A8A" stroke-width="2" stroke-linecap="round"/> <ellipse cx="8" cy="8" rx="4" ry="2" fill="white" opacity="0.5" transform="rotate(-45 8 8)"/>
+    </svg>`,
+
+    // Aero Zoom Out (Büyüteç Eksi - Mavi Cam)
+    "aero-zoom-out": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-zoom-out" cx="30%" cy="30%" r="70%"><stop offset="0%" stop-color="#E0F2FE"/><stop offset="100%" stop-color="#3B82F6"/></linearGradient></defs>
+    <circle cx="11" cy="11" r="9" fill="url(#grad-zoom-out)" stroke="#1D4ED8" stroke-width="0.5"/>
+    <path d="M21 21l-4.35-4.35" stroke="#1E3A8A" stroke-width="3" stroke-linecap="round"/>
+    <path d="M8 11h6" stroke="#1E3A8A" stroke-width="2" stroke-linecap="round"/> <ellipse cx="8" cy="8" rx="4" ry="2" fill="white" opacity="0.5" transform="rotate(-45 8 8)"/>
+    </svg>`,
+
+    // Aero Kilit Açık (Unlock - Yeşil Cam)
+    "aero-lock-open": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-lock-o" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#A7F3D0"/><stop offset="100%" stop-color="#10B981"/></linearGradient></defs>
+    <rect x="5" y="11" width="14" height="10" rx="2" fill="url(#grad-lock-o)" stroke="#064E3B" stroke-width="0.5"/>
+    <path d="M7 11V7a5 5 0 0 1 9.9-1" stroke="#64748B" stroke-width="2.5" stroke-linecap="round" fill="none"/> <circle cx="12" cy="16" r="2" fill="#065F46"/>
+    <path d="M12 16v2" stroke="#065F46" stroke-width="2"/>
+    </svg>`,
+
+    // Aero Kilit Kapalı (Lock - Kırmızı Cam)
+    "aero-lock-closed": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-lock-c" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FCA5A5"/><stop offset="100%" stop-color="#DC2626"/></linearGradient></defs>
+    <rect x="5" y="11" width="14" height="10" rx="2" fill="url(#grad-lock-c)" stroke="#991B1B" stroke-width="0.5"/>
+    <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="#7F1D1D" stroke-width="2.5" stroke-linecap="round" fill="none"/> <circle cx="12" cy="16" r="2" fill="#7F1D1D"/>
+    <path d="M12 16v2" stroke="#7F1D1D" stroke-width="2"/>
+    </svg>`,
+
+    // Aero Kapı (Çıkış/Giriş - Ahşap/Cam)
+    "aero-door-enter": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-door" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#92400E"/><stop offset="100%" stop-color="#FBBF24"/></linearGradient></defs>
+    <path d="M13 3h-2v18h2V3z" fill="#78350F"/> <rect x="5" y="3" width="14" height="18" rx="1" fill="url(#grad-door)" stroke="#78350F" stroke-width="0.5" opacity="0.8"/> <path d="M15 12h2" stroke="white" stroke-width="2" stroke-linecap="round"/> <path d="M18 3v18" stroke="white" stroke-width="1" opacity="0.3"/>
+    </svg>`,
+
+
+    // Aero Ana Kasa (Titanium Vault - Yuvarlak Kapı)
+    "aero-vault-titanium": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-vault-ti" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#94A3B8"/><stop offset="100%" stop-color="#334155"/></linearGradient><radialGradient id="grad-vault-lock" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#38BDF8"/><stop offset="100%" stop-color="#0284C7"/></radialGradient></defs>
+    <rect x="2" y="2" width="20" height="20" rx="4" fill="url(#grad-vault-ti)" stroke="#1E293B" stroke-width="1"/>
+    <circle cx="12" cy="12" r="7" fill="#1E293B" stroke="#475569" stroke-width="0.5"/>
+    <circle cx="12" cy="12" r="5" fill="url(#grad-vault-lock)" stroke="#0EA5E9" stroke-width="1"/>
+    <g>
+        <rect x="11" y="7" width="2" height="10" rx="1" fill="white" opacity="0.8"/>
+        <rect x="7" y="11" width="10" height="2" rx="1" fill="white" opacity="0.8"/>
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="10s" repeatCount="indefinite"/>
+    </g>
+    <path d="M4 4h2M18 4h2M4 20h2M18 20h2" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.2"/>
+    </svg>`,
+
+    // Aero Dijital Kasa (Neon Şifreli)
+    "aero-safe-digital": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-safe-digi" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1E1B4B"/><stop offset="100%" stop-color="#312E81"/></linearGradient></defs>
+    <rect x="4" y="4" width="16" height="16" rx="3" fill="url(#grad-safe-digi)" stroke="#4338CA" stroke-width="1"/>
+    <rect x="8" y="8" width="8" height="4" rx="1" fill="#000000" stroke="#4ADE80" stroke-width="0.5"/>
+    <circle cx="10" cy="10" r="0.5" fill="#4ADE80" class="animate-pulse"/> <circle cx="12" cy="10" r="0.5" fill="#4ADE80" class="animate-pulse" style="animation-delay: 0.2s"/>
+    <circle cx="14" cy="10" r="0.5" fill="#4ADE80" class="animate-pulse" style="animation-delay: 0.4s"/>
+    
+    <rect x="7" y="14" width="2" height="2" rx="0.5" fill="#6366F1"/>
+    <rect x="11" y="14" width="2" height="2" rx="0.5" fill="#6366F1"/>
+    <rect x="15" y="14" width="2" height="2" rx="0.5" fill="#6366F1"/>
+    <path d="M4 5h16" stroke="white" stroke-width="1" opacity="0.1"/>
+    </svg>`,
+
+    // Aero Banka Kasası (Altın Külçeli)
+    "aero-safe-open-gold": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-safe-open" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#475569"/><stop offset="100%" stop-color="#1E293B"/></linearGradient></defs>
+    <path d="M2 5h14v14H2z" fill="url(#grad-safe-open)"/>
+    <path d="M5 15l3-2 3 2-3 2z" fill="#FACC15"/>
+    <path d="M8 13l3-2 3 2-3 2z" fill="#FACC15"/>
+    <path d="M6 11l3-2 3 2-3 2z" fill="#EAB308"/>
+    <path d="M16 5l6 2v10l-6 2V5z" fill="#64748B" stroke="#94A3B8" stroke-width="1"/>
+    <circle cx="19" cy="12" r="2" fill="#CBD5E1" stroke="#475569" stroke-width="2"/>
+    <path d="M19 12h2" stroke="#475569" stroke-width="2"/>
+    </svg>`,
+
+    // Aero Merkez Bankası (Yunan Sütunu - Mermer/Cam)
+    "aero-bank-central": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-bank-cen" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F1F5F9"/><stop offset="100%" stop-color="#CBD5E1"/></linearGradient></defs>
+    <path d="M12 2L2 8h20L12 2z" fill="url(#grad-bank-cen)" stroke="#94A3B8" stroke-width="0.5"/> <rect x="4" y="8" width="16" height="2" fill="#64748B"/>
+    <path d="M5 10h2v11H5z" fill="url(#grad-bank-cen)" opacity="0.8"/> <path d="M9 10h2v11H9z" fill="url(#grad-bank-cen)" opacity="0.8"/> <path d="M13 10h2v11h-2z" fill="url(#grad-bank-cen)" opacity="0.8"/> <path d="M17 10h2v11h-2z" fill="url(#grad-bank-cen)" opacity="0.8"/> <rect x="2" y="21" width="20" height="2" fill="#475569"/>
+    <path d="M12 4l5 3H7l5-3z" fill="white" opacity="0.5"/>
+    </svg>`,
+
+    // Aero Kripto Bankası (Blok Zincir - Mor)
+    "aero-bank-crypto": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-bank-cry" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#C084FC"/><stop offset="100%" stop-color="#6B21A8"/></linearGradient></defs>
+    <path d="M12 2l10 6-10 6-10-6z" fill="url(#grad-bank-cry)" stroke="#A855F7" stroke-width="0.5"/>
+    <path d="M2 8v10l10 4 10-4V8" fill="#3B0764" opacity="0.4" stroke="#7E22CE" stroke-width="1"/>
+    <path d="M12 14v8" stroke="#A855F7" stroke-width="1"/>
+    <path d="M12 8l5 3M12 8l-5 3" stroke="white" stroke-width="1" opacity="0.6"/>
+    <circle cx="12" cy="14" r="2" fill="#FCD34D" stroke="#B45309" stroke-width="1"/> </svg>`,
+
+    // Aero Mobil Bankacılık (Telefon & Bina)
+    "aero-bank-mobile": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-bank-mob" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#1D4ED8"/></linearGradient></defs>
+    <rect x="6" y="2" width="12" height="20" rx="3" fill="#1E3A8A" stroke="#1E40AF" stroke-width="1"/>
+    <rect x="8" y="4" width="8" height="14" rx="1" fill="url(#grad-bank-mob)"/>
+    <path d="M12 7l-3 2h6l-3-2z" fill="white"/> <rect x="10" y="10" width="1" height="3" fill="white" opacity="0.7"/>
+    <rect x="13" y="10" width="1" height="3" fill="white" opacity="0.7"/>
+    <rect x="9" y="13" width="6" height="1" fill="white"/>
+    <circle cx="12" cy="19" r="1" fill="white" opacity="0.5"/>
+    </svg>`,
+
+
+    // Aero Para Çantası (Dolar - Yeşil Çuval)
+    "aero-money-bag-glass": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-money-bag" cx="40%" cy="60%" r="60%"><stop offset="0%" stop-color="#86EFAC"/><stop offset="100%" stop-color="#15803D"/></radialGradient></defs>
+    <path d="M12 3c-2 0-3 2-3 3 0 2 2 3 2 3s-4 1-5 6c-1 4 1 7 6 7h4c5 0 7-3 6-7-1-5-5-6-5-6s2-1 2-3c0-1-1-3-3-3z" fill="url(#grad-money-bag)" stroke="#14532D" stroke-width="0.5"/>
+    <path d="M9 6h6" stroke="#064E3B" stroke-width="2" stroke-linecap="round"/> <text x="12" y="17" font-family="serif" font-weight="bold" font-size="8" fill="#064E3B" text-anchor="middle" opacity="0.8">$</text>
+    <path d="M8 12c2 1 5 0 8 2" stroke="white" stroke-width="1" opacity="0.3" fill="none"/>
+    </svg>`,
+
+    // Aero Zırhlı Araç (Para Kamyonu)
+    "aero-money-truck": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-truck" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#94A3B8"/><stop offset="100%" stop-color="#334155"/></linearGradient></defs>
+    <path d="M2 12h3l2-4h10v4h5v7h-2a2 2 0 0 1-4 0h-6a2 2 0 0 1-4 0H2v-7z" fill="url(#grad-truck)" stroke="#1E293B" stroke-width="0.5"/>
+    <rect x="11" y="10" width="6" height="4" rx="1" fill="#0F172A"/> <path d="M13 12h2" stroke="#10B981" stroke-width="2"/> <circle cx="7" cy="19" r="2" fill="#111827" stroke="#475569" stroke-width="1"/>
+    <circle cx="17" cy="19" r="2" fill="#111827" stroke="#475569" stroke-width="1"/>
+    <path d="M4 12h3l1-2" stroke="white" stroke-width="1" opacity="0.4" fill="none"/>
+    </svg>`,
+
+    // Aero Evrak Çantası (Gizli Kasa)
+    "aero-briefcase-secure": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-case" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#475569"/><stop offset="100%" stop-color="#0F172A"/></linearGradient></defs>
+    <rect x="3" y="7" width="18" height="13" rx="2" fill="url(#grad-case)" stroke="#0F172A" stroke-width="1"/>
+    <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" stroke="#94A3B8" stroke-width="2"/>
+    <rect x="11" y="7" width="2" height="4" rx="1" fill="#FCD34D"/> <rect x="3" y="7" width="2" height="2" fill="#94A3B8"/> <rect x="19" y="7" width="2" height="2" fill="#94A3B8"/>
+    <path d="M3 9h18" stroke="white" stroke-width="1" opacity="0.1"/>
+    </svg>`,
+
+
+
+
+    // =================================================
+    // 2200. AERO TIME: ZAMANIN AKIŞI (LIQUID CLOCKS)
+    // Not: Tik-tak sesini hissettiren, eriyen ve dönen saatler.
+    // =================================================
+
+    // Aero Eriyen Saat (Dali Style)
+    "aero-loader-clock-melt": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-melt-clock" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#A78BFA"/></linearGradient></defs>
+    <path d="M12 2C6.5 2 2 6.5 2 12c0 3 1.5 6 4 8s6 2 6 2 3.5 0 6-2 4-5 4-8-4.5-10-10-10z" fill="url(#grad-melt-clock)" stroke="#4F46E5" stroke-width="0.5">
+        <animate attributeName="d" values="M12 2C6.5 2 2 6.5 2 12c0 3 1.5 6 4 8s6 2 6 2 3.5 0 6-2 4-5 4-8-4.5-10-10-10z; M12 2C6.5 2 3 7 3 12c0 4 2 9 5 9s7 1 7 1 2-3 5-6 2-9 2-12-4.5-10-10-10z; M12 2C6.5 2 2 6.5 2 12c0 3 1.5 6 4 8s6 2 6 2 3.5 0 6-2 4-5 4-8-4.5-10-10-10z" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="12" cy="12" r="1" fill="white"/>
+    <line x1="12" y1="12" x2="12" y2="6" stroke="white" stroke-width="1.5" stroke-linecap="round">
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="12" y1="12" x2="16" y2="12" stroke="white" stroke-width="1.5" stroke-linecap="round">
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="12s" repeatCount="indefinite"/>
+    </line>
+    </svg>`,
+
+    // Aero Hızlı Kronometre (Turbo)
+    "aero-loader-stopwatch": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-stop" cx="50%" cy="50%"><stop offset="0%" stop-color="#FCA5A5"/><stop offset="100%" stop-color="#DC2626"/></radialGradient></defs>
+    <path d="M12 2v2" stroke="#DC2626" stroke-width="2"/>
+    <circle cx="12" cy="13" r="9" fill="url(#grad-stop)" stroke="#991B1B" stroke-width="0.5"/>
+    <circle cx="12" cy="13" r="7" stroke="white" stroke-width="1" opacity="0.3" stroke-dasharray="2 2"/>
+    <line x1="12" y1="13" x2="12" y2="7" stroke="white" stroke-width="2" stroke-linecap="round">
+         <animateTransform attributeName="transform" type="rotate" from="0 12 13" to="360 12 13" dur="0.5s" repeatCount="indefinite"/>
+    </line>
+    </svg>`,
+
+    // Aero Kum Saati (Sıvı Akışı)
+    "aero-loader-hourglass-liquid": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-sand" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FDE047"/><stop offset="100%" stop-color="#D97706"/></linearGradient></defs>
+    <path d="M6 2v20h12v-20z" stroke="#475569" stroke-width="2" fill="none" opacity="0.3"/>
+    <path d="M17 2H7l5 9 5-9z" fill="url(#grad-sand)">
+        <animate attributeName="d" values="M17 2H7l5 9 5-9z; M17 2H7l5 0 5 0z; M17 2H7l5 9 5-9z" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M12 11v11" stroke="#D97706" stroke-width="2" stroke-dasharray="2 2">
+        <animate attributeName="stroke-dashoffset" from="0" to="4" dur="0.2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M7 22h10l-5-9-5 9z" fill="url(#grad-sand)">
+         <animate attributeName="d" values="M7 22h10l-5 0-5 0z; M7 22h10l-5-9-5 9z; M7 22h10l-5 0-5 0z" dur="2s" repeatCount="indefinite"/>
+    </path>
+    </svg>`,
+
+    // =================================================
+    // 2201. AERO NEBULA: UZAY & ENERJİ (COSMIC LOADER)
+    // Not: Galaksi gibi dönen, parlayan yükleyiciler.
+    // =================================================
+
+    // Aero Nebula (Dönen Galaksi - Mor/Mavi)
+    "aero-loader-nebula-spin": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-nebula" cx="50%" cy="50%"><stop offset="0%" stop-color="#C084FC" stop-opacity="0"/><stop offset="100%" stop-color="#7C3AED"/></radialGradient></defs>
+    <circle cx="12" cy="12" r="2" fill="white">
+         <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" repeatCount="indefinite"/>
+    </circle>
+    <path d="M12 2a10 10 0 0 1 10 10" stroke="url(#grad-nebula)" stroke-width="4" stroke-linecap="round" fill="none">
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M12 22a10 10 0 0 1-10-10" stroke="url(#grad-nebula)" stroke-width="4" stroke-linecap="round" fill="none">
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1.5s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="22" cy="12" r="1.5" fill="#A78BFA">
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    </svg>`,
+
+    // Aero Atom Çekirdeği (Yörünge)
+    "aero-loader-atom-core": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="4" fill="#3B82F6"/>
+    <ellipse cx="12" cy="12" rx="10" ry="3" stroke="#60A5FA" stroke-width="1" fill="none">
+        <animateTransform attributeName="transform" type="rotate" values="0 12 12; 360 12 12" dur="3s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="12" cy="12" rx="10" ry="3" stroke="#93C5FD" stroke-width="1" fill="none">
+        <animateTransform attributeName="transform" type="rotate" values="60 12 12; 420 12 12" dur="3s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="12" cy="12" rx="10" ry="3" stroke="#2563EB" stroke-width="1" fill="none">
+        <animateTransform attributeName="transform" type="rotate" values="-60 12 12; 300 12 12" dur="3s" repeatCount="indefinite"/>
+    </ellipse>
+    <circle cx="22" cy="12" r="1" fill="white">
+        <animateTransform attributeName="transform" type="rotate" values="0 12 12; 360 12 12" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    </svg>`,
+
+    // Aero Portal (Girdap - Yeşil)
+    "aero-loader-portal": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-port" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#059669"/></linearGradient></defs>
+    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" stroke="url(#grad-port)" stroke-width="0.5" fill="none">
+        <animate attributeName="d" values="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0; M12 12m-10 0a10 10 0 1 0 20 0a10 10 0 1 0 -20 0" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" stroke="url(#grad-port)" stroke-width="0.5" fill="none">
+        <animate attributeName="d" values="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0; M12 12m-10 0a10 10 0 1 0 20 0a10 10 0 1 0 -20 0" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+    </path>
+    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" stroke="url(#grad-port)" stroke-width="0.5" fill="none">
+        <animate attributeName="d" values="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0; M12 12m-10 0a10 10 0 1 0 20 0a10 10 0 1 0 -20 0" dur="2s" begin="1.3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" dur="2s" begin="1.3s" repeatCount="indefinite"/>
+    </path>
+    </svg>`,
+
+    // =================================================
+    // 2202. AERO UI: YÜKLEME BARLARI (GLASS BARS)
+    // Not: Sıvı gibi dolan barlar.
+    // =================================================
+
+    // Aero Bar (Sonsuz Gidiş Geliş)
+    "aero-loader-bar-indeterminate": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-bar-ind" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#60A5FA"/></linearGradient></defs>
+    <rect x="2" y="10" width="20" height="4" rx="2" fill="#E2E8F0"/>
+    <rect x="2" y="10" width="8" height="4" rx="2" fill="url(#grad-bar-ind)">
+        <animate attributeName="x" values="2;14;2" dur="1.5s" repeatCount="indefinite"/>
+    </rect>
+    </svg>`,
+
+    // Aero Noktalar (Sıçrayan Toplar)
+    "aero-loader-dots-bounce": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="6" cy="12" r="3" fill="#F472B6">
+        <animate attributeName="cy" values="12;6;12" dur="0.6s" repeatCount="indefinite" begin="0s"/>
+    </circle>
+    <circle cx="12" cy="12" r="3" fill="#818CF8">
+        <animate attributeName="cy" values="12;6;12" dur="0.6s" repeatCount="indefinite" begin="0.2s"/>
+    </circle>
+    <circle cx="18" cy="12" r="3" fill="#34D399">
+        <animate attributeName="cy" values="12;6;12" dur="0.6s" repeatCount="indefinite" begin="0.4s"/>
+    </circle>
+    </svg>`,
+
+    // =================================================
+    // 2203. AERO OKLAR: YÖN & DÖNGÜ (GLASS CYCLES)
+    // =================================================
+
+    // Aero Yenile (Refresh - Dönen)
+    "aero-arrow-refresh-spin": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-refresh" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#06B6D4"/></linearGradient></defs>
+    <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8" stroke="url(#grad-refresh)" stroke-width="3" stroke-linecap="round" fill="none">
+         <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1s" repeatCount="indefinite"/>
+    </path>
+    <path d="M21 3v5h-5" stroke="url(#grad-refresh)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+         <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1s" repeatCount="indefinite"/>
+    </path>
+    </svg>`,
+
+    // Aero Transfer (Sağ/Sol - Animasyonlu)
+    "aero-arrow-transfer-live": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 10h12" stroke="#6366F1" stroke-width="2" stroke-linecap="round">
+        <animate attributeName="d" values="M4 10h12;M8 10h12;M4 10h12" dur="1.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M13 7l3 3-3 3" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <animate attributeName="transform" type="translate" values="0,0; 4,0; 0,0" dur="1.5s" repeatCount="indefinite"/>
+    </path>
+    
+    <path d="M20 14H8" stroke="#10B981" stroke-width="2" stroke-linecap="round">
+        <animate attributeName="d" values="M20 14H8;M16 14H8;M20 14H8" dur="1.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M11 17l-3-3 3-3" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+         <animate attributeName="transform" type="translate" values="0,0; -4,0; 0,0" dur="1.5s" repeatCount="indefinite"/>
+    </path>
+    </svg>`,
+
+    // =================================================
+    // 2204. AERO KUTULAR: 3D OBJELER (GLASS OBJECTS)
+    // =================================================
+
+    // Aero Kutu Yükleniyor (Dönen Kutu)
+    "aero-box-loading-spin": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <rect x="8" y="8" width="8" height="8" rx="1" stroke="#F59E0B" stroke-width="2" fill="none">
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="5" y="5" width="14" height="14" rx="2" stroke="#FCD34D" stroke-width="1" fill="none" opacity="0.5">
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="-360 12 12" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    </svg>`,
+
+    // Aero Küp (Jelly Effect)
+    "aero-cube-jelly": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-cube-j" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#EC4899"/><stop offset="100%" stop-color="#DB2777"/></linearGradient></defs>
+    <rect x="7" y="7" width="10" height="10" rx="2" fill="url(#grad-cube-j)">
+        <animateTransform attributeName="transform" type="scale" values="1;0.8;1.1;1" dur="1s" repeatCount="indefinite" additive="sum" transform-origin="12 12"/>
+    </rect>
+    <path d="M12 2v5M12 17v5M2 12h5M17 12h5" stroke="#F472B6" stroke-width="2" opacity="0.5" stroke-linecap="round">
+         <animateTransform attributeName="transform" type="scale" values="1;1.2;0.8;1" dur="1s" repeatCount="indefinite" additive="sum" transform-origin="12 12"/>
+    </path>
+    </svg>`,
+
+
+
+// =================================================
+    // 2180. AERO LOADER: YAZI & ÜRETİM (CREATIVE FLOW)
+    // Not: Yazı yazan kalem ve dolan kağıtlar.
+    // =================================================
+
+    // Aero Yazı Yazan Kalem (İmza Atıyor)
+    "aero-loader-pen-write": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-pen" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#2563EB"/></linearGradient></defs>
+    <path d="M4 18h10" stroke="#E2E8F0" stroke-width="2" stroke-linecap="round" stroke-dasharray="10">
+        <animate attributeName="stroke-dashoffset" values="10;0" dur="1s" repeatCount="indefinite"/>
+    </path>
+    <g>
+        <path d="M18 4l-9 9-2 5 5-2 9-9-3-3z" fill="url(#grad-pen)" stroke="#1E40AF" stroke-width="0.5"/>
+        <path d="M16 6l2 2" stroke="white" stroke-width="1" opacity="0.5"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0; -5,2; 0,0" dur="0.5s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="rotate" values="0 14 14; -10 14 14; 0 14 14" dur="0.5s" repeatCount="indefinite" additive="sum"/>
+    </g>
+    </svg>`,
+
+    // Aero Belge Tarama (Scan Line)
+    "aero-loader-doc-scan": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <rect x="6" y="4" width="12" height="16" rx="2" stroke="#64748B" stroke-width="2" fill="none" opacity="0.3"/>
+    <line x1="9" y1="8" x2="15" y2="8" stroke="#64748B" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="9" y1="12" x2="15" y2="12" stroke="#64748B" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="9" y1="16" x2="13" y2="16" stroke="#64748B" stroke-width="1.5" stroke-linecap="round"/>
+    <rect x="4" y="4" width="16" height="2" fill="#3B82F6" opacity="0.5">
+        <animate attributeName="y" values="4;18;4" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    </svg>`,
+
+    // =================================================
+    // 2181. AERO LOADER: KALP & NABIZ (VITAL RHYTHM)
+    // Not: Küçükten büyüğe giden, yayılan kalp serisi.
+    // =================================================
+
+    // Aero Kalp Dalgası (Growing Hearts)
+    "aero-loader-heart-ripple": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="#F43F5E" opacity="0">
+        <animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="scale" values="0;1" dur="1.5s" repeatCount="indefinite" additive="sum"/>
+    </path>
+    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="#E11D48" transform="scale(0.5) translate(12,12)">
+         <animateTransform attributeName="transform" type="scale" values="0.5;0.8;0.5" dur="0.8s" repeatCount="indefinite" additive="sum" transform-origin="12 12"/>
+    </path>
+    </svg>`,
+
+    // =================================================
+    // 2182. AERO LOADER: GÜVENLİK (LOCK ACTION)
+    // Not: Kilidin açılıp kapanması.
+    // =================================================
+
+    // Aero Kilit Döngüsü (Lock/Unlock Loop)
+    "aero-loader-lock-toggle": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-lock-act" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#059669"/></linearGradient></defs>
+    <rect x="5" y="11" width="14" height="10" rx="2" fill="url(#grad-lock-act)" stroke="#064E3B" stroke-width="0.5"/>
+    <circle cx="12" cy="16" r="1.5" fill="white"/>
+    <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="#475569" stroke-width="3" stroke-linecap="round" fill="none">
+        <animate attributeName="d" values="M7 11V7a5 5 0 0 1 10 0v4; M7 11V7a5 5 0 0 1 10 0v0; M7 11V7a5 5 0 0 1 10 0v4" dur="2s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2; 0,0" dur="2s" repeatCount="indefinite"/>
+    </path>
+    </svg>`,
+
+    // Aero Kalkan Tarama (Shield Scan)
+    "aero-loader-shield-scan": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#3B82F6" stroke-width="2" fill="none"/>
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="#3B82F6" fill-opacity="0.2"/>
+    <rect x="4" y="4" width="16" height="2" fill="#60A5FA" opacity="0.6">
+        <animate attributeName="y" values="4;18;4" dur="1.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.6;0.1;0.6" dur="1.5s" repeatCount="indefinite"/>
+    </rect>
+    </svg>`,
+
+    // =================================================
+    // 2183. AERO LOADER: İLERLEME (ADVANCED PROGRESS)
+    // =================================================
+
+    // Aero Batarya Şarjı (Yıldırım Efektli)
+    "aero-loader-battery-charge": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <rect x="2" y="6" width="18" height="12" rx="2" stroke="#475569" stroke-width="2" fill="none"/>
+    <line x1="22" y1="11" x2="22" y2="13" stroke="#475569" stroke-width="2"/>
+    <rect x="4" y="8" width="0" height="8" rx="1" fill="#22C55E">
+        <animate attributeName="width" values="0;14;14;0" keyTimes="0;0.5;0.8;1" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <path d="M11 7v10" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0">
+         <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite"/>
+    </path>
+    </svg>`,
+
+    // Aero Dairesel Yüzde (Pie Fill)
+    "aero-loader-pie-fill": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="10" stroke="#E2E8F0" stroke-width="2" fill="none"/>
+    <path d="M12 12L12 2A10 10 0 0 1 12 2" fill="#8B5CF6" stroke="none">
+        <animate attributeName="d" values="M12 12L12 2A10 10 0 0 1 12 2; M12 12L12 2A10 10 0 1 1 12 22; M12 12L12 2A10 10 0 1 1 11.99 2" dur="2s" repeatCount="indefinite"/>
+    </path>
+    </svg>`,
+
+    // =================================================
+    // 2184. AERO SİSTEM: ARA & BUL (SEARCH ANIM)
+    // =================================================
+
+    // Aero Büyüteç (Arayan)
+    "aero-loader-search-move": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <circle cx="10" cy="10" r="7" stroke="#6366F1" stroke-width="2" fill="none" opacity="0.8"/>
+        <path d="M15 15l4 4" stroke="#6366F1" stroke-width="3" stroke-linecap="round"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0; 4,4; 0,0" dur="2s" repeatCount="indefinite"/>
+    </g>
+    </svg>`,
+
 };
 
   return { icons };
