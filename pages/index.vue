@@ -145,7 +145,7 @@ const handleScroll = () => {
 const selectCategory = (id) => {
     activeCategory.value = id;
     visibleCount.value = 50;
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    //window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 // Lifecycle Hooks (Scroll ve ESC dinleyicileri)
