@@ -3,16 +3,37 @@ import { ref, computed, onMounted, watch } from 'vue';
 import { useFluxIcons } from '@/composables/useFluxIcons';
 
 useHead({ 
-  title: 'Flux Pattern - Create SVG Backgrounds',
-  meta: [
-    {
-      name: 'description',
-      content:
-        'Free SVG pattern generator for web designers. Create seamless background patterns with Flux Icons.',
-    },
-  ],
+    title: 'Free SVG Pattern Generator | Flux Background Maker',
+    meta: [
+        { name: 'description', content: 'Create seamless, customizable SVG background patterns for your website instantly. Choose from 3000+ icons, adjust colors, size, and opacity. Export as CSS or HTML.' },
+        { name: 'keywords', content: 'svg pattern generator, background maker, seamless pattern, website background, css pattern, icon pattern, flux icons' },
+        // Open Graph (Sosyal Medya)
+        { property: 'og:title', content: 'Flux Pattern - Free SVG Background Generator' },
+        { property: 'og:description', content: 'Design beautiful, seamless background patterns with 3000+ icons in seconds.' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: 'https://flux-icon.com/pattern' }
+    ],
+    script: [
+        {
+            type: 'application/ld+json',
+            children: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "Flux Pattern Generator",
+                "url": "https://flux-icon.com/pattern",
+                "description": "A free online tool to generate seamless SVG background patterns for web design.",
+                "applicationCategory": "DesignApplication",
+                "operatingSystem": "Web",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "featureList": "Customizable icons, CSS export, HTML export, Live preview"
+            })
+        }
+    ]
 });
-
 const { icons } = useFluxIcons();
 
 // --- STATE ---
@@ -200,6 +221,7 @@ const toggleDemoTheme = () => {
 </script>
 
 <template>
+ <main class="max-w-7xl mx-auto p-6 min-h-screen">
   <div class="min-h-screen flex flex-col lg:flex-row overflow-hidden bg-slate-950 text-white">
     <aside
       class="w-full lg:w-80 bg-slate-900 border-r border-slate-800 flex flex-col z-20 h-screen shrink-0"
@@ -391,7 +413,7 @@ const toggleDemoTheme = () => {
       </div>
     </aside>
 
-    <main
+    <section
       class="flex-1 relative overflow-hidden transition-colors duration-300"
       :style="{ backgroundColor: settings.bgColor }"
     >
@@ -449,8 +471,59 @@ const toggleDemoTheme = () => {
           </div>
         </div>
       </div>
-    </main>
+    </section>
   </div>
+  <section class="w-full bg-slate-900 border-t border-slate-800 py-16 px-8">
+        <div class="max-w-4xl mx-auto text-slate-400 space-y-12">
+            
+            <div class="text-center">
+                <h2 class="text-3xl font-black text-white mb-4">Why use SVG Patterns?</h2>
+                <p class="text-lg leading-relaxed">
+                    SVG patterns are lightweight, scalable, and resolution-independent. Unlike heavy image files (JPG/PNG), SVG backgrounds load instantly and look crisp on any screen size, from mobile devices to 4K monitors.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                        <FluxIcon name="sketch-lightning-bolt" class="text-yellow-500"/> Fast & Lightweight
+                    </h3>
+                    <p class="text-sm">
+                        Flux Pattern generates optimized <strong>Base64 Data URIs</strong>. This means no extra HTTP requests are needed to load your background images, significantly improving your website's <strong>Core Web Vitals</strong> and SEO score.
+                    </p>
+                </div>
+                
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                        <FluxIcon name="palette" class="text-pink-500"/> Fully Customizable
+                    </h3>
+                    <p class="text-sm">
+                        Choose from over <strong>3000+ icons</strong> in our library. Adjust colors, opacity, rotation, and spacing to match your brand identity perfectly. Whether you need a subtle texture or a bold design, Flux Pattern handles it all.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                        <FluxIcon name="liquid-code-brackets" class="text-emerald-500"/> CSS Ready
+                    </h3>
+                    <p class="text-sm">
+                        Get production-ready code instantly. Simply copy the generated <strong>CSS</strong> and paste it into your stylesheet. Works with Tailwind CSS, Bootstrap, or vanilla CSS projects seamlessly.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                        <FluxIcon name="unlock" class="text-indigo-500"/> Free & Open Source
+                    </h3>
+                    <p class="text-sm">
+                        Flux Pattern is completely free to use for personal and commercial projects. No attribution required, though we appreciate a shoutout! Built by developers, for developers.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+   </main>
 </template>
 
 <style scoped>
