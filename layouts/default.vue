@@ -56,6 +56,7 @@ onMounted(() => {
              <NuxtLink to="/" class="px-4 py-1.5 rounded-md text-sm font-medium transition-all" active-class="bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm">Icons</NuxtLink>
              <NuxtLink to="/mixer" class="px-4 py-1.5 rounded-md text-sm font-medium transition-all" active-class="bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm">Mixer</NuxtLink>
              <NuxtLink to="/pattern" class="px-4 py-1.5 rounded-md text-sm font-medium transition-all" active-class="bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm">Pattern</NuxtLink>
+             <NuxtLink to="/tools" class="px-4 py-1.5 rounded-md text-sm font-medium transition-all flex items-center gap-2" active-class="bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm">Tools</NuxtLink>
              <NuxtLink to="/docs" class="px-4 py-1.5 rounded-md text-sm font-medium transition-all" active-class="bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm">Docs</NuxtLink>
              <NuxtLink to="/install" class="px-4 py-1.5 rounded-md text-sm font-medium transition-all" active-class="bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm">Installation</NuxtLink>
              <NuxtLink to="/contact" class="px-4 py-1.5 rounded-md text-sm font-medium transition-all" active-class="bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm">Contact</NuxtLink>
