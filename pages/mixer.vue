@@ -158,7 +158,7 @@ const setPosition = (pos) => {
                 <div class="grid grid-cols-5 gap-2 max-h-60 overflow-y-auto custom-scrollbar pr-1" @scroll="handleBaseScroll">
                     <button v-for="name in baseList" :key="name" @click="selectedBase=name" 
                         class="p-2 rounded-lg transition-all flex justify-center aspect-square items-center group relative"
-                        :class="selectedBase===name ? 'bg-indigo-600 text-white shadow-lg ring-2 ring-offset-2 ring-indigo-500 dark:ring-offset-slate-900' : 'hover:bg-indigo-50 dark:hover:bg-indigo-900/30 text-slate-500 dark:text-slate-400'">
+                        :class="selectedBase===name ? 'bg-indigo-600 text-white shadow-lg ring-2 [--tw-ring-offset-width:-2px] ring-indigo-500 dark:ring-offset-slate-900' : 'hover:bg-indigo-50 dark:hover:bg-indigo-900/30 text-slate-500 dark:text-slate-400'">
                         <FluxIcon :name="name" size="24" />
                     </button>
                 </div>
@@ -173,7 +173,7 @@ const setPosition = (pos) => {
                 <div class="grid grid-cols-5 gap-2 max-h-60 overflow-y-auto custom-scrollbar pr-1" @scroll="handleBadgeScroll">
                     <button v-for="name in badgeList" :key="name" @click="selectedBadge=name" 
                         class="p-2 rounded-lg transition-all flex justify-center aspect-square items-center group relative"
-                        :class="selectedBadge===name ? 'bg-pink-600 text-white shadow-lg ring-2 ring-offset-2 ring-pink-500 dark:ring-offset-slate-900' : 'hover:bg-pink-50 dark:hover:bg-pink-900/30 text-slate-500 dark:text-slate-400'">
+                        :class="selectedBadge===name ? 'bg-pink-600 text-white shadow-lg ring-2 [--tw-ring-offset-width:-2px] ring-pink-500 dark:ring-offset-slate-900' : 'hover:bg-pink-50 dark:hover:bg-pink-900/30 text-slate-500 dark:text-slate-400'">
                         <FluxIcon :name="name" size="20" />
                     </button>
                 </div>
