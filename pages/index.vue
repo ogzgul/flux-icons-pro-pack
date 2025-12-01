@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted, watch } from "vue";
 import { useFluxIcons } from '@/composables/useFluxIcons';
+import { useRouter, useRoute } from 'vue-router'; // Router eklendi
 
 // --- SEO META ---
 useHead({
@@ -12,38 +13,8 @@ useHead({
 });
 
 const { icons } = useFluxIcons();
-
-// --- EŞ ANLAMLI SÖZLÜĞÜ (AKILLI ARAMA) ---
-const aliases = {
-  'invoice': 'receipt',
-  'bill': 'receipt',
-  'picture': 'image',
-  'photo': 'image',
-  'security': 'shield',
-  'safe': 'lock',
-  'people': 'user',
-  'person': 'user',
-  'profile': 'user',
-  'garbage': 'trash',
-  'delete': 'trash',
-  'remove': 'trash',
-  'add': 'plus',
-  'create': 'plus',
-  'music': 'note',
-  'song': 'note',
-  'play': 'media',
-  'video': 'film',
-  'movie': 'film',
-  'gear': 'setting',
-  'config': 'setting',
-  'wifi': 'signal',
-  'internet': 'wifi',
-  'connection': 'link',
-  'mail': 'envelope',
-  'message': 'chat',
-  'sms': 'chat',
-  'payment':'bank'
-};
+const router = useRouter();
+const route = useRoute();
 
 // --- AYARLAR ---
 const searchQuery = ref("");
@@ -73,11 +44,41 @@ watch(() => customize.value.type, (newType) => {
     }
 });
 
+// --- URL VE MODAL YÖNETİMİ (YENİ MANTIK) ---
+// URL değişince Modalı aç/kapat (Geri tuşu ve Link paylaşımı için)
+watch(() => route.query.icon, (newIcon) => {
+    if (newIcon && icons[newIcon]) {
+        selectedIcon.value = newIcon;
+        isModalOpen.value = true;
+        copied.value = false;
+    } else {
+        isModalOpen.value = false;
+        // Modal kapanınca URL temizlendiği için burası çalışır
+    }
+}, { immediate: true }); // Sayfa ilk açıldığında da çalışsın (Link paylaşımı için)
+
+// Modalı açarken sadece URL'i değiştiriyoruz, Watcher gerisini hallediyor
+const openModal = (name) => { 
+    router.push({ query: { ...route.query, icon: name } });
+};
+
+// Modalı kapatırken URL parametresini siliyoruz
+const closeModal = () => { 
+    router.push({ query: { ...route.query, icon: undefined } });
+};
+
+// ESC Tuşu ile Kapatma
+const handleKeydown = (e) => {
+    if (e.key === 'Escape' && isModalOpen.value) {
+        closeModal();
+    }
+};
+
 // --- RENK PALETİ KONTROLÜ ---
 const isColorable = computed(() => {
     if (!selectedIcon.value) return true;
     const name = selectedIcon.value;
-    const staticTypes = ['liquid-', 'flag-', 'sticker-', 'original', 'brand-', 'fill', 'solid'];
+    const staticTypes = ['liquid-', 'flag-', 'sticker-', 'original', 'brand-', 'fill', 'solid','avatar-','vivid-'];
     if (staticTypes.some(type => name.includes(type))) {
         return false;
     }
@@ -100,47 +101,40 @@ const categories = [
   { id: 'chart-', name: 'Charts' }
 ];
 
-// --- GELİŞMİŞ FİLTRELEME (DÜZELTİLDİ) ---
+// --- FİLTRELEME ---
 const allIconNames = computed(() => Object.keys(icons).sort());
 const filteredIcons = computed(() => {
-  const rawQuery = searchQuery.value.trim().toLowerCase();
+  // 1. Boşlukları temizle ve küçük harfe çevir
+  let query = searchQuery.value.trim().toLowerCase();
   const category = activeCategory.value;
 
-  // Boşsa hepsini kategoriye göre ver
-  const tokens = rawQuery.split(/\s+/).filter(Boolean);
+  // 2. Alias (Eş Anlamlı) Kontrolü (Mevcut kodundan)
+  const aliases = {
+      'invoice': 'receipt', 'bill': 'receipt', 'picture': 'image', 'photo': 'image', 
+      'security': 'shield', 'safe': 'lock', 'people': 'user', 'person': 'user', 
+      'profile': 'user', 'garbage': 'trash', 'delete': 'trash', 'remove': 'trash', 
+      'add': 'plus', 'create': 'plus', 'music': 'note', 'song': 'note', 
+      'play': 'media', 'video': 'film', 'movie': 'film', 'gear': 'setting', 
+      'config': 'setting', 'wifi': 'signal', 'internet': 'wifi', 'connection': 'link', 
+      'mail': 'envelope', 'message': 'chat', 'sms': 'chat','payment':'bank'
+  };
+  
+  const aliasKey = Object.keys(aliases).find(key => query.includes(key));
+  const extraQuery = aliasKey ? aliases[aliasKey] : '';
 
-  return allIconNames.value.filter((name) => {
-    // Kategori filtresi
-    if (category !== 'all' && !name.startsWith(category)) return false;
-    if (!tokens.length) return true;
-
-    // Arama index’i: heart-lock + "heart lock"
-    const searchIndex = `${name} ${name.replace(/-/g, ' ')}`.toLowerCase();
-
-    // Her token için eşleşme: direkt isimde ya da alias üzerinden
-    const matchesAllTokens = tokens.every((token) => {
-      if (searchIndex.includes(token)) return true;
-
-      // token ile eşleşen alias’ları bul (örn: inv → invoice → receipt)
-      const aliasTargets = Object.entries(aliases)
-        .filter(([key]) => key.includes(token))
-        .map(([, value]) => value.toLowerCase());
-
-      return aliasTargets.some((alias) => searchIndex.includes(alias));
-    });
-
-    return matchesAllTokens;
+  return allIconNames.value.filter(name => {
+    const matchesSearch = name.includes(query) || (extraQuery && name.includes(extraQuery));
+    let matchesCategory = true;
+    if (category !== 'all') matchesCategory = name.startsWith(category);
+    return matchesSearch && matchesCategory;
   });
 });
 
 const displayedIcons = computed(() => filteredIcons.value.slice(0, visibleCount.value));
 
-// --- GELİŞMİŞ SCROLL (DÜZELTİLDİ) ---
 const handleScroll = () => {
   const scrollPosition = window.scrollY + window.innerHeight;
   const totalHeight = document.documentElement.scrollHeight;
-  
-  // En dibe gelmesini bekleme, 300px kala yükle (Daha akıcı)
   if (scrollPosition >= totalHeight - 800) {
     if (visibleCount.value < filteredIcons.value.length) {
         visibleCount.value += 50;
@@ -153,11 +147,17 @@ const selectCategory = (id) => {
     visibleCount.value = 50;
     window.scrollTo({ top: 0, behavior: 'smooth' });
 };
-onMounted(() => window.addEventListener("scroll", handleScroll));
-onUnmounted(() => window.removeEventListener("scroll", handleScroll));
 
-const openModal = (name) => { selectedIcon.value = name; isModalOpen.value = true; copied.value = false; };
-const closeModal = () => { isModalOpen.value = false; };
+// Lifecycle Hooks (Scroll ve ESC dinleyicileri)
+onMounted(() => { 
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("keydown", handleKeydown); // ESC Dinleyicisi
+});
+
+onUnmounted(() => { 
+    window.removeEventListener("scroll", handleScroll);
+    window.removeEventListener("keydown", handleKeydown);
+});
 
 // --- KOD ÇIKTISI ---
 const generatedCode = computed(() => {
@@ -235,7 +235,7 @@ const copyToClipboard = () => {
                 <span class="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 pointer-events-none z-20">
                     <FluxIcon name="search" size="22" />
                 </span>
-                <input v-model="searchQuery" type="text" placeholder="Search 1000+ icons..." class="relative z-10 w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-full py-4 pl-14 pr-32 text-lg shadow-lg focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all placeholder:text-slate-400" />
+                <input v-model="searchQuery" type="text" placeholder="Search 1000+ icons (e.g. user, invoice, settings)..." class="relative z-10 w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-full py-4 pl-14 pr-32 text-lg shadow-lg focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all placeholder:text-slate-400" />
                 <div class="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-bold font-mono bg-slate-100 dark:bg-slate-800 text-slate-500 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-700 z-20 pointer-events-none">
                     <span class="text-indigo-600 dark:text-indigo-400">{{ displayedIcons.length }}</span> / {{ filteredIcons.length }}
                 </div>
@@ -244,27 +244,25 @@ const copyToClipboard = () => {
             <div class="flex flex-wrap justify-center gap-2 w-full">
                 <button v-for="cat in categories" :key="cat.id" @click="selectCategory(cat.id)" class="px-4 py-2 rounded-full text-sm font-semibold transition-all border" :class="activeCategory === cat.id ? 'bg-indigo-600 text-white border-indigo-600 shadow-lg shadow-indigo-500/30 transform scale-105' : 'bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-800 hover:border-indigo-300 dark:hover:border-indigo-700 hover:bg-slate-50 dark:hover:bg-slate-800'">{{ cat.name }}</button>
             </div>
-
-           
         </div>
     </div>
 
 
-    <div class="max-w-4xl mx-auto px-4 mb-8">
-        <NuxtLink to="/mixer" class="block bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-6 text-white shadow-lg hover:shadow-xl hover:scale-[1.01] transition-all group">
-            <div class="flex items-center justify-between">
-                <div>
-                    <h3 class="text-xl font-bold flex items-center gap-2">
-                        <FluxIcon name="layers-floating" class="text-yellow-300" /> 
-                        New: Icon Mixer
-                    </h3>
-                    <p class="text-indigo-100 text-sm mt-1">Create custom icon combinations. File + Lock? User + Star? You decide!</p>
-                </div>
-                <div class="bg-white/20 p-2 rounded-lg group-hover:bg-white/30 transition-colors">
-                    <FluxIcon name="arrow-right-heavy" />
-                </div>
-            </div>
-        </NuxtLink>
+  <div class="max-w-4xl mx-auto px-4 mb-8">
+          <NuxtLink to="/mixer" class="block bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-6 text-white shadow-lg hover:shadow-xl hover:scale-[1.01] transition-all group">
+              <div class="flex items-center justify-between">
+                  <div>
+                      <h3 class="text-xl font-bold flex items-center gap-2">
+                          <FluxIcon name="layers-floating" class="text-yellow-300" /> 
+                          New: Icon Mixer
+                      </h3>
+                      <p class="text-indigo-100 text-sm mt-1">Create custom icon combinations. File + Lock? User + Star? You decide!</p>
+                  </div>
+                  <div class="bg-white/20 p-2 rounded-lg group-hover:bg-white/30 transition-colors">
+                      <FluxIcon name="arrow-right-heavy" />
+                  </div>
+              </div>
+          </NuxtLink>
     </div>
 
 
@@ -273,7 +271,7 @@ const copyToClipboard = () => {
             <FluxIcon name="search-x" size="48" class="text-slate-400" />
         </div>
         <h3 class="text-lg font-bold text-slate-700 dark:text-slate-200">No icons found</h3>
-        <p class="text-slate-500 mb-6">Try adjusting your search or filters.</p>
+        <p class="text-slate-500 mb-6">Try using different keywords like 'user', 'chart', or 'arrow'.</p>
         <button @click="searchQuery = ''; activeCategory = 'all'" class="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium">Clear Filters</button>
     </div>
     
@@ -294,12 +292,8 @@ const copyToClipboard = () => {
     <section class="max-w-4xl mx-auto mt-20 pt-10 border-t border-slate-200 dark:border-slate-800">
         <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Why Choose Flux Icons?</h2>
         <div class="prose prose-slate dark:prose-invert max-w-none text-sm text-slate-600 dark:text-slate-400 space-y-4">
-            <p>
-                Flux Icons is not just another icon set; it's a comprehensive design system built for modern web applications. Whether you are building a dashboard, a marketing site, or a mobile app, Flux Icons provides the versatility and quality you need.
-            </p>
-            <p>
-                Our library includes over 1500 icons across various categories like User Interface, Finance, Education, and Technology. With unique styles like "Liquid Glass" and "Striped", you can make your project stand out from the crowd.
-            </p>
+            <p>Flux Icons is not just another icon set; it's a comprehensive design system built for modern web applications. Whether you are building a dashboard, a marketing site, or a mobile app, Flux Icons provides the versatility and quality you need.</p>
+            <p>Our library includes over 1500 icons across various categories like User Interface, Finance, Education, and Technology. With unique styles like "Liquid Glass" and "Striped", you can make your project stand out from the crowd.</p>
             <h3 class="text-lg font-semibold text-slate-800 dark:text-slate-200 mt-6">Key Features:</h3>
             <ul class="list-disc pl-5 space-y-2">
                 <li><strong>Framework Agnostic:</strong> Use as SVG, Webfont, or Vue/Nuxt component.</li>
