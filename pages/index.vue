@@ -98,7 +98,8 @@ const categories = [
   { id: 'file-', name: 'Files' },
   { id: 'user-', name: 'Users' },
   { id: 'arrow-', name: 'Arrows' },
-  { id: 'chart-', name: 'Charts' }
+  { id: 'chart-', name: 'Charts' },
+   { id: 'aero-', name: 'Aero' }
 ];
 
 // --- FİLTRELEME ---
