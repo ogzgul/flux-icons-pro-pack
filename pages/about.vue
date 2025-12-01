@@ -22,7 +22,7 @@
         </div>
 
         <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow text-center">
-            <div class="mb-4 flex justify-center text-pink-500"><FluxIcon name="magic-wand-pro" size="32" /></div>
+            <div class="mb-4 flex justify-center text-pink-500"><FluxIcon name="magic-wand" size="32" /></div>
             <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Fully Customizable</h3>
             <p class="text-sm text-slate-500">Change strokes, colors, sizes, and even animations instantly to fit your brand.</p>
         </div>
