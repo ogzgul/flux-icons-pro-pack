@@ -116,7 +116,7 @@ const filteredIcons = computed(() => {
       'add': 'plus', 'create': 'plus', 'music': 'note', 'song': 'note', 
       'play': 'media', 'video': 'film', 'movie': 'film', 'gear': 'setting', 
       'config': 'setting', 'wifi': 'signal', 'internet': 'wifi', 'connection': 'link', 
-      'mail': 'envelope', 'message': 'chat', 'sms': 'chat','payment':'bank','tick','check'
+      'mail': 'envelope', 'message': 'chat', 'sms': 'chat','payment':'bank','tick':'check'
   };
   
   const aliasKey = Object.keys(aliases).find(key => query.includes(key));
