@@ -1,10 +1,13 @@
 <script setup>
+import { ref, nextTick, watch, onMounted } from 'vue'
 import { ref } from 'vue'
 import FluxIcon from '~/components/FluxIcon.vue'
 
 useHead({
   title: 'Contact Us - Flux Icons'
 })
+const route = useRoute()
+const recaptchaMountKey = ref(0)
 
 const loading = ref(false)
 const success = ref(false)
@@ -16,6 +19,21 @@ const formData = ref({
   email: '',
   message: '',
   'bot-field': '' // Netlify honeypot
+})
+
+
+const bumpRecaptcha = async () => {
+  recaptchaMountKey.value++
+  await nextTick()
+}
+
+// İlk load + /contact’a route ile gelince (SPA)
+onMounted(() => {
+  if (route.path === '/contact') bumpRecaptcha()
+})
+
+watch(() => route.fullPath, async () => {
+  if (route.path === '/contact') await bumpRecaptcha()
 })
 
 // Form gönderme
@@ -38,6 +56,8 @@ const handleSubmit = async () => {
 
     success.value = true
     formData.value = { name: '', email: '', message: '', 'bot-field': '' }
+    await bumpRecaptcha() // başarıdan sonra form yeniden açılırsa diye
+
   } catch (err) {
     console.error(err)
     error.value = true
@@ -83,6 +103,7 @@ const handleSubmit = async () => {
         <!-- Form -->
         <form
           v-if="!success"
+          :key="recaptchaMountKey"
           name="contact"
           method="POST"
           data-netlify="true"
