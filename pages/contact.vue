@@ -1,6 +1,6 @@
 <script setup>
 import { ref, nextTick, watch, onMounted } from 'vue'
-import { ref } from 'vue'
+import { useRoute } from 'vue-router'
 import FluxIcon from '~/components/FluxIcon.vue'
 
 useHead({
