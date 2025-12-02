@@ -232,6 +232,79 @@ const generatedCode = computed(() => {
   return "";
 });
 
+
+
+// --- PERFORMANS OPTİMİZASYONU ---
+
+// 1. İkon anahtarlarını bir kere al ve sakla (Reactivity dışına çıkar)
+const ALL_ICON_KEYS = Object.keys(icons);
+
+// --- RELATED ICONS (ULTRA FAST) ---
+const relatedIcons = computed(() => {
+    // Modal kapalıysa veya ikon seçili değilse hesaplama yapma (CPU tasarrufu)
+    if (!isModalOpen.value || !selectedIcon.value) return [];
+    
+    const currentName = selectedIcon.value;
+    
+    // Kök bulma (Basitleştirilmiş Regex)
+    // "aero-user-add-outline" -> "user-add"
+    let baseName = currentName
+        .replace(/^(aero-|liquid-|flat-|brand-|flux-|avatar-|memoji-|vivid-)/, '') // Önek sil
+        .replace(/(-outline|-solid|-fill|-duotone|-striped|-dashed|-line|-heavy|-light|-bold|-glass|-pro|-live)$/, ''); // Sonek sil
+
+    // Hala tire varsa temizle
+    baseName = baseName.replace(/^-+|-+$/g, '');
+    if (baseName.length < 2) baseName = currentName.split('-')[0];
+
+    // Hızlı Arama (Limitli)
+    const matches = [];
+    let count = 0;
+
+    for (let i = 0; i < ALL_ICON_KEYS.length; i++) {
+        const name = ALL_ICON_KEYS[i];
+        if (name === currentName) continue; // Kendini atla
+
+        // Kök ismini içeriyor mu?
+        if (name.includes(baseName)) {
+            matches.push(name);
+            count++;
+        }
+        // Çok fazla sonuç bulursak döngüyü kır (Performans için kritik!)
+        if (count > 50) break; 
+    }
+
+    // Bulunanları Puanla ve Sırala
+    // (Bu kısım az sayıda elemanla çalıştığı için hızlıdır)
+    const getScore = (name) => {
+        if (name === baseName + '-outline') return 10;
+        if (name === baseName + '-fill') return 20;
+        if (name === baseName + '-solid') return 30;
+        if (name.startsWith('aero-')) return 900;
+        if (name.startsWith('liquid-')) return 910;
+        return 100;
+    };
+
+    matches.sort((a, b) => {
+        const scoreA = getScore(a);
+        const scoreB = getScore(b);
+        if (scoreA !== scoreB) return scoreA - scoreB;
+        return a.length - b.length;
+    });
+
+    // Yedek Plan (Eğer hiç varyasyon yoksa)
+    if (matches.length < 4) {
+        const category = currentName.split('-')[0];
+        // Kategori bazlı hızlı arama
+        const siblings = ALL_ICON_KEYS.filter(n => n.startsWith(category + '-') && n !== currentName).slice(0, 5);
+        matches.push(...siblings);
+    }
+
+    // Tekrar edenleri temizle ve ilk 6'yı al
+    return [...new Set(matches)].slice(0, 6);
+});
+
+
+
 const copyToClipboard = () => {
   navigator.clipboard.writeText(generatedCode.value);
   copied.value = true;
@@ -443,6 +516,33 @@ const copyToClipboard = () => {
                   {{ copied ? 'Copied' : 'Copy' }}
               </button>
             </div>
+
+
+<div v-if="relatedIcons.length > 0" class="border-t border-slate-200 dark:border-slate-800 pt-4 mt-2">
+              <label class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-3 block">
+                  Alternative Styles
+              </label>
+              <div class="flex gap-2 overflow-x-auto pb-2 custom-scrollbar">
+                  <button 
+                      v-for="iconName in relatedIcons" 
+                      :key="iconName"
+                      @click="selectedIcon = iconName" 
+                      class="w-12 h-12 flex items-center justify-center rounded-xl border border-slate-200 dark:border-slate-700 hover:border-indigo-500 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-all group shrink-0 bg-white dark:bg-slate-800"
+                      :title="iconName"
+                  >
+                      <FluxIcon 
+                          :name="iconName" 
+                          size="20" 
+                          class="text-slate-600 dark:text-slate-300 group-hover:text-indigo-500 dark:group-hover:text-indigo-400 transition-colors"
+                          :color="iconName.startsWith('liquid') || iconName.startsWith('aero') ? undefined : undefined" 
+                      />
+                      </button>
+              </div>
+          </div>
+
+
+
+
           </div>
         </div>
       </div>
