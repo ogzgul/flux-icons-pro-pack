@@ -45,6 +45,12 @@ const SVGO_CONFIG = {
   ],
 };
 
+function ensureXmlns(svg) {
+  if (!svg.trim().startsWith("<svg")) return svg;
+  if (/xmlns=/.test(svg)) return svg;
+  return svg.replace("<svg", '<svg xmlns="http://www.w3.org/2000/svg"');
+}
+
 function sanitizeSvg(svg) {
   // invalid bare attributes
   svg = svg.replace(/\slinear(\s|\/?>)/g, ' calcMode="linear"$1');
@@ -173,7 +179,7 @@ async function generateCssIcons() {
         : 'fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"';
       rawSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" ${strokeAttr}>${rawSvg}</svg>`;
     }
-
+    rawSvg = ensureXmlns(rawSvg);
     rawSvg = sanitizeSvg(rawSvg);
     rawSvg = safeOptimizeWithName(rawSvg, name);
 
@@ -189,7 +195,8 @@ async function generateCssIcons() {
       .replace(/</g, "%3C")
       .replace(/>/g, "%3E");
 
-    const dataUri = `data:image/svg+xml,${encodedSvg}`;
+    //const dataUri = `data:image/svg+xml,${encodedSvg}`;
+    const dataUri = `data:image/svg+xml;charset=utf-8,${encodedSvg}`;
 
     if (isColored) {
       // Renkli ikon: background-image (renk/animasyon korunur)
