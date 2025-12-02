@@ -87,6 +87,7 @@ const handleSubmit = async () => {
           method="POST"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
+          data-netlify-recaptcha="true"
           @submit.prevent="handleSubmit"
           class="space-y-6"
         >
@@ -164,6 +165,8 @@ const handleSubmit = async () => {
             <FluxIcon v-else name="send-fill" size="20" />
             {{ loading ? 'Sending...' : 'Send Message' }}
           </button>
+
+          <div data-netlify-recaptcha="true"></div>
         </form>
 
         <div class="mt-8 pt-8 border-t border-slate-100 dark:border-slate-800 text-center">
