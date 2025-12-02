@@ -1,13 +1,13 @@
 <script setup>
-import { ref, nextTick, watch, onMounted } from 'vue'
+import { ref, onMounted, nextTick } from 'vue'
 import { useRoute } from 'vue-router'
 import FluxIcon from '~/components/FluxIcon.vue'
 
 useHead({
   title: 'Contact Us - Flux Icons'
 })
+
 const route = useRoute()
-const recaptchaMountKey = ref(0)
 
 const loading = ref(false)
 const success = ref(false)
@@ -21,19 +21,41 @@ const formData = ref({
   'bot-field': '' // Netlify honeypot
 })
 
+// reCAPTCHA alanını SPA'da zorla yeniden render etmek için
+const recaptchaKey = ref(0)
 
-const bumpRecaptcha = async () => {
-  recaptchaMountKey.value++
+// Netlify'ın recaptcha script'ini sadece bir kez yükle
+const ensureNetlifyRecaptchaScript = () =>
+  new Promise((resolve) => {
+    if (typeof window === 'undefined') return resolve(true)
+
+    // zaten varsa tamam
+    if (document.querySelector('script[data-netlify-recaptcha]')) return resolve(true)
+
+    const s = document.createElement('script')
+    // Netlify Forms reCAPTCHA için kullanılan script
+    s.src = 'https://www.google.com/recaptcha/api.js'
+    s.async = true
+    s.defer = true
+    s.setAttribute('data-netlify-recaptcha', 'true')
+    s.onload = () => resolve(true)
+    s.onerror = () => resolve(false)
+    document.head.appendChild(s)
+  })
+
+const mountRecaptcha = async () => {
+  // önce script yüklensin
+  await ensureNetlifyRecaptchaScript()
+  // sonra DOM update + yeniden mount
   await nextTick()
+  recaptchaKey.value++
 }
 
-// İlk load + /contact’a route ile gelince (SPA)
-onMounted(() => {
-  if (route.path === '/contact') bumpRecaptcha()
-})
-
-watch(() => route.fullPath, async () => {
-  if (route.path === '/contact') await bumpRecaptcha()
+// Sayfa SPA ile açılınca tetikle
+onMounted(async () => {
+  if (route.path === '/contact') {
+    await mountRecaptcha()
+  }
 })
 
 // Form gönderme
@@ -56,8 +78,9 @@ const handleSubmit = async () => {
 
     success.value = true
     formData.value = { name: '', email: '', message: '', 'bot-field': '' }
-    await bumpRecaptcha() // başarıdan sonra form yeniden açılırsa diye
 
+    // Başarıdan sonra form tekrar görünürse recaptcha tekrar düzgün gelsin
+    await mountRecaptcha()
   } catch (err) {
     console.error(err)
     error.value = true
@@ -103,7 +126,6 @@ const handleSubmit = async () => {
         <!-- Form -->
         <form
           v-if="!success"
-          :key="recaptchaMountKey"
           name="contact"
           method="POST"
           data-netlify="true"
@@ -112,7 +134,6 @@ const handleSubmit = async () => {
           @submit.prevent="handleSubmit"
           class="space-y-6"
         >
-          <!-- Netlify form name -->
           <input type="hidden" name="form-name" value="contact" />
 
           <!-- Honeypot -->
@@ -150,6 +171,7 @@ const handleSubmit = async () => {
               placeholder="you@example.com"
             />
           </div>
+
           <div class="mt-6 text-center text-sm text-slate-500 dark:text-slate-400">
             <p class="mb-2">Enjoying Flux Icons or want to support its development?</p>
             <NuxtLink
@@ -160,8 +182,6 @@ const handleSubmit = async () => {
               <FluxIcon name="heart-sharp" size="18" /> Become a Sponsor
             </NuxtLink>
           </div>
-
-
 
           <div>
             <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
@@ -187,7 +207,10 @@ const handleSubmit = async () => {
             {{ loading ? 'Sending...' : 'Send Message' }}
           </button>
 
-          <div data-netlify-recaptcha="true"></div>
+          <!-- reCAPTCHA: SPA'da yeniden mount -->
+          <ClientOnly>
+            <div :key="recaptchaKey" data-netlify-recaptcha="true"></div>
+          </ClientOnly>
         </form>
 
         <div class="mt-8 pt-8 border-t border-slate-100 dark:border-slate-800 text-center">
