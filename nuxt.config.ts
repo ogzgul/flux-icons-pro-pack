@@ -38,7 +38,9 @@ export default defineNuxtConfig({
         //{ rel: 'icon', type: 'image/x-icon',sizes: '192x192', href: '/favicon2.ico' },
         
         // Eğer PNG attıysan (örneğin logo.png):
-        { rel: 'icon', type: 'image/png',sizes: '256x256', href: '/logo.png' }
+        { rel: 'icon', href: '/favicon.ico', sizes: 'any' }
+
+          //{ rel: 'icon', type: 'image/png',sizes: '256x256', href: '/logo.png' }
       ],
 
 // AdSense Kodu (İlerde aktifleşince buraya ID gelecek)
