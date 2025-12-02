@@ -7586,9 +7586,9 @@ const d = {
     <circle cx="12" cy="12" r="7" fill="#1E293B" stroke="#475569" stroke-width="0.5"/>
     <circle cx="12" cy="12" r="5" fill="url(#grad-vault-lock)" stroke="#0EA5E9" stroke-width="1"/>
     <g>
-        <rect x="11" y="7" width="2" height="10" rx="1" fill="white" opacity="0.8"/>
-        <rect x="7" y="11" width="10" height="2" rx="1" fill="white" opacity="0.8"/>
-        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="10s" repeatCount="indefinite"/>
+    <rect x="11" y="7" width="2" height="10" rx="1" fill="white" opacity="0.8"/>
+    <rect x="7" y="11" width="10" height="2" rx="1" fill="white" opacity="0.8"/>
+    <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="10s" repeatCount="indefinite"/>
     </g>
     <path d="M4 4h2M18 4h2M4 20h2M18 20h2" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.2"/>
     </svg>`,
@@ -7910,7 +7910,150 @@ const d = {
         <path d="M15 15l4 4" stroke="#6366F1" stroke-width="3" stroke-linecap="round"/>
         <animateTransform attributeName="transform" type="translate" values="0,0; 4,4; 0,0" dur="2s" repeatCount="indefinite"/>
     </g>
-    </svg>`
+    </svg>`,
+  // =================================================
+  // 2200. CURSORS: TEMEL İMLEÇLER (SYSTEM CURSORS)
+  // Not: İşletim sistemi standartlarında ama modern hatlı.
+  // =================================================
+  // Standart Ok (Default Arrow - Outline)
+  "cursor-arrow-outline": '<path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M13 13l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
+  // Standart Ok (Solid - Dolu)
+  "cursor-arrow-solid": '<path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z" fill="currentColor"/><path d="M13 13l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
+  // El İşareti (Pointer - Link - Outline)
+  "cursor-hand-outline": '<path d="M14 9a2 2 0 0 1 2 2v1.15l-1.45-2.04a2.3 2.3 0 0 0-4.02 1.62l.85 7.27H7.5a2.5 2.5 0 0 1 0-5H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M9 10V4a2 2 0 1 1 4 0v5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
+  // El İşareti (Solid - Dolu)
+  "cursor-hand-solid": '<path d="M14.5 9c.83 0 1.5.67 1.5 1.5v1.15l-1.45-2.04a2.3 2.3 0 0 0-4.02 1.62l.85 7.27H7.5a2.5 2.5 0 0 1 0-5H9v-3.5a2 2 0 1 1 4 0V9z" fill="currentColor"/>',
+  // Metin Seçici (Text/I-Beam)
+  "cursor-text-beam": '<path d="M8 4h8M12 4v16M8 20h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
+  // Yasak / Bekle (Not Allowed)
+  "cursor-wait-ban": '<circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2" fill="none"/><path d="M7 7l10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
+  // =================================================
+  // 2201. AERO CURSORS: 3D & CAM (GLASS POINTERS)
+  // Not: Tıklama efektli, renkli ve hacimli imleçler.
+  // =================================================
+  // Aero Ok (Mavi Cam - Gölgeli)
+  "aero-cursor-arrow": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-arr-glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#2563EB"/></linearGradient></defs>
+    <path d="M4 3l6.5 16 2.5-7 7-2.5L4 3z" fill="url(#grad-arr-glass)" stroke="#1E40AF" stroke-width="0.5"/>
+    <path d="M4 3l6 6" stroke="white" stroke-width="1" opacity="0.6" stroke-linecap="round"/>
+    <path d="M13.5 13.5l5.5 5.5" stroke="#1E40AF" stroke-width="2" stroke-linecap="round"/>
+    </svg>`,
+  // Aero El (Tıklama - Yeşil Dalga)
+  "aero-cursor-click": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="grad-click" cx="50%" cy="50%"><stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#059669"/></radialGradient></defs>
+    <circle cx="12" cy="8" r="6" stroke="#10B981" stroke-width="1" fill="none" opacity="0.3">
+        <animate attributeName="r" values="2;8" dur="1s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" dur="1s" repeatCount="indefinite"/>
+    </circle>
+    <path d="M13 11V5a2 2 0 0 0-4 0v9l-2-2c-.6-.6-1.5-.6-2 0l-.5.5 5 5h6c1.5 0 2.5-1 2.5-2.5V13c0-1.1-.9-2-2-2h-3" fill="url(#grad-click)" stroke="#064E3B" stroke-width="0.5"/>
+    <path d="M11 6v4" stroke="white" stroke-width="1" opacity="0.5"/>
+    </svg>`,
+  // Aero Bekle (Loading - Renkli Top)
+  "aero-cursor-loading": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-wait" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#F472B6"/><stop offset="100%" stop-color="#9333EA"/></linearGradient></defs>
+    <circle cx="12" cy="12" r="6" fill="url(#grad-wait)" stroke="#7E22CE" stroke-width="0.5"/>
+    <path d="M12 12l3-3" stroke="white" stroke-width="1.5" opacity="0.6"/>
+    <circle cx="12" cy="12" r="8" stroke="#C084FC" stroke-width="1.5" fill="none" stroke-dasharray="4 4">
+        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    </svg>`,
+  // =================================================
+  // 2202. ETKİLEŞİM & JESTLER (GESTURES)
+  // Not: Mobil ve dokunmatik ekranlar için.
+  // =================================================
+  // Dokunma (Tap - Parmak İzi)
+  "gesture-tap-finger": '<path d="M12 3v11a2 2 0 0 1-4 0V8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="14" r="4" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2" opacity="0.5"/>',
+  // Kaydırma (Swipe Right)
+  "gesture-swipe-right": '<path d="M8 16s2-4 4-4 4 4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" transform="rotate(90 12 12)"/><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.3"/>',
+  // Sürükle Bırak (Drag & Drop - Dashed)
+  "gesture-drag-drop": '<rect x="4" y="4" width="8" height="8" rx="1" stroke="currentColor" stroke-width="2"/><path d="M12 12l4 4 4 4" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 2"/><rect x="14" y="14" width="8" height="8" rx="1" stroke="currentColor" stroke-width="2" fill="none" opacity="0.5"/>',
+  // =================================================
+  // 2203. YENİ & FARKLI ARAÇLAR (UTILITY EXPANSION)
+  // Not: Listede olmayan, arayüz tasarımcılarının aradığı araçlar.
+  // =================================================
+  // Renk Seçici (Pipet - Aero)
+  "aero-tool-eyedropper": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-drop" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FDE047"/><stop offset="100%" stop-color="#EA580C"/></linearGradient></defs>
+    <path d="M19 13l-7-7-2 2 7 7" stroke="white" stroke-width="4"/>
+    <path d="M14 16l-4 4M8 12l4-4" stroke="#78350F" stroke-width="1"/>
+    <path d="M12 22s2-2 2-4a2 2 0 0 0-4 0c0 2 2 4 2 4z" fill="url(#grad-drop)" stroke="#B45309" stroke-width="0.5"/>
+    <path d="M17 8l2-2a2 2 0 1 0-2.8-2.8l-2 2" fill="#1F2937"/>
+    </svg>`,
+  // Kırpma Aracı (Crop)
+  "tool-crop-dashed": '<path d="M6 2v14a2 2 0 0 0 2 2h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 22v-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M2 6h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 6v8h-8" stroke="currentColor" stroke-width="2" stroke-dasharray="3 3"/>',
+  // Sihirli Değnek (Magic Wand - Parlayan)
+  "tool-magic-sparkle": '<path d="M14.5 4.5l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M3 21l9-9" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M10 7l1-2 2 1-2 1-1 2-1-2-2-1 2-1z" fill="currentColor"/><circle cx="18" cy="18" r="0.5" fill="currentColor"/><circle cx="5" cy="5" r="0.5" fill="currentColor"/>',
+  // Katman Birleştir (Merge Layers)
+  "tool-layers-merge": '<path d="M2 12h20M12 2v20" stroke="currentColor" stroke-width="1" opacity="0.2"/><rect x="6" y="6" width="8" height="8" rx="1" stroke="currentColor" stroke-width="2" fill="none"/><rect x="10" y="10" width="8" height="8" rx="1" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.2"/>',
+  // =================================================
+  // 2204. AERO OKLARIN DEVAMI (MORE ARROWS)
+  // =================================================
+  // Döner Ok (Refresh - Renkli)
+  "aero-arrow-refresh-color": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad-ref" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#059669"/></linearGradient></defs>
+    <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8" stroke="url(#grad-ref)" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M21 3v5h-5" stroke="url(#grad-ref)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="12" cy="12" r="1" fill="#166534"/>
+    </svg>`,
+  // Çapraz Ok (Expand - Mavi)
+  "aero-arrow-expand": `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15 3h6v6M9 21H3v-6" stroke="#3B82F6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M21 3l-7 7M3 21l7-7" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+    </svg>`,
+  // =================================================
+  // 2100. AERO MEGA: LOADERS (HİPNOTİK YÜKLEYİCİLER)
+  // =================================================
+  "aero-load-spin-blue": '<svg viewBox="0 0 24 24"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#2563EB"/></linearGradient></defs><circle cx="12" cy="12" r="10" stroke="#E2E8F0" stroke-width="2" fill="none"/><path d="M12 2a10 10 0 0 1 10 10" stroke="url(#g1)" stroke-width="3" stroke-linecap="round" fill="none"><animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1s" repeatCount="indefinite"/></path></svg>',
+  "aero-load-spin-purple": '<svg viewBox="0 0 24 24"><defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#C084FC"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs><circle cx="12" cy="12" r="10" stroke="#F3E8FF" stroke-width="2" fill="none"/><path d="M12 22a10 10 0 0 1-10-10" stroke="url(#g2)" stroke-width="3" stroke-linecap="round" fill="none"><animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1s" repeatCount="indefinite"/></path></svg>',
+  "aero-load-spin-green": '<svg viewBox="0 0 24 24"><defs><linearGradient id="g3" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#059669"/></linearGradient></defs><circle cx="12" cy="12" r="10" stroke="#DCFCE7" stroke-width="2" fill="none"/><path d="M2 12a10 10 0 0 1 10-10" stroke="url(#g3)" stroke-width="3" stroke-linecap="round" fill="none"><animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1s" repeatCount="indefinite"/></path></svg>',
+  "aero-load-dots": '<svg viewBox="0 0 24 24"><circle cx="4" cy="12" r="3" fill="#60A5FA"><animate attributeName="cy" values="12;6;12" dur="0.6s" repeatCount="indefinite"/></circle><circle cx="12" cy="12" r="3" fill="#818CF8"><animate attributeName="cy" values="12;6;12" dur="0.6s" begin="0.2s" repeatCount="indefinite"/></circle><circle cx="20" cy="12" r="3" fill="#A78BFA"><animate attributeName="cy" values="12;6;12" dur="0.6s" begin="0.4s" repeatCount="indefinite"/></circle></svg>',
+  "aero-load-pulse-red": '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="#FCA5A5"><animate attributeName="r" values="8;11;8" dur="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite"/></circle><circle cx="12" cy="12" r="5" fill="#DC2626"/></svg>',
+  "aero-load-bar-blue": '<svg viewBox="0 0 24 24"><rect x="2" y="10" width="20" height="4" rx="2" fill="#DBEAFE"/><rect x="2" y="10" width="8" height="4" rx="2" fill="#2563EB"><animate attributeName="x" values="2;14;2" dur="1.5s" repeatCount="indefinite"/></rect></svg>',
+  "aero-load-ring-dual": '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" stroke="#3B82F6" stroke-width="2" fill="none" stroke-dasharray="20 10"><animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="2s" repeatCount="indefinite"/></circle><circle cx="12" cy="12" r="4" stroke="#F472B6" stroke-width="2" fill="none" stroke-dasharray="10 5"><animateTransform attributeName="transform" type="rotate" from="360 12 12" to="0 12 12" dur="2s" repeatCount="indefinite"/></circle></svg>',
+  "aero-load-cube": '<svg viewBox="0 0 24 24"><rect x="8" y="8" width="8" height="8" rx="1" fill="#F59E0B"><animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite"/></rect></svg>',
+  "aero-load-liquid": '<svg viewBox="0 0 24 24"><defs><linearGradient id="gL" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#60A5FA"/></linearGradient></defs><rect x="6" y="2" width="12" height="20" rx="3" stroke="#1D4ED8" stroke-width="1" fill="none"/><rect x="7" y="18" width="10" height="0" rx="2" fill="url(#gL)"><animate attributeName="height" values="0;16;0" dur="2s" repeatCount="indefinite"/><animate attributeName="y" values="21;5;21" dur="2s" repeatCount="indefinite"/></rect></svg>',
+  "aero-load-infinity": '<svg viewBox="0 0 24 24"><path d="M8 8c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm8 0c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4z" stroke="#8B5CF6" stroke-width="2" fill="none" stroke-dasharray="5 5"><animate attributeName="stroke-dashoffset" from="20" to="0" dur="1s" repeatCount="indefinite"/></path></svg>',
+  "aero-load-radar": '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="#10B981" stroke-width="1" fill="none"/><line x1="12" y1="12" x2="12" y2="2" stroke="#34D399" stroke-width="2"><animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1.5s" repeatCount="indefinite"/></line><circle cx="12" cy="12" r="10" fill="#10B981" opacity="0.1"><animate attributeName="opacity" values="0.1;0.3;0.1" dur="1.5s" repeatCount="indefinite"/></circle></svg>',
+  "aero-load-gear": '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#64748B" opacity="0.5"/><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12s4.48 10 10 10 10-4.48 10-10zm-2 0c0 4.41-3.59 8-8 8s-8-3.59-8-8 3.59-8 8-8 8 3.59 8 8z" fill="#334155"><animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="3s" repeatCount="indefinite"/></path></svg>',
+  "aero-load-hourglass": '<svg viewBox="0 0 24 24"><path d="M6 2v20h12v-20z" fill="none" stroke="#475569" stroke-width="2"/><path d="M6 2h12l-6 10 6 10h-12l6-10z" fill="#F59E0B"><animate attributeName="d" values="M6 2h12l-6 10 6 10h-12l6-10z; M6 2h12l-6 0 6 0h-12l6 0z; M6 2h12l-6 10 6 10h-12l6-10z" dur="3s" repeatCount="indefinite"/></path></svg>',
+  "aero-load-wifi": '<svg viewBox="0 0 24 24"><path d="M12 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" fill="#6366F1"><animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite"/></path><path d="M8.5 14a5 5 0 0 1 7 0" stroke="#6366F1" stroke-width="2" stroke-linecap="round" opacity="0.3"><animate attributeName="opacity" values="0.3;1;0.3" dur="1s" begin="0.3s" repeatCount="indefinite"/></path><path d="M5 10a10 10 0 0 1 14 0" stroke="#6366F1" stroke-width="2" stroke-linecap="round" opacity="0.3"><animate attributeName="opacity" values="0.3;1;0.3" dur="1s" begin="0.6s" repeatCount="indefinite"/></path></svg>',
+  "aero-load-upload": '<svg viewBox="0 0 24 24"><path d="M12 16V8" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/><path d="M9 11l3-3 3 3" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><animateTransform attributeName="transform" type="translate" values="0,0; 0,-5; 0,0" dur="1s" repeatCount="indefinite"/></path><path d="M5 18h14" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/></svg>',
+  // =================================================
+  // 2101. AERO MEGA: OKLAR (GLASS ARROWS)
+  // =================================================
+  "aero-arr-r-blue": '<svg viewBox="0 0 24 24"><defs><linearGradient id="ar1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#2563EB"/></linearGradient></defs><path d="M5 12h14M12 5l7 7-7 7" stroke="url(#ar1)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 12h14" stroke="white" stroke-width="1" opacity="0.5" transform="translate(0, -1)"/></svg>',
+  "aero-arr-l-purple": '<svg viewBox="0 0 24 24"><defs><linearGradient id="ar2" x1="1" y1="0" x2="0" y2="0"><stop offset="0%" stop-color="#C084FC"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs><path d="M19 12H5M12 19l-7-7 7-7" stroke="url(#ar2)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12H5" stroke="white" stroke-width="1" opacity="0.5" transform="translate(0, -1)"/></svg>',
+  "aero-arr-u-green": '<svg viewBox="0 0 24 24"><defs><linearGradient id="ar3" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#059669"/></linearGradient></defs><path d="M12 19V5M5 12l7-7 7 7" stroke="url(#ar3)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 19V5" stroke="white" stroke-width="1" opacity="0.5" transform="translate(-1, 0)"/></svg>',
+  "aero-arr-d-orange": '<svg viewBox="0 0 24 24"><defs><linearGradient id="ar4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FDBA74"/><stop offset="100%" stop-color="#EA580C"/></linearGradient></defs><path d="M12 5v14M19 12l-7 7-7-7" stroke="url(#ar4)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 5v14" stroke="white" stroke-width="1" opacity="0.5" transform="translate(-1, 0)"/></svg>',
+  "aero-arr-cycle": '<svg viewBox="0 0 24 24"><defs><linearGradient id="ar5" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#10B981"/></linearGradient></defs><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8" stroke="url(#ar5)" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M21 3v5h-5" stroke="url(#ar5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  "aero-arr-shuffle": '<svg viewBox="0 0 24 24"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l5 5M4 4l5 5" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  "aero-arr-expand": '<svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  "aero-arr-collapse": '<svg viewBox="0 0 24 24"><path d="M4 14h6v6M20 10h-6V4M10 14L3 21M14 10l7-7" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  "aero-arr-login": '<svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" stroke="#475569" stroke-width="2" stroke-linecap="round"/><path d="M10 17l5-5-5-5M15 12H3" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  "aero-arr-logout": '<svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" stroke="#475569" stroke-width="2" stroke-linecap="round"/><path d="M16 17l5-5-5-5M21 12H9" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  "aero-arr-chevron-r": '<svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="#6366F1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M9 18l6-6-6-6" stroke="white" stroke-width="1" opacity="0.5" transform="translate(-1,0)"/></svg>',
+  "aero-arr-chevron-l": '<svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" stroke="#6366F1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M15 18l-6-6 6-6" stroke="white" stroke-width="1" opacity="0.5" transform="translate(1,0)"/></svg>',
+  "aero-arr-chevron-u": '<svg viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6" stroke="#6366F1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 15l-6-6-6 6" stroke="white" stroke-width="1" opacity="0.5" transform="translate(0,1)"/></svg>',
+  "aero-arr-chevron-d": '<svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="#6366F1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M6 9l6 6 6-6" stroke="white" stroke-width="1" opacity="0.5" transform="translate(0,-1)"/></svg>',
+  "aero-arr-play": '<svg viewBox="0 0 24 24"><defs><linearGradient id="ar-play" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#10B981"/><stop offset="100%" stop-color="#059669"/></linearGradient></defs><circle cx="12" cy="12" r="10" fill="url(#ar-play)" stroke="#047857" stroke-width="0.5"/><path d="M10 8l6 4-6 4V8z" fill="white"/><path d="M10 8l6 4-6 4" stroke="rgba(0,0,0,0.1)" stroke-width="1" fill="none"/></svg>',
+  // =================================================
+  // 2102. AERO MEGA: DURUM & UYARI (GLASS ALERTS)
+  // =================================================
+  "aero-check-circle": '<svg viewBox="0 0 24 24"><defs><linearGradient id="st1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#059669"/></linearGradient></defs><circle cx="12" cy="12" r="10" fill="url(#st1)" stroke="#047857" stroke-width="0.5"/><path d="M9 12l2 2 4-4" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 2a10 10 0 0 1 5 2" stroke="white" stroke-width="1" opacity="0.3" fill="none"/></svg>',
+  "aero-error-circle": '<svg viewBox="0 0 24 24"><defs><linearGradient id="st2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F87171"/><stop offset="100%" stop-color="#DC2626"/></linearGradient></defs><circle cx="12" cy="12" r="10" fill="url(#st2)" stroke="#991B1B" stroke-width="0.5"/><path d="M15 9l-6 6M9 9l6 6" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M12 2a10 10 0 0 1 5 2" stroke="white" stroke-width="1" opacity="0.3" fill="none"/></svg>',
+  "aero-warn-triangle": '<svg viewBox="0 0 24 24"><defs><linearGradient id="st4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FDE047"/><stop offset="100%" stop-color="#D97706"/></linearGradient></defs><path d="M12 3L2 21h20L12 3z" fill="url(#st4)" stroke="#B45309" stroke-width="0.5"/><path d="M12 9v6M12 17h.01" stroke="#78350F" stroke-width="2.5" stroke-linecap="round"/><path d="M12 3l4 7" stroke="white" stroke-width="1" opacity="0.4"/></svg>',
+  "aero-help-circle": '<svg viewBox="0 0 24 24"><defs><linearGradient id="st5" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#A78BFA"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs><circle cx="12" cy="12" r="10" fill="url(#st5)" stroke="#5B21B6" stroke-width="0.5"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M12 17h.01" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M12 2a10 10 0 0 1 5 2" stroke="white" stroke-width="1" opacity="0.3" fill="none"/></svg>',
+  "aero-bell-ring": '<svg viewBox="0 0 24 24"><defs><linearGradient id="st6" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FCD34D"/><stop offset="100%" stop-color="#B45309"/></linearGradient></defs><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" fill="url(#st6)" stroke="#92400E" stroke-width="0.5"/><path d="M13.73 21a2 2 0 0 1-3.46 0" stroke="#B45309" stroke-width="2"/><path d="M18 8c0-1-1-2-2-2" stroke="white" stroke-width="1" opacity="0.5"/><animateTransform attributeName="transform" type="rotate" values="0 12 2; 15 12 2; -15 12 2; 0 12 2" dur="1s" repeatCount="indefinite"/></svg>',
+  "aero-eye-show": '<svg viewBox="0 0 24 24"><defs><linearGradient id="st9" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#E0F2FE"/><stop offset="100%" stop-color="#3B82F6"/></linearGradient></defs><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" fill="url(#st9)" stroke="#1E40AF" stroke-width="0.5"/><circle cx="12" cy="12" r="3" fill="#1E3A8A"/><circle cx="13" cy="11" r="1" fill="white"/><path d="M12 5c3 0 6 2 8 4" stroke="white" stroke-width="1" opacity="0.5" fill="none"/></svg>',
+  "aero-eye-hide": '<svg viewBox="0 0 24 24"><defs><linearGradient id="st10" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#94A3B8"/><stop offset="100%" stop-color="#475569"/></linearGradient></defs><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" fill="url(#st10)" stroke="#334155" stroke-width="0.5" fill-opacity="0.5"/><line x1="1" y1="1" x2="23" y2="23" stroke="#334155" stroke-width="2"/></svg>',
+  // =================================================
+  // 2103. AERO MEGA: UI & GENEL (GLASS ESSENTIALS)
+  // =================================================
+  "aero-ui-home": '<svg viewBox="0 0 24 24"><defs><linearGradient id="ui1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#2563EB"/></linearGradient></defs><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" fill="url(#ui1)" stroke="#1D4ED8" stroke-width="0.5"/><path d="M9 22V12h6v10" fill="#1E3A8A" opacity="0.3"/><path d="M12 3l8 7" stroke="white" stroke-width="1" opacity="0.4"/></svg>',
+  "aero-ui-user": '<svg viewBox="0 0 24 24"><defs><linearGradient id="ui2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#A78BFA"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs><circle cx="12" cy="7" r="4" fill="url(#ui2)" stroke="#5B21B6" stroke-width="0.5"/><path d="M20 21v-2a4 4 0 0 0-3-3.8H7a4 4 0 0 0-3 3.8v2" fill="url(#ui2)" stroke="#5B21B6" stroke-width="0.5"/><circle cx="13" cy="6" r="1" fill="white" opacity="0.5"/></svg>',
+  "aero-ui-search": '<svg viewBox="0 0 24 24"><defs><linearGradient id="ui3" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#E0F2FE"/><stop offset="100%" stop-color="#38BDF8"/></linearGradient></defs><circle cx="11" cy="11" r="8" fill="url(#ui3)" stroke="#0284C7" stroke-width="0.5"/><path d="M21 21l-4.35-4.35" stroke="#0284C7" stroke-width="3" stroke-linecap="round"/><circle cx="11" cy="11" r="5" stroke="white" stroke-width="1" opacity="0.4"/></svg>',
+  "aero-ui-settings": '<svg viewBox="0 0 24 24"><defs><linearGradient id="ui4" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#94A3B8"/><stop offset="100%" stop-color="#475569"/></linearGradient></defs><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" fill="#1E293B"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1.51 1H16a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" fill="url(#ui4)" stroke="#334155" stroke-width="0.5"><animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="5s" repeatCount="indefinite"/></path></svg>',
+  "aero-ui-star": '<svg viewBox="0 0 24 24"><defs><linearGradient id="ui5" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FDE047"/><stop offset="100%" stop-color="#EAB308"/></linearGradient></defs><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="url(#ui5)" stroke="#A16207" stroke-width="0.5"/><path d="M12 2l3 6 7 1" stroke="white" stroke-width="1" opacity="0.4" fill="none"/></svg>',
+  "aero-ui-heart": '<svg viewBox="0 0 24 24"><defs><linearGradient id="ui6" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FCA5A5"/><stop offset="100%" stop-color="#DC2626"/></linearGradient></defs><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="url(#ui6)" stroke="#991B1B" stroke-width="0.5"/><path d="M6 8c1-2 4-3 6-1" stroke="white" stroke-width="1.5" opacity="0.5" fill="none"/></svg>',
+  "aero-ui-trash": '<svg viewBox="0 0 24 24"><defs><linearGradient id="ui7" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94A3B8"/><stop offset="100%" stop-color="#475569"/></linearGradient></defs><path d="M3 6h18" stroke="#334155" stroke-width="2" stroke-linecap="round"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" fill="url(#ui7)" stroke="#334155" stroke-width="0.5"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" fill="#CBD5E1"/><line x1="10" y1="11" x2="10" y2="17" stroke="white" stroke-width="1" opacity="0.3"/><line x1="14" y1="11" x2="14" y2="17" stroke="white" stroke-width="1" opacity="0.3"/></svg>',
+  "aero-ui-edit": '<svg viewBox="0 0 24 24"><defs><linearGradient id="ui8" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#86EFAC"/><stop offset="100%" stop-color="#16A34A"/></linearGradient></defs><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" stroke="#14532D" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" fill="url(#ui8)" stroke="#14532D" stroke-width="0.5"/><path d="M16 5l3 3" stroke="white" stroke-width="1" opacity="0.5"/></svg>',
+  "aero-ui-image": '<svg viewBox="0 0 24 24"><defs><linearGradient id="ui9" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F472B6"/><stop offset="100%" stop-color="#DB2777"/></linearGradient></defs><rect x="3" y="3" width="18" height="18" rx="2" fill="url(#ui9)" stroke="#9F1239" stroke-width="0.5"/><circle cx="8.5" cy="8.5" r="1.5" fill="white" opacity="0.8"/><path d="M21 15l-5-5L5 21" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>',
+  "aero-ui-link": '<svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" stroke="#6366F1" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" fill="none"/></svg>'
 }, p = ["width", "height", "fill", "stroke-width", "innerHTML"], k = {
   key: 1,
   style: { color: "red", "font-size": "10px", display: "inline-block", width: "24px", "text-align": "center" }
@@ -7950,13 +8093,13 @@ const d = {
       innerHTML: l.value
     }, null, 14, p)) : (c(), s("span", k, "?"));
   }
-}, f = {
+}, y = {
   install: (r) => {
     r.component("FluxIcon", w);
   }
 };
 export {
   w as FluxIcon,
-  f as default,
+  y as default,
   d as icons
 };
