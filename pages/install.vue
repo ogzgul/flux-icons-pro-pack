@@ -40,9 +40,9 @@ const copyToClipboard = async (text, type) => {
             <p class="mb-4 text-slate-600 dark:text-slate-400">Without any installation, just paste this into the <code>&lt;head&gt;</code> section of your HTML file:</p>
             
             <div class="bg-slate-950 text-slate-200 p-4 rounded-lg font-mono text-xs md:text-sm flex justify-between items-center gap-4">
-                <span class="break-all text-indigo-300">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flux-icons-pro-pack@1.0.36/dist-font/flux-icons.css" /&gt;</span>
+                <span class="break-all text-indigo-300">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flux-icons-pro-pack@1.0.37/dist-font/flux-icons.css" /&gt;</span>
                <button 
-                    @click="copyToClipboard('<link rel=\'stylesheet\' href=\'https://cdn.jsdelivr.net/npm/flux-icons-pro-pack@1.0.36/dist-font/flux-icons.css\' />', 'cdn')" 
+                    @click="copyToClipboard('<link rel=\'stylesheet\' href=\'https://cdn.jsdelivr.net/npm/flux-icons-pro-pack@1.0.37/dist-font/flux-icons.css\' />', 'cdn')" 
                     class="shrink-0 px-3 py-1.5 rounded text-xs font-bold transition-all flex items-center gap-2"
                     :class="copiedState.cdn ? 'bg-emerald-500 text-white' : 'bg-slate-800 text-slate-400 hover:bg-indigo-600 hover:text-white'"
                     >
