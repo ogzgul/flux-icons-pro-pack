@@ -3,6 +3,18 @@ import { ref, onMounted, onUnmounted } from 'vue' // onUnmounted'ı import'a ekl
 const isDark = ref(true)
 const showScrollButton = ref(false)
 
+// 'flux_theme' adında bir çerez tutuyoruz. Varsayılan 'dark'.
+const colorMode = useCookie('flux_theme', {
+    default: () => 'dark',
+    watch: true // Değiştiği an cookie'yi güncelle
+});
+// HTML etiketine class'ı otomatik işle (SSR Uyumlu)
+useHead({
+    htmlAttrs: {
+        class: () => colorMode.value // 'dark' veya '' (boş) döner
+    }
+});
+
 const checkScroll = () => {
   // 300px aşağı inince butonu göster
   showScrollButton.value = window.scrollY > 300
@@ -13,7 +25,6 @@ const scrollToTop = () => {
 }
 
 onMounted(() => {
-  document.documentElement.classList.add('dark') 
   window.addEventListener('scroll', checkScroll) // Scroll dinleyicisini başlat
 })
 
@@ -22,17 +33,9 @@ onUnmounted(() => {
 })
 
 const toggleTheme = () => {
-  isDark.value = !isDark.value
-  if (isDark.value) {
-    document.documentElement.classList.add('dark')
-  } else {
-    document.documentElement.classList.remove('dark')
-  }
-}
+    colorMode.value = colorMode.value === 'dark' ? '' : 'dark';
+};
 
-onMounted(() => {
-  document.documentElement.classList.add('dark') // Başlangıçta Dark başlasın
-})
 </script>
 
 <template>

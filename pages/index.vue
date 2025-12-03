@@ -422,12 +422,13 @@ const copyToClipboard = () => {
   </main>
 
   <Transition name="fade">
-    <div v-if="isModalOpen" class="fixed inset-0 z-[60] flex items-center justify-center p-4">
+    <div v-if="isModalOpen" class="fixed inset-0 z-[60] flex items-end md:items-center justify-center p-0 md:p-4">
       <div @click="closeModal" class="absolute inset-0 bg-slate-900/60 dark:bg-black/90 backdrop-blur-sm transition-opacity"></div>
       
-      <div class="relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 w-full max-w-3xl rounded-2xl shadow-2xl flex flex-col md:flex-row overflow-hidden transform transition-all scale-100 ring-1 ring-white/10">
+    <div class="relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 w-full md:max-w-3xl rounded-t-2xl md:rounded-2xl shadow-2xl flex flex-col md:flex-row overflow-hidden transform transition-all scale-100 ring-1 ring-white/10
+         max-h-[92vh] md:max-h-none">
         
-        <div class="w-full md:w-5/12 bg-white flex items-center justify-center p-10 relative border-b md:border-b-0 md:border-r border-slate-200 group">
+        <div class="w-full md:w-5/12 bg-white flex items-center justify-center p-6 md:p-10 relative border-b md:border-b-0 md:border-r border-slate-200 group">
           <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#000000 1px, transparent 1px); background-size: 20px 20px;"></div>
           <FluxIcon 
             :name="selectedIcon" 
@@ -440,7 +441,7 @@ const copyToClipboard = () => {
           />
         </div>
 
-        <div class="w-full md:w-7/12 p-6 flex flex-col gap-6">
+        <div class="w-full md:w-7/12 p-6 flex flex-col gap-6 overflow-y-auto md:overflow-visible">
           <div class="flex justify-between items-start">
               <div>
                   <h3 class="text-2xl font-black text-slate-900 dark:text-white select-all tracking-tight">{{ selectedIcon }}</h3>

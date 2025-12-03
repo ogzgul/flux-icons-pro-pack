@@ -15,7 +15,7 @@
         
         <aside class="hidden lg:block space-y-1 sticky top-24 h-fit">
             <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 px-3">Core Concepts</p>
-            <a href="/install" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Installation</a>
+            <a href="#install" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Installation</a>
             <a href="#props" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Component Props</a>
             
             <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mt-6 mb-3 px-3">Features</p>
