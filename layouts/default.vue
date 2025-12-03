@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue' // onUnmounted'ı import'a eklemeyi unutma
-const isDark = ref(true)
+const isDark = computed(() => colorMode.value === 'dark')
 const showScrollButton = ref(false)
 
 // 'flux_theme' adında bir çerez tutuyoruz. Varsayılan 'dark'.
@@ -10,10 +10,8 @@ const colorMode = useCookie('flux_theme', {
 });
 // HTML etiketine class'ı otomatik işle (SSR Uyumlu)
 useHead({
-    htmlAttrs: {
-        class: () => colorMode.value // 'dark' veya '' (boş) döner
-    }
-});
+  htmlAttrs: { class: computed(() => (isDark.value ? 'dark' : '')) }
+})
 
 const checkScroll = () => {
   // 300px aşağı inince butonu göster
@@ -33,7 +31,7 @@ onUnmounted(() => {
 })
 
 const toggleTheme = () => {
-    colorMode.value = colorMode.value === 'dark' ? '' : 'dark';
+    colorMode.value = colorMode.value === 'dark' ? 'light' : 'dark';
 };
 
 </script>
