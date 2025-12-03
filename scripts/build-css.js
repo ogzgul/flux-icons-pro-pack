@@ -166,11 +166,38 @@ async function generateCssIcons() {
       COLORED_TYPES.some((t) => name.includes(t)) ||
       (rawSvg.includes("fill=") && !rawSvg.includes('fill="none"'));
 
-    // SVG'yi standart hale getir
+    // // SVG'yi standart hale getir
+    // if (!rawSvg.trim().startsWith("<svg")) {
+    //   const strokeAttr = isColored
+    //     ? ""
+    //     : 'fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"';
+    //   rawSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" ${strokeAttr}>${rawSvg}</svg>`;
+    // }
+
+    // SVG'yi standart hale getir (Wrapper Ekleme)
     if (!rawSvg.trim().startsWith("<svg")) {
-      const strokeAttr = isColored
-        ? ""
-        : 'fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"';
+      
+      let strokeAttr = '';
+
+      // 1. DURUM: Renkli İkonlar (Aero, Liquid, Flag vs.)
+      // Bunların içindeki renkleri ve fill ayarlarını korumalıyız.
+      // Sadece varsayılan siyah dolguyu engellemek için fill="none" diyoruz.
+      if (isColored) {
+          strokeAttr = 'fill="none"'; 
+      } 
+      // 2. DURUM: Solid/Fill İkonlar (Tek Renk Dolgulu)
+      // Bunlara ASLA stroke (çizgi) vermemeliyiz, yoksa ikon şişer.
+      // Sadece fill="currentColor" veriyoruz ki CSS color ile boyanabilsin.
+      else if (name.includes('-solid') || name.includes('-fill') || name.includes('-filled')) {
+          strokeAttr = 'fill="currentColor"'; 
+      } 
+      // 3. DURUM: Outline İkonlar (Çizgisel)
+      // Bunların içi boş olmalı (fill="none") ve çizgileri olmalı (stroke).
+      else {
+          strokeAttr = 'fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"';
+      }
+
+      // Wrapper'ı oluştur
       rawSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" ${strokeAttr}>${rawSvg}</svg>`;
     }
 
