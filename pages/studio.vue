@@ -512,7 +512,6 @@ const stopDrag = () => {
     document.removeEventListener('mousemove', onDrag);
     document.removeEventListener('mouseup', stopDrag);
 };
-
 // --- EXPORT LOGIC ---
 const downloadCanvas = () => {
     const node = document.getElementById('flux-canvas');
@@ -521,11 +520,40 @@ const downloadCanvas = () => {
     const serializer = new XMLSerializer();
     let source = serializer.serializeToString(node);
     
+    // --- FIX: XML/SVG STANDARDİZASYONU ---
+    
+    // 1. Namespace Eksikse Ekle
     if(!source.match(/^<svg[^>]+xmlns="http\:\/\/www\.w3\.org\/2000\/svg"/)){
         source = source.replace(/^<div/, '<svg xmlns="http://www.w3.org/2000/svg"'); 
+        source = source.replace(/^<svg/, '<svg xmlns="http://www.w3.org/2000/svg"');
     }
+
+    // 2. "linear" Hatasını Düzelt (Senin aldığın hata)
+    // Hatalı: <animate ... linear ... />
+    // Doğru:  <animate ... calcMode="linear" ... />
+    source = source.replace(/\slinear(?=[\s>])/g, ' calcMode="linear"');
+
+    // 3. "infinite" Hatasını Düzelt (Sık çıkar)
+    // Hatalı: <animate ... infinite ... />
+    // Doğru:  <animate ... repeatCount="indefinite" ... />
+    source = source.replace(/\sinfinite(?=[\s>])/g, ' repeatCount="indefinite"');
+
+    // 4. Div artıklarını temizle (Eğer serializer div'i aldıysa)
+    if (source.startsWith('<div')) {
+         // Bu nadir olur ama güvenlik önlemi
+         source = source.replace('<div', '<svg').replace('</div>', '</svg>');
+    }
+
+    // --- GENERATE ---
+
+    // Basit Mod: SVG stringine çevir (Canvas yapısını koruyarak)
+    // Ancak yukarıdaki serializer zaten DOM'u aldı. Bizim manuel SVG oluşturma mantığımız
+    // yerine, DOM'dan gelen temizlenmiş source'u kullanmak daha güvenli olabilir.
+    // FAKAT senin kodunda manuel bir yapı kurmuştuk (layers döngüsü).
+    // Eğer o yapıyı kullanıyorsan, 'getIconContent' içinden gelen veriyi de temizlemeliyiz.
     
-    // Basit Mod: SVG stringine çevir
+    // YUKARIDAKİ DÜZELTME YETMEZSE, MANUEL OLUŞTURDUĞUMUZ KISMI DA DÜZELTELİM:
+    
     let svgContent = `<svg xmlns="http://www.w3.org/2000/svg" width="${canvas.value.width}" height="${canvas.value.height}" viewBox="0 0 ${canvas.value.width} ${canvas.value.height}" style="background-color:${canvas.value.bgColor}">`;
     
     if (canvas.value.bgImage) {
@@ -536,7 +564,13 @@ const downloadCanvas = () => {
         const transform = `translate(${l.x} ${l.y}) rotate(${l.rotation} ${l.type==='text'?0:l.size/2} ${l.type==='text'?0:l.size/2})`;
         
         if (l.type === 'icon') {
-            const path = getIconContent(l.content);
+            // İkon içeriğini al
+            let path = getIconContent(l.content);
+            
+            // 🔥 BURASI KRİTİK: İkon verisi ham geldiği için burada da temizliyoruz
+            path = path.replace(/\slinear(?=[\s>])/g, ' calcMode="linear"');
+            path = path.replace(/\sinfinite(?=[\s>])/g, ' repeatCount="indefinite"');
+
             svgContent += `<g transform="${transform}" color="${l.color}"><svg width="${l.size}" height="${l.size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">${path}</svg></g>`;
         } else if (l.type === 'text') {
             svgContent += `<text transform="${transform}" font-family="sans-serif" font-weight="900" font-size="${l.size}" fill="${l.color}" dominant-baseline="hanging">${l.text}</text>`;
@@ -545,11 +579,13 @@ const downloadCanvas = () => {
     
     svgContent += `</svg>`;
 
+    // İNDİRME İŞLEMİ
     if (exportFormat.value === 'svg') {
         const url = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svgContent);
         triggerDownload(url, 'svg');
     } else {
         const img = new Image();
+        // SVG içeriğini Data URL'e çevirirken de encode etmeliyiz
         img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgContent);
         img.onload = () => {
             const c = document.createElement('canvas');
