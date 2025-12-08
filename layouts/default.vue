@@ -72,6 +72,9 @@ onUnmounted(() => {
             <NuxtLink to="/" class="px-4 py-1.5 rounded-md text-sm font-medium transition-all" active-class="bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm">Icons</NuxtLink>
             <NuxtLink to="/mixer" class="px-4 py-1.5 rounded-md text-sm font-medium transition-all" active-class="bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm">Mixer</NuxtLink>
             <NuxtLink to="/pattern" class="px-4 py-1.5 rounded-md text-sm font-medium transition-all" active-class="bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm">Pattern</NuxtLink>
+            <NuxtLink to="/studio" class="px-4 py-1.5 rounded-md text-sm font-medium transition-all flex items-center gap-1" active-class="bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm">
+        Studio <span class="text-[10px] bg-indigo-100 text-indigo-600 px-1.5 py-0.5 rounded-full dark:bg-indigo-900/50 dark:text-indigo-300 ml-1">New</span>
+    </NuxtLink>
             <NuxtLink to="/tools" class="px-4 py-1.5 rounded-md text-sm font-medium transition-all flex items-center gap-2" active-class="bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm">Tools</NuxtLink>
             <NuxtLink to="/blog" class="px-4 py-1.5 rounded-md text-sm font-medium transition-all" active-class="bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm">Blog</NuxtLink>
             <NuxtLink to="/docs" class="px-4 py-1.5 rounded-md text-sm font-medium transition-all" active-class="bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-sm">Docs</NuxtLink>
