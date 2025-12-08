@@ -1,4 +1,8 @@
 ﻿// https://nuxt.com/docs/api/configuration/nuxt-config
+
+import { defineNuxtConfig } from 'nuxt/config'
+// 👇 1. İKON VERİSİNİ BURAYA ÇAĞIRIYORUZ (Hatanın çözümü bu)
+import { icons } from './lib/icons'
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
@@ -10,6 +14,19 @@ export default defineNuxtConfig({
   // HATA VEREN "site: {}" YERİNE BUNU KULLAN:
   site: {
     url: 'https://flux-icon.com',
+  },
+  // 👇 2. SITEMAP AYARLARI (Dinamik Linkler)
+  sitemap: {
+    // 3500+ sayfa olduğu için 'urls' fonksiyonu ile besliyoruz
+    urls: async () => {
+      return Object.keys(icons).map(name => `/icon/${name}`)
+    },
+    // Sitemap dosyasının çok şişmemesi için varsayılan ayarlar
+    defaults: {
+      changefreq: 'weekly',
+      priority: 0.8,
+      lastmod: new Date()
+    }
   },
   gtag: {
       id: 'G-3C1VRW18EF' // <--- KENDİ GA4 ÖLÇÜM KİMLİĞİNİ BURAYA YAPIŞTIR

@@ -18,6 +18,7 @@
         <NuxtLink to="/privacy-policy" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Privacy Policy</NuxtLink>
         <NuxtLink to="/terms" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Terms of Service</NuxtLink>
         <NuxtLink to="/contact" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</NuxtLink>
+        <NuxtLink to="/faq" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">FAQ</NuxtLink>
       </div>
 
     </div>

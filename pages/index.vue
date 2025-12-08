@@ -442,11 +442,18 @@ const copyToClipboard = () => {
         </div>
 
         <div class="w-full md:w-7/12 p-6 flex flex-col gap-6 overflow-y-auto md:overflow-visible">
-          <div class="flex justify-between items-start">
+         <div class="flex justify-between items-start">
               <div>
                   <h3 class="text-2xl font-black text-slate-900 dark:text-white select-all tracking-tight">{{ selectedIcon }}</h3>
-                  <p class="text-xs font-medium text-indigo-500 mt-1 uppercase tracking-wider">Flux Icon Library</p>
-              </div>
+                  
+                  <div class="flex items-center gap-3 mt-1">
+                      <p class="text-xs font-medium text-indigo-500 uppercase tracking-wider">Flux Icon Library</p>
+                      <span class="text-slate-300 dark:text-slate-700 text-xs">|</span>
+                      <NuxtLink :to="`/icon/${selectedIcon}`" class="text-xs text-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400 hover:underline flex items-center gap-1 font-medium transition-colors">
+                        View Icon Page <FluxIcon name="flux-arrow-right" size="12" />
+                      </NuxtLink>
+                  </div>
+                  </div>
               <button @click="closeModal" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-400 hover:text-red-500 transition-colors">
                   <FluxIcon name="x" size="20" />
               </button>
