@@ -51,16 +51,16 @@ export default defineNuxtConfig({
 
       // Favicon (Sekme İkonu) Ayarları
       link: [
-        // Eğer public klasörüne favicon.ico attıysan:
-        //{ rel: 'icon', type: 'image/x-icon',sizes: '192x192', href: '/favicon2.ico' },
-        
-        // Eğer PNG attıysan (örneğin logo.png):
-        { rel: 'icon', href: '/favicon.ico', sizes: 'any' }
+        { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
+        // 2. GOOGLE ARAMA SONUÇLARI İÇİN (Çözüm Bu!)
+        // En az 192x192 olmalı.
+        { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/icon.png' },
+        // 3. Apple Cihazlar İçin (Opsiyonel ama önerilir)
+        { rel: 'apple-touch-icon', href: '/icon.png' }
 
-          //{ rel: 'icon', type: 'image/png',sizes: '256x256', href: '/logo.png' }
       ],
 
-// AdSense Kodu (İlerde aktifleşince buraya ID gelecek)
+      // AdSense Kodu (İlerde aktifleşince buraya ID gelecek)
   
       script: [
         {

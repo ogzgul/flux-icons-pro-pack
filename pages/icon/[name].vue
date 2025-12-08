@@ -208,6 +208,26 @@ useHead({
         // Sosyal Medya Kartları
         { property: 'og:title', content: () => `${iconTitle.value} Icon SVG` },
         { property: 'og:description', content: () => `Get the ${iconTitle.value} icon for your next project.` }
+    ],
+    // 🔥 YENİ: SCHEMA MARKUP (Google'ın bayıldığı kısım)
+    script: [
+      {
+        type: 'application/ld+json',
+        children: computed(() => JSON.stringify({
+          "@context": "https://schema.org/",
+          "@type": "ImageObject",
+          "name": `${iconTitle.value} Icon`,
+          "contentUrl": `https://flux-icon.com/icon/${iconName}`,
+          "license": "https://flux-icon.com/terms",
+          "acquireLicensePage": "https://flux-icon.com/terms",
+          "format": "image/svg+xml",
+          "author": {
+            "@type": "Organization",
+            "name": "Flux Icons"
+          },
+          "description": `Vector SVG icon of ${iconTitle.value} in ${style.value} style.`
+        }))
+      }
     ]
 });
 </script>
