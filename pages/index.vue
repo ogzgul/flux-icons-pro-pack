@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted, watch } from "vue";
 import { useFluxIcons } from '@/composables/useFluxIcons';
-import { useRouter, useRoute } from 'vue-router'; // Router eklendi
+import { useRouter, useRoute } from 'vue-router';
 
 // --- SEO META ---
 useHead({
@@ -26,67 +26,61 @@ const activeCategory = ref('all');
 
 // Varsayılan Ayarlar (Cookie)
 const customize = useCookie('flux_settings', {
-    default: () => ({ 
-        size: 64, 
-        color: "#000000", 
-        stroke: 1, 
-        type: "class", 
-        spin: false,
-        animation: ""
-    }),
-    watch: true 
+  default: () => ({
+    size: 64,
+    color: "#000000",
+    stroke: 1,
+    type: "class",
+    spin: false,
+    animation: ""
+  }),
+  watch: true
 });
 
 // Class modunda stroke sabit
 watch(() => customize.value.type, (newType) => {
-    if (newType === 'class') {
-        customize.value.stroke = 1;
-    }
+  if (newType === 'class') {
+    customize.value.stroke = 1;
+  }
 });
 
-// --- URL VE MODAL YÖNETİMİ (YENİ MANTIK) ---
-// URL değişince Modalı aç/kapat (Geri tuşu ve Link paylaşımı için)
+// --- URL VE MODAL YÖNETİMİ ---
 watch(() => route.query.icon, (newIcon) => {
-    if (newIcon && icons[newIcon]) {
-        selectedIcon.value = newIcon;
-        isModalOpen.value = true;
-        copied.value = false;
-    } else {
-        isModalOpen.value = false;
-        // Modal kapanınca URL temizlendiği için burası çalışır
-    }
-}, { immediate: true }); // Sayfa ilk açıldığında da çalışsın (Link paylaşımı için)
+  if (newIcon && icons[newIcon]) {
+    selectedIcon.value = newIcon;
+    isModalOpen.value = true;
+    copied.value = false;
+  } else {
+    isModalOpen.value = false;
+  }
+}, { immediate: true });
 
-// Modalı açarken sadece URL'i değiştiriyoruz, Watcher gerisini hallediyor
-const openModal = (name) => { 
-    router.push({ query: { ...route.query, icon: name } });
+const openModal = (name) => {
+  router.push({ query: { ...route.query, icon: name } });
 };
 
-// Modalı kapatırken URL parametresini siliyoruz
-const closeModal = () => { 
-    router.push({ query: { ...route.query, icon: undefined } });
+const closeModal = () => {
+  router.push({ query: { ...route.query, icon: undefined } });
 };
 
 // ESC Tuşu ile Kapatma
 const handleKeydown = (e) => {
-    if (e.key === 'Escape' && isModalOpen.value) {
-        closeModal();
-    }
+  if (e.key === 'Escape' && isModalOpen.value) {
+    closeModal();
+  }
 };
 
 // --- RENK PALETİ KONTROLÜ ---
 const isColorable = computed(() => {
-    if (!selectedIcon.value) return true;
-    const name = selectedIcon.value;
-    const staticTypes = ['liquid-', 'flag-', 'sticker-', 'original', 'brand-', 'fill', 'solid','avatar-','vivid-','aero-'];
-    if (staticTypes.some(type => name.includes(type))) {
-        return false;
-    }
-    return true; 
+  if (!selectedIcon.value) return true;
+  const name = selectedIcon.value;
+  const staticTypes = ['liquid-', 'flag-', 'sticker-', 'original', 'brand-', 'fill', 'solid', 'avatar-', 'vivid-', 'aero-'];
+  if (staticTypes.some(type => name.includes(type))) return false;
+  return true;
 });
 
 const effectiveColor = computed(() => {
-    return isColorable.value ? customize.value.color : '#000000'; 
+  return isColorable.value ? customize.value.color : '#000000';
 });
 
 // --- KATEGORİLER ---
@@ -99,120 +93,204 @@ const categories = [
   { id: 'user-', name: 'Users' },
   { id: 'arrow-', name: 'Arrows' },
   { id: 'chart-', name: 'Charts' },
-   { id: 'aero-', name: 'Aero' }
+  { id: 'aero-', name: 'Aero' }
 ];
 
-// --- FİLTRELEME ---
+// --- FİLTRELEME (PRO SEARCH: Best Match + Synonyms + Fallback) ---
+
+// "yoksa bunu dene" (invoice yoksa receipt gibi)
+const FALLBACK = {
+  invoice: ["receipt", "bill"],
+  bill: ["receipt"],
+  picture: ["image", "photo"],
+  photo: ["image", "picture"],
+  security: ["shield", "lock"],
+  safe: ["lock", "shield"],
+  garbage: ["trash", "delete", "remove"],
+  delete: ["trash", "remove"],
+  remove: ["trash", "delete"],
+  mail: ["envelope", "message", "chat"],
+  message: ["chat", "mail"],
+  sms: ["chat", "message"],
+  payment: ["bank", "card"],
+  wifi: ["signal"],
+  internet: ["wifi"],
+};
+
+// "birlikte ara" (tick yazınca check de gelsin gibi)
+const SYNONYMS = {
+  tick: ["check"],
+  check: ["tick"],
+  trash: ["delete", "remove"],
+  delete: ["trash", "remove"],
+  remove: ["trash", "delete"],
+  user: ["person", "profile", "people"],
+  person: ["user", "profile", "people"],
+  profile: ["user", "person"],
+  receipt: ["invoice", "bill"],
+  invoice: ["receipt", "bill"],
+};
+
+const tokenize = (s) =>
+  (s || "")
+    .toLowerCase()
+    .trim()
+    .split(/[\s-_]+/g) // boşluk, - ve _
+    .filter(Boolean);
+
 const allIconNames = computed(() => Object.keys(icons).sort());
-const filteredIcons = computed(() => {
-  const rawQuery = searchQuery.value.trim().toLowerCase();
-  const category = activeCategory.value;
 
-  // Alias (eş anlamlı) tablosu
-  const aliases = {
-    invoice: 'receipt',
-    bill: 'receipt',
-    picture: 'image',
-    photo: 'image',
-    security: 'shield',
-    safe: 'lock',
-    people: 'user',
-    person: 'user',
-    profile: 'user',
-    garbage: 'trash',
-    delete: 'trash',
-    remove: 'trash',
-    add: 'plus',
-    create: 'plus',
-    music: 'note',
-    song: 'note',
-    play: 'media',
-    video: 'film',
-    movie: 'film',
-    gear: 'setting',
-    config: 'setting',
-    wifi: 'signal',
-    internet: 'wifi',
-    connection: 'link',
-    mail: 'envelope',
-    message: 'chat',
-    sms: 'chat',
-    payment: 'bank',
-    tick: 'check',
-    file: 'file',
-    heart: 'heart'
-  };
-
-  // Hiç arama yoksa (sadece kategori)
-  if (!rawQuery && category === 'all') {
-    return allIconNames.value;
+// performans: icon tokenlarını bir kere cache'le
+const iconTokensCache = computed(() => {
+  const map = new Map();
+  for (const name of allIconNames.value) {
+    map.set(name, tokenize(name));
   }
-
-  // Query'i kelimelere böl (file heart, aero file, vs.)
-  const rawTokens = rawQuery.split(/\s+/).filter(Boolean);
-
-  // Her token'ı alias'a çevir
-  const tokens = rawTokens.map((t) => {
-    const aliasKey = Object.keys(aliases).find((key) => t.includes(key));
-    return aliasKey ? aliases[aliasKey] : t;
-  });
-
-  return allIconNames.value.filter((name) => {
-    // Kategori filtresi
-    if (category !== 'all' && !name.startsWith(category)) return false;
-
-    // İkon adını normalize et: tire/alt çizgi -> boşluk
-    const normalizedName = name.toLowerCase().replace(/[-_]/g, ' ');
-
-    // Tüm kelimeler ikon adında geçmeli
-    const matchesSearch = tokens.every((t) => normalizedName.includes(t));
-
-    return matchesSearch;
-  });
+  return map;
 });
 
+// synonym genişletme: tick -> [tick, check]
+const expandWithSynonyms = (tokens) => {
+  const out = new Set(tokens);
+  for (const t of tokens) {
+    const syns = SYNONYMS[t];
+    if (syns) syns.forEach(x => out.add(x));
+  }
+  return [...out];
+};
+
+const hasExactToken = (iconTokens, t) => iconTokens.includes(t);
+const hasPrefixToken = (iconTokens, t) => iconTokens.some(x => x.startsWith(t));
+const hasSubstringToken = (iconTokens, t) => iconTokens.some(x => x.includes(t));
+
+// Best-match puanlama: tüm tokenlar şart değil, ama 0 eşleşme varsa elenir
+const scoreIcon = (name, iconTokens, originalQueryTokens, expandedTokens) => {
+  let score = 0;
+  let matched = 0;
+
+  // 1) Genişletilmiş tokenlarla “herhangi biri” eşleşsin: partial scoring
+  for (const t of expandedTokens) {
+    if (hasExactToken(iconTokens, t)) { score += 90; matched++; continue; }
+    if (hasPrefixToken(iconTokens, t)) { score += 55; matched++; continue; }
+    if (hasSubstringToken(iconTokens, t)) { score += 20; matched++; continue; }
+  }
+
+  if (matched === 0) return -1;
+
+  // 2) Orijinal query token coverage bonus (asıl yazdığın şey daha değerli)
+  // (synonym ile gelen puanlar var ama asıl query coverage yukarı çeker)
+  let coreMatched = 0;
+  for (const qt of originalQueryTokens) {
+    if (hasExactToken(iconTokens, qt)) coreMatched++;
+    else if (hasPrefixToken(iconTokens, qt)) coreMatched++;
+    else if (hasSubstringToken(iconTokens, qt)) coreMatched++;
+  }
+  const coverage = originalQueryTokens.length ? (coreMatched / originalQueryTokens.length) : 0;
+  score += coverage * 120;
+
+  // 3) Sıra bonusu: “abstract outline ticket” gibi chain yakalarsa yükselsin
+  let chain = 0;
+  let idx = 0;
+  for (const qt of originalQueryTokens) {
+    const next = iconTokens.findIndex((x, i) => i >= idx && (x === qt || x.startsWith(qt) || x.includes(qt)));
+    if (next === -1) { chain = 0; break; }
+    chain += 1;
+    idx = next + 1;
+  }
+  score += chain * 18;
+
+  // 4) Küçük normalizasyon: aşırı uzun isimleri biraz aşağı çek
+  score -= Math.min(name.length, 60) * 0.15;
+
+  // 5) Çok iyi “tam token” eşleşmelerini ekstra ödüllendir (doğal his)
+  if (coreMatched === originalQueryTokens.length && originalQueryTokens.length >= 2) score += 80;
+
+  return score;
+};
+
+const filteredIcons = computed(() => {
+  const raw = searchQuery.value.trim().toLowerCase();
+  const category = activeCategory.value;
+
+  // kategori filtresi
+  const baseList = (category === "all")
+    ? allIconNames.value
+    : allIconNames.value.filter(n => n.startsWith(category));
+
+  if (!raw) return baseList;
+
+  const originalTokens = tokenize(raw);
+  const expandedTokens = expandWithSynonyms(originalTokens);
+
+  const tokenMap = iconTokensCache.value;
+
+  const scored = [];
+  for (const name of baseList) {
+    const tokens = tokenMap.get(name) || tokenize(name);
+    const s = scoreIcon(name, tokens, originalTokens, expandedTokens);
+    if (s >= 0) scored.push([name, s]);
+  }
+
+  // Fallback: 0 sonuç çıktıysa ve tek kelimeyse (invoice -> receipt)
+  if (scored.length === 0 && originalTokens.length === 1) {
+    const key = originalTokens[0];
+    const fb = FALLBACK[key];
+    if (fb?.length) {
+      const fbExpanded = expandWithSynonyms(fb);
+      for (const name of baseList) {
+        const tokens = tokenMap.get(name) || tokenize(name);
+        const s = scoreIcon(name, tokens, fb, fbExpanded);
+        if (s >= 0) scored.push([name, s]);
+      }
+    }
+  }
+
+  // Sırala: en iyi eşleşme en üstte
+  scored.sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  return scored.map(x => x[0]);
+});
 
 const displayedIcons = computed(() => filteredIcons.value.slice(0, visibleCount.value));
 
+// Infinite scroll
 const handleScroll = () => {
   const scrollPosition = window.scrollY + window.innerHeight;
   const totalHeight = document.documentElement.scrollHeight;
   if (scrollPosition >= totalHeight - 800) {
     if (visibleCount.value < filteredIcons.value.length) {
-        visibleCount.value += 50;
+      visibleCount.value += 50;
     }
   }
 };
 
 const selectCategory = (id) => {
-    activeCategory.value = id;
-    visibleCount.value = 50;
-    //window.scrollTo({ top: 0, behavior: 'smooth' });
+  activeCategory.value = id;
+  visibleCount.value = 50;
 };
 
-// Lifecycle Hooks (Scroll ve ESC dinleyicileri)
-onMounted(() => { 
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("keydown", handleKeydown); // ESC Dinleyicisi
+// Lifecycle Hooks
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("keydown", handleKeydown);
 });
 
-onUnmounted(() => { 
-    window.removeEventListener("scroll", handleScroll);
-    window.removeEventListener("keydown", handleKeydown);
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+  window.removeEventListener("keydown", handleKeydown);
 });
 
 // --- KOD ÇIKTISI ---
 const generatedCode = computed(() => {
   if (!selectedIcon.value) return "";
   const sizeValue = customize.value.size;
-  const colorValue = isColorable.value ? customize.value.color : '#000000'; 
+  const colorValue = isColorable.value ? customize.value.color : '#000000';
   const strokeValue = customize.value.stroke;
   const strokeAttr = strokeValue !== 1 ? ` stroke-width="${strokeValue}"` : '';
   const spinProp = customize.value.spin ? ' spin' : '';
   const spinClass = customize.value.spin ? ' flux-spin' : '';
   const animProp = customize.value.animation ? ` animation="${customize.value.animation}"` : '';
   const animClass = customize.value.animation ? ` flux-anim-${customize.value.animation}` : '';
-  
+
   const colorStyle = ` color: ${colorValue};`;
   const customStyle = `style="font-size: ${sizeValue}px;${colorStyle}"`;
 
@@ -222,88 +300,73 @@ const generatedCode = computed(() => {
   if (customize.value.type === "component") {
     const colorProp = isColorable.value ? ` color="${colorValue}"` : '';
     return `<FluxIcon name="${selectedIcon.value}" size="${sizeValue}"${colorProp}${strokeAttr}${spinProp}${animProp} />`;
-  } 
+  }
   if (customize.value.type === "html") {
-      const svgClasses = (spinClass + animClass).trim();
-      const classAttr = svgClasses ? ` class="${svgClasses}"` : '';
-      const svgColor = isColorable.value ? colorValue : 'currentColor';
-      return `<svg width="${sizeValue}" height="${sizeValue}" viewBox="0 0 24 24" fill="none" stroke="${svgColor}" stroke-width="${strokeValue}" stroke-linecap="round" stroke-linejoin="round"${classAttr}>${icons[selectedIcon.value]}</svg>`;
+    const svgClasses = (spinClass + animClass).trim();
+    const classAttr = svgClasses ? ` class="${svgClasses}"` : '';
+    const svgColor = isColorable.value ? colorValue : 'currentColor';
+    return `<svg width="${sizeValue}" height="${sizeValue}" viewBox="0 0 24 24" fill="none" stroke="${svgColor}" stroke-width="${strokeValue}" stroke-linecap="round" stroke-linejoin="round"${classAttr}>${icons[selectedIcon.value]}</svg>`;
   }
   return "";
 });
 
-
-
 // --- PERFORMANS OPTİMİZASYONU ---
-
-// 1. İkon anahtarlarını bir kere al ve sakla (Reactivity dışına çıkar)
+// ikon anahtarlarını bir kere al ve sakla
 const ALL_ICON_KEYS = Object.keys(icons);
 
 // --- RELATED ICONS (ULTRA FAST) ---
 const relatedIcons = computed(() => {
-    // Modal kapalıysa veya ikon seçili değilse hesaplama yapma (CPU tasarrufu)
-    if (!isModalOpen.value || !selectedIcon.value) return [];
-    
-    const currentName = selectedIcon.value;
-    
-    // Kök bulma (Basitleştirilmiş Regex)
-    // "aero-user-add-outline" -> "user-add"
-    let baseName = currentName
-        .replace(/^(aero-|liquid-|flat-|brand-|flux-|avatar-|memoji-|vivid-)/, '') // Önek sil
-        .replace(/(-outline|-solid|-fill|-duotone|-striped|-dashed|-line|-heavy|-light|-bold|-glass|-pro|-live)$/, ''); // Sonek sil
+  if (!isModalOpen.value || !selectedIcon.value) return [];
 
-    // Hala tire varsa temizle
-    baseName = baseName.replace(/^-+|-+$/g, '');
-    if (baseName.length < 2) baseName = currentName.split('-')[0];
+  const currentName = selectedIcon.value;
 
-    // Hızlı Arama (Limitli)
-    const matches = [];
-    let count = 0;
+  let baseName = currentName
+    .replace(/^(aero-|liquid-|flat-|brand-|flux-|avatar-|memoji-|vivid-)/, '')
+    .replace(/(-outline|-solid|-fill|-duotone|-striped|-dashed|-line|-heavy|-light|-bold|-glass|-pro|-live)$/, '');
 
-    for (let i = 0; i < ALL_ICON_KEYS.length; i++) {
-        const name = ALL_ICON_KEYS[i];
-        if (name === currentName) continue; // Kendini atla
+  baseName = baseName.replace(/^-+|-+$/g, '');
+  if (baseName.length < 2) baseName = currentName.split('-')[0];
 
-        // Kök ismini içeriyor mu?
-        if (name.includes(baseName)) {
-            matches.push(name);
-            count++;
-        }
-        // Çok fazla sonuç bulursak döngüyü kır (Performans için kritik!)
-        if (count > 50) break; 
+  const matches = [];
+  let count = 0;
+
+  for (let i = 0; i < ALL_ICON_KEYS.length; i++) {
+    const name = ALL_ICON_KEYS[i];
+    if (name === currentName) continue;
+
+    if (name.includes(baseName)) {
+      matches.push(name);
+      count++;
     }
+    if (count > 50) break;
+  }
 
-    // Bulunanları Puanla ve Sırala
-    // (Bu kısım az sayıda elemanla çalıştığı için hızlıdır)
-    const getScore = (name) => {
-        if (name === baseName + '-outline') return 10;
-        if (name === baseName + '-fill') return 20;
-        if (name === baseName + '-solid') return 30;
-        if (name.startsWith('aero-')) return 900;
-        if (name.startsWith('liquid-')) return 910;
-        return 100;
-    };
+  const getScore = (name) => {
+    if (name === baseName + '-outline') return 10;
+    if (name === baseName + '-fill') return 20;
+    if (name === baseName + '-solid') return 30;
+    if (name.startsWith('aero-')) return 900;
+    if (name.startsWith('liquid-')) return 910;
+    return 100;
+  };
 
-    matches.sort((a, b) => {
-        const scoreA = getScore(a);
-        const scoreB = getScore(b);
-        if (scoreA !== scoreB) return scoreA - scoreB;
-        return a.length - b.length;
-    });
+  matches.sort((a, b) => {
+    const scoreA = getScore(a);
+    const scoreB = getScore(b);
+    if (scoreA !== scoreB) return scoreA - scoreB;
+    return a.length - b.length;
+  });
 
-    // Yedek Plan (Eğer hiç varyasyon yoksa)
-    if (matches.length < 4) {
-        const category = currentName.split('-')[0];
-        // Kategori bazlı hızlı arama
-        const siblings = ALL_ICON_KEYS.filter(n => n.startsWith(category + '-') && n !== currentName).slice(0, 5);
-        matches.push(...siblings);
-    }
+  if (matches.length < 4) {
+    const category = currentName.split('-')[0];
+    const siblings = ALL_ICON_KEYS
+      .filter(n => n.startsWith(category + '-') && n !== currentName)
+      .slice(0, 5);
+    matches.push(...siblings);
+  }
 
-    // Tekrar edenleri temizle ve ilk 6'yı al
-    return [...new Set(matches)].slice(0, 6);
+  return [...new Set(matches)].slice(0, 6);
 });
-
-
 
 const copyToClipboard = () => {
   navigator.clipboard.writeText(generatedCode.value);
