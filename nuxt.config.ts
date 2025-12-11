@@ -15,6 +15,15 @@ export default defineNuxtConfig({
   site: {
     url: 'https://flux-icon.com',
   },
+// 👇 YENİ EKLENEN KISIM: STATIC GENERATION AYARI
+  // Bu ayar, 'npm run generate' dediğinde tüm ikon sayfalarını (HTML) fiziksel olarak oluşturur.
+  // Böylece linke direkt gidildiğinde sayfa açılır.
+  nitro: {
+    prerender: {
+      routes: Object.keys(icons).map(name => `/icon/${name}`)
+    }
+  },
+
   // 👇 2. SITEMAP AYARLARI (Dinamik Linkler)
   sitemap: {
     // 3500+ sayfa olduğu için 'urls' fonksiyonu ile besliyoruz
